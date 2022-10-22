@@ -1,0 +1,56 @@
+@import "wacca.scss";
+
+@font-face {
+  font-family: "SHINBI";
+  font-style: normal;
+  font-weight: 400;
+  src: url("~/assets/font/SHINBI.woff2") format("woff2");
+}
+
+.front-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  .mithical {
+    width: 400px;
+  }
+
+  h1 {
+    line-height: 1;
+    font-weight: 300;
+    font-size: 4.5rem;
+  }
+}
+
+#nav {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #e50065;
+
+  .profile-select {
+    max-width: 200px;
+  }
+
+  a {
+    color: white;
+    position: relative;
+
+    padding: 10px 10px;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
