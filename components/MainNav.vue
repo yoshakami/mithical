@@ -22,9 +22,11 @@
       </svg>
     </NuxtLink>
     <v-select
+      class="profile-select"
       v-model="profile"
       :items="profiles"
-      class="profile-select"
+      item-title="name"
+      return-object
       hide-details
       single-line
       prepend-inner-icon="mdi-card-account-details-outline"
@@ -37,6 +39,21 @@
 </template>
 
 <script setup>
-const profile = ref("Maurice");
-const profiles = ref(["Maurice", "Maurice but longer"]);
+const profiles = ref([
+  {
+    name: "Maurice",
+    wacca: {
+      options: {},
+    },
+  },
+
+  {
+    name: "Maurice but longer",
+    wacca: {
+      options: {},
+    },
+  },
+]);
+
+const profile = useState("profile", () => profiles.value[0]);
 </script>

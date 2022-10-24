@@ -23,6 +23,6 @@
 
 <script setup>
 useHead({
-  title: "Wacca",
+  title: "Mithical | Wacca",
 });
 </script>

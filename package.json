@@ -8,10 +8,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.11",
+    "nuxt": "3.0.0-rc.12",
     "fuzzysort": "^2.0.1",
     "sass": "^1.55.0",
     "@mdi/font": "^7.0.96",
-    "vuetify": "^3.0.0-beta.13"
+    "vuetify": "^3.0.0-beta.14"
   }
 }

@@ -110,6 +110,14 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: $song-paddings;
+
+      @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
     }
 
     .song-difficulty-pill {
@@ -280,5 +288,13 @@
     gap: 3px;
     margin-bottom: 20px;
     justify-content: center;
+  }
+
+  .option {
+    margin-bottom: 1rem;
+
+    .option-heading {
+      font-weight: bold;
+    }
   }
 }

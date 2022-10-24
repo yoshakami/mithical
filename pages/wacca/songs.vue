@@ -46,7 +46,7 @@
   </v-container>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import fuzzysort from "fuzzysort";
 import waccaData from "~/assets/js/waccaData.js";
 
@@ -63,7 +63,7 @@ const activeCategory = ref("");
 const search = ref("");
 const activeFilters = ref([]);
 
-function generatePlayerData() {
+function generatePlayerData(): void {
   // fake playerData
   for (let song of waccaData.songs) {
     let songData = {
@@ -79,9 +79,9 @@ function generatePlayerData() {
   }
 }
 
-function randomResult() {
-  let score = Math.floor(Math.random() * 1000000);
-  let misses = Math.floor(Math.random() * 20);
+function randomResult(): object {
+  let score: number = Math.floor(Math.random() * 1000000);
+  let misses: number = Math.floor(Math.random() * 20);
 
   if (Math.random() > 0.9) {
     score = 1000000;
@@ -95,7 +95,7 @@ function randomResult() {
 }
 generatePlayerData();
 
-function clickCategory(category) {
+function clickCategory(category: string): void {
   if (activeCategory.value === category) {
     activeCategory.value = "";
   } else {
@@ -103,7 +103,7 @@ function clickCategory(category) {
   }
 }
 
-function clickFilter(filter) {
+function clickFilter(filter: string): void {
   if (activeFilters.value.includes(filter)) {
     activeFilters.value = activeFilters.value.filter((f) => f !== filter);
   } else {
