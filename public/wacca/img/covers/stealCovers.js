@@ -5,7 +5,7 @@ const https = require("https");
 let rawdata = fs.readFileSync("../../data.json");
 let waccaData = JSON.parse(rawdata);
 
-for (song of waccaData.songs) {
+for (song of waccaData) {
   const coverName = song.imageName;
 
   // check if file exists

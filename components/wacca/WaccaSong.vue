@@ -28,8 +28,8 @@
 
       <div class="song-sheets">
         <div
-          v-for="(sheet, i) in song.sheets"
-          :key="sheet.difficulty"
+          v-for="(difficulty, i) in song.sheets"
+          :key="i"
           class="song-difficulty"
         >
           <div class="all-song-medal">
@@ -38,14 +38,14 @@
 
           <div
             class="song-difficulty-pill"
-            :class="'song-difficulty-' + sheet.difficulty"
+            :class="`song-difficulty-${difficulties[i]}`"
           >
             <div class="song-difficulty-name">
-              {{ sheet.difficulty }}
+              {{ difficulties[i] }}
             </div>
 
             <div class="song-difficulty-level">
-              {{ sheet.level }}
+              {{ difficulty }}
             </div>
           </div>
 
@@ -54,7 +54,7 @@
             v-if="playerData && playerData.scores[i]"
           >
             <div class="song-score">
-              {{ formatScore(playerData.scores[i].score) }}
+              {{ playerData.scores[i].score }}
             </div>
           </div>
         </div>
@@ -73,24 +73,24 @@ const fullUrl = computed((): string => {
   return `/wacca/img/covers/${props.song.imageName}`;
 });
 
-function formatScore(score: number): string {
-  return score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-function medal(i: number): string {
-  if (!props.playerData || typeof props.playerData.scores[i] === "undefined") {
+function medal(difficulty): string {
+  console.log(difficulty);
+  console.log(props.playerData);
+  if (!props.playerData || !props.playerData.scores[difficulty]) {
     return "none";
   }
 
-  if (props.playerData.scores[i].score == 1000000) {
+  if (props.playerData.scores[difficulty].all_marvelous_count > 0) {
     return "allmarvelous";
-  } else if (props.playerData.scores[i].misses === 0) {
+  } else if (props.playerData.scores[difficulty].full_combo_count > 0) {
     return "fullcombo";
-  } else if (props.playerData.scores[i].misses <= 5) {
+  } else if (props.playerData.scores[difficulty].missless_count > 0) {
     return "missless";
-  } else {
+  } else if (props.playerData.scores[difficulty].clear_count > 0) {
     return "clear";
   }
+
+  return "none";
 }
 
 const emit = defineEmits(["toggleFavorite"]);
@@ -98,4 +98,6 @@ const emit = defineEmits(["toggleFavorite"]);
 function toggleFavorite(): void {
   emit("toggleFavorite");
 }
+
+const difficulties = ["Normal", "Hard", "Expert", "Inferno"];
 </script>

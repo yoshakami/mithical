@@ -104,21 +104,29 @@
     }
   }
 
+  .profile-stat {
+    display: inline-block;
+  }
+
   // RECENTS
   $play-paddings: 10px;
   $play-cover-size: 80px;
   .play {
-    display: flex;
     position: relative;
-    gap: $play-paddings;
 
     padding: $play-paddings;
+    padding-bottom: 0;
     margin-bottom: 1rem;
 
     border-radius: $play-paddings;
 
     background-color: black;
     overflow: hidden;
+
+    .player-header {
+      display: flex;
+      gap: $play-paddings;
+    }
 
     .play-cover {
       flex-shrink: 0;
@@ -130,13 +138,12 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
       }
     }
 
     &.expanded .play-cover {
-      width: 160px;
-      height: 160px;
+      // width: 160px;
+      // height: 160px;
     }
 
     .play-info {
@@ -178,6 +185,7 @@
 
     .play-stats {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
 
       background: white;
@@ -209,24 +217,112 @@
       }
     }
 
+    .play-grade {
+      height: 32px;
+
+      img {
+        height: 100%;
+      }
+    }
+
     .play-score {
       font-size: 1.5rem;
       font-weight: 600;
-      margin-right: 20px;
+      padding-left: 10px;
+    }
+
+    .play-pb {
+      font-weight: 300;
+      padding-left: 10px;
     }
 
     .play-spacer {
       flex-grow: 1;
     }
 
+    .play-medal {
+      padding-left: 10px;
+
+      span {
+        padding-right: 2px; // weird cutoff otherwise
+      }
+    }
+
     .play-detail {
+      display: flex;
+      gap: 10px;
+      margin-top: $play-paddings;
+      line-height: 1;
+      font-size: 1.5rem;
+      font-family: "SHINBI", sans-serif;
+      color: white;
+      flex-wrap: wrap;
+      justify-content: space-around;
       max-height: 0px;
       overflow: hidden;
       transition: max-height 0.5s;
     }
 
     &.expanded .play-detail {
-      max-height: 168px;
+      max-height: 156px;
+    }
+
+    .play-judgements {
+      margin-bottom: 20px;
+
+      .play-judgement {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 0;
+        margin-top: -10px;
+
+        .play-judgement-label {
+          letter-spacing: -2px;
+        }
+
+        &.judgement-Marvelous .play-judgement-label {
+          background: -webkit-linear-gradient(#ff1e8c, #fe8e34);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.judgement-Great .play-judgement-label {
+          background: -webkit-linear-gradient(#ffff88, #c2e67b);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.judgement-Good .play-judgement-label {
+          background: -webkit-linear-gradient(#98edff, #72a6f1);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.judgement-Miss .play-judgement-label {
+          background: -webkit-linear-gradient(#8b8b8b, #dadada);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.judgement-Fast .play-judgement-label {
+          background: -webkit-linear-gradient(#fd6d1e, #ad093f);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.judgement-Late .play-judgement-label {
+          background: -webkit-linear-gradient(#8872fe, #1e1eff);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.judgement-Combo .play-judgement-label {
+          // background: -webkit-linear-gradient(#8b8b8b, #dadada);
+          // background-clip: text;
+          // -webkit-text-fill-color: transparent;
+        }
+      }
     }
 
     .play-expand {
@@ -311,19 +407,19 @@
     }
 
     .song-difficulty-pill {
-      &.song-difficulty-normal {
+      &.song-difficulty-Normal {
         background-color: #009de6;
       }
 
-      &.song-difficulty-hard {
+      &.song-difficulty-Hard {
         background-color: #fed131;
       }
 
-      &.song-difficulty-expert {
+      &.song-difficulty-Expert {
         background-color: #fc06a3;
       }
 
-      &.song-difficulty-inferno {
+      &.song-difficulty-Inferno {
         background-color: #4a004f;
       }
 
@@ -332,6 +428,8 @@
       font-size: 1.3rem;
       text-transform: uppercase;
       padding: 3px 15px;
+      padding-right: 0px;
+
       border-radius: 100px;
       background-image: linear-gradient(
         110deg,
@@ -340,7 +438,7 @@
       );
 
       .song-difficulty-level {
-        width: 30px;
+        width: 55px;
         text-align: center;
       }
     }
@@ -403,7 +501,20 @@
   .medal-missless {
     span {
       color: #dfff01;
+      -webkit-text-stroke: #7eb301 0.1px;
       background: linear-gradient(180deg, #fffc00, #b2fb03);
+      background-clip: text;
+      // evil vendor prefix stuff
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
+
+  .medal-failed {
+    span {
+      text-transform: uppercase;
+      color: #e80e69;
+      background: linear-gradient(180deg, #e80e69, #29257c);
       background-clip: text;
       // evil vendor prefix stuff
       -webkit-text-fill-color: transparent;

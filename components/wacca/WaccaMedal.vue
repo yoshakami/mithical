@@ -14,5 +14,6 @@ const medalNames = {
   fullcombo: "Full Combo!",
   missless: "Missless!",
   clear: "Clear!",
+  failed: "Failed",
 };
 </script>

@@ -22,16 +22,19 @@
       </svg>
     </NuxtLink>
     <v-select
-      class="profile-select"
+      class="profile-select mr-16"
       v-model="profile"
       :items="profiles"
-      item-title="name"
+      item-title="user_name"
       return-object
       hide-details
       single-line
       prepend-inner-icon="mdi-card-account-details-outline"
     />
-    <NuxtLink to="/wacca" class="ml-16"><div>Wacca</div></NuxtLink>
+    <NuxtLink to="/wacca"><div>Wacca</div></NuxtLink>
+    <NuxtLink to="#"><div>Chunithm</div></NuxtLink>
+    <NuxtLink to="#"><div>Initial D Zero</div></NuxtLink>
+    <NuxtLink to="#"><div>Wacchunitial D</div></NuxtLink>
   </div>
 </template>
 
