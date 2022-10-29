@@ -1,10 +1,8 @@
 @import "wacca.scss";
 
-@font-face {
-  font-family: "SHINBI";
-  font-style: normal;
-  font-weight: 400;
-  src: url("~/assets/font/SHINBI.woff2") format("woff2");
+body {
+  // evil hack to make waifus work (waifus > neat code)
+  overflow: hidden;
 }
 
 .front-header {
@@ -14,7 +12,7 @@
   flex-direction: column;
   text-transform: uppercase;
   .mithical {
-    width: 400px;
+    max-width: 400px;
   }
 
   h1 {
@@ -30,11 +28,9 @@
   font-weight: bold;
   line-height: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  background: #e50065;
+  background: rgb(var(--v-theme-primary));
 
   .profile-select {
     max-width: 200px;
@@ -43,14 +39,21 @@
   a {
     color: white;
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
 
-    padding: 10px 10px;
+    padding: 0 10px;
     text-decoration: none;
 
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(255, 255, 255, 0.3);
     }
   }
+}
+
+.layout {
+  flex-grow: 1;
 }

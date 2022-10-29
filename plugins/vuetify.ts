@@ -10,6 +10,13 @@ const waccaTheme: ThemeDefinition = {
   },
 };
 
+const mithicalTheme: ThemeDefinition = {
+  dark: true,
+  colors: {
+    primary: "#000",
+  },
+};
+
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     components,
@@ -17,6 +24,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     theme: {
       themes: {
         wacca: waccaTheme,
+        mithical: mithicalTheme,
       },
     },
   });

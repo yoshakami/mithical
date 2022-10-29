@@ -1,6 +1,8 @@
 <template>
-  <MainNav />
-  <NuxtLayout :name="layout"> </NuxtLayout>
+  <v-app>
+    <MainNav />
+    <NuxtLayout :name="layout"> </NuxtLayout>
+  </v-app>
 </template>
 
 <style>
@@ -15,7 +17,7 @@
 }
 </style>
 
-<script setup lang="ts">
+<script setup>
 import { useTheme } from "vuetify";
 
 const layout = ref("dark");
@@ -29,12 +31,12 @@ const route = useRoute();
 
 watch(route, updateTheme);
 
-function updateTheme(): void {
+function updateTheme() {
   // get the first part of the url
   let theme = route.path.split("/")[1];
 
   if (!["wacca"].includes(theme)) {
-    theme = "dark";
+    theme = "mithical";
   }
 
   layout.value = theme;
@@ -42,4 +44,23 @@ function updateTheme(): void {
 }
 
 updateTheme();
+
+// profile stuff
+const profiles = useState("profiles", () => [
+  {
+    luid: "11111111111111111111",
+  },
+]);
+
+const profile = useState("profile", () => {
+  return {};
+});
+
+async function loadProfile(luid) {
+  const data = await $fetch(`http://192.168.0.150:3001/wacca/user/${luid}`);
+
+  profile.value = data;
+}
+
+loadProfile(profiles.value[0].luid);
 </script>

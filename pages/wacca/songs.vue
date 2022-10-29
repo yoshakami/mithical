@@ -18,9 +18,8 @@
         v-for="filter in filters"
         :key="filter"
         @click="clickFilter(filter)"
-        pill
         :color="activeFilters.includes(filter) ? 'primary' : 'default'"
-        :rounded="true"
+        rounded
       >
         {{ filter }}
       </v-btn>
@@ -34,7 +33,7 @@
 
     <ClientOnly>
       <div class="songs">
-        <div v-for="song in filteredSongs" :key="song.songId">
+        <div v-for="song in paginatedSongs" :key="song.songId">
           <WaccaSong
             :song="song"
             :player-data="playerData[song.songId]"
@@ -42,6 +41,11 @@
           />
         </div>
       </div>
+
+      <v-pagination
+        v-model="page"
+        :length="Math.ceil(filteredSongs.length / perPage)"
+      ></v-pagination>
     </ClientOnly>
   </v-container>
 </template>
@@ -58,10 +62,12 @@ const filters = [
   "Uncleared Inferno",
 ];
 
+const perPage = 50;
+const page = ref(1);
 const playerData = ref({});
-const activeCategory = ref("");
 const search = ref("");
 const activeFilters = ref([]);
+const activeCategory = ref("");
 
 function generatePlayerData(): void {
   // fake playerData
@@ -164,6 +170,18 @@ const filteredSongs = computed(() => {
   }
 
   return results;
+});
+
+const paginatedSongs = computed(() => {
+  return filteredSongs.value.slice(
+    (page.value - 1) * perPage,
+    page.value * perPage
+  );
+});
+
+// reset page to 1 if the song list changes
+watch(filteredSongs, () => {
+  page.value = 1;
 });
 
 function toggleFavorite(song) {

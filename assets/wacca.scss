@@ -1,7 +1,12 @@
-.v-theme--wacca {
-  .v-application__wrap {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAA9AgMAAAC4tyNYAAAADFBMVEX4+Pj////9/f37+/uz03onAAAA10lEQVQoz1XQvQ3CMBCG4QNEQZEybMAISJSRWIAil6RIkREYgSW8D0tkH/z9JBJu/FaPfRff2E7n+xSL6xAv1yUm1zlG1y0GVxtppkR2QjJyEVJLTFNrElJrFFJLzFpLTEF1RFALENaMn7AmIKwRCIpMiyJTVB0Q1gKENUfDAnNngbmxwKwsMLnVk/V/Hntd9yp75cdxzLfroI1wiNl1z97V5qDA+65MMETSTINRjKQYDtEbSTOFAwgBIwSMEDBCwAgBIwSMEDJYohggYoCYObtmIGKAiPkBm4hj3UXWVGQAAAAASUVORK5CYII=);
-  }
+@font-face {
+  font-family: "SHINBI";
+  font-style: normal;
+  font-weight: 400;
+  src: url("~/assets/font/SHINBI.woff2") format("woff2");
+}
+
+.v-theme--wacca.layout {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAA9AgMAAAC4tyNYAAAADFBMVEX4+Pj////9/f37+/uz03onAAAA10lEQVQoz1XQvQ3CMBCG4QNEQZEybMAISJSRWIAil6RIkREYgSW8D0tkH/z9JBJu/FaPfRff2E7n+xSL6xAv1yUm1zlG1y0GVxtppkR2QjJyEVJLTFNrElJrFFJLzFpLTEF1RFALENaMn7AmIKwRCIpMiyJTVB0Q1gKENUfDAnNngbmxwKwsMLnVk/V/Hntd9yp75cdxzLfroI1wiNl1z97V5qDA+65MMETSTINRjKQYDtEbSTOFAwgBIwSMEDBCwAgBIwSMEDJYohggYoCYObtmIGKAiPkBm4hj3UXWVGQAAAAASUVORK5CYII=);
 
   .v-container {
     max-width: 1000px;
@@ -17,6 +22,12 @@
       margin: 0 auto;
       display: block;
     }
+  }
+
+  @mixin slanted($dist) {
+    clip-path: polygon($dist 0, 100% 0, calc(100% - $dist) 100%, 0 100%);
+    padding-left: $dist;
+    padding-right: $dist;
   }
 
   #wacca-nav {
@@ -53,6 +64,184 @@
     }
   }
 
+  // INDEX
+  .waifu-holder {
+    position: relative;
+    pointer-events: none;
+  }
+
+  .waifu {
+    position: absolute;
+    $size: 0.7;
+
+    width: 2048px * $size;
+    height: 2048px * $size;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    top: -100px;
+    right: -600px;
+  }
+
+  .profile-box-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .profile-box {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    padding: 10px 40px;
+
+    &.slanted {
+      @include slanted(30px);
+    }
+
+    .light {
+      font-weight: 200;
+    }
+  }
+
+  // RECENTS
+  $play-paddings: 10px;
+  $play-cover-size: 80px;
+  .play {
+    display: flex;
+    position: relative;
+    gap: $play-paddings;
+
+    padding: $play-paddings;
+    margin-bottom: 1rem;
+
+    border-radius: $play-paddings;
+
+    background-color: black;
+    overflow: hidden;
+
+    .play-cover {
+      flex-shrink: 0;
+      width: $play-cover-size;
+      height: $play-cover-size;
+
+      transition: width 0.5s, height 0.5s;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.expanded .play-cover {
+      width: 160px;
+      height: 160px;
+    }
+
+    .play-info {
+      flex-grow: 1;
+      color: white;
+      font-weight: bold;
+      min-width: 0;
+    }
+
+    .play-header {
+      display: flex;
+      align-items: center;
+
+      line-height: 1.4;
+
+      .play-header-left {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .play-title {
+          font-size: 1.5rem;
+          margin-bottom: -10px;
+          margin-right: 10px;
+        }
+
+        .play-artist {
+          font-size: 1rem;
+          color: rgb(var(--v-theme-primary));
+        }
+      }
+
+      .play-header-right {
+        flex-shrink: 0;
+      }
+    }
+
+    .play-stats {
+      display: flex;
+      align-items: center;
+
+      background: white;
+      color: black;
+      @include slanted(15px);
+      padding-left: 0;
+    }
+
+    .play-difficulty {
+      font-size: 1.5rem;
+      color: white;
+      @include slanted(15px);
+      padding: 0 25px;
+
+      &.difficulty-1 {
+        background-color: #009de6;
+      }
+
+      &.difficulty-2 {
+        background-color: #fed131;
+      }
+
+      &.difficulty-3 {
+        background-color: #fc06a3;
+      }
+
+      &.difficulty-4 {
+        background-color: #4a004f;
+      }
+    }
+
+    .play-score {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+
+    .play-spacer {
+      flex-grow: 1;
+    }
+
+    .play-detail {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.5s;
+    }
+
+    &.expanded .play-detail {
+      max-height: 168px;
+    }
+
+    .play-expand {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 13px);
+
+      .v-btn__content {
+        transform: translateY(-6px);
+      }
+    }
+  }
+
+  // SONGS
   $song-paddings: 10px;
   .song {
     display: flex;
@@ -81,6 +270,7 @@
       flex-grow: 1;
       color: white;
       font-weight: bold;
+      min-width: 0;
     }
 
     .song-header {
@@ -166,119 +356,115 @@
       text-align: center;
     }
 
-    .song-medal {
-      white-space: nowrap;
-      font-family: "SHINBI", sans-serif;
-      letter-spacing: -1.5px;
-      font-size: 1.3rem;
-      text-align: center;
+    .all-song-medal {
       transform: rotate(-10deg);
       height: 40px;
       margin-bottom: -5px;
+      text-align: center;
     }
+  }
 
-    .medal-clear {
-      text-transform: uppercase;
-      font-weight: 300;
+  .song-medal {
+    white-space: nowrap;
+    font-family: "SHINBI", sans-serif;
+    letter-spacing: -2px;
+    font-size: 1.3rem;
+  }
 
-      span {
-        padding: 0 2px;
-        background-image: linear-gradient(
-          90deg,
-          #057bd0,
-          20%,
-          #47fee7,
-          40%,
-          #fd44a0,
-          60%,
-          #47fee7,
-          80%,
-          #057bd0
-        );
-        background-clip: text;
+  .medal-clear {
+    text-transform: uppercase;
+    font-weight: 300;
 
-        // evil vendor prefix stuff
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-stroke: 3px transparent;
-        -moz-text-stroke: 3px transparent;
-        color: white;
-      }
+    span {
+      padding: 0 2px;
+      background-image: linear-gradient(
+        90deg,
+        #057bd0,
+        20%,
+        #47fee7,
+        40%,
+        #fd44a0,
+        60%,
+        #47fee7,
+        80%,
+        #057bd0
+      );
+      background-clip: text;
+
+      // evil vendor prefix stuff
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-stroke: 3px transparent;
+      -moz-text-stroke: 3px transparent;
+      color: white;
     }
+  }
 
-    .medal-missless {
-      span {
-        color: #dfff01;
-        background: linear-gradient(180deg, #fffc00, #b2fb03);
-        background-clip: text;
-        // evil vendor prefix stuff
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-      }
+  .medal-missless {
+    span {
+      color: #dfff01;
+      background: linear-gradient(180deg, #fffc00, #b2fb03);
+      background-clip: text;
+      // evil vendor prefix stuff
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
     }
+  }
 
-    .medal-fullcombo {
-      span {
-        color: #dfff01;
-        background: linear-gradient(
-          180deg,
-          #fb0298,
-          33%,
-          #fb0298,
-          66%,
-          #530bc8
-        );
-        background-clip: text;
-        // evil vendor prefix stuff
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-      }
+  .medal-fullcombo {
+    span {
+      color: #dfff01;
+      background: linear-gradient(180deg, #fb0298, 33%, #fb0298, 66%, #530bc8);
+      background-clip: text;
+      // evil vendor prefix stuff
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
     }
+  }
 
-    .medal-allmarvelous {
-      span {
-        height: 30px;
-        display: block;
-        font-weight: 900;
-        color: #dfff01;
-        background: linear-gradient(
-          170deg,
-          #c323d3,
-          5%,
-          #eccd1b,
-          15%,
-          #eca41b,
-          25%,
-          #e43a3d,
-          33%,
-          #c323d3,
-          50%,
-          #c323d3,
-          55%,
-          #eccd1b,
-          65%,
-          #eca41b,
-          75%,
-          #e43a3d,
-          83%,
-          #c323d3
-        );
-        background-clip: text;
-        // evil vendor prefix stuff
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+  .medal-allmarvelous {
+    span {
+      height: 30px;
+      display: block;
+      font-weight: 900;
+      color: #dfff01;
+      background: linear-gradient(
+        170deg,
+        #c323d3,
+        5%,
+        #eccd1b,
+        15%,
+        #eca41b,
+        25%,
+        #e43a3d,
+        33%,
+        #c323d3,
+        50%,
+        #c323d3,
+        55%,
+        #eccd1b,
+        65%,
+        #eca41b,
+        75%,
+        #e43a3d,
+        83%,
+        #c323d3
+      );
+      background-clip: text;
+      // evil vendor prefix stuff
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
 
-        @keyframes marvelous {
-          from {
-            background-position: 0 0px;
-          }
-          to {
-            background-position: 0 30px;
-          }
+      @keyframes marvelous {
+        from {
+          background-position: 0 0px;
         }
-
-        animation: 2s linear infinite marvelous;
+        to {
+          background-position: 0 30px;
+        }
       }
+
+      animation: 2s linear infinite marvelous;
     }
   }
 

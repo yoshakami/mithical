@@ -1,7 +1,7 @@
 const waccaData = {
   songs: [
     {
-      songId: "Rainbow Dream",
+      songId: 2224,
       category: "TANO*C（オリジナル）",
       title: "Rainbow Dream",
       artist: "DJ Genki feat. Yukacco",
@@ -41,7 +41,7 @@ const waccaData = {
       ],
     },
     {
-      songId: "Knight Rider",
+      songId: 2225,
       category: "TANO*C（オリジナル）",
       title: "Knight Rider",
       artist: "USAO",
@@ -81,7 +81,7 @@ const waccaData = {
       ],
     },
     {
-      songId: "Poseidon",
+      songId: 1002,
       category: "TANO*C（オリジナル）",
       title: "Poseidon",
       artist: "Massive New Krew",

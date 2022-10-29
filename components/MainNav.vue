@@ -31,29 +31,11 @@
       single-line
       prepend-inner-icon="mdi-card-account-details-outline"
     />
-    <NuxtLink to="/wacca" class="ml-16">Wacca</NuxtLink>
-    <NuxtLink to="#">Chunithm</NuxtLink>
-    <NuxtLink to="#">Initial D</NuxtLink>
-    <NuxtLink to="#">Whatever else SEGA has</NuxtLink>
+    <NuxtLink to="/wacca" class="ml-16"><div>Wacca</div></NuxtLink>
   </div>
 </template>
 
 <script setup>
-const profiles = ref([
-  {
-    name: "Maurice",
-    wacca: {
-      options: {},
-    },
-  },
-
-  {
-    name: "Maurice but longer",
-    wacca: {
-      options: {},
-    },
-  },
-]);
-
-const profile = useState("profile", () => profiles.value[0]);
+const profiles = useState("profiles");
+const profile = useState("profile");
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="song">
     <div class="song-cover">
-      <img :src="fullUrl" />
+      <v-img :src="fullUrl" />
     </div>
     <div class="song-info">
       <div class="song-header">
@@ -32,29 +32,9 @@
           :key="sheet.difficulty"
           class="song-difficulty"
         >
-          <div
-            v-if="medal(i) == 'allMarvelous'"
-            class="song-medal medal-allmarvelous"
-          >
-            <span>All Marvelous!!</span>
+          <div class="all-song-medal">
+            <div class="song-medal"><WaccaMedal :medal="medal(i)" /></div>
           </div>
-
-          <div
-            v-if="medal(i) == 'fullCombo'"
-            class="song-medal medal-fullcombo"
-          >
-            <span>Full Combo!</span>
-          </div>
-
-          <div v-if="medal(i) == 'missless'" class="song-medal medal-missless">
-            <span>Missless!</span>
-          </div>
-
-          <div v-if="medal(i) == 'clear'" class="song-medal medal-clear">
-            <span>Clear!</span>
-          </div>
-
-          <div v-if="medal(i) == 'none'" class="song-medal medal-none"></div>
 
           <div
             class="song-difficulty-pill"
@@ -103,9 +83,9 @@ function medal(i: number): string {
   }
 
   if (props.playerData.scores[i].score == 1000000) {
-    return "allMarvelous";
+    return "allmarvelous";
   } else if (props.playerData.scores[i].misses === 0) {
-    return "fullCombo";
+    return "fullcombo";
   } else if (props.playerData.scores[i].misses <= 5) {
     return "missless";
   } else {

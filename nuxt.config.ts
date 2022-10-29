@@ -12,4 +12,8 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
+  experimental: {
+    writeEarlyHints: false,
+  },
+  ssr: false,
 });
