@@ -17,8 +17,8 @@
 
         <div class="song-header-right">
           <div class="song-favorite">
-            <v-btn icon @click="toggleFavorite" variant="plain" size="x-large">
-              <v-icon color="yellow">{{
+            <v-btn icon @click="toggleFavorite" variant="plain">
+              <v-icon color="yellow" size="x-large">{{
                 playerData.favorite ? "mdi-star" : "mdi-star-outline"
               }}</v-icon>
             </v-btn>
@@ -74,8 +74,6 @@ const fullUrl = computed((): string => {
 });
 
 function medal(difficulty): string {
-  console.log(difficulty);
-  console.log(props.playerData);
   if (!props.playerData || !props.playerData.scores[difficulty]) {
     return "none";
   }

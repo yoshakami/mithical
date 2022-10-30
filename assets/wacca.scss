@@ -64,6 +64,12 @@
     }
   }
 
+  .loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
   // INDEX
   .waifu-holder {
     position: relative;
@@ -83,8 +89,24 @@
     right: -600px;
   }
 
-  .profile-box-wrapper {
+  .profile-name {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
+
+    .profile-icon {
+      height: 150px;
+      margin-right: -40px;
+      z-index: 2;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .profile-box.slanted {
+      padding-left: 50px;
+    }
   }
 
   .profile-box {
@@ -156,12 +178,12 @@
     .play-header {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
 
       line-height: 1.4;
 
       .play-header-left {
         flex-grow: 1;
-        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -180,6 +202,9 @@
 
       .play-header-right {
         flex-shrink: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
     }
 
@@ -199,6 +224,7 @@
       color: white;
       @include slanted(15px);
       padding: 0 25px;
+      margin-right: -10px;
 
       &.difficulty-1 {
         background-color: #009de6;
@@ -218,6 +244,7 @@
     }
 
     .play-grade {
+      padding-left: 10px;
       height: 32px;
 
       img {

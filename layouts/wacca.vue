@@ -22,7 +22,38 @@
 </style>
 
 <script setup>
+const runtimeConfig = useRuntimeConfig();
+
 useHead({
   title: "Mithical | Wacca",
 });
+
+const profile = useState("profile");
+const profileLoading = useState("profileLoading", () => true);
+const profileError = useState("profileError");
+
+let luid = "11111111111111111111";
+let profileUrl = `${runtimeConfig.apiUrl}/wacca/user/${luid}`;
+
+const {
+  pending,
+  data: fetchProfile,
+  error: fetchError,
+} = useLazyFetch(profileUrl);
+watch(fetchProfile, (newProfile) => {
+  profile.value = newProfile;
+});
+watch(fetchError, (newError) => {
+  profileError.value = newError;
+});
+
+watch(pending, (newPending) => {
+  profileLoading.value = newPending;
+});
+
+async function loadProfile(luid) {
+  const data = await $fetch(profileUrl);
+
+  profile.value = data;
+}
 </script>

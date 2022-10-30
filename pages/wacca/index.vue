@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <WaccaProfileRequired>
     <v-container class="pa-0 waifu-holder">
       <div
         class="waifu"
@@ -9,12 +9,15 @@
       ></div>
     </v-container>
     <v-container>
-      <img :src="`/wacca/img/icons/${icon.path}.png`" />
-
-      <WaccaProfileBox
-        ><span class="light">Welcome back</span> {{ profile.user_name
-        }}<span class="light">!</span></WaccaProfileBox
-      >
+      <div class="profile-name">
+        <div class="profile-icon">
+          <img :src="`/wacca/img/icons/${icon.path}.png`" />
+        </div>
+        <WaccaProfileBox
+          ><span class="light">Welcome back</span> {{ profile.user_name
+          }}<span class="light">!</span></WaccaProfileBox
+        >
+      </div>
 
       <WaccaProfileBox>
         <div class="profile-stat mr-5">
@@ -28,7 +31,7 @@
         </div>
       </WaccaProfileBox>
     </v-container>
-  </div>
+  </WaccaProfileRequired>
 </template>
 
 <script setup>

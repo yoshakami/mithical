@@ -44,23 +44,4 @@ function updateTheme() {
 }
 
 updateTheme();
-
-// profile stuff
-const profiles = useState("profiles", () => [
-  {
-    luid: "11111111111111111111",
-  },
-]);
-
-const profile = useState("profile", () => {
-  return {};
-});
-
-async function loadProfile(luid) {
-  const data = await $fetch(`http://192.168.0.150:3001/wacca/user/${luid}`);
-
-  profile.value = data;
-}
-
-loadProfile(profiles.value[0].luid);
 </script>

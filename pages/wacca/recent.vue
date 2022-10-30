@@ -1,7 +1,9 @@
 <template>
-  <v-container>
-    <WaccaPlay v-for="play in profile.playlog" :play="play" />
-  </v-container>
+  <WaccaProfileRequired>
+    <v-container>
+      <WaccaPlay v-for="play in profile.playlog" :play="play" />
+    </v-container>
+  </WaccaProfileRequired>
 </template>
 
 <script setup>

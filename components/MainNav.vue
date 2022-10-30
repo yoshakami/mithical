@@ -21,7 +21,7 @@
         />
       </svg>
     </NuxtLink>
-    <v-select
+    <!-- <v-select
       class="profile-select mr-16"
       v-model="profile"
       :items="profiles"
@@ -30,15 +30,10 @@
       hide-details
       single-line
       prepend-inner-icon="mdi-card-account-details-outline"
-    />
+    /> -->
     <NuxtLink to="/wacca"><div>Wacca</div></NuxtLink>
     <NuxtLink to="#"><div>Chunithm</div></NuxtLink>
     <NuxtLink to="#"><div>Initial D Zero</div></NuxtLink>
     <NuxtLink to="#"><div>Wacchunitial D</div></NuxtLink>
   </div>
 </template>
-
-<script setup>
-const profiles = useState("profiles");
-const profile = useState("profile");
-</script>

@@ -1,58 +1,61 @@
 <template>
-  <v-container>
-    <div class="filters">
-      <v-btn
-        v-for="category in categories"
-        :key="category.category"
-        @click="clickCategory(category.category)"
-        pill
-        :color="activeCategory === category.category ? 'primary' : 'default'"
-        :rounded="true"
-      >
-        {{ category.category }}
-      </v-btn>
-    </div>
-
-    <div class="filters">
-      <v-btn
-        v-for="filter in filters"
-        :key="filter"
-        @click="clickFilter(filter)"
-        :color="activeFilters.includes(filter) ? 'primary' : 'default'"
-        rounded
-      >
-        {{ filter }}
-      </v-btn>
-    </div>
-
-    <v-text-field
-      v-model="search"
-      label="Find a Song"
-      prepend-inner-icon="mdi-magnify"
-    ></v-text-field>
-
-    <ClientOnly>
-      <div class="songs">
-        <div v-for="song in paginatedSongs" :key="song.id">
-          <WaccaSong
-            :song="song"
-            :player-data="playerData[song.id]"
-            @toggle-favorite="toggleFavorite(song)"
-          />
-        </div>
+  <WaccaProfileRequired>
+    <v-container>
+      <div class="filters">
+        <v-btn
+          v-for="category in categories"
+          :key="category.category"
+          @click="clickCategory(category.category)"
+          pill
+          :color="activeCategory === category.category ? 'primary' : 'default'"
+          :rounded="true"
+        >
+          {{ category.category }}
+        </v-btn>
       </div>
 
-      <v-pagination
-        v-model="page"
-        :length="Math.ceil(filteredSongs.length / perPage)"
-      ></v-pagination>
-    </ClientOnly>
-  </v-container>
+      <div class="filters">
+        <v-btn
+          v-for="filter in filters"
+          :key="filter"
+          @click="clickFilter(filter)"
+          :color="activeFilters.includes(filter) ? 'primary' : 'default'"
+          rounded
+        >
+          {{ filter }}
+        </v-btn>
+      </div>
+
+      <v-text-field
+        v-model="search"
+        label="Find a Song"
+        prepend-inner-icon="mdi-magnify"
+      ></v-text-field>
+
+      <ClientOnly>
+        <div class="songs">
+          <div v-for="song in paginatedSongs" :key="song.id">
+            <WaccaSong
+              :song="song"
+              :player-data="playerData[song.id]"
+              @toggle-favorite="toggleFavorite(song)"
+            />
+          </div>
+        </div>
+
+        <v-pagination
+          v-model="page"
+          :length="Math.ceil(filteredSongs.length / perPage)"
+        ></v-pagination>
+      </ClientOnly>
+    </v-container>
+  </WaccaProfileRequired>
 </template>
 
 <script setup>
 import fuzzysort from "fuzzysort";
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
+const runtimeConfig = useRuntimeConfig();
 
 const filters = [
   "Favorites",
@@ -69,21 +72,6 @@ const page = ref(1);
 const search = ref("");
 const activeFilters = ref([]);
 const activeCategory = ref("");
-
-function randomResult() {
-  let score = Math.floor(Math.random() * 1000000);
-  let misses = Math.floor(Math.random() * 20);
-
-  if (Math.random() > 0.9) {
-    score = 1000000;
-    misses = 0;
-  }
-
-  return {
-    score: score,
-    misses: misses,
-  };
-}
 
 function clickCategory(category) {
   if (activeCategory.value === category) {
@@ -161,7 +149,7 @@ const filteredSongs = computed(() => {
     // perform search
     results = fuzzysort
       .go(search.value, results, {
-        keys: ["title", "artist"],
+        keys: ["title", "artist", "titleEnglish"],
       })
       .map((result) => result.obj);
   }
@@ -181,9 +169,22 @@ watch(filteredSongs, () => {
   page.value = 1;
 });
 
-function toggleFavorite(song) {
-  // playerData.value[song.songId].favorite =
-  //   !playerData.value[song.songId].favorite;
+async function toggleFavorite(song) {
+  var index = profile.value.favorite_music.indexOf(song.id);
+
+  if (index === -1) {
+    profile.value.favorite_music.push(song.id);
+  } else {
+    profile.value.favorite_music.splice(index, 1);
+  }
+  cachePlayerData();
+
+  await $fetch(
+    `${runtimeConfig.apiUrl}/wacca/user/11111111111111111111/favorites/${song.id}/toggle`,
+    {
+      method: "POST",
+    }
+  );
 }
 
 function findMusic(song, difficulty) {
@@ -217,13 +218,14 @@ function cacheSongInfo(song) {
 const playerData = ref({});
 
 function cachePlayerData() {
+  console.log("caching playerdata");
   for (const song of waccaSongs) {
     playerData.value[song.id] = cacheSongInfo(song);
   }
 }
 
-watch(profile, cachePlayerData);
-cachePlayerData();
+if (profile.value) cachePlayerData(); // cache on page load if profile already exists
+watch(profile, cachePlayerData); // cache when profile changes
 
 const categories = [
   { category: "アニメ／ＰＯＰ" },
