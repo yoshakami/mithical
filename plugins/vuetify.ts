@@ -12,9 +12,7 @@ const waccaTheme: ThemeDefinition = {
 
 const mithicalTheme: ThemeDefinition = {
   dark: true,
-  colors: {
-    primary: "#000",
-  },
+  colors: {},
 };
 
 export default defineNuxtPlugin((nuxtApp) => {

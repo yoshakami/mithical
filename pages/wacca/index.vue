@@ -38,6 +38,10 @@
 import waccaNavigators from "~/assets/wacca/waccaNavigators.js";
 import waccaIcons from "~/assets/wacca/waccaIcons.js";
 
+definePageMeta({
+  middleware: ["auth"],
+});
+
 const profile = useState("profile");
 
 const level = computed(() => {
