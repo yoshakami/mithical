@@ -53,17 +53,19 @@ const realRate = computed(() => {
 });
 
 const navigator = computed(() => {
-  let navigatorId = profile.value.options.find((option) => {
-    return option.option_id == 1004;
-  }).value;
+  let navigatorId =
+    profile.value.options.find((option) => {
+      return option.option_id == 1004;
+    })?.value || 310001;
 
   return waccaNavigators.find((n) => n.id === navigatorId);
 });
 
 const icon = computed(() => {
-  let iconId = profile.value.options.find((option) => {
-    return option.option_id == 1003;
-  }).value;
+  let iconId =
+    profile.value.options.find((option) => {
+      return option.option_id == 1003;
+    })?.value || 102001;
 
   return waccaIcons.find((i) => i.id === iconId);
 });

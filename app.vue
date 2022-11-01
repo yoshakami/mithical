@@ -44,4 +44,13 @@ function updateTheme() {
 }
 
 updateTheme();
+
+// load cards from localStorage
+
+const cards = useState("cards", () => []);
+const storageCards = localStorage.getItem("cards");
+
+if (storageCards) {
+  cards.value = JSON.parse(storageCards);
+}
 </script>

@@ -21,19 +21,22 @@
         />
       </svg>
     </NuxtLink>
-    <!-- <v-select
-      class="profile-select mr-16"
-      v-model="profile"
-      :items="profiles"
+    <v-select
+      class="profile-select"
+      v-model="activeCard"
+      :items="cards"
       item-title="user_name"
-      return-object
+      item-value="luid"
       hide-details
       single-line
-      prepend-inner-icon="mdi-card-account-details-outline"
-    /> -->
-    <NuxtLink to="/wacca"><div>Wacca</div></NuxtLink>
-    <NuxtLink to="#"><div>Chunithm</div></NuxtLink>
-    <NuxtLink to="#"><div>Initial D Zero</div></NuxtLink>
-    <NuxtLink to="#"><div>Wacchunitial D</div></NuxtLink>
+      prepend-inner-icon="mdi-credit-card"
+    />
+    <div class="nav-spacer"></div>
+    <NuxtLink to="/wacca">Wacca</NuxtLink>
   </div>
 </template>
+
+<script setup>
+const cards = useState("cards");
+const activeCard = useState("activeCard", () => cards.value[0].luid);
+</script>

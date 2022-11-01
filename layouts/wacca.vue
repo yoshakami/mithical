@@ -23,6 +23,7 @@
 
 <script setup>
 const runtimeConfig = useRuntimeConfig();
+const activeCard = useState("activeCard");
 
 useHead({
   title: "Mithical | Wacca",
@@ -32,28 +33,21 @@ const profile = useState("profile");
 const profileLoading = useState("profileLoading", () => true);
 const profileError = useState("profileError");
 
-let luid = "11111111111111111111";
-let profileUrl = `${runtimeConfig.apiUrl}/wacca/user/${luid}`;
+async function loadProfile() {
+  let profileUrl = `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}`;
+  console.log("Loading profile", profileUrl);
 
-const {
-  pending,
-  data: fetchProfile,
-  error: fetchError,
-} = useLazyFetch(profileUrl);
-watch(fetchProfile, (newProfile) => {
-  profile.value = newProfile;
-});
-watch(fetchError, (newError) => {
-  profileError.value = newError;
-});
-
-watch(pending, (newPending) => {
-  profileLoading.value = newPending;
-});
-
-async function loadProfile(luid) {
-  const data = await $fetch(profileUrl);
-
-  profile.value = data;
+  $fetch(profileUrl)
+    .then((data) => {
+      profile.value = data;
+      profileLoading.value = false;
+    })
+    .catch((err) => {
+      profileError.value = err;
+      profileLoading.value = false;
+    });
 }
+
+loadProfile();
+watch(activeCard, loadProfile);
 </script>
