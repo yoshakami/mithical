@@ -35,11 +35,13 @@
       <ClientOnly>
         <div class="songs">
           <div v-for="song in paginatedSongs" :key="song.id">
-            <WaccaSong
-              :song="song"
-              :player-data="playerData[song.id]"
-              @toggle-favorite="toggleFavorite(song)"
-            />
+            <NuxtLink :to="`/wacca/songs/${song.id}`">
+              <WaccaSong
+                :song="song"
+                :player-data="playerData[song.id]"
+                @toggle-favorite="toggleFavorite(song)"
+              />
+            </NuxtLink>
           </div>
         </div>
 

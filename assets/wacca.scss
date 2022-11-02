@@ -365,163 +365,175 @@
   }
 
   // SONGS
-  $song-paddings: 10px;
-  .song {
-    display: flex;
-    gap: $song-paddings;
+  .songs {
+    $song-paddings: 10px;
 
-    padding: $song-paddings;
-    margin-bottom: 1rem;
-
-    border-radius: $song-paddings;
-
-    background-color: black;
-
-    .song-cover {
-      flex-shrink: 0;
-      width: 160px;
-      height: 160px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    a {
+      text-decoration: none;
     }
 
-    .song-info {
-      flex-grow: 1;
-      color: white;
-      font-weight: bold;
-      min-width: 0;
-    }
-
-    .song-header {
+    .song {
       display: flex;
-      justify-content: space-between;
-    }
-
-    .song-header-left {
-      flex-grow: 1;
-
-      .song-title {
-        font-size: 1.5rem;
-        margin-bottom: -10px;
-      }
-
-      .song-artist {
-        font-size: 1rem;
-        color: rgb(var(--v-theme-primary));
-      }
-    }
-
-    .song-header-right {
-      flex-shrink: 0;
-    }
-
-    .song-sheets {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: $song-paddings;
 
-      @media (max-width: 1000px) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: $song-paddings;
+      margin-bottom: 1rem;
+
+      border-radius: $song-paddings;
+
+      background-color: black;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #333;
       }
 
-      @media (max-width: 600px) {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-      }
-    }
+      .song-cover {
+        flex-shrink: 0;
+        width: 160px;
+        height: 160px;
 
-    .song-difficulty-pill {
-      &.song-difficulty-Normal {
-        background-color: #009de6;
-      }
-
-      &.song-difficulty-Hard {
-        background-color: #fed131;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
-      &.song-difficulty-Expert {
-        background-color: #fc06a3;
+      .song-info {
+        flex-grow: 1;
+        color: white;
+        font-weight: bold;
+        min-width: 0;
       }
 
-      &.song-difficulty-Inferno {
-        background-color: #4a004f;
+      .song-header {
+        display: flex;
+        justify-content: space-between;
       }
 
-      display: flex;
-      justify-content: space-between;
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      padding: 3px 15px;
-      padding-right: 0px;
+      .song-header-left {
+        flex-grow: 1;
 
-      border-radius: 100px;
-      background-image: linear-gradient(
-        110deg,
-        transparent 70%,
-        rgba(0, 0, 0, 0.3) 70%
-      );
+        .song-title {
+          font-size: 1.5rem;
+          margin-bottom: -10px;
+        }
 
-      .song-difficulty-level {
-        width: 55px;
+        .song-artist {
+          font-size: 1rem;
+          color: rgb(var(--v-theme-primary));
+        }
+      }
+
+      .song-header-right {
+        flex-shrink: 0;
+      }
+
+      .song-sheets {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: $song-paddings;
+
+        @media (max-width: 1000px) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @media (max-width: 600px) {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+      }
+
+      .song-difficulty-pill {
+        &.song-difficulty-1 {
+          background-color: #009de6;
+        }
+
+        &.song-difficulty-2 {
+          background-color: #fed131;
+        }
+
+        &.song-difficulty-3 {
+          background-color: #fc06a3;
+        }
+
+        &.song-difficulty-4 {
+          background-color: #4a004f;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        padding: 3px 15px;
+        padding-right: 0px;
+
+        border-radius: 100px;
+        background-image: linear-gradient(
+          110deg,
+          transparent 70%,
+          rgba(0, 0, 0, 0.3) 70%
+        );
+
+        .song-difficulty-level {
+          width: 55px;
+          text-align: center;
+        }
+      }
+
+      .song-difficulty-bottom {
+        background-color: white;
+        color: black;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .all-song-medal {
+        transform: rotate(-10deg);
+        height: 40px;
+        margin-bottom: -5px;
         text-align: center;
       }
     }
 
-    .song-difficulty-bottom {
-      background-color: white;
-      color: black;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-      font-size: 1rem;
-      text-align: center;
+    .song-medal {
+      white-space: nowrap;
+      font-family: "SHINBI", sans-serif;
+      letter-spacing: -2px;
+      font-size: 1.3rem;
     }
 
-    .all-song-medal {
-      transform: rotate(-10deg);
-      height: 40px;
-      margin-bottom: -5px;
-      text-align: center;
-    }
-  }
+    .medal-clear {
+      text-transform: uppercase;
+      font-weight: 300;
 
-  .song-medal {
-    white-space: nowrap;
-    font-family: "SHINBI", sans-serif;
-    letter-spacing: -2px;
-    font-size: 1.3rem;
-  }
+      span {
+        padding: 0 2px;
+        background-image: linear-gradient(
+          90deg,
+          #057bd0,
+          20%,
+          #47fee7,
+          40%,
+          #fd44a0,
+          60%,
+          #47fee7,
+          80%,
+          #057bd0
+        );
+        background-clip: text;
 
-  .medal-clear {
-    text-transform: uppercase;
-    font-weight: 300;
-
-    span {
-      padding: 0 2px;
-      background-image: linear-gradient(
-        90deg,
-        #057bd0,
-        20%,
-        #47fee7,
-        40%,
-        #fd44a0,
-        60%,
-        #47fee7,
-        80%,
-        #057bd0
-      );
-      background-clip: text;
-
-      // evil vendor prefix stuff
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-stroke: 3px transparent;
-      -moz-text-stroke: 3px transparent;
-      color: white;
+        // evil vendor prefix stuff
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-stroke: 3px transparent;
+        -moz-text-stroke: 3px transparent;
+        color: white;
+      }
     }
   }
 
@@ -620,5 +632,24 @@
     .option-heading {
       font-weight: bold;
     }
+  }
+
+  // SONG
+  .single-song {
+    display: flex;
+    gap: 10px;
+
+    .single-song-cover {
+      width: 320px;
+    }
+
+    .single-song-header {
+      flex-grow: 1;
+    }
+  }
+
+  .highscore-grade {
+    height: 30px;
+    vertical-align: middle;
   }
 }

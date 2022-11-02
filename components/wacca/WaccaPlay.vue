@@ -100,7 +100,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import waccaSongs from "~~/assets/wacca/waccaSongs.js";
 
 const props = defineProps({
@@ -113,11 +113,11 @@ const song = computed(() => {
   return song;
 });
 
-const fullUrl = computed((): string => {
+const fullUrl = computed(() => {
   return `/wacca/img/covers/${song.value.imageName}`;
 });
 
-function formatDate(date: string): string {
+function formatDate(date) {
   return new Date(date).toLocaleString();
 }
 

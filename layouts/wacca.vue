@@ -35,7 +35,6 @@ const profileError = useState("profileError");
 
 async function loadProfile() {
   let profileUrl = `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}`;
-  console.log("Loading profile", profileUrl);
 
   $fetch(profileUrl)
     .then((data) => {

@@ -29,7 +29,7 @@
       item-value="luid"
       hide-details
       single-line
-      prepend-inner-icon="mdi-credit-card"
+      prepend-inner-icon="mdi-card-account-details-outline"
     />
     <div class="nav-spacer"></div>
     <NuxtLink to="/wacca">Wacca</NuxtLink>

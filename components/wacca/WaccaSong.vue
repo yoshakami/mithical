@@ -17,7 +17,7 @@
 
         <div class="song-header-right">
           <div class="song-favorite">
-            <v-btn icon @click="toggleFavorite" variant="plain">
+            <v-btn icon @click.prevent="toggleFavorite" variant="plain">
               <v-icon color="yellow" size="x-large">{{
                 playerData.favorite ? "mdi-star" : "mdi-star-outline"
               }}</v-icon>
@@ -36,12 +36,9 @@
             <div class="song-medal"><WaccaMedal :medal="medal(i)" /></div>
           </div>
 
-          <div
-            class="song-difficulty-pill"
-            :class="`song-difficulty-${difficulties[i]}`"
-          >
+          <div class="song-difficulty-pill" :class="`song-difficulty-${i + 1}`">
             <div class="song-difficulty-name">
-              {{ difficulties[i] }}
+              {{ waccaDifficulties.find((d) => d.id === i + 1).name }}
             </div>
 
             <div class="song-difficulty-level">
@@ -63,17 +60,19 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
+
 const props = defineProps({
   song: Object,
   playerData: Object,
 });
 
-const fullUrl = computed((): string => {
+const fullUrl = computed(() => {
   return `/wacca/img/covers/${props.song.imageName}`;
 });
 
-function medal(difficulty): string {
+function medal(difficulty) {
   if (!props.playerData || !props.playerData.scores[difficulty]) {
     return "none";
   }
@@ -93,9 +92,7 @@ function medal(difficulty): string {
 
 const emit = defineEmits(["toggleFavorite"]);
 
-function toggleFavorite(): void {
+function toggleFavorite() {
   emit("toggleFavorite");
 }
-
-const difficulties = ["Normal", "Hard", "Expert", "Inferno"];
 </script>

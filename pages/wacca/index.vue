@@ -49,7 +49,7 @@ const level = computed(() => {
 });
 
 const realRate = computed(() => {
-  return Math.floor(profile.value.rating / 10);
+  return Math.floor((profile.value.rating ?? 0) / 10);
 });
 
 const navigator = computed(() => {
