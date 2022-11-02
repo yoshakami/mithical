@@ -332,7 +332,7 @@ const waccaSongs = [
   {
     id: 1054,
     title: "LEVATEiN feat. 野宮あゆみ",
-    titleEnglish: null,
+    titleEnglish: "LEVATEiN feat. Ayumi Nomiya",
     artist: "REDALiCE",
     imageName:
       "e934eab848138ecfbcd45ef3633de5cac17ee44355dba4f621e8e3f123fc3c54.png",
@@ -453,7 +453,7 @@ const waccaSongs = [
   {
     id: 1073,
     title: "BLUE SKY feat. 野宮あゆみ",
-    titleEnglish: null,
+    titleEnglish: "BLUE SKY feat. Ayumi Nomiya",
     artist: "源屋",
     imageName:
       "a1dbf65563d28ba47412b1e284a5426e75ee1f95f5efde1a4ba34864b6fc506c.png",
@@ -905,7 +905,7 @@ const waccaSongs = [
   {
     id: 1098,
     title: "AIAIAI (feat. 中田ヤスタカ)",
-    titleEnglish: null,
+    titleEnglish: "AIAIAI (feat. Yasutaka Nakata)",
     artist: "Kizuna AI",
     imageName:
       "6894935c7ca7b4feecaeea03bf48fde6e0d1d732a05491515df038dad21b6455.png",
@@ -1995,7 +1995,7 @@ const waccaSongs = [
   {
     id: 2005,
     title: "Gimme×Gimme feat. 初音ミク・鏡音リン",
-    titleEnglish: null,
+    titleEnglish: "Gimme×Gimme feat. Hatsune Miku/Kagamine Rin",
     artist: "八王子P × Giga",
     imageName:
       "9ea90b46d6b17d3adbdaafea55e252132de7211f16ab8ce6f1512e96e3051e97.png",
@@ -2600,7 +2600,7 @@ const waccaSongs = [
   {
     id: 2071,
     title: "From Zero feat. 利香",
-    titleEnglish: null,
+    titleEnglish: "From Zero feat. Rika",
     artist: "Neko Hacker",
     imageName:
       "3526054d8582a865c74e6c5b2a249cefd09ab044ebcbdec9857724a8ecdf3b4a.png",

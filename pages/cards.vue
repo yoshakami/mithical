@@ -13,10 +13,9 @@
         v-model="luid"
         label="Card ID/Access Code"
         counter="20"
-        size="xl"
         maxlength="20"
         :error-messages="errorMessage"
-        :messages="messages"
+        :messages="message"
         class="mb-1"
       ></v-text-field>
 
@@ -32,15 +31,15 @@ const runtimeConfig = useRuntimeConfig();
 
 const luid = ref("");
 const cards = useState("cards");
-const errorMessage = ref(false);
-const messages = ref(false);
+const errorMessage = ref("");
+const message = ref("");
 const loading = ref(false);
 
 watch(luid, (newLuid) => {
   // only allow numbers
   luid.value = newLuid.replace(/\D/g, "");
-  errorMessage.value = false;
-  messages.value = false;
+  errorMessage.value = "";
+  message.value = "";
 });
 
 function addCard() {
@@ -58,27 +57,22 @@ function addCard() {
 
   loading.value = true;
   $fetch(`${runtimeConfig.apiUrl}/card/${luid.value}`)
-    .catch((err) => {
-      errorMessage.value = "Something went wrong, try again later!";
-      loading.value = false;
-    })
     .then((data) => {
       loading.value = false;
+      errorMessage.value = "";
 
-      if (data.error) {
-        errorMessage.value = data.reason;
-      } else {
-        errorMessage.value = false;
+      message.value = "Card added successfully!";
 
-        messages.value = "Card added successfully!";
+      cards.value.push({
+        luid: luid.value,
+        user_name: data.user_name,
+      });
 
-        cards.value.push({
-          luid: luid.value,
-          user_name: data.data.user_name,
-        });
-
-        localStorage.setItem("cards", JSON.stringify(cards.value));
-      }
+      localStorage.setItem("cards", JSON.stringify(cards.value));
+    })
+    .catch((err, data) => {
+      errorMessage.value = err.data.errors[0].msg;
+      loading.value = false;
     });
 }
 </script>
