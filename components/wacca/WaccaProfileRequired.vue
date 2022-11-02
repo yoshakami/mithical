@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <div v-if="profileLoading" class="loading">
       <v-progress-circular
         indeterminate
@@ -9,14 +9,14 @@
       ></v-progress-circular>
     </div>
 
-    <div v-if="profileError" class="loading">
-      Something went wrong with the API :( Please try again later.
-    </div>
+    <v-alert v-if="profileError" type="error">
+      Couldn't reach the API. Please try again later.
+    </v-alert>
 
     <div v-if="!profileLoading && !profileError">
       <slot></slot>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script setup>

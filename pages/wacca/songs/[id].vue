@@ -37,7 +37,10 @@
     </div>
 
     <div v-else>
-      <div class="text-center" v-if="loadingMessage">{{ loadingMessage }}</div>
+      <v-alert v-if="loadingError" type="error" class="mt-4">{{
+        loadingError
+      }}</v-alert>
+
       <v-table v-else>
         <thead>
           <tr>
@@ -79,14 +82,13 @@ const song = computed(() => {
 });
 
 const fullUrl = computed(() => {
-  console.log(song.value);
   return `/wacca/img/covers/${song.value.imageName}`;
 });
 
 const difficulty = ref(2);
 const highscores = ref([]);
 const loading = ref(false);
-const loadingMessage = ref();
+const loadingError = ref();
 
 function loadHighscores() {
   loading.value = ref(true);
@@ -99,7 +101,7 @@ function loadHighscores() {
     })
     .catch((err) => {
       loading.value = false;
-      loadingMessage.value = "Error loading highscores, try again later.";
+      loadingError.value = "Couldn't reach the API. Please try again later.";
     });
 }
 
@@ -109,7 +111,8 @@ const loadingGoToSong = ref(false);
 const goToSongMessage = ref("");
 
 function goToSong() {
-  loadingGoToSong.value = ref(true);
+  goToSongMessage.value = null;
+  loadingGoToSong.value = true;
   $fetch(`${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/gotosong`, {
     method: "POST",
     body: JSON.stringify({
@@ -124,7 +127,7 @@ function goToSong() {
     })
     .catch((err) => {
       loadingGoToSong.value = false;
-      goToSongMessage.value = "Error setting song, try again later.";
+      goToSongMessage.value = "Couldn't reach the API. Please try again later.";
     });
 }
 </script>

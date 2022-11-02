@@ -30,21 +30,26 @@ useHead({
 });
 
 const profile = useState("profile");
-const profileLoading = useState("profileLoading", () => true);
+const profileLoading = useState("profileLoading", () => false);
 const profileError = useState("profileError");
 
 async function loadProfile() {
-  let profileUrl = `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}`;
+  profileLoading.value = true;
+  profileError.value = null;
 
-  $fetch(profileUrl)
-    .then((data) => {
-      profile.value = data;
-      profileLoading.value = false;
-    })
-    .catch((err) => {
-      profileError.value = err;
-      profileLoading.value = false;
-    });
+  if (activeCard.value) {
+    let profileUrl = `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}`;
+
+    $fetch(profileUrl)
+      .then((data) => {
+        profile.value = data;
+        profileLoading.value = false;
+      })
+      .catch((err) => {
+        profileError.value = err;
+        profileLoading.value = false;
+      });
+  }
 }
 
 loadProfile();

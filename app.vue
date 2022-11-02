@@ -53,4 +53,14 @@ const storageCards = localStorage.getItem("cards");
 if (storageCards) {
   cards.value = JSON.parse(storageCards);
 }
+
+// set default card from localStorage
+const activeCard = useState("activeCard");
+const storageActiveCard = localStorage.getItem("activeCard");
+
+if (storageActiveCard) {
+  activeCard.value = storageActiveCard;
+} else {
+  activeCard.value = cards.value[0]?.luid;
+}
 </script>

@@ -96,6 +96,7 @@
 
     .profile-icon {
       height: 150px;
+      width: 150px;
       margin-right: -40px;
       z-index: 2;
 
@@ -144,6 +145,11 @@
 
     background-color: black;
     overflow: hidden;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #333;
+    }
 
     .player-header {
       display: flex;
@@ -499,41 +505,41 @@
         text-align: center;
       }
     }
+  }
 
-    .song-medal {
-      white-space: nowrap;
-      font-family: "SHINBI", sans-serif;
-      letter-spacing: -2px;
-      font-size: 1.3rem;
-    }
+  .song-medal {
+    white-space: nowrap;
+    font-family: "SHINBI", sans-serif;
+    letter-spacing: -2px;
+    font-size: 1.3rem;
+  }
 
-    .medal-clear {
-      text-transform: uppercase;
-      font-weight: 300;
+  .medal-clear {
+    text-transform: uppercase;
+    font-weight: 300;
 
-      span {
-        padding: 0 2px;
-        background-image: linear-gradient(
-          90deg,
-          #057bd0,
-          20%,
-          #47fee7,
-          40%,
-          #fd44a0,
-          60%,
-          #47fee7,
-          80%,
-          #057bd0
-        );
-        background-clip: text;
+    span {
+      padding: 0 2px;
+      background-image: linear-gradient(
+        90deg,
+        #057bd0,
+        20%,
+        #47fee7,
+        40%,
+        #fd44a0,
+        60%,
+        #47fee7,
+        80%,
+        #057bd0
+      );
+      background-clip: text;
 
-        // evil vendor prefix stuff
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-stroke: 3px transparent;
-        -moz-text-stroke: 3px transparent;
-        color: white;
-      }
+      // evil vendor prefix stuff
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-stroke: 3px transparent;
+      -moz-text-stroke: 3px transparent;
+      color: white;
     }
   }
 

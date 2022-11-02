@@ -23,5 +23,9 @@
 
       <h1>Mithical</h1>
     </div>
+
+    <v-container style="max-width: 400px">
+      <v-btn to="/cards" block color="primary">Card Management</v-btn>
+    </v-container>
   </v-container>
 </template>

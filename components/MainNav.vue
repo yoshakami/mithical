@@ -38,5 +38,5 @@
 
 <script setup>
 const cards = useState("cards");
-const activeCard = useState("activeCard", () => cards.value[0].luid);
+const activeCard = useState("activeCard");
 </script>
