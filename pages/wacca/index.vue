@@ -11,7 +11,7 @@
     <v-container>
       <div class="profile-name">
         <div class="profile-icon">
-          <img :src="`/wacca/img/icons/${icon.path}.png`" />
+          <WaccaIcon :icon="iconId" />
         </div>
         <WaccaProfileBox
           ><span class="light">Welcome back</span> {{ profile.user_name
@@ -36,7 +36,6 @@
 
 <script setup>
 import waccaNavigators from "~/assets/wacca/waccaNavigators.js";
-import waccaIcons from "~/assets/wacca/waccaIcons.js";
 
 definePageMeta({
   middleware: ["auth"],
@@ -61,12 +60,11 @@ const navigator = computed(() => {
   return waccaNavigators.find((n) => n.id === navigatorId);
 });
 
-const icon = computed(() => {
-  let iconId =
-    profile.value.options.find((option) => {
-      return option.option_id == 1003;
-    })?.value || 102001;
+const iconId = computed(() => {
+  let iconId = profile.value.options.find((option) => {
+    return option.option_id == 1003;
+  })?.value;
 
-  return waccaIcons.find((i) => i.id === iconId);
+  return iconId ?? 102001;
 });
 </script>

@@ -43,6 +43,10 @@
               />
             </NuxtLink>
           </div>
+
+          <div v-if="paginatedSongs.length == 0">
+            <v-alert type="info">No songs found</v-alert>
+          </div>
         </div>
 
         <v-pagination
@@ -68,6 +72,7 @@ const filters = [
 ];
 
 const profile = useState("profile");
+const activeCard = useState("activeCard");
 
 const perPage = 50;
 const page = ref(1);
@@ -140,9 +145,9 @@ const filteredSongs = computed(() => {
   if (activeFilters.value.includes("Uncleared Inferno")) {
     results = results.filter((song) => {
       return (
-        !playerData.value[song.id].scores[3] ||
-        (playerData.value[song.id].scores[3].clear_count == 0 &&
-          song.sheets.length > 3)
+        (!playerData.value[song.id].scores[3] ||
+          playerData.value[song.id].scores[3].clear_count == 0) &&
+        song.sheets.length > 3
       );
     });
   }
@@ -182,7 +187,7 @@ async function toggleFavorite(song) {
   cachePlayerData();
 
   await $fetch(
-    `${runtimeConfig.apiUrl}/wacca/user/11111111111111111111/favorites/${song.id}/toggle`,
+    `${runtimeConfig.API_URL}/wacca/user/${activeCard.value}/favorites/${song.id}/toggle`,
     {
       method: "POST",
     }
@@ -220,7 +225,6 @@ function cacheSongInfo(song) {
 const playerData = ref({});
 
 function cachePlayerData() {
-  console.log("caching playerdata");
   for (const song of waccaSongs) {
     playerData.value[song.id] = cacheSongInfo(song);
   }

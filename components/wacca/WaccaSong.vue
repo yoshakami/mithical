@@ -1,7 +1,7 @@
 <template>
   <div class="song">
     <div class="song-cover">
-      <v-img :src="fullUrl" />
+      <v-img :src="fullUrl"> </v-img>
     </div>
     <div class="song-info">
       <div class="song-header">
@@ -36,7 +36,10 @@
             <div class="song-medal"><WaccaMedal :medal="medal(i)" /></div>
           </div>
 
-          <div class="song-difficulty-pill" :class="`song-difficulty-${i + 1}`">
+          <div
+            class="song-difficulty-pill active"
+            :class="`song-difficulty-${i + 1}`"
+          >
             <div class="song-difficulty-name">
               {{ waccaDifficulties.find((d) => d.id === i + 1).name }}
             </div>

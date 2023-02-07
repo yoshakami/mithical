@@ -39,4 +39,8 @@
 <script setup>
 const cards = useState("cards");
 const activeCard = useState("activeCard");
+
+watch(activeCard, (newVal) => {
+  localStorage.setItem("activeCard", newVal);
+});
 </script>

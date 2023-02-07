@@ -38,7 +38,7 @@ async function loadProfile() {
   profileError.value = null;
 
   if (activeCard.value) {
-    let profileUrl = `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}`;
+    let profileUrl = `${runtimeConfig.API_URL}/wacca/user/${activeCard.value}`;
 
     $fetch(profileUrl)
       .then((data) => {

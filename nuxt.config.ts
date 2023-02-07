@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     writeEarlyHints: false,
   },
   publicRuntimeConfig: {
-    apiUrl: process.env.API_URL ?? "http://127.0.0.1:3001",
+    API_URL: "http://localhost:3001",
   },
   ssr: false,
 });

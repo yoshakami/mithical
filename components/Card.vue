@@ -10,10 +10,10 @@
         </div>
       </div>
       <div class="card-luid">
-        {{ formattedLuid }}
         <v-btn icon variant="text" size="small" @click="toggleHidden">
           <v-icon size="small">{{ hidden ? "mdi-eye" : "mdi-eye-off" }}</v-icon>
         </v-btn>
+        {{ formattedLuid }}
       </div>
     </v-card-text>
   </v-card>

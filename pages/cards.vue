@@ -62,21 +62,23 @@ function addCard() {
   }
 
   loading.value = true;
-  $fetch(`${runtimeConfig.apiUrl}/card/${luid.value}`)
+  $fetch(`${runtimeConfig.API_URL}/card/${luid.value}`)
     .then((data) => {
       loading.value = false;
       errorMessage.value = "";
 
-      message.value = "Card added successfully!";
-
       cards.value.push({
         luid: luid.value,
         user_name: data.user_name,
+        id: data.id,
       });
 
       localStorage.setItem("cards", JSON.stringify(cards.value));
       activeCard.value = luid.value;
       localStorage.setItem("activeCard", activeCard.value);
+
+      message.value = "Card added successfully!";
+      luid.value = "";
     })
     .catch((err, data) => {
       errorMessage.value =
