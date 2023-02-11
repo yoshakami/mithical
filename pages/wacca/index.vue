@@ -14,8 +14,8 @@
           <WaccaIcon :icon="iconId" />
         </div>
         <WaccaProfileBox
-          ><span class="light">Welcome back</span> {{ profile.user_name
-          }}<span class="light">!</span></WaccaProfileBox
+          ><span class="light">Welcome back</span>
+          {{ profile.user_name }}</WaccaProfileBox
         >
       </div>
 

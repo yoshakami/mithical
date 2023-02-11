@@ -4,15 +4,39 @@
       <div class="card-name">
         <div>{{ props.card.user_name }}</div>
         <div>
-          <v-btn icon variant="text" size="small" @click="deleteCard">
-            <v-icon color="error">mdi-delete</v-icon>
-          </v-btn>
+          <v-tooltip location="top">
+            <template v-slot:activator="{ props }">
+              <v-btn
+                icon
+                variant="text"
+                size="small"
+                @click="deleteCard"
+                v-bind="props"
+              >
+                <v-icon color="error">mdi-delete</v-icon>
+              </v-btn>
+            </template>
+            <span>Remove card</span>
+          </v-tooltip>
         </div>
       </div>
       <div class="card-luid">
-        <v-btn icon variant="text" size="small" @click="toggleHidden">
-          <v-icon size="small">{{ hidden ? "mdi-eye" : "mdi-eye-off" }}</v-icon>
-        </v-btn>
+        <v-tooltip location="top">
+          <template v-slot:activator="{ props }">
+            <v-btn
+              icon
+              variant="text"
+              size="small"
+              @click="toggleHidden"
+              v-bind="props"
+            >
+              <v-icon size="small">{{
+                hidden ? "mdi-eye" : "mdi-eye-off"
+              }}</v-icon>
+            </v-btn>
+          </template>
+          <span>View full ID</span>
+        </v-tooltip>
         {{ formattedLuid }}
       </div>
     </v-card-text>

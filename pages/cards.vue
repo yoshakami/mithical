@@ -11,6 +11,7 @@
           maxlength="20"
           :error-messages="errorMessage"
           :messages="message"
+          @keydown.enter="addCard"
         ></v-text-field>
       </v-card-text>
 

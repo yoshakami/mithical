@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     "vuetify/_styles.scss",
     "~/assets/roboto.scss",
   ],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
+  },
   typescript: {
     shim: false,
   },
@@ -15,8 +19,10 @@ export default defineNuxtConfig({
   experimental: {
     writeEarlyHints: false,
   },
-  publicRuntimeConfig: {
-    API_URL: "http://localhost:3001",
+  runtimeConfig: {
+    public: {
+      API_URL: "http://localhost:3001",
+    },
   },
   ssr: false,
 });

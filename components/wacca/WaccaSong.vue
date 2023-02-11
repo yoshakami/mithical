@@ -17,11 +17,23 @@
 
         <div class="song-header-right">
           <div class="song-favorite">
-            <v-btn icon @click.prevent="toggleFavorite" variant="plain">
-              <v-icon color="yellow" size="x-large">{{
-                playerData.favorite ? "mdi-star" : "mdi-star-outline"
-              }}</v-icon>
-            </v-btn>
+            <v-tooltip location="start">
+              <template v-slot:activator="{ props }">
+                <v-btn
+                  icon
+                  @click.prevent="toggleFavorite"
+                  variant="plain"
+                  v-bind="props"
+                >
+                  <v-icon color="yellow" size="x-large">{{
+                    playerData.favorite ? "mdi-star" : "mdi-star-outline"
+                  }}</v-icon>
+                </v-btn>
+              </template>
+              <span>{{
+                playerData.favorite ? "Remove favorite" : "Add favorite"
+              }}</span>
+            </v-tooltip>
           </div>
         </div>
       </div>
