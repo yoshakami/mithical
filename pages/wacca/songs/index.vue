@@ -187,7 +187,7 @@ async function toggleFavorite(song) {
   cachePlayerData();
 
   await $fetch(
-    `${runtimeConfig.API_URL}/wacca/user/${activeCard.value}/favorites/${song.id}/toggle`,
+    `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/favorites/${song.id}/toggle`,
     {
       method: "POST",
     }

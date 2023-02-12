@@ -63,7 +63,7 @@ function addCard() {
   }
 
   loading.value = true;
-  $fetch(`${runtimeConfig.API_URL}/card/${luid.value}`)
+  $fetch(`${runtimeConfig.apiUrl}/card/${luid.value}`)
     .then((data) => {
       loading.value = false;
       errorMessage.value = "";

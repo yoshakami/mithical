@@ -10,18 +10,12 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
   },
-  typescript: {
-    shim: false,
-  },
   build: {
     transpile: ["vuetify"],
   },
-  experimental: {
-    writeEarlyHints: false,
-  },
   runtimeConfig: {
     public: {
-      API_URL: "http://localhost:3001",
+      apiUrl: "http://localhost:3001",
     },
   },
   ssr: false,
