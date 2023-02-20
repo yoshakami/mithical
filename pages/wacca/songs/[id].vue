@@ -139,7 +139,7 @@ const playerHistory = ref([]);
 function loadData() {
   leaderboardsLoading.value = ref(true);
   $fetch(
-    `${runtimeConfig.apiUrl}/wacca/song/${song.value.id}/highscores/${selectedDifficulty.value}`
+    `${runtimeConfig.apiUrl}/wacca/music/${song.value.id}/highscores/${selectedDifficulty.value}`
   )
     .then((data) => {
       leaderboardsLoading.value = false;
@@ -160,7 +160,7 @@ loadData();
 
 function loadPlayerData() {
   $fetch(
-    `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/song/${song.value.id}/${selectedDifficulty.value}`
+    `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/music/${song.value.id}`
   ).then((data) => {
     playerHistory.value = data;
   });
@@ -184,7 +184,7 @@ const goToSongMessage = ref("");
 function goToSong() {
   goToSongMessage.value = null;
   loadingGoToSong.value = true;
-  $fetch(`${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/gotosong`, {
+  $fetch(`${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/gotomusic`, {
     method: "POST",
     body: JSON.stringify({
       music_id: song.value.id,

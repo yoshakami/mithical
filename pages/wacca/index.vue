@@ -4,7 +4,7 @@
       <div
         class="waifu"
         :style="{
-          backgroundImage: `url(/wacca/img/navigators/${navigator.path}.png)`,
+          backgroundImage: `url(/wacca/img/navigators/${navigator.path}.webp)`,
         }"
       ></div>
     </v-container>

@@ -71,7 +71,6 @@ function addCard() {
       cards.value.push({
         luid: luid.value,
         user_name: data.user_name,
-        id: data.id,
       });
 
       localStorage.setItem("cards", JSON.stringify(cards.value));
