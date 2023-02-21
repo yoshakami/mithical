@@ -10,7 +10,7 @@
           :color="activeCategory === category.category ? 'primary' : 'default'"
           :rounded="true"
         >
-          {{ category.category }}
+          {{ category.text }}
         </v-btn>
       </div>
 
@@ -234,13 +234,13 @@ if (profile.value) cachePlayerData(); // cache on page load if profile already e
 watch(profile, cachePlayerData); // cache when profile changes
 
 const categories = [
-  { category: "アニメ／ＰＯＰ" },
-  { category: "ボカロ" },
-  { category: "東方アレンジ" },
-  { category: "2.5次元" },
-  { category: "バラエティ" },
-  { category: "オリジナル" },
-  { category: "TANO*C" },
-  { category: "TANO*C（オリジナル）" },
+  { category: "アニメ／ＰＯＰ", text: "Anime/Pop" },
+  { category: "ボカロ", text: "Vocaloid" },
+  { category: "東方アレンジ", text: "Touhou" },
+  { category: "2.5次元", text: "2.5D" },
+  { category: "バラエティ", text: "Variety" },
+  { category: "オリジナル", text: "Original" },
+  { category: "TANO*C", text: "TANO*C" },
+  { category: "TANO*C（オリジナル）", text: "TANO*C (Original)" },
 ];
 </script>
