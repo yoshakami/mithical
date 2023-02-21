@@ -8,6 +8,12 @@
           Looks like you haven't played anything yet!
         </v-alert>
       </div>
+
+      <div v-if="profile.playlog.length == 100">
+        <p class="text-grey-darken-2 text-center">
+          Only the most recent 100 plays are shown.
+        </p>
+      </div>
     </v-container>
   </WaccaProfileRequired>
 </template>
