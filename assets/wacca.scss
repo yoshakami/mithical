@@ -662,6 +662,11 @@
   }
 
   // SONG
+
+  .v-container.single-song-container {
+    padding: 0;
+  }
+
   .single-song {
     display: flex;
     gap: 10px;
@@ -672,6 +677,10 @@
 
     .single-song-header {
       flex-grow: 1;
+
+      h2 {
+        color: rgb(var(--v-theme-primary));
+      }
     }
   }
 

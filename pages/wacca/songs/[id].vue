@@ -1,6 +1,9 @@
 <template>
   <div style="padding-bottom: 4em">
-    <v-container class="elevation-1 mt-4" style="background: white">
+    <v-container
+      class="elevation-1 mt-4 single-song-container"
+      style="background: white"
+    >
       <div class="single-song">
         <div class="single-song-cover">
           <v-img :src="fullUrl" />
@@ -8,7 +11,7 @@
 
         <div class="single-song-header">
           <h1>{{ getTitle }}</h1>
-          <h2 class="text-grey">{{ song.artist }}</h2>
+          <h2>{{ song.artist }}</h2>
 
           <!-- <v-btn
             class="mt-4"
