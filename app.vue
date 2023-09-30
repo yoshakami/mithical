@@ -63,4 +63,14 @@ if (storageActiveCard) {
 } else {
   activeCard.value = cards.value[0]?.luid;
 }
+
+// set language from localStorage
+const activeLanguage = useState("activeLanguage");
+const storageActiveLanguage = localStorage.getItem("activeLanguage");
+
+if (storageActiveLanguage) {
+  activeLanguage.value = storageActiveLanguage;
+} else {
+  activeLanguage.value = "en";
+}
 </script>

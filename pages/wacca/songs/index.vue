@@ -4,13 +4,13 @@
       <div class="filters">
         <v-btn
           v-for="category in categories"
-          :key="category.category"
-          @click="clickCategory(category.category)"
+          :key="category.ja"
+          @click="clickCategory(category.ja)"
           pill
-          :color="activeCategory === category.category ? 'primary' : 'default'"
+          :color="activeCategory === category.ja ? 'primary' : 'default'"
           :rounded="true"
         >
-          {{ category.text }}
+          {{ activeLanguage == "ja" ? category.ja : category.en }}
         </v-btn>
       </div>
 
@@ -234,13 +234,15 @@ if (profile.value) cachePlayerData(); // cache on page load if profile already e
 watch(profile, cachePlayerData); // cache when profile changes
 
 const categories = [
-  { category: "アニメ／ＰＯＰ", text: "Anime/Pop" },
-  { category: "ボカロ", text: "Vocaloid" },
-  { category: "東方アレンジ", text: "Touhou" },
-  { category: "2.5次元", text: "2.5D" },
-  { category: "バラエティ", text: "Variety" },
-  { category: "オリジナル", text: "Original" },
-  { category: "TANO*C", text: "TANO*C" },
-  { category: "TANO*C（オリジナル）", text: "TANO*C (Original)" },
+  { ja: "アニメ／ＰＯＰ", en: "Anime/Pop" },
+  { ja: "ボカロ", en: "Vocaloid" },
+  { ja: "東方アレンジ", en: "Touhou" },
+  { ja: "2.5次元", en: "2.5D" },
+  { ja: "バラエティ", en: "Variety" },
+  { ja: "オリジナル", en: "Original" },
+  { ja: "TANO*C", en: "TANO*C" },
+  { ja: "TANO*C（オリジナル）", en: "TANO*C (Original)" },
 ];
+
+const activeLanguage = useState("activeLanguage");
 </script>

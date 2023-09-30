@@ -7,13 +7,10 @@
         </div>
 
         <div class="single-song-header">
-          <h1>{{ song.title }}</h1>
-          <p class="text-grey" v-if="song.titleEnglish">
-            ({{ song.titleEnglish }})
-          </p>
-          <h2>{{ song.artist }}</h2>
+          <h1>{{ getTitle }}</h1>
+          <h2 class="text-grey">{{ song.artist }}</h2>
 
-          <v-btn
+          <!-- <v-btn
             class="mt-4"
             color="primary"
             block
@@ -23,7 +20,7 @@
             Jump to this song on next login
           </v-btn>
 
-          <div class="text-center mt-4">{{ goToSongMessage }}</div>
+          <div class="text-center mt-4">{{ goToSongMessage }}</div> -->
         </div>
       </div>
     </v-container>
@@ -178,27 +175,37 @@ loadPlayerData();
 
 // Jump to song on next login
 
-const loadingGoToSong = ref(false);
-const goToSongMessage = ref("");
+// const loadingGoToSong = ref(false);
+// const goToSongMessage = ref("");
 
-function goToSong() {
-  goToSongMessage.value = null;
-  loadingGoToSong.value = true;
-  $fetch(`${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/gotomusic`, {
-    method: "POST",
-    body: JSON.stringify({
-      music_id: song.value.id,
-      difficulty: selectedDifficulty.value,
-    }),
-  })
-    .then((data) => {
-      loadingGoToSong.value = false;
-      goToSongMessage.value =
-        "Song set! Wacca will jump to this song on your next login. Good luck!";
-    })
-    .catch((err) => {
-      loadingGoToSong.value = false;
-      goToSongMessage.value = "Couldn't reach the API. Please try again later.";
-    });
-}
+// function goToSong() {
+//   goToSongMessage.value = null;
+//   loadingGoToSong.value = true;
+//   $fetch(`${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/gotomusic`, {
+//     method: "POST",
+//     body: JSON.stringify({
+//       music_id: song.value.id,
+//       difficulty: selectedDifficulty.value,
+//     }),
+//   })
+//     .then((data) => {
+//       loadingGoToSong.value = false;
+//       goToSongMessage.value =
+//         "Song set! Wacca will jump to this song on your next login. Good luck!";
+//     })
+//     .catch((err) => {
+//       loadingGoToSong.value = false;
+//       goToSongMessage.value = "Couldn't reach the API. Please try again later.";
+//     });
+// }
+
+const activeLanguage = useState("activeLanguage");
+
+const getTitle = computed(() => {
+  if (activeLanguage.value === "ja") {
+    return song.value.title;
+  }
+
+  return song.value.titleEnglish || song.value.title;
+});
 </script>

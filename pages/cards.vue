@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="cards-container">
     <v-card class="card">
       <v-card-title> Add a card </v-card-title>
 
@@ -21,6 +21,7 @@
         </v-btn>
       </v-card-actions>
     </v-card>
+
     <div class="cards">
       <Card
         v-for="card in cards"
@@ -29,6 +30,15 @@
         @delete="deleteCard(card)"
       />
     </div>
+
+    <v-btn
+      v-if="cards.length > 0"
+      color="primary"
+      @click="$router.push('/wacca')"
+      block
+    >
+      Go to the Wacca page
+    </v-btn>
   </v-container>
 </template>
 
@@ -80,10 +90,9 @@ function addCard() {
       message.value = "Card added successfully!";
       luid.value = "";
     })
-    .catch((err, data) => {
+    .catch((error) => {
       errorMessage.value =
-        err.data?.errors[0].msg ||
-        "Couldn't reach the API. Please try again later.";
+        error.data || "Couldn't reach the API. Please try again later.";
       loading.value = false;
     });
 }

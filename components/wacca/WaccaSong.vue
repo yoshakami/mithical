@@ -7,7 +7,7 @@
       <div class="song-header">
         <div class="song-header-left">
           <div class="song-title">
-            {{ song.title }}
+            {{ getTitle }}
           </div>
 
           <div class="song-artist">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="song-header-right">
-          <div class="song-favorite">
+          <!-- <div class="song-favorite">
             <v-tooltip location="start">
               <template v-slot:activator="{ props }">
                 <v-btn
@@ -34,6 +34,10 @@
                 playerData.favorite ? "Remove favorite" : "Add favorite"
               }}</span>
             </v-tooltip>
+          </div> -->
+
+          <div v-if="playerData.favorite" class="song-is-favorite">
+            <v-icon>mdi-star</v-icon>
           </div>
         </div>
       </div>
@@ -105,9 +109,19 @@ function medal(difficulty) {
   return "none";
 }
 
-const emit = defineEmits(["toggleFavorite"]);
+// const emit = defineEmits(["toggleFavorite"]);
 
-function toggleFavorite() {
-  emit("toggleFavorite");
-}
+// function toggleFavorite() {
+//   emit("toggleFavorite");
+// }
+
+const activeLanguage = useState("activeLanguage");
+
+const getTitle = computed(() => {
+  if (activeLanguage.value === "ja") {
+    return props.song.title;
+  }
+
+  return props.song.titleEnglish || props.song.title;
+});
 </script>

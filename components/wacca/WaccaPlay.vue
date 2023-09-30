@@ -9,7 +9,7 @@
           <div class="play-header">
             <div class="play-header-left">
               <span class="play-title">
-                {{ song.title }}
+                {{ getTitle }}
               </span>
 
               <span class="play-artist">
@@ -148,6 +148,16 @@ const medal = computed(() => {
     return "clear";
   } else {
     return "failed";
+  }
+});
+
+const activeLanguage = useState("activeLanguage");
+
+const getTitle = computed(() => {
+  if (activeLanguage.value === "ja") {
+    return song.value.title;
+  } else {
+    return song.value.titleEnglish || song.value.title;
   }
 });
 </script>

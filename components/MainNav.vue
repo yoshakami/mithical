@@ -22,7 +22,18 @@
       </svg>
     </NuxtLink>
     <v-select
-      class="profile-select"
+      class="nav-select language-select"
+      v-model="activeLanguage"
+      :items="languages"
+      item-title="name"
+      item-value="code"
+      hide-details
+      single-line
+      prepend-inner-icon="mdi-translate"
+    />
+
+    <v-select
+      class="nav-select"
       v-model="activeCard"
       :items="cards"
       item-title="user_name"
@@ -39,8 +50,18 @@
 <script setup>
 const cards = useState("cards");
 const activeCard = useState("activeCard");
+const activeLanguage = useState("activeLanguage");
+
+const languages = [
+  { name: "English", code: "en" },
+  { name: "日本語", code: "ja" },
+];
 
 watch(activeCard, (newVal) => {
   localStorage.setItem("activeCard", newVal);
+});
+
+watch(activeLanguage, (newVal) => {
+  localStorage.setItem("activeLanguage", newVal);
 });
 </script>
