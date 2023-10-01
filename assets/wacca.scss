@@ -134,11 +134,10 @@
 
   // RECENTS
   $play-paddings: 10px;
-  $play-cover-size: 80px;
+  $play-cover-size: 100px;
   .play {
     position: relative;
 
-    padding: $play-paddings;
     padding-bottom: 0;
     margin-bottom: 1rem;
 
@@ -146,10 +145,11 @@
 
     background-color: black;
     overflow: hidden;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s;
 
     &:hover {
       background-color: #333;
+      box-shadow: 0 0 10px rgb(var(--v-theme-primary));
     }
 
     .player-header {
@@ -180,6 +180,7 @@
       color: white;
       font-weight: bold;
       min-width: 0;
+      padding: $play-paddings;
     }
 
     .play-header {
@@ -285,7 +286,7 @@
     .play-detail {
       display: flex;
       gap: 10px;
-      margin-top: $play-paddings;
+      // margin-top: $play-paddings;
       line-height: 1;
       font-size: 1.5rem;
       font-family: "SHINBI", sans-serif;
@@ -463,16 +464,17 @@
       display: flex;
       gap: $song-paddings;
 
-      padding: $song-paddings;
       margin-bottom: 1rem;
 
       border-radius: $song-paddings;
+      overflow: hidden;
 
       background-color: black;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, box-shadow 0.2s;
 
       &:hover {
         background-color: #333;
+        box-shadow: 0 0 10px rgb(var(--v-theme-primary));
       }
 
       .song-is-favorite {
