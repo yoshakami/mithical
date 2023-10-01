@@ -20,7 +20,7 @@
 <script setup>
 import { useTheme } from "vuetify";
 
-const layout = ref("dark");
+const layout = ref("wacca");
 
 useHead({
   title: "Mithical",
@@ -28,8 +28,6 @@ useHead({
 
 const vuetifyTheme = useTheme();
 const route = useRoute();
-
-watch(route, updateTheme);
 
 function updateTheme() {
   // get the first part of the url
@@ -43,6 +41,7 @@ function updateTheme() {
   vuetifyTheme.global.name.value = theme;
 }
 
+watch(() => route.path, updateTheme);
 updateTheme();
 
 // load cards from localStorage
