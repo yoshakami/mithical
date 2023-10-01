@@ -11,6 +11,11 @@ const props = defineProps({
 
 const url = computed(() => {
   let icon = waccaIcons.find((i) => i.id === props.icon);
-  return `/wacca/img/icons/${icon.path}.webp`;
+
+  if (icon) {
+    return `/wacca/img/icons/${icon.path}.webp`;
+  }
+
+  return "/wacca/img/icons/S01/uT_UICN_S01_00_001.webp";
 });
 </script>

@@ -63,6 +63,10 @@ import fuzzysort from "fuzzysort";
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
 const runtimeConfig = useRuntimeConfig();
 
+definePageMeta({
+  middleware: ["auth"],
+});
+
 const filters = [
   "Favorites",
   "Uncleared Normal",

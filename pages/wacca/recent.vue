@@ -19,5 +19,9 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: ["auth"],
+});
+
 const profile = useState("profile");
 </script>

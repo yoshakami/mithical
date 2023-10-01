@@ -13,6 +13,15 @@
           <h1>{{ getTitle }}</h1>
           <h2>{{ song.artist }}</h2>
 
+          <div class="single-song-bpm">
+            <v-icon>mdi-metronome</v-icon> {{ song.bpm }} bpm
+          </div>
+          <div>Added: {{ formatDate(song.dateAdded) }}</div>
+          <div v-if="song.dateRemoved != 0">
+            Removed: {{ formatDate(song.dateRemoved) }}
+          </div>
+          <div>Game: {{ waccaVersions[song.gameVersion - 1].name }}</div>
+
           <!-- <v-btn
             class="mt-4"
             color="primary"
@@ -117,6 +126,24 @@ definePageMeta({
   middleware: ["auth"],
 });
 
+const waccaVersions = [
+  {
+    name: "Wacca",
+  },
+  {
+    name: "Wacca S",
+  },
+  {
+    name: "Wacca Lily",
+  },
+  {
+    name: "Wacca Lily R",
+  },
+  {
+    name: "Wacca Reverse",
+  },
+];
+
 const runtimeConfig = useRuntimeConfig();
 const route = useRoute();
 const activeCard = useState("activeCard");
@@ -139,7 +166,7 @@ const playerHistory = ref([]);
 function loadData() {
   leaderboardsLoading.value = ref(true);
   $fetch(
-    `${runtimeConfig.apiUrl}/wacca/music/${song.value.id}/highscores/${selectedDifficulty.value}`
+    `${runtimeConfig.public.apiUrl}/wacca/music/${song.value.id}/highscores/${selectedDifficulty.value}`
   )
     .then((data) => {
       leaderboardsLoading.value = false;
@@ -160,7 +187,7 @@ loadData();
 
 function loadPlayerData() {
   $fetch(
-    `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/music/${song.value.id}`
+    `${runtimeConfig.public.apiUrl}/wacca/user/${activeCard.value}/music/${song.value.id}`
   ).then((data) => {
     playerHistory.value = data;
   });
@@ -211,4 +238,16 @@ const getTitle = computed(() => {
 
   return song.value.titleEnglish || song.value.title;
 });
+
+function formatDate(date) {
+  if (date == 0) {
+    date = 20190718;
+  }
+  const strDate = date.toString();
+
+  let year = strDate.slice(0, 4);
+  let month = strDate.slice(4, 6);
+  let day = strDate.slice(6, 8);
+  return new Date(`${year}-${month}-${day}`).toLocaleDateString();
+}
 </script>

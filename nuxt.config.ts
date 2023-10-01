@@ -6,17 +6,25 @@ export default defineNuxtConfig({
     "vuetify/_styles.scss",
     "~/assets/roboto.scss",
   ],
+
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
   },
+
   build: {
     transpile: ["vuetify"],
   },
+
   runtimeConfig: {
     public: {
       apiUrl: "http://localhost:3001",
     },
   },
+
   ssr: false,
+
+  devtools: {
+    enabled: true,
+  },
 });

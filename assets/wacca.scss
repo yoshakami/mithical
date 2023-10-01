@@ -684,6 +684,15 @@
         color: rgb(var(--v-theme-primary));
       }
     }
+
+    .single-song-bpm {
+      border-radius: 50px;
+      padding: 5px 10px;
+      background-color: #333;
+      color: white;
+      display: inline-block;
+      font-weight: 700;
+    }
   }
 
   .highscore-grade,
