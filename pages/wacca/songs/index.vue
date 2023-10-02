@@ -30,6 +30,8 @@
         v-model="search"
         label="Find a Song"
         prepend-inner-icon="mdi-magnify"
+        variant="solo"
+        single-line
       ></v-text-field>
 
       <ClientOnly>
@@ -156,7 +158,7 @@ const filteredSongs = computed(() => {
     });
   }
 
-  if (search.value !== "") {
+  if (search.value.length > 2) {
     // perform search
     results = fuzzysort
       .go(search.value, results, {

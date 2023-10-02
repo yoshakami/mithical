@@ -9,18 +9,29 @@
           <v-img :src="fullUrl" />
         </div>
 
-        <div class="single-song-header">
+        <div class="single-song-details">
           <h1>{{ getTitle }}</h1>
           <h2>{{ song.artist }}</h2>
 
-          <div class="single-song-bpm">
-            <v-icon>mdi-metronome</v-icon> {{ song.bpm }} bpm
+          <div class="single-song-pills">
+            <div class="single-song-pill">
+              <v-icon>mdi-pulse</v-icon> {{ song.bpm }} bpm
+            </div>
+            <div class="single-song-pill">
+              <v-icon>mdi-plus</v-icon>{{ formatDate(song.dateAdded) }}
+            </div>
+            <div v-if="song.dateRemoved != 0" class="single-song-pill">
+              <v-icon>mdi-minus</v-icon>{{ formatDate(song.dateRemoved) }}
+            </div>
+            <div class="single-song-pill">
+              <v-icon>mdi-pound</v-icon>
+              {{ playCount }}
+              play{{ playCount == 1 ? "" : "s" }}
+            </div>
+            <div v-if="isFavorite" class="single-song-pill">
+              <v-icon>mdi-star</v-icon> Favorite
+            </div>
           </div>
-          <div>Added: {{ formatDate(song.dateAdded) }}</div>
-          <div v-if="song.dateRemoved != 0">
-            Removed: {{ formatDate(song.dateRemoved) }}
-          </div>
-          <div>Game: {{ waccaVersions[song.gameVersion - 1].name }}</div>
 
           <!-- <v-btn
             class="mt-4"
@@ -33,6 +44,10 @@
           </v-btn>
 
           <div class="text-center mt-4">{{ goToSongMessage }}</div> -->
+        </div>
+
+        <div class="single-song-game">
+          <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
         </div>
       </div>
     </v-container>
@@ -250,4 +265,37 @@ function formatDate(date) {
   let day = strDate.slice(6, 8);
   return new Date(`${year}-${month}-${day}`).toLocaleDateString();
 }
+
+useSeoMeta({
+  title: `Mithical | ${getTitle.value}`,
+  ogTitle: `Mithical | ${getTitle.value}`,
+  description: "View your scores and the leaderboards for this song!",
+  ogDescription: "View your scores and the leaderboards for this song!",
+  ogImage: fullUrl.value,
+  twitterCard: "summary",
+});
+
+const profile = useState("profile");
+
+const isFavorite = computed(() => {
+  return profile.value
+    ? profile.value.favorite_music.includes(song.value.id)
+    : false;
+});
+
+const playCount = computed(() => {
+  if (!profile.value) {
+    return null;
+  }
+
+  let totalPlayCount = 0;
+
+  profile.value.music.forEach((music) => {
+    if (music.music_id === song.value.id) {
+      totalPlayCount += music.play_count;
+    }
+  });
+
+  return totalPlayCount;
+});
 </script>

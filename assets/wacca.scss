@@ -670,6 +670,7 @@
   }
 
   .single-song {
+    position: relative;
     display: flex;
     gap: 10px;
 
@@ -677,21 +678,39 @@
       width: 320px;
     }
 
-    .single-song-header {
-      flex-grow: 1;
-
-      h2 {
-        color: rgb(var(--v-theme-primary));
-      }
+    .single-song-details {
+      display: flex;
+      flex-direction: column;
     }
 
-    .single-song-bpm {
+    h2 {
+      color: rgb(var(--v-theme-primary));
+    }
+
+    .single-song-pills {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .single-song-pill {
       border-radius: 50px;
       padding: 5px 10px;
       background-color: #333;
       color: white;
-      display: inline-block;
       font-weight: 700;
+    }
+
+    .single-song-game {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      height: 50px;
+
+      img {
+        height: 100%;
+      }
     }
   }
 
