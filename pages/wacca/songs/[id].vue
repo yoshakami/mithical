@@ -23,12 +23,15 @@
             <div v-if="song.dateRemoved != 0" class="single-song-pill">
               <v-icon>mdi-minus</v-icon>{{ formatDate(song.dateRemoved) }}
             </div>
-            <div class="single-song-pill">
+            <div class="single-song-pill" v-if="profile">
               <v-icon>mdi-pound</v-icon>
-              {{ playCount }}
-              play{{ playCount == 1 ? "" : "s" }}
+              {{ profile.songs[song.id].playCount }}
+              play{{ profile.songs[song.id].playCount == 1 ? "" : "s" }}
             </div>
-            <div v-if="isFavorite" class="single-song-pill">
+            <div
+              v-if="profile && profile.songs[song.id].favorite"
+              class="single-song-pill"
+            >
               <v-icon>mdi-star</v-icon> Favorite
             </div>
           </div>
@@ -137,27 +140,11 @@
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
 import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 
+const profile = useState("profile");
+
 definePageMeta({
   middleware: ["auth"],
 });
-
-const waccaVersions = [
-  {
-    name: "Wacca",
-  },
-  {
-    name: "Wacca S",
-  },
-  {
-    name: "Wacca Lily",
-  },
-  {
-    name: "Wacca Lily R",
-  },
-  {
-    name: "Wacca Reverse",
-  },
-];
 
 const runtimeConfig = useRuntimeConfig();
 const route = useRoute();
@@ -273,29 +260,5 @@ useSeoMeta({
   ogDescription: "View your scores and the leaderboards for this song!",
   ogImage: fullUrl.value,
   twitterCard: "summary",
-});
-
-const profile = useState("profile");
-
-const isFavorite = computed(() => {
-  return profile.value
-    ? profile.value.favorite_music.includes(song.value.id)
-    : false;
-});
-
-const playCount = computed(() => {
-  if (!profile.value) {
-    return null;
-  }
-
-  let totalPlayCount = 0;
-
-  profile.value.music.forEach((music) => {
-    if (music.music_id === song.value.id) {
-      totalPlayCount += music.play_count;
-    }
-  });
-
-  return totalPlayCount;
 });
 </script>

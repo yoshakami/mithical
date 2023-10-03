@@ -4,5 +4,6 @@
     <NuxtLink to="/wacca/recent">Recent Plays</NuxtLink>
     <NuxtLink to="/wacca/songs">All Songs</NuxtLink>
     <NuxtLink to="/wacca/settings">Settings</NuxtLink>
+    <NuxtLink to="/wacca/stats">Stats</NuxtLink>
   </div>
 </template>

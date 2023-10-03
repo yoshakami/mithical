@@ -22,6 +22,8 @@
 </style>
 
 <script setup>
+import waccaSongs from "~/assets/wacca/waccaSongs.js";
+
 const runtimeConfig = useRuntimeConfig();
 const activeCard = useState("activeCard");
 
@@ -44,11 +46,51 @@ async function loadProfile() {
       .then((data) => {
         profile.value = data;
         profileLoading.value = false;
+
+        cachePlayerSongs();
       })
       .catch((err) => {
-        profileError.value = err;
         profileLoading.value = false;
+        profileError.value = "Couldn't reach the API. Please try again later.";
       });
+  }
+}
+
+function findMusic(song, difficulty) {
+  return profile.value.music.find((music) => {
+    return music.music_id === song.id && music.music_difficulty === difficulty;
+  });
+}
+
+// getting the song and sheet data by id/difficulty
+// is a lot of .find so we cache them in playerData
+function cacheSongInfo(song) {
+  let favorite = profile.value.favorite_music.includes(song.id);
+  let playCount = 0;
+  let scores = [];
+
+  for (let difficulty = 1; difficulty <= song.sheets.length; difficulty++) {
+    let music = findMusic(song, difficulty);
+
+    if (music) {
+      playCount += music.play_count;
+      scores.push(music);
+    } else {
+      scores.push(null);
+    }
+  }
+
+  return {
+    favorite,
+    scores,
+    playCount,
+  };
+}
+
+function cachePlayerSongs() {
+  profile.value.songs = [];
+  for (const song of waccaSongs) {
+    profile.value.songs[song.id] = cacheSongInfo(song);
   }
 }
 

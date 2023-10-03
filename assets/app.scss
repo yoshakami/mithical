@@ -91,3 +91,18 @@ body {
     font-size: 1.1rem;
   }
 }
+
+.footer {
+  background: rgb(var(--v-theme-background));
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: #888;
+  font-size: 0.8em;
+}
+
+.footer-tooltip {
+  display: flex;
+  gap: 5px;
+}

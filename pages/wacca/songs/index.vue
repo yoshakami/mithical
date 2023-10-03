@@ -40,7 +40,7 @@
             <NuxtLink :to="`/wacca/songs/${song.id}`">
               <WaccaSong
                 :song="song"
-                :player-data="playerData[song.id]"
+                :player-data="profile.songs[song.id]"
                 @toggle-favorite="toggleFavorite(song)"
               />
             </NuxtLink>
@@ -117,15 +117,15 @@ const filteredSongs = computed(() => {
   // other filters
   if (activeFilters.value.includes("Favorites")) {
     results = results.filter((song) => {
-      return playerData.value[song.id]?.favorite;
+      return profile.value.songs[song.id]?.favorite;
     });
   }
 
   if (activeFilters.value.includes("Uncleared Normal")) {
     results = results.filter((song) => {
       return (
-        !playerData.value[song.id].scores[0] ||
-        playerData.value[song.id].scores[0].clear_count == 0
+        !profile.value.songs[song.id].scores[0] ||
+        profile.value.songs[song.id].scores[0].clear_count == 0
       );
     });
   }
@@ -133,8 +133,8 @@ const filteredSongs = computed(() => {
   if (activeFilters.value.includes("Uncleared Hard")) {
     results = results.filter((song) => {
       return (
-        !playerData.value[song.id].scores[1] ||
-        playerData.value[song.id].scores[1].clear_count == 0
+        !profile.value.songs[song.id].scores[1] ||
+        profile.value.songs[song.id].scores[1].clear_count == 0
       );
     });
   }
@@ -142,8 +142,8 @@ const filteredSongs = computed(() => {
   if (activeFilters.value.includes("Uncleared Expert")) {
     results = results.filter((song) => {
       return (
-        !playerData.value[song.id].scores[2] ||
-        playerData.value[song.id].scores[2].clear_count == 0
+        !profile.value.songs[song.id].scores[2] ||
+        profile.value.songs[song.id].scores[2].clear_count == 0
       );
     });
   }
@@ -151,8 +151,8 @@ const filteredSongs = computed(() => {
   if (activeFilters.value.includes("Uncleared Inferno")) {
     results = results.filter((song) => {
       return (
-        (!playerData.value[song.id].scores[3] ||
-          playerData.value[song.id].scores[3].clear_count == 0) &&
+        (!profile.value.songs[song.id].scores[3] ||
+          profile.value.songs[song.id].scores[3].clear_count == 0) &&
         song.sheets.length > 3
       );
     });
@@ -182,62 +182,22 @@ watch(filteredSongs, () => {
   page.value = 1;
 });
 
-async function toggleFavorite(song) {
-  var index = profile.value.favorite_music.indexOf(song.id);
+// async function toggleFavorite(song) {
+//   var index = profile.value.favorite_music.indexOf(song.id);
 
-  if (index === -1) {
-    profile.value.favorite_music.push(song.id);
-  } else {
-    profile.value.favorite_music.splice(index, 1);
-  }
-  cachePlayerData();
+//   if (index === -1) {
+//     profile.value.favorite_music.push(song.id);
+//   } else {
+//     profile.value.favorite_music.splice(index, 1);
+//   }
 
-  await $fetch(
-    `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/favorites/${song.id}/toggle`,
-    {
-      method: "POST",
-    }
-  );
-}
-
-function findMusic(song, difficulty) {
-  return profile.value.music.find((music) => {
-    return music.music_id === song.id && music.music_difficulty === difficulty;
-  });
-}
-
-// getting the song and sheet data by id/difficulty
-// is a lot of .find so we cache them in playerData
-function cacheSongInfo(song) {
-  let favorite = profile.value.favorite_music.includes(song.id);
-  let scores = [];
-
-  for (let difficulty = 1; difficulty <= song.sheets.length; difficulty++) {
-    let music = findMusic(song, difficulty);
-
-    if (music) {
-      scores.push(music);
-    } else {
-      scores.push(null);
-    }
-  }
-
-  return {
-    favorite,
-    scores,
-  };
-}
-
-const playerData = ref({});
-
-function cachePlayerData() {
-  for (const song of waccaSongs) {
-    playerData.value[song.id] = cacheSongInfo(song);
-  }
-}
-
-if (profile.value) cachePlayerData(); // cache on page load if profile already exists
-watch(profile, cachePlayerData); // cache when profile changes
+//   await $fetch(
+//     `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/favorites/${song.id}/toggle`,
+//     {
+//       method: "POST",
+//     }
+//   );
+// }
 
 const categories = [
   { ja: "アニメ／ＰＯＰ", en: "Anime/Pop" },

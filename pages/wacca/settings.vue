@@ -1,11 +1,10 @@
 <template>
-  <v-container>
-    <v-alert type="warning">
-      This page is just for demonstration purposes for now. It may or may not
-      show correct data, and won't save anything yet.
-    </v-alert>
-
-    <WaccaProfileRequired>
+  <WaccaProfileRequired>
+    <v-container>
+      <v-alert type="warning">
+        This page is just for demonstration purposes for now. It may or may not
+        show correct data, and won't save anything yet.
+      </v-alert>
       <h1>Current profile: {{ profile.user_name }}</h1>
 
       <div v-for="option in optionList" :key="option.name" class="option">
@@ -52,8 +51,8 @@
           ></v-switch>
         </div>
       </div>
-    </WaccaProfileRequired>
-  </v-container>
+    </v-container>
+  </WaccaProfileRequired>
 </template>
 
 <script setup>
