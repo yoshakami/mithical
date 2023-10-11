@@ -12,14 +12,13 @@
           :error-messages="errorMessage"
           :messages="message"
           @keydown.enter="addCard"
+          :loading="loading"
         ></v-text-field>
-      </v-card-text>
 
-      <v-card-actions>
-        <v-btn color="primary" @click="addCard" :loading="loading">
+        <v-btn color="primary" @click="addCard" :loading="loading" block>
           Add Card
         </v-btn>
-      </v-card-actions>
+      </v-card-text>
     </v-card>
 
     <div class="cards">
@@ -73,7 +72,7 @@ function addCard() {
   }
 
   loading.value = true;
-  $fetch(`${runtimeConfig.apiUrl}/card/${luid.value}`)
+  $fetch(`${runtimeConfig.public.apiUrl}/card/${luid.value}`)
     .then((data) => {
       loading.value = false;
       errorMessage.value = "";

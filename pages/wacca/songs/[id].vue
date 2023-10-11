@@ -10,7 +10,11 @@
         </div>
 
         <div class="single-song-details">
-          <h1>{{ getTitle }}</h1>
+          <div class="single-song-title">
+            <h1>{{ getTitle }}</h1>
+
+            <WaccaFavorite :song-id="song.id" />
+          </div>
           <h2>{{ song.artist }}</h2>
 
           <div class="single-song-pills">
@@ -213,7 +217,7 @@ loadPlayerData();
 // function goToSong() {
 //   goToSongMessage.value = null;
 //   loadingGoToSong.value = true;
-//   $fetch(`${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/gotomusic`, {
+//   $fetch(`${runtimeConfig.public.apiUrl}/wacca/user/${activeCard.value}/gotomusic`, {
 //     method: "POST",
 //     body: JSON.stringify({
 //       music_id: song.value.id,

@@ -681,6 +681,13 @@
     .single-song-details {
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .single-song-title {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
 
     h2 {

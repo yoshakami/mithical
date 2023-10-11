@@ -38,11 +38,7 @@
         <div class="songs">
           <div v-for="song in paginatedSongs" :key="song.id">
             <NuxtLink :to="`/wacca/songs/${song.id}`">
-              <WaccaSong
-                :song="song"
-                :player-data="profile.songs[song.id]"
-                @toggle-favorite="toggleFavorite(song)"
-              />
+              <WaccaSong :song="song" :player-data="profile.songs[song.id]" />
             </NuxtLink>
           </div>
 
@@ -63,7 +59,6 @@
 <script setup>
 import fuzzysort from "fuzzysort";
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
-const runtimeConfig = useRuntimeConfig();
 
 definePageMeta({
   middleware: ["auth"],
@@ -78,7 +73,6 @@ const filters = [
 ];
 
 const profile = useState("profile");
-const activeCard = useState("activeCard");
 
 const perPage = 50;
 const page = ref(1);
@@ -181,23 +175,6 @@ const paginatedSongs = computed(() => {
 watch(filteredSongs, () => {
   page.value = 1;
 });
-
-// async function toggleFavorite(song) {
-//   var index = profile.value.favorite_music.indexOf(song.id);
-
-//   if (index === -1) {
-//     profile.value.favorite_music.push(song.id);
-//   } else {
-//     profile.value.favorite_music.splice(index, 1);
-//   }
-
-//   await $fetch(
-//     `${runtimeConfig.apiUrl}/wacca/user/${activeCard.value}/favorites/${song.id}/toggle`,
-//     {
-//       method: "POST",
-//     }
-//   );
-// }
 
 const categories = [
   { ja: "アニメ／ＰＯＰ", en: "Anime/Pop" },
