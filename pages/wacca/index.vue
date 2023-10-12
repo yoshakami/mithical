@@ -24,7 +24,10 @@
           <span class="light">Level</span> {{ level }}
         </div>
         <div class="profile-stat mr-5">
-          <span class="light">Rate</span> {{ realRate }}
+          <span class="light">Rate</span>&nbsp;<span
+            :class="`rating-${ratingColor}`"
+            >{{ realRate }}</span
+          >
         </div>
         <div class="profile-stat">
           <span class="light">Points</span> {{ profile.points }}
@@ -37,6 +40,18 @@
 <script setup>
 import waccaNavigators from "~/assets/wacca/waccaNavigators.js";
 
+const ratingColors = [
+  { from: 0, color: "white" },
+  { from: 300, color: "darkblue" },
+  { from: 600, color: "yellow" },
+  { from: 1000, color: "red" },
+  { from: 1300, color: "purple" },
+  { from: 1600, color: "blue" },
+  { from: 1900, color: "silver" },
+  { from: 2200, color: "gold" },
+  { from: 2500, color: "rainbow" },
+];
+
 definePageMeta({
   middleware: ["auth"],
 });
@@ -48,7 +63,15 @@ const level = computed(() => {
 });
 
 const realRate = computed(() => {
-  return Math.floor((profile.value.rating ?? 0) / 10);
+  return (profile.value.rating ?? 0) / 10;
+});
+
+const ratingColor = computed(() => {
+  for (let i = ratingColors.length - 1; i >= 0; i--) {
+    if (realRate.value >= ratingColors[i].from) {
+      return ratingColors[i].color;
+    }
+  }
 });
 
 const navigator = computed(() => {

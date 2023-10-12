@@ -125,6 +125,7 @@
 
     .light {
       font-weight: 200;
+      color: white;
     }
   }
 
@@ -135,11 +136,90 @@
   // RECENTS
   $play-paddings: 10px;
   $play-cover-size: 100px;
+
+  .playlog-hr {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .playlog-hr:before,
+  .playlog-hr:after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.5);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+  }
+
+  .rating-white {
+    color: white;
+  }
+
+  .rating-darkblue {
+    color: #009de6;
+  }
+
+  .rating-yellow {
+    color: #fffc48;
+  }
+
+  .rating-red {
+    color: #fc0606;
+  }
+
+  .rating-purple {
+    color: #a000ac;
+  }
+
+  .rating-blue {
+    color: #009de6;
+  }
+
+  .rating-silver {
+    color: #c0c0c0;
+  }
+
+  .rating-gold {
+    color: #ffd700;
+  }
+
+  .rating-rainbow {
+    background-image: repeating-linear-gradient(
+      -70deg,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red,
+      violet
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+
+    @keyframes rainbow_animation {
+      0%,
+      100% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 100% 0;
+      }
+    }
+  }
+
   .play {
     position: relative;
 
     padding-bottom: 0;
-    margin-bottom: 1rem;
+    margin: 12px 0;
 
     border-radius: $play-paddings;
 
@@ -248,6 +328,10 @@
 
       &.difficulty-4 {
         background-color: #4a004f;
+      }
+
+      .play-difficulty-number {
+        font-weight: 300;
       }
     }
 
@@ -430,6 +514,7 @@
 
     .song-difficulty-level {
       width: 55px;
+      font-weight: 300;
       text-align: center;
     }
   }
@@ -448,7 +533,7 @@
   .all-song-medal {
     transform: rotate(-10deg);
     height: 40px;
-    margin-bottom: -5px;
+    margin-bottom: -20px;
     text-align: center;
   }
 
@@ -607,7 +692,7 @@
       display: block;
       font-weight: 900;
       color: #dfff01;
-      background: linear-gradient(
+      background: repeating-linear-gradient(
         169deg,
         #c323d3,
         5%,
@@ -684,7 +769,7 @@
       flex-grow: 1;
     }
 
-    .single-song-title {
+    .single-song-header {
       display: flex;
       justify-content: space-between;
       width: 100%;

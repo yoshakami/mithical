@@ -10,12 +10,15 @@
         </div>
 
         <div class="single-song-details">
-          <div class="single-song-title">
-            <h1>{{ getTitle }}</h1>
-
-            <WaccaFavorite :song-id="song.id" />
+          <div class="single-song-header">
+            <div class="single-song-header-left">
+              <h1>{{ getTitle }}</h1>
+              <h2>{{ song.artist }}</h2>
+            </div>
+            <div class="single-song-header-right">
+              <WaccaFavorite :song-id="song.id" />
+            </div>
           </div>
-          <h2>{{ song.artist }}</h2>
 
           <div class="single-song-pills">
             <div class="single-song-pill">

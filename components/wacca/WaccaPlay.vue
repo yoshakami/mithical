@@ -27,6 +27,9 @@
               class="play-difficulty"
               :class="`difficulty-${play.music_difficulty}`"
             >
+              <span class="play-difficulty-number">{{
+                song.sheets[play.music_difficulty - 1]
+              }}</span>
               {{ difficulties[play.music_difficulty] }}
             </div>
 
@@ -38,7 +41,9 @@
               {{ props.play.score }}
             </div>
 
-            <!-- <div class="play-pb" v-if="props.play.is_new_record">New Record!</div> -->
+            <!-- <div class="play-pb" v-if="props.play.is_new_record">
+              New Record!
+            </div> -->
 
             <div class="play-spacer"></div>
 

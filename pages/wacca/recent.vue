@@ -1,7 +1,10 @@
 <template>
   <WaccaProfileRequired>
     <v-container>
-      <WaccaPlay v-for="play in profile.playlog" :play="play" />
+      <div v-for="group in playlogGrouped">
+        <div class="playlog-hr">{{ group.date }}</div>
+        <WaccaPlay v-for="play in group.plays" :play="play" />
+      </div>
 
       <div v-if="profile.playlog.length === 0">
         <v-alert type="info" border="left" prominent>
@@ -24,4 +27,26 @@ definePageMeta({
 });
 
 const profile = useState("profile");
+
+const playlogGrouped = computed(() => {
+  const grouped = [];
+
+  profile.value.playlog.forEach((play) => {
+    const date = new Date(play.user_play_date);
+    const dateStr = date.toLocaleDateString();
+
+    const group = grouped.find((group) => group.date === dateStr);
+
+    if (group) {
+      group.plays.push(play);
+    } else {
+      grouped.push({
+        date: dateStr,
+        plays: [play],
+      });
+    }
+  });
+
+  return grouped;
+});
 </script>
