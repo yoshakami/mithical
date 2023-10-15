@@ -1,7 +1,8 @@
 <template>
-  <v-app>
+  <v-app :style="{ background }">
     <MainNav />
-    <NuxtLayout :name="layout"> </NuxtLayout>
+    <NuxtLayout :name="layout"></NuxtLayout>
+    <SettingsModal />
   </v-app>
 </template>
 
@@ -21,6 +22,21 @@
 import { useTheme } from "vuetify";
 
 const layout = ref("wacca");
+const theme = useState("theme");
+
+let defaultDark =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// defualt to light for now...
+defaultDark = false;
+
+const storageTheme = localStorage.getItem("theme");
+if (storageTheme) {
+  theme.value = storageTheme;
+} else {
+  theme.value = defaultDark ? "Dark" : "Light";
+}
 
 useHead({
   title: "Mithical",
@@ -37,16 +53,18 @@ const route = useRoute();
 
 function updateTheme() {
   // get the first part of the url
-  let theme = route.path.split("/")[1];
+  let nuxtTheme = route.path.split("/")[1];
 
-  if (!["wacca"].includes(theme)) {
-    theme = "mithical";
+  if (!["wacca"].includes(nuxtTheme)) {
+    nuxtTheme = "mithical";
   }
 
-  layout.value = theme;
-  vuetifyTheme.global.name.value = theme;
+  layout.value = nuxtTheme;
+  vuetifyTheme.global.name.value = nuxtTheme + theme.value;
+  console.log(vuetifyTheme.global.name.value);
 }
 
+watch(theme, updateTheme);
 watch(() => route.path, updateTheme);
 updateTheme();
 
@@ -69,13 +87,7 @@ if (storageActiveCard) {
   activeCard.value = cards.value[0]?.luid;
 }
 
-// set language from localStorage
-const activeLanguage = useState("activeLanguage");
-const storageActiveLanguage = localStorage.getItem("activeLanguage");
-
-if (storageActiveLanguage) {
-  activeLanguage.value = storageActiveLanguage;
-} else {
-  activeLanguage.value = "en";
-}
+const background = computed(() => {
+  return vuetifyTheme.current.value.colors.background;
+});
 </script>

@@ -1,9 +1,9 @@
 <template>
   <WaccaProfileRequired>
     <v-container>
-      <v-alert type="warning">
-        This page is just for demonstration purposes for now. It may or may not
-        show correct data, and won't save anything yet.
+      <v-alert type="info">
+        This page is only for testing purposes right now. It may or may not show
+        correct data, and won't save anything yet.
       </v-alert>
       <h1>Current profile: {{ profile.user_name }}</h1>
 
@@ -133,13 +133,16 @@ const optionList = [
 
   {
     id: 7,
-    text: "Play movies?",
+    text: "Background Video Settings",
     type: "options",
     default: 0,
     choices: [
-      { text: "Ask every time", value: 0 },
-      { text: "Always NO", value: 1 },
-      { text: "Always YES", value: 2 },
+      {
+        text: "Ask whether or not to play background videos each time.",
+        value: 0,
+      },
+      { text: "Never play background videos.", value: 1 },
+      { text: "Always play background videos.", value: 2 },
     ],
   },
 

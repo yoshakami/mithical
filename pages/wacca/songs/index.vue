@@ -10,7 +10,7 @@
           :color="activeCategory === category.ja ? 'primary' : 'default'"
           :rounded="true"
         >
-          {{ activeLanguage == "ja" ? category.ja : category.en }}
+          {{ language == "ja" ? category.ja : category.en }}
         </v-btn>
       </div>
 
@@ -43,7 +43,7 @@
           </div>
 
           <div v-if="paginatedSongs.length == 0">
-            <v-alert type="info">No songs found</v-alert>
+            <v-alert type="info" color="primary">No songs found</v-alert>
           </div>
         </div>
 
@@ -187,5 +187,5 @@ const categories = [
   { ja: "TANO*C（オリジナル）", en: "TANO*C (Original)" },
 ];
 
-const activeLanguage = useState("activeLanguage");
+const language = useState("language");
 </script>

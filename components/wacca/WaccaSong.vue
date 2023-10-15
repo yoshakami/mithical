@@ -30,18 +30,11 @@
             <div class="song-medal"><WaccaMedal :medal="medal(i)" /></div>
           </div>
 
-          <div
-            class="song-difficulty-pill active"
-            :class="`song-difficulty-${i + 1}`"
-          >
-            <div class="song-difficulty-name">
-              {{ waccaDifficulties.find((d) => d.id === i + 1).name }}
-            </div>
-
-            <div class="song-difficulty-level">
-              {{ difficulty }}
-            </div>
-          </div>
+          <WaccaDifficultyPill
+            :i="i + 1"
+            :difficulty="difficulty"
+            class="active"
+          />
 
           <div
             class="song-difficulty-bottom"
@@ -58,8 +51,6 @@
 </template>
 
 <script setup>
-import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
-
 const props = defineProps({
   song: Object,
   playerData: Object,
@@ -87,10 +78,10 @@ function medal(difficulty) {
   return "none";
 }
 
-const activeLanguage = useState("activeLanguage");
+const language = useState("language");
 
 const getTitle = computed(() => {
-  if (activeLanguage.value === "ja") {
+  if (language.value === "ja") {
     return props.song.title;
   }
 

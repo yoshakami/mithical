@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(var(--v-theme-primary));
+  background: rgb(var(--v-theme-navbar));
 
   .nav-select {
     max-width: 200px;
@@ -62,7 +62,7 @@ body {
   }
 }
 
-.layout {
+.mithical {
   flex-grow: 1;
 }
 
@@ -105,4 +105,44 @@ body {
 .footer-tooltip {
   display: flex;
   gap: 5px;
+}
+
+.modal {
+  z-index: -1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
+
+  .modal-content {
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.on {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .modal-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.settings {
+  min-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.settings-rounding label {
+  opacity: 1;
 }

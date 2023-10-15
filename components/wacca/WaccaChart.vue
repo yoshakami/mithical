@@ -78,6 +78,7 @@ onMounted(() => {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+
       scales: {
         x: {
           type: "time",
@@ -87,8 +88,12 @@ onMounted(() => {
         },
 
         y: {
+          offset: true,
+          adterDataLimits: (scale) => {
+            scale.max = 50000000;
+            scale.min = 0;
+          },
           max: 1000000,
-          suggestedMin: 800000,
         },
       },
       plugins: {

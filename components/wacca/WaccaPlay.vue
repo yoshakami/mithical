@@ -28,7 +28,10 @@
               :class="`difficulty-${play.music_difficulty}`"
             >
               <span class="play-difficulty-number">{{
-                song.sheets[play.music_difficulty - 1]
+                formatDifficulty(
+                  song.sheets[play.music_difficulty - 1],
+                  difficultyInternal
+                )
               }}</span>
               {{ difficulties[play.music_difficulty] }}
             </div>
@@ -108,6 +111,9 @@
 </template>
 
 <script setup>
+import { formatDifficulty } from "~/assets/js/util";
+const difficultyInternal = useState("difficultyInternal");
+
 import waccaSongs from "~~/assets/wacca/waccaSongs.js";
 
 const props = defineProps({
@@ -156,10 +162,10 @@ const medal = computed(() => {
   }
 });
 
-const activeLanguage = useState("activeLanguage");
+const language = useState("language");
 
 const getTitle = computed(() => {
-  if (activeLanguage.value === "ja") {
+  if (language.value === "ja") {
     return song.value.title;
   } else {
     return song.value.titleEnglish || song.value.title;

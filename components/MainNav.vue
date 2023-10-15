@@ -21,16 +21,10 @@
         />
       </svg>
     </NuxtLink>
-    <v-select
-      class="nav-select language-select"
-      v-model="activeLanguage"
-      :items="languages"
-      item-title="name"
-      item-value="code"
-      hide-details
-      single-line
-      prepend-inner-icon="mdi-translate"
-    />
+
+    <v-btn @click="openSettings" icon variant="plain">
+      <v-icon>mdi-cog</v-icon>
+    </v-btn>
 
     <v-select
       class="nav-select"
@@ -41,6 +35,7 @@
       hide-details
       single-line
       prepend-inner-icon="mdi-card-account-details-outline"
+      no-data-text="No cards added yet"
     />
     <div class="nav-spacer"></div>
     <NuxtLink to="/wacca">Wacca</NuxtLink>
@@ -50,18 +45,16 @@
 <script setup>
 const cards = useState("cards");
 const activeCard = useState("activeCard");
-const activeLanguage = useState("activeLanguage");
-
-const languages = [
-  { name: "English", code: "en" },
-  { name: "日本語", code: "ja" },
-];
 
 watch(activeCard, (newVal) => {
-  localStorage.setItem("activeCard", newVal);
+  if (newVal) {
+    localStorage.setItem("activeCard", newVal);
+  }
 });
 
-watch(activeLanguage, (newVal) => {
-  localStorage.setItem("activeLanguage", newVal);
-});
+const settingsVisible = useState("settingsVisible");
+
+function openSettings() {
+  settingsVisible.value = true;
+}
 </script>

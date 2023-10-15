@@ -2,7 +2,7 @@
   <div style="padding-bottom: 4em">
     <v-container
       class="elevation-1 mt-4 single-song-container"
-      style="background: white"
+      style="background: rgb(var(--v-theme-surface))"
     >
       <div class="single-song">
         <div class="single-song-cover">
@@ -62,12 +62,18 @@
       </div>
     </v-container>
 
-    <v-container class="elevation-1 mt-4" style="background: white">
+    <v-container
+      class="elevation-1 mt-4"
+      style="background: rgb(var(--v-theme-surface))"
+    >
       <h2>Your scores</h2>
       <WaccaChart ref="chart" :player-history="playerHistory" :song="song" />
     </v-container>
 
-    <v-container class="elevation-1 mt-4" style="background: white">
+    <v-container
+      class="elevation-1 mt-4"
+      style="background: rgb(var(--v-theme-surface))"
+    >
       <h2>Leaderboards</h2>
       <div class="song-sheets difficulty-selection mt-4">
         <div
@@ -75,22 +81,12 @@
           :key="i"
           class="song-difficulty"
         >
-          <div
-            class="song-difficulty-pill"
-            :class="[
-              `song-difficulty-${i + 1}`,
-              { active: i + 1 == selectedDifficulty },
-            ]"
+          <WaccaDifficultyPill
+            :i="i + 1"
+            :difficulty="difficulty"
+            :class="{ active: i + 1 == selectedDifficulty }"
             @click="selectDifficulty(i + 1)"
-          >
-            <div class="song-difficulty-name">
-              {{ waccaDifficulties.find((d) => d.id === i + 1).name }}
-            </div>
-
-            <div class="song-difficulty-level">
-              {{ difficulty }}
-            </div>
-          </div>
+          />
         </div>
       </div>
 
@@ -145,7 +141,6 @@
 
 <script setup>
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
-import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 
 const profile = useState("profile");
 
@@ -165,7 +160,7 @@ const fullUrl = computed(() => {
   return `/wacca/img/covers/${song.value.imageName}`;
 });
 
-const selectedDifficulty = ref(3);
+const selectedDifficulty = ref(song.value.sheets.length);
 const highscores = ref([]);
 const leaderboardsLoading = ref(false);
 const leaderboardsLoadingError = ref();
@@ -238,10 +233,10 @@ loadPlayerData();
 //     });
 // }
 
-const activeLanguage = useState("activeLanguage");
+const language = useState("language");
 
 const getTitle = computed(() => {
-  if (activeLanguage.value === "ja") {
+  if (language.value === "ja") {
     return song.value.title;
   }
 

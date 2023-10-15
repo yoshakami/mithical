@@ -1,5 +1,5 @@
 <template>
-  <v-theme-provider theme="wacca" with-background class="layout">
+  <v-theme-provider :theme="`wacca${theme}`" class="wacca" with-background>
     <div id="site-logo">
       <img src="/wacca/img/logo.svg" />
     </div>
@@ -24,6 +24,7 @@
 <script setup>
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
 
+const theme = useState("theme");
 const runtimeConfig = useRuntimeConfig();
 const activeCard = useState("activeCard");
 

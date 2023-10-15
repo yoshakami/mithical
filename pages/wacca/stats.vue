@@ -1,6 +1,7 @@
 <template>
   <WaccaProfileRequired>
     <v-container>
+      Stat ideas
       <h1>Average score for difficulty</h1>
       <h1>Best leaderboard placement</h1>
       <h1>Worst leaderboard placement</h1>

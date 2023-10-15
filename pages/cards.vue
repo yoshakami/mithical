@@ -7,39 +7,67 @@
         <v-text-field
           v-model="luid"
           label="Card ID/Access Code"
-          counter="20"
-          maxlength="20"
+          maxlength="24"
+          pattern="[0-9]*"
+          inputmode="numeric"
           :error-messages="errorMessage"
           :messages="message"
           @keydown.enter="addCard"
           :loading="loading"
         ></v-text-field>
 
-        <v-btn color="primary" @click="addCard" :loading="loading" block>
+        <v-btn
+          color="primary"
+          @click="addCard"
+          :loading="loading"
+          block
+          style="margin-top: 6px"
+        >
           Add Card
         </v-btn>
+
+        <div style="margin-top: 1em">
+          <div v-if="cards.length == 0" class="text-center text-grey">
+            Add your card on every device you wanna use it on, as it is stored
+            in your browser.
+          </div>
+
+          <v-btn
+            v-if="cards.length > 0"
+            color="primary"
+            @click="$router.push('/wacca')"
+            block
+          >
+            Go to the Wacca page
+          </v-btn>
+        </div>
       </v-card-text>
     </v-card>
 
-    <div class="cards">
+    <TransitionGroup class="cards" name="cards" tag="div">
       <Card
         v-for="card in cards"
         :key="card.luid"
         :card="card"
         @delete="deleteCard(card)"
       />
-    </div>
-
-    <v-btn
-      v-if="cards.length > 0"
-      color="primary"
-      @click="$router.push('/wacca')"
-      block
-    >
-      Go to the Wacca page
-    </v-btn>
+    </TransitionGroup>
   </v-container>
 </template>
+
+<style scoped lang="scss">
+.cards-enter-active,
+.cards-leave-active {
+  transform-origin: top;
+  transform: perspective(600px) rotateX(0deg);
+  transition: transform 0.5s ease-out;
+}
+.cards-enter-from,
+.cards-leave-to {
+  transform: perspective(600px) rotateX(90deg);
+  transform-origin: top;
+}
+</style>
 
 <script setup>
 const runtimeConfig = useRuntimeConfig();
@@ -51,39 +79,48 @@ const errorMessage = ref("");
 const message = ref("");
 const loading = ref(false);
 
-watch(luid, (newLuid) => {
-  // only allow numbers
-  luid.value = newLuid.replace(/\D/g, "");
-  errorMessage.value = "";
-  message.value = "";
+function formatLuid(ins) {
+  let realLuid = ins.replace(/[^0-9]/gi, "");
+  let separatedLuid = realLuid.match(/.{1,4}/g);
+
+  if (separatedLuid === null) {
+    return "";
+  }
+
+  return separatedLuid.join(" ");
+}
+
+watch(luid, () => {
+  luid.value = formatLuid(luid.value);
 });
 
 function addCard() {
   // check that the card is valid by asking the API
+  const inputLuid = luid.value.replace(/[^0-9]/gi, "");
 
-  if (luid.value.length < 20) {
+  if (inputLuid.length < 20) {
     errorMessage.value = "Card ID must be 20 characters long.";
     return;
   }
 
-  if (cards.value.find((card) => card.luid === luid.value)) {
+  if (cards.value.find((card) => card.luid === inputLuid)) {
     errorMessage.value = "You already added this card.";
     return;
   }
 
   loading.value = true;
-  $fetch(`${runtimeConfig.public.apiUrl}/card/${luid.value}`)
+  $fetch(`${runtimeConfig.public.apiUrl}/card/${inputLuid}`)
     .then((data) => {
       loading.value = false;
       errorMessage.value = "";
 
       cards.value.push({
-        luid: luid.value,
+        luid: inputLuid,
         user_name: data.user_name,
       });
 
       localStorage.setItem("cards", JSON.stringify(cards.value));
-      activeCard.value = luid.value;
+      activeCard.value = inputLuid;
       localStorage.setItem("activeCard", activeCard.value);
 
       message.value = "Card added successfully!";
