@@ -21,26 +21,23 @@
           </div>
 
           <div class="single-song-pills">
-            <div class="single-song-pill">
-              <v-icon>mdi-pulse</v-icon> {{ song.bpm }} bpm
-            </div>
-            <div class="single-song-pill">
-              <v-icon>mdi-plus</v-icon>{{ formatDate(song.dateAdded) }}
-            </div>
-            <div v-if="song.dateRemoved != 0" class="single-song-pill">
-              <v-icon>mdi-minus</v-icon>{{ formatDate(song.dateRemoved) }}
-            </div>
-            <div class="single-song-pill" v-if="profile">
-              <v-icon>mdi-pound</v-icon>
+            <v-chip prepend-icon="mdi-pulse">{{ song.bpm }} bpm</v-chip>
+            <v-chip prepend-icon="mdi-plus">
+              {{ formatDate(song.dateAdded) }}</v-chip
+            >
+            <v-chip v-if="song.dateRemoved != 0" prepend-icon="mdi-minus">
+              {{ formatDate(song.dateRemoved) }}</v-chip
+            >
+            <v-chip v-if="profile" prepend-icon="mdi-pound">
               {{ profile.songs[song.id].playCount }}
               play{{ profile.songs[song.id].playCount == 1 ? "" : "s" }}
-            </div>
-            <div
+            </v-chip>
+            <v-chip
               v-if="profile && profile.songs[song.id].favorite"
-              class="single-song-pill"
+              prepend-icon="mdi-star"
             >
-              <v-icon>mdi-star</v-icon> Favorite
-            </div>
+              Favorite
+            </v-chip>
           </div>
 
           <!-- <v-btn

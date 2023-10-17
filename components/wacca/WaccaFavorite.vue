@@ -1,20 +1,20 @@
 <template>
-  <v-tooltip location="start">
-    <template v-slot:activator="{ props }">
-      <v-btn
-        icon
-        @click.prevent="toggleFavorite"
-        variant="plain"
-        v-bind="props"
-        size="x-large"
-      >
-        <v-icon color="yellow" size="50">{{
-          profileSong.favorite ? "mdi-star" : "mdi-star-outline"
-        }}</v-icon>
-      </v-btn>
-    </template>
+  <!-- <v-tooltip location="start">
+    <template v-slot:activator="{ props }"> -->
+  <v-btn
+    icon
+    @click.prevent="toggleFavorite"
+    variant="plain"
+    v-bind="props"
+    size="x-large"
+  >
+    <v-icon color="yellow" size="50">{{
+      profileSong.favorite ? "mdi-star" : "mdi-star-outline"
+    }}</v-icon>
+  </v-btn>
+  <!-- </template>
     <span>{{ profileSong.favorite ? "Remove favorite" : "Add favorite" }}</span>
-  </v-tooltip>
+  </v-tooltip> -->
 </template>
 
 <script setup>

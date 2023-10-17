@@ -61,7 +61,6 @@ function updateTheme() {
 
   layout.value = nuxtTheme;
   vuetifyTheme.global.name.value = nuxtTheme + theme.value;
-  console.log(vuetifyTheme.global.name.value);
 }
 
 watch(theme, updateTheme);
