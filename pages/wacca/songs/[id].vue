@@ -54,7 +54,7 @@
         </div>
 
         <div class="single-song-game">
-          <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
+          <img :src="`/wacca/img/games/${song.gameVersion}.png`" />
         </div>
       </div>
     </v-container>

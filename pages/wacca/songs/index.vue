@@ -66,6 +66,11 @@
 
             <v-menu activator="parent">
               <div class="song-filters" @click.stop>
+                <div class="song-filter-help">
+                  <div>No</div>
+                  <div>All</div>
+                  <div>Yes</div>
+                </div>
                 <div
                   v-for="filter in filters"
                   class="song-filter-row"
@@ -103,9 +108,12 @@
                 color="primary"
                 v-for="category in categories"
                 v-model="activeCategories"
-                :label="category.en"
                 :value="category.ja"
-              />
+              >
+                <template v-slot:label>
+                  {{ language == "ja" ? category.ja : category.en }}
+                </template>
+              </v-checkbox>
             </div>
           </v-menu>
         </v-btn-group>
@@ -335,9 +343,9 @@ const sortOptions = [
 ];
 
 const filters = ref([
-  {
-    text: "General",
-  },
+  // {
+  //   text: "General",
+  // },
   {
     text: "Played",
     subItems: [

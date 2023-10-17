@@ -29,7 +29,7 @@
           mauricesy
         </div>
       </v-tooltip>
-      Made by Maurice, feel free to contact me with suggestions.
+      Made by <u>Maurice</u>, feel free to contact me with suggestions.
     </div>
   </v-theme-provider>
 </template>

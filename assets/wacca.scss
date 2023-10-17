@@ -650,6 +650,19 @@
     }
   }
 
+  .song-filter-help {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0.7;
+    font-size: 0.8em;
+
+    > div {
+      width: 64px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   .song-categories {
     background: rgb(var(--v-theme-surface));
     padding: 0.5em;
