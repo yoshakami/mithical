@@ -54,7 +54,7 @@
         </div>
 
         <div class="single-song-game">
-          <img :src="`/wacca/img/games/${song.gameVersion}.png`" />
+          <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
         </div>
       </div>
     </v-container>
@@ -79,6 +79,7 @@
           class="song-difficulty"
         >
           <WaccaDifficultyPill
+            v-ripple
             :i="i + 1"
             :difficulty="difficulty"
             :class="{ active: i + 1 == selectedDifficulty }"

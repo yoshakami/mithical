@@ -66,32 +66,61 @@
 
             <v-menu activator="parent">
               <div class="song-filters" @click.stop>
-                <div class="song-filter-help">
-                  <div>No</div>
-                  <div>All</div>
-                  <div>Yes</div>
-                </div>
-                <div
-                  v-for="filter in filters"
-                  class="song-filter-row"
-                  :class="{ heading: !filter.subItems }"
-                >
-                  <div class="song-filter-label">
-                    {{ filter.text }}
+                <div v-for="filter in filters" class="song-filter-row">
+                  <div class="song-filter-help">
+                    <div
+                      v-if="filter.type == 'help'"
+                      v-for="help in filter.help"
+                    >
+                      {{ help }}
+                    </div>
                   </div>
 
-                  <v-btn-group rounded="0" v-if="filter.subItems">
-                    <v-btn
-                      variant="text"
-                      v-for="filterSub in filter.subItems"
-                      @click="clickFilter(filter, filterSub)"
-                      :color="filterSub.active ? 'primary' : ''"
-                    >
-                      <v-icon>{{
-                        filterSub.active ? filterSub.iconActive : filterSub.icon
-                      }}</v-icon>
-                    </v-btn>
-                  </v-btn-group>
+                  <div v-if="filter.type == 'heading'">
+                    <div class="song-filter-heading">{{ filter.text }}</div>
+                  </div>
+
+                  <div
+                    class="song-filter-buttons"
+                    v-if="filter.type == 'buttons'"
+                  >
+                    <div class="song-filter-label" v-if="filter.text">
+                      {{ filter.text }}
+                    </div>
+
+                    <v-btn-group rounded="0" v-if="filter.subItems">
+                      <v-btn
+                        variant="text"
+                        v-for="filterSub in filter.subItems"
+                        @click="clickFilter(filter, filterSub)"
+                        :color="filterSub.active ? 'primary' : ''"
+                      >
+                        <v-icon>{{
+                          filterSub.active
+                            ? filterSub.iconActive
+                            : filterSub.icon
+                        }}</v-icon>
+                      </v-btn>
+                    </v-btn-group>
+                  </div>
+
+                  <div
+                    v-if="filter.type == 'range-slider'"
+                    class="song-filter-range-slider"
+                  >
+                    <div>
+                      {{ filter.text }}
+                    </div>
+                    <v-range-slider
+                      v-model="filter.model"
+                      :min="filter.min"
+                      :max="filter.max"
+                      :step="filter.step"
+                      thumb-label
+                      color="primary"
+                      hide-details
+                    />
+                  </div>
                 </div>
               </div>
             </v-menu>
@@ -103,17 +132,14 @@
 
           <v-menu activator="parent">
             <div class="song-categories" @click.stop>
-              <v-checkbox
-                hide-details
-                color="primary"
+              <WaccaCategoryToggle
                 v-for="category in categories"
-                v-model="activeCategories"
-                :value="category.ja"
-              >
-                <template v-slot:label>
-                  {{ language == "ja" ? category.ja : category.en }}
-                </template>
-              </v-checkbox>
+                :key="category.ja"
+                :category="category"
+                :active-categories="activeCategories"
+                @click="toggleCategory(category)"
+                :language="language"
+              />
             </div>
           </v-menu>
         </v-btn-group>
@@ -136,7 +162,11 @@
       <div class="songs">
         <div v-for="song in songsPaginated" :key="song.id">
           <NuxtLink :to="`/wacca/songs/${song.id}`">
-            <WaccaSong :song="song" :player-data="profile.songs[song.id]" />
+            <WaccaSong
+              v-ripple="{ class: 'text-white' }"
+              :song="song"
+              :player-data="profile.songs[song.id]"
+            />
           </NuxtLink>
         </div>
 
@@ -160,6 +190,7 @@ import fuzzysort from "fuzzysort";
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
 
 const language = useState("language");
+const profile = useState("profile");
 
 definePageMeta({
   middleware: ["auth"],
@@ -216,6 +247,13 @@ const sortOptions = [
           (profile.value.songs[a.id]?.playCount ?? 0)
         );
       }
+    },
+  },
+  {
+    text: "Rating",
+    defaultSort: "desc",
+    sortFunction(a, b) {
+      return 1;
     },
   },
   {
@@ -343,20 +381,13 @@ const sortOptions = [
 ];
 
 const filters = ref([
-  // {
-  //   text: "General",
-  // },
+  {
+    type: "help",
+    help: ["All", "No", "Yes"],
+  },
   {
     text: "Played",
     subItems: [
-      {
-        text: "Not Played",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return profile.value.songs[song.id]?.playCount == 0;
-        },
-      },
       {
         text: "All",
         icon: "mdi-circle-outline",
@@ -365,6 +396,14 @@ const filters = ref([
           return true;
         },
         active: true,
+      },
+      {
+        text: "Not Played",
+        icon: "mdi-close-circle-outline",
+        iconActive: "mdi-close-circle",
+        filterFunction(song) {
+          return profile.value.songs[song.id]?.playCount == 0;
+        },
       },
       {
         text: "Played",
@@ -377,16 +416,9 @@ const filters = ref([
     ],
   },
   {
+    type: "buttons",
     text: "Favorite",
     subItems: [
-      {
-        text: "Not a favorite",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return !profile.value.songs[song.id]?.favorite;
-        },
-      },
       {
         text: "All",
         icon: "mdi-circle-outline",
@@ -395,6 +427,14 @@ const filters = ref([
           return true;
         },
         active: true,
+      },
+      {
+        text: "Not a favorite",
+        icon: "mdi-close-circle-outline",
+        iconActive: "mdi-close-circle",
+        filterFunction(song) {
+          return !profile.value.songs[song.id]?.favorite;
+        },
       },
       {
         text: "Is a favorite",
@@ -407,16 +447,9 @@ const filters = ref([
     ],
   },
   {
+    type: "buttons",
     text: "Has Inferno",
     subItems: [
-      {
-        text: "No",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return song.sheets.length <= 3;
-        },
-      },
       {
         text: "All",
         icon: "mdi-circle-outline",
@@ -425,6 +458,14 @@ const filters = ref([
           return true;
         },
         active: true,
+      },
+      {
+        text: "No",
+        icon: "mdi-close-circle-outline",
+        iconActive: "mdi-close-circle",
+        filterFunction(song) {
+          return song.sheets.length <= 3;
+        },
       },
       {
         text: "Yes",
@@ -437,154 +478,187 @@ const filters = ref([
     ],
   },
   {
+    type: "buttons",
+    text: "Contributes to rating",
+    subItems: [
+      {
+        text: "All",
+        icon: "mdi-circle-outline",
+        iconActive: "mdi-circle",
+        filterFunction() {
+          return true;
+        },
+        active: true,
+      },
+      {
+        text: "No",
+        icon: "mdi-close-circle-outline",
+        iconActive: "mdi-close-circle",
+        filterFunction(song) {
+          return true;
+        },
+      },
+      {
+        text: "Yes",
+        icon: "mdi-check-circle-outline",
+        iconActive: "mdi-check-circle",
+        filterFunction(song) {
+          return true;
+        },
+      },
+    ],
+  },
+  {
+    type: "heading",
     text: "Clear Status",
   },
   {
-    text: "Normal",
-    subItems: [
-      {
-        text: "Uncleared",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return (
-            !profile.value.songs[song.id].scores[0] ||
-            profile.value.songs[song.id].scores[0].clear_count == 0
-          );
-        },
-      },
-      {
-        text: "All",
-        icon: "mdi-circle-outline",
-        iconActive: "mdi-circle",
-        filterFunction() {
-          return true;
-        },
-        active: true,
-      },
-      {
-        text: "Cleared",
-        icon: "mdi-check-circle-outline",
-        iconActive: "mdi-check-circle",
-        filterFunction(song) {
-          return profile.value.songs[song.id]?.scores[0]?.clear_count > 0;
-        },
-      },
-    ],
-  },
-  {
-    text: "Hard",
-    subItems: [
-      {
-        text: "Uncleared",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return (
-            !profile.value.songs[song.id].scores[1] ||
-            profile.value.songs[song.id].scores[1].clear_count == 0
-          );
-        },
-      },
-      {
-        text: "All",
-        icon: "mdi-circle-outline",
-        iconActive: "mdi-circle",
-        filterFunction() {
-          return true;
-        },
-        active: true,
-      },
-      {
-        text: "Cleared",
-        icon: "mdi-check-circle-outline",
-        iconActive: "mdi-check-circle",
-        filterFunction(song) {
-          return profile.value.songs[song.id]?.scores[1]?.clear_count > 0;
-        },
-      },
-    ],
-  },
-  {
-    text: "Expert",
-    subItems: [
-      {
-        text: "Uncleared",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return (
-            !profile.value.songs[song.id].scores[2] ||
-            profile.value.songs[song.id].scores[2].clear_count == 0
-          );
-        },
-      },
-      {
-        text: "All",
-        icon: "mdi-circle-outline",
-        iconActive: "mdi-circle",
-        filterFunction() {
-          return true;
-        },
-        active: true,
-      },
-      {
-        text: "Cleared",
-        icon: "mdi-check-circle-outline",
-        iconActive: "mdi-check-circle",
-        filterFunction(song) {
-          return profile.value.songs[song.id]?.scores[2]?.clear_count > 0;
-        },
-      },
-    ],
-  },
-  {
-    text: "Inferno",
-    subItems: [
-      {
-        text: "Uncleared",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return (
-            !profile.value.songs[song.id].scores[3] ||
-            profile.value.songs[song.id].scores[3].clear_count == 0
-          );
-        },
-      },
-      {
-        text: "All",
-        icon: "mdi-circle-outline",
-        iconActive: "mdi-circle",
-        filterFunction() {
-          return true;
-        },
-        active: true,
-      },
-      {
-        text: "Cleared",
-        icon: "mdi-check-circle-outline",
-        iconActive: "mdi-check-circle",
-        filterFunction(song) {
-          return profile.value.songs[song.id]?.scores[3]?.clear_count > 0;
-        },
-      },
+    type: "help",
+    help: [
+      "All",
+      "Uncleared",
+      "Clear",
+      "Missless",
+      "Full Combo",
+      "All Marvelous",
     ],
   },
 ]);
 
-const categories = [
-  { ja: "アニメ／ＰＯＰ", en: "Anime/Pop" },
-  { ja: "ボカロ", en: "Vocaloid" },
-  { ja: "東方アレンジ", en: "Touhou" },
-  { ja: "2.5次元", en: "2.5D" },
-  { ja: "バラエティ", en: "Variety" },
-  { ja: "オリジナル", en: "Original" },
-  { ja: "TANO*C", en: "TANO*C" },
-  { ja: "TANO*C（オリジナル）", en: "TANO*C (Original)" },
-];
+const difficulties = ["Normal", "Hard", "Expert", "Inferno"];
 
-const profile = useState("profile");
+for (let i = 0; i < difficulties.length; i++) {
+  filters.value.push({
+    type: "buttons",
+    text: difficulties[i],
+    subItems: [
+      {
+        text: "All",
+        icon: "mdi-circle-outline",
+        iconActive: "mdi-circle",
+        filterFunction() {
+          return true;
+        },
+        active: true,
+      },
+      {
+        text: "Uncleared",
+        icon: "mdi-close-circle-outline",
+        iconActive: "mdi-close-circle",
+        filterFunction(song) {
+          return (
+            !profile.value.songs[song.id].scores[i] ||
+            profile.value.songs[song.id].scores[i].clear_count == 0
+          );
+        },
+      },
+      {
+        text: "Clear",
+        icon: "mdi-alpha-c-circle-outline",
+        iconActive: "mdi-alpha-c-circle",
+        filterFunction(song) {
+          return profile.value.songs[song.id]?.scores[i]?.clear_count > 0;
+        },
+      },
+      {
+        text: "Missless",
+        icon: "mdi-alpha-m-circle-outline",
+        iconActive: "mdi-alpha-m-circle",
+        filterFunction(song) {
+          return profile.value.songs[song.id]?.scores[i]?.missless_count > 0;
+        },
+      },
+      {
+        text: "Full Combo",
+        icon: "mdi-alpha-f-circle-outline",
+        iconActive: "mdi-alpha-f-circle",
+        filterFunction(song) {
+          return profile.value.songs[song.id]?.scores[i]?.full_combo_count > 0;
+        },
+      },
+      {
+        text: "All Marvelous",
+        icon: "mdi-alpha-a-circle-outline",
+        iconActive: "mdi-alpha-a-circle",
+        filterFunction(song) {
+          return (
+            profile.value.songs[song.id]?.scores[i]?.all_marvelous_count > 0
+          );
+        },
+      },
+    ],
+  });
+}
+
+filters.value.push({
+  type: "heading",
+  text: "Score",
+});
+
+// function debounce(fn, wait) {
+//   let timer;
+//   return function (...args) {
+//     if (timer) {
+//       clearTimeout(timer); // clear any pre-existing timer
+//     }
+//     const context = this; // get the current context
+//     timer = setTimeout(() => {
+//       fn.apply(context, args); // call the function if time expires
+//     }, wait);
+//   };
+// }
+
+for (let i = 0; i < difficulties.length; i++) {
+  let model = ref([0, 1000000]);
+  // let modelDebounced = ref([0, 1000000]);
+
+  // let debounced = debounce(() => {
+  //   modelDebounced.value = model.value;
+  // }, 0);
+
+  // watch(model, () => {
+  //   debounced();
+  // });
+
+  filters.value.push({
+    type: "range-slider",
+    text: difficulties[i],
+    min: 0,
+    max: 1000000,
+    model: model,
+    step: 10000,
+    filterFunction(song) {
+      if (!profile.value) {
+        return true;
+      }
+
+      let score = profile.value.songs[song.id]?.scores[i]?.score ?? 0;
+
+      return score >= model.value[0] && score <= model.value[1];
+    },
+  });
+}
+
+const categories = [
+  {
+    ja: "アニメ／ＰＯＰ",
+    en: "Anime/Pop",
+    img: "animepop.webp",
+    color: "#237ccf",
+  },
+  { ja: "ボカロ", en: "Vocaloid", img: "vocaloid.webp", color: "#77c9b9" },
+  { ja: "東方アレンジ", en: "Touhou", img: "touhou.webp", color: "#e9183a" },
+  { ja: "2.5次元", en: "2.5D", img: "25dmusical.webp", color: "#ef7301" },
+  { ja: "バラエティ", en: "Variety", img: "variety.webp", color: "#68d35e" },
+  { ja: "オリジナル", en: "Original", img: "original.webp", color: "#ea3989" },
+  { ja: "TANO*C", en: "TANO*C", img: "tanoc.webp", color: "#232530" },
+  // {
+  //   ja: "TANO*C（オリジナル）",
+  //   en: "TANO*C (Original)",
+  //   img: "tanoc.webp",
+  //   color: "#232530",
+  // },
+];
 
 const perPage = 50;
 const page = ref(1);
@@ -593,27 +667,45 @@ const activeSort = ref(sortOptions[0]);
 const sortOrder = ref("asc");
 const activeCategories = ref([]);
 
+function toggleCategory(category) {
+  if (activeCategories.value.includes(category.ja)) {
+    activeCategories.value = activeCategories.value.filter(
+      (c) => c != category.ja
+    );
+  } else {
+    activeCategories.value.push(category.ja);
+  }
+}
+
 const songsFiltered = computed(() => {
   let results = [...waccaSongs];
 
   // category
   // no category = all categories
-  let compareCategories = activeCategories.value;
+  let compareCategories = [...activeCategories.value];
+
   if (compareCategories.length == 0) {
     compareCategories = categories.map((category) => category.ja);
   }
+
+  if (compareCategories.includes("TANO*C")) {
+    compareCategories.push("TANO*C（オリジナル）");
+  }
+
   results = results.filter((song) => {
     return compareCategories.includes(song.category);
   });
 
   // filters
   filters.value.forEach((filter) => {
-    if (filter.subItems) {
+    if (filter.type == "buttons") {
       filter.subItems.forEach((filterSub) => {
         if (filterSub.active) {
           results = results.filter(filterSub.filterFunction);
         }
       });
+    } else if (filter.type == "range-slider") {
+      results = results.filter(filter.filterFunction);
     }
   });
 

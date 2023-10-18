@@ -1,7 +1,7 @@
 <template>
   <div class="song">
     <div class="song-cover">
-      <v-img :src="fullUrl"> </v-img>
+      <v-img :src="fullUrl" />
     </div>
     <div class="song-info">
       <div class="song-header">

@@ -45,7 +45,7 @@ useHead({
 useSeoMeta({
   title: "Mithical",
   description: "Web UI for Wacca",
-  ogImage: "/logo.png",
+  ogImage: "~/assets/logo.png",
 });
 
 const vuetifyTheme = useTheme();
