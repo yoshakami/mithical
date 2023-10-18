@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="`/wacca/songs/${song.id}`" style="text-decoration: none">
-    <div class="play" :class="{ expanded }">
+    <div class="play" :class="{ expanded }" v-ripple="{ class: 'text-white' }">
       <div class="player-header">
         <div class="play-cover">
           <v-img :src="fullUrl" />
