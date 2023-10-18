@@ -1,9 +1,6 @@
 <template>
   <div style="padding-bottom: 4em">
-    <v-container
-      class="elevation-1 mt-4 single-song-container"
-      style="background: rgb(var(--v-theme-surface))"
-    >
+    <v-container class="elevation-1 mt-4">
       <div class="single-song">
         <div class="single-song-cover">
           <v-img :src="fullUrl" />
@@ -12,8 +9,8 @@
         <div class="single-song-details">
           <div class="single-song-header">
             <div class="single-song-header-left">
-              <h1>{{ getTitle }}</h1>
-              <h2>{{ song.artist }}</h2>
+              <h1 class="title">{{ getTitle }}</h1>
+              <h2 class="artist">{{ song.artist }}</h2>
             </div>
             <div class="single-song-header-right">
               <WaccaFavorite :song-id="song.id" />
@@ -59,19 +56,13 @@
       </div>
     </v-container>
 
-    <v-container
-      class="elevation-1 mt-4"
-      style="background: rgb(var(--v-theme-surface))"
-    >
-      <h2>Your scores</h2>
+    <v-container class="elevation-1 mt-4">
+      <h2 class="container-heading">Your scores</h2>
       <WaccaChart ref="chart" :player-history="playerHistory" :song="song" />
     </v-container>
 
-    <v-container
-      class="elevation-1 mt-4"
-      style="background: rgb(var(--v-theme-surface))"
-    >
-      <h2>Leaderboards</h2>
+    <v-container class="elevation-1 mt-4">
+      <h2 class="container-heading">Leaderboards</h2>
       <div class="song-sheets difficulty-selection mt-4">
         <div
           v-for="(difficulty, i) in song.sheets"
@@ -136,6 +127,76 @@
     </v-container>
   </div>
 </template>
+
+<style scoped lang="scss">
+.v-container {
+  padding: 0;
+  background: rgb(var(--v-theme-surface));
+}
+
+.container-heading {
+  padding: 5px 10px;
+}
+
+.single-song {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.artist {
+  color: rgb(var(--v-theme-primary));
+}
+
+.single-song-cover {
+  width: 320px;
+}
+
+.single-song-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.single-song-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.single-song-pills {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.single-song-pill {
+  border-radius: 50px;
+  padding: 5px 10px;
+  background-color: rgb(var(--v-theme-surface-variant));
+  color: white;
+  font-weight: 700;
+}
+
+.single-song-game {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 50px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.highscore-grade,
+.highscore-icon {
+  height: 30px;
+  vertical-align: middle;
+}
+</style>
 
 <script setup>
 import waccaSongs from "~/assets/wacca/waccaSongs.js";

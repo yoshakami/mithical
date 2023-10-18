@@ -157,11 +157,16 @@
         ></v-text-field>
       </div>
 
-      Showing {{ songsFiltered.length }} of {{ waccaSongs.length }} songs
+      <div class="songs-result-count">
+        Showing {{ songsFiltered.length }} of {{ waccaSongs.length }} songs
+      </div>
 
       <div class="songs">
         <div v-for="song in songsPaginated" :key="song.id">
-          <NuxtLink :to="`/wacca/songs/${song.id}`">
+          <NuxtLink
+            :to="`/wacca/songs/${song.id}`"
+            style="text-decoration: none"
+          >
             <WaccaSong
               v-ripple="{ class: 'text-white' }"
               :song="song"
@@ -184,6 +189,146 @@
     </v-container>
   </WaccaProfileRequired>
 </template>
+
+<style scoped lang="scss">
+.song-options {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 1em 0;
+  align-items: stretch;
+
+  > .v-btn-group {
+    display: flex;
+    height: auto;
+  }
+}
+
+.sort-menu {
+  display: flex;
+  flex-direction: column;
+
+  .v-btn {
+    justify-content: left;
+  }
+}
+
+.sort-order-button {
+  border-left: 2px solid rgba(var(--v-theme-background), 0.7) !important;
+}
+
+.song-filters {
+  padding: 0.5em;
+  background: rgb(var(--v-theme-surface));
+  overflow: auto;
+  border-radius: inherit;
+
+  box-shadow: 0px 5px 5px -3px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
+    0px 8px 10px 1px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
+    0px 3px 14px 2px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
+}
+
+.song-filter-row {
+  .song-filter-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .song-filter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+    color: rgb(var(--v-theme-primary));
+
+    &:before,
+    &:after {
+      content: "";
+      flex-grow: 1;
+      background: rgb(var(--v-theme-primary));
+      height: 1px;
+      font-size: 0px;
+      line-height: 0px;
+    }
+  }
+
+  .song-filter-help {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0.7;
+    font-size: 0.8em;
+    gap: 0;
+    text-align: center;
+
+    > div {
+      width: 64px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .song-filter-range-slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 0;
+
+    .v-slider {
+      width: 100%;
+      max-width: 320px;
+      margin-right: 32px;
+    }
+  }
+}
+
+.song-categories {
+  background: rgb(var(--v-theme-surface));
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: inherit;
+  user-select: none;
+  overflow: auto;
+}
+
+.songs-result-count {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+  opacity: 0.7;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.option {
+  margin-bottom: 1rem;
+
+  .option-heading {
+    font-weight: bold;
+  }
+}
+</style>
 
 <script setup>
 import fuzzysort from "fuzzysort";
@@ -386,6 +531,7 @@ const filters = ref([
     help: ["All", "No", "Yes"],
   },
   {
+    type: "buttons",
     text: "Played",
     subItems: [
       {
@@ -595,6 +741,7 @@ filters.value.push({
   text: "Score",
 });
 
+// leaving this here in case it turns out I need to debounce it
 // function debounce(fn, wait) {
 //   let timer;
 //   return function (...args) {
@@ -688,6 +835,7 @@ const songsFiltered = computed(() => {
     compareCategories = categories.map((category) => category.ja);
   }
 
+  // Tanoc original doesn't exist in game, so this code adds it to the cats
   if (compareCategories.includes("TANO*C")) {
     compareCategories.push("TANO*C（オリジナル）");
   }

@@ -110,6 +110,245 @@
   </NuxtLink>
 </template>
 
+<style scoped lang="scss">
+$paddings: 10px;
+$cover-size: 100px;
+
+@mixin slanted($dist) {
+  clip-path: polygon($dist 0, 100% 0, calc(100% - $dist) 100%, 0 100%);
+  padding-left: $dist;
+  padding-right: $dist;
+}
+
+.play {
+  position: relative;
+
+  padding-bottom: 0;
+  margin: 1em 0;
+
+  border-radius: $paddings;
+
+  background-color: rgb(var(--v-theme-boxcolor));
+  overflow: hidden;
+  transition: background-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    background-color: #444;
+    box-shadow: 0 0 10px rgb(var(--v-theme-primary));
+  }
+}
+
+.player-header {
+  display: flex;
+  gap: $paddings;
+}
+
+.play-cover {
+  flex-shrink: 0;
+  width: $cover-size;
+  height: $cover-size;
+
+  transition: width 0.5s, height 0.5s;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.play-info {
+  flex-grow: 1;
+  color: white;
+  font-weight: bold;
+  min-width: 0;
+  padding: $paddings;
+}
+
+.play-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  line-height: 1.4;
+
+  .play-header-left {
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .play-title {
+      font-size: 1.5rem;
+      margin-bottom: -10px;
+      margin-right: 10px;
+    }
+
+    .play-artist {
+      font-size: 1rem;
+      color: rgb(var(--v-theme-primary));
+    }
+  }
+
+  .play-header-right {
+    flex-shrink: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.play-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  background: white;
+  color: black;
+  @include slanted(15px);
+  padding-left: 0;
+}
+
+.play-difficulty {
+  font-size: 1.5rem;
+  color: white;
+  @include slanted(15px);
+  padding: 0 25px;
+  margin-right: -10px;
+
+  &.difficulty-1 {
+    background-color: #009de6;
+  }
+
+  &.difficulty-2 {
+    background-color: #fed131;
+  }
+
+  &.difficulty-3 {
+    background-color: #fc06a3;
+  }
+
+  &.difficulty-4 {
+    background-color: #4a004f;
+  }
+
+  .play-difficulty-number {
+    font-weight: 300;
+  }
+}
+
+.play-grade {
+  padding-left: 10px;
+  height: 32px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.play-score {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.play-pb {
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.play-spacer {
+  flex-grow: 1;
+}
+
+.play-medal {
+  padding-left: 10px;
+
+  span {
+    padding-right: 2px; // weird cutoff otherwise
+  }
+}
+
+.play-detail {
+  display: flex;
+  gap: 10px;
+  // margin-top: $paddings;
+  line-height: 1;
+  font-size: 1.5rem;
+  font-family: "SHINBI", sans-serif;
+  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.play.expanded .play-detail {
+  max-height: 156px;
+}
+
+.play-judgements {
+  margin-bottom: 20px;
+}
+
+.play-judgement {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  margin-top: -10px;
+
+  .play-judgement-label {
+    letter-spacing: -2px;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &.judgement-Marvelous .play-judgement-label {
+    background-image: -webkit-linear-gradient(#ff1e8c, #fe8e34);
+  }
+
+  &.judgement-Great .play-judgement-label {
+    background-image: -webkit-linear-gradient(#ffff88, #c2e67b);
+  }
+
+  &.judgement-Good .play-judgement-label {
+    background-image: -webkit-linear-gradient(#98edff, #72a6f1);
+  }
+
+  &.judgement-Miss .play-judgement-label {
+    background-image: -webkit-linear-gradient(#8b8b8b, #dadada);
+  }
+
+  &.judgement-Fast .play-judgement-label {
+    background-image: -webkit-linear-gradient(#fd6d1e, #ad093f);
+  }
+
+  &.judgement-Late .play-judgement-label {
+    background-image: -webkit-linear-gradient(#8872fe, #1e1eff);
+  }
+
+  &.judgement-Combo .play-judgement-label {
+    background-image: -webkit-linear-gradient(#fff, #ccc);
+  }
+}
+
+.play-expand {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 13px);
+
+  :deep(.v-btn__content) {
+    transform: translateY(-6px);
+  }
+}
+
+.v-theme--waccaOled .play {
+  outline: solid 1px white;
+}
+</style>
+
 <script setup>
 import { formatDifficulty } from "~/assets/js/util";
 const difficultyInternal = useState("difficultyInternal");

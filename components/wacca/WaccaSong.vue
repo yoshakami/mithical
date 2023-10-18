@@ -26,9 +26,7 @@
           :key="i"
           class="song-difficulty"
         >
-          <div class="all-song-medal">
-            <div class="song-medal"><WaccaMedal :medal="medal(i)" /></div>
-          </div>
+          <WaccaMedal :medal="medal(i)" />
 
           <WaccaDifficultyPill
             :i="i + 1"
@@ -49,6 +47,99 @@
     </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+$song-paddings: 10px;
+
+.song {
+  display: flex;
+
+  margin-bottom: 1rem;
+
+  border-radius: $song-paddings;
+  overflow: hidden;
+
+  background-color: rgb(var(--v-theme-boxcolor));
+  transition: background-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    background-color: #444;
+    box-shadow: 0 0 10px rgb(var(--v-theme-primary));
+  }
+}
+
+.song-cover {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+
+  .v-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .v-img--booting {
+    background-color: #888;
+  }
+}
+
+.song-info {
+  flex-grow: 1;
+  color: white;
+  font-weight: bold;
+  min-width: 0;
+}
+
+.song-header {
+  padding-left: $song-paddings;
+  display: flex;
+  justify-content: space-between;
+  gap: $song-paddings;
+}
+
+.song-header-left {
+  flex-grow: 1;
+
+  .song-title {
+    font-size: 1.5rem;
+    margin-bottom: -10px;
+  }
+
+  .song-artist {
+    font-size: 1rem;
+    color: rgb(var(--v-theme-primary));
+  }
+}
+
+.song-header-right {
+  flex-shrink: 0;
+}
+
+// difficulties
+
+.song-difficulty-bottom {
+  background-color: white;
+  color: black;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.song-medal {
+  transform: rotate(-10deg);
+  height: 40px;
+  margin-bottom: -20px;
+  text-align: center;
+}
+
+.v-theme--waccaOled .song {
+  outline: solid 1px white;
+}
+</style>
 
 <script setup>
 const props = defineProps({

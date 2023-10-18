@@ -13,10 +13,10 @@
         <div class="profile-icon">
           <WaccaIcon :icon="iconId" />
         </div>
-        <WaccaProfileBox
-          ><span class="light">Welcome back</span>
-          {{ profile.user_name }}</WaccaProfileBox
-        >
+        <WaccaProfileBox>
+          <span class="light">Welcome back</span>
+          {{ profile.user_name }}
+        </WaccaProfileBox>
       </div>
 
       <WaccaProfileBox>
@@ -36,6 +36,140 @@
     </v-container>
   </WaccaProfileRequired>
 </template>
+
+<style scoped lang="scss">
+.waifu-holder {
+  position: relative;
+  pointer-events: none;
+}
+
+.waifu {
+  position: absolute;
+  $size: 0.7;
+
+  width: 2048px * $size;
+  height: 2048px * $size;
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+  top: -100px;
+  right: -600px;
+}
+
+.profile-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .profile-icon {
+    height: 150px;
+    width: 150px;
+    margin-right: -40px;
+    z-index: 2;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  :deep(.profile-box) {
+    padding-left: 50px;
+  }
+}
+
+@mixin animate {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rate_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+.profile-stat {
+  display: inline-block;
+}
+
+.rating-white {
+  color: white;
+}
+
+.rating-darkblue {
+  color: #1005de;
+}
+
+.rating-yellow {
+  color: #fffc48;
+}
+
+.rating-red {
+  color: #fc0606;
+}
+
+.rating-purple {
+  color: #a000ac;
+}
+
+.rating-blue {
+  color: #009de6;
+}
+
+.rating-silver {
+  @include animate;
+
+  background-image: repeating-linear-gradient(
+    -70deg,
+    #b7b7b7,
+    #f6f6f6,
+    #8a8a8a,
+    #f5f5f5,
+    #828282
+  );
+}
+
+.rating-gold {
+  @include animate;
+
+  background-image: repeating-linear-gradient(
+    -70deg,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+}
+
+.rating-rainbow {
+  @include animate;
+
+  background-image: repeating-linear-gradient(
+    -70deg,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red,
+    violet
+  );
+}
+
+.light {
+  font-weight: 200;
+}
+
+@keyframes rate_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+</style>
 
 <script setup>
 import waccaNavigators from "~/assets/wacca/waccaNavigators.js";

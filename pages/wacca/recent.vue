@@ -21,6 +21,24 @@
   </WaccaProfileRequired>
 </template>
 
+<style scoped lang="scss">
+.playlog-hr {
+  display: flex;
+  align-items: center;
+  color: rgba(var(--v-theme-on-background), 0.5);
+  gap: 10px;
+}
+.playlog-hr:before,
+.playlog-hr:after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(var(--v-theme-on-background), 0.5);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+}
+</style>
+
 <script setup>
 definePageMeta({
   middleware: ["auth"],

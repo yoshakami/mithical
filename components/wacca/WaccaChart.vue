@@ -7,6 +7,28 @@
   </div>
 </template>
 
+<style scoped lang="scss">
+.player-chart {
+  height: 300px;
+  position: relative;
+
+  .player-chart-text {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(var(--v-theme-surface), 0.5);
+    div {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+}
+</style>
+
 <script setup>
 import { Chart, registerables } from "chart.js";
 import "chartjs-adapter-moment";
