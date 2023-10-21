@@ -21,6 +21,7 @@
     "vuetify": "^3.0.0"
   },
   "dependencies": {
+    "chartjs-plugin-annotation": "^3.0.1",
     "vite-plugin-image-optimizer": "^1.1.7"
   }
 }

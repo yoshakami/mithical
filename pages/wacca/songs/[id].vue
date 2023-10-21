@@ -1,43 +1,44 @@
 <template>
-  <div style="padding-bottom: 4em">
-    <v-container class="elevation-1 mt-4">
-      <div class="single-song">
-        <div class="single-song-cover">
-          <v-img :src="fullUrl" />
-        </div>
-
-        <div class="single-song-details">
-          <div class="single-song-header">
-            <div class="single-song-header-left">
-              <h1 class="title">{{ getTitle }}</h1>
-              <h2 class="artist">{{ song.artist }}</h2>
-            </div>
-            <div class="single-song-header-right">
-              <WaccaFavorite :song-id="song.id" />
-            </div>
+  <WaccaProfileRequired>
+    <div style="padding-bottom: 4em">
+      <v-container class="elevation-1 mt-4">
+        <div class="single-song">
+          <div class="single-song-cover">
+            <v-img :src="fullUrl" />
           </div>
 
-          <div class="single-song-pills">
-            <v-chip prepend-icon="mdi-pulse">{{ song.bpm }} bpm</v-chip>
-            <v-chip prepend-icon="mdi-plus">
-              {{ formatDate(song.dateAdded) }}</v-chip
-            >
-            <v-chip v-if="song.dateRemoved != 0" prepend-icon="mdi-minus">
-              {{ formatDate(song.dateRemoved) }}</v-chip
-            >
-            <v-chip v-if="profile" prepend-icon="mdi-pound">
-              {{ profile.songs[song.id].playCount }}
-              play{{ profile.songs[song.id].playCount == 1 ? "" : "s" }}
-            </v-chip>
-            <v-chip
-              v-if="profile && profile.songs[song.id].favorite"
-              prepend-icon="mdi-star"
-            >
-              Favorite
-            </v-chip>
-          </div>
+          <div class="single-song-details">
+            <div class="single-song-header">
+              <div class="single-song-header-left">
+                <h1 class="title">{{ getTitle }}</h1>
+                <h2 class="artist">{{ song.artist }}</h2>
+              </div>
+              <div class="single-song-header-right">
+                <WaccaFavorite :song-id="song.id" />
+              </div>
+            </div>
 
-          <!-- <v-btn
+            <div class="single-song-pills">
+              <v-chip prepend-icon="mdi-pulse">{{ song.bpm }} bpm</v-chip>
+              <v-chip prepend-icon="mdi-plus">
+                {{ formatDate(song.dateAdded) }}</v-chip
+              >
+              <v-chip v-if="song.dateRemoved != 0" prepend-icon="mdi-minus">
+                {{ formatDate(song.dateRemoved) }}</v-chip
+              >
+              <v-chip v-if="profile" prepend-icon="mdi-pound">
+                {{ profile.songs[song.id].playCount }}
+                play{{ profile.songs[song.id].playCount == 1 ? "" : "s" }}
+              </v-chip>
+              <v-chip
+                v-if="profile && profile.songs[song.id].favorite"
+                prepend-icon="mdi-star"
+              >
+                Favorite
+              </v-chip>
+            </div>
+
+            <!-- <v-btn
             class="mt-4"
             color="primary"
             block
@@ -48,84 +49,131 @@
           </v-btn>
 
           <div class="text-center mt-4">{{ goToSongMessage }}</div> -->
+          </div>
+
+          <div class="single-song-game">
+            <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
+          </div>
+        </div>
+      </v-container>
+
+      <v-container class="elevation-1 mt-4">
+        <h2 class="container-heading">Your scores</h2>
+
+        <WaccaSongSheets :song="song" :player-data="profile.songs[song.id]" />
+        <WaccaChart ref="chart" :player-history="playerHistory" :song="song" />
+      </v-container>
+
+      <v-container class="elevation-1 mt-4">
+        <h2 class="container-heading">
+          Histograms
+
+          <v-tooltip location="end">
+            <template v-slot:activator="{ props }">
+              <v-icon v-bind="props" color="primary"
+                >mdi-information-outline</v-icon
+              >
+            </template>
+            <span
+              >Histograms show the distribution of scores of everyone on the
+              network.</span
+            >
+          </v-tooltip>
+        </h2>
+        <div v-if="histogramsLoading" class="d-flex justify-center">
+          <v-progress-circular
+            indeterminate
+            color="primary"
+            :size="80"
+            :width="10"
+            class="mt-4"
+          ></v-progress-circular>
         </div>
 
-        <div class="single-song-game">
-          <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
+        <div v-else>
+          <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
+            leaderboardsLoadingError
+          }}</v-alert>
+
+          <div v-else class="histograms">
+            <WaccaHistogram
+              v-for="(difficulty, i) in song.sheets"
+              :key="i"
+              :scores="histograms[i]"
+              :color="waccaDifficulties[i].color"
+              :label="waccaDifficulties[i].name"
+              :score="profile.songs[song.id]?.scores[i]?.score"
+            />
+          </div>
         </div>
-      </div>
-    </v-container>
+      </v-container>
 
-    <v-container class="elevation-1 mt-4">
-      <h2 class="container-heading">Your scores</h2>
-      <WaccaChart ref="chart" :player-history="playerHistory" :song="song" />
-    </v-container>
-
-    <v-container class="elevation-1 mt-4">
-      <h2 class="container-heading">Leaderboards</h2>
-      <div class="song-sheets difficulty-selection mt-4">
-        <div
-          v-for="(difficulty, i) in song.sheets"
-          :key="i"
-          class="song-difficulty"
-        >
-          <WaccaDifficultyPill
-            v-ripple
-            :i="i + 1"
-            :difficulty="difficulty"
-            :class="{ active: i + 1 == selectedDifficulty }"
-            @click="selectDifficulty(i + 1)"
-          />
+      <v-container class="elevation-1 mt-4">
+        <h2 class="container-heading">Leaderboards</h2>
+        <div class="song-sheets difficulty-selection mt-4">
+          <div
+            v-for="(difficulty, i) in song.sheets"
+            :key="i"
+            class="song-difficulty"
+          >
+            <WaccaDifficultyPill
+              v-ripple
+              :i="i + 1"
+              :difficulty="difficulty"
+              :class="{ active: i + 1 == selectedDifficulty }"
+              @click="selectDifficulty(i + 1)"
+            />
+          </div>
         </div>
-      </div>
 
-      <div v-if="leaderboardsLoading" class="d-flex justify-center">
-        <v-progress-circular
-          indeterminate
-          color="primary"
-          :size="80"
-          :width="10"
-          class="mt-4"
-        ></v-progress-circular>
-      </div>
+        <div v-if="leaderboardsLoading" class="d-flex justify-center">
+          <v-progress-circular
+            indeterminate
+            color="primary"
+            :size="80"
+            :width="10"
+            class="mt-4"
+          ></v-progress-circular>
+        </div>
 
-      <div v-else>
-        <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
-          leaderboardsLoadingError
-        }}</v-alert>
+        <div v-else>
+          <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
+            leaderboardsLoadingError
+          }}</v-alert>
 
-        <v-table v-else>
-          <thead>
-            <tr>
-              <th width="1%">Rank</th>
-              <th>Name</th>
-              <th>Score</th>
-              <th>Date</th>
-            </tr>
-          </thead>
+          <v-table v-else>
+            <thead>
+              <tr>
+                <th width="1%">Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Date</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr v-for="(score, i) in highscores" :key="i">
-              <td class="text-right">{{ i + 1 }}</td>
-              <td>
-                <WaccaIcon class="highscore-icon" :icon="score.user_icon" />
-                {{ score.user_name }}
-              </td>
-              <td>
-                <WaccaGrade class="highscore-grade" :grade="score.grade" />
-                {{ score.score }}
-              </td>
-              <td>{{ new Date(score.user_play_date).toLocaleString() }}</td>
-            </tr>
+            <tbody>
+              <tr v-for="(score, i) in highscores" :key="i">
+                <td class="text-right">{{ i + 1 }}</td>
+                <td>
+                  <WaccaIcon class="highscore-icon" :icon="score.user_icon" />
+                  {{ score.user_name }}
+                </td>
+                <td>
+                  <WaccaGrade class="highscore-grade" :grade="score.grade" />
+                  {{ score.score }}
+                </td>
+                <td>{{ new Date(score.user_play_date).toLocaleString() }}</td>
+              </tr>
 
-            <tr v-if="highscores.length === 0">
-              <td colspan="5" class="text-center">No scores yet!</td>
-            </tr>
-          </tbody>
-        </v-table>
-      </div>
-    </v-container>
-  </div>
+              <tr v-if="highscores.length === 0">
+                <td colspan="5" class="text-center">No scores yet!</td>
+              </tr>
+            </tbody>
+          </v-table>
+        </div>
+      </v-container>
+    </div>
+  </WaccaProfileRequired>
 </template>
 
 <style scoped lang="scss">
@@ -196,10 +244,43 @@
   height: 30px;
   vertical-align: middle;
 }
+
+.histograms {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 10px;
+
+  .histogram {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 300px 300px 300px;
+  }
+}
+
+.difficulty-selection {
+  :deep(.song-difficulty-pill) {
+    cursor: pointer;
+  }
+}
 </style>
 
 <script setup>
+import { Chart, registerables } from "chart.js";
+import "chartjs-adapter-moment";
+import zoomPlugin from "chartjs-plugin-zoom";
+import annotationPlugin from "chartjs-plugin-annotation";
+
+Chart.register(zoomPlugin);
+Chart.register(...registerables);
+Chart.register(annotationPlugin);
+
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
+import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 
 const profile = useState("profile");
 
@@ -223,6 +304,9 @@ const selectedDifficulty = ref(song.value.sheets.length);
 const highscores = ref([]);
 const leaderboardsLoading = ref(false);
 const leaderboardsLoadingError = ref();
+const histograms = ref([]);
+const histogramsLoading = ref(false);
+const histogramsLoadingError = ref();
 
 const playerHistory = ref([]);
 
@@ -242,13 +326,30 @@ function loadData() {
     });
 }
 
+function loadHistograms() {
+  histogramsLoading.value = ref(true);
+  $fetch(
+    `${runtimeConfig.public.apiUrl}/wacca/music/${song.value.id}/allscores`
+  )
+    .then((data) => {
+      histogramsLoading.value = false;
+      histograms.value = data;
+    })
+    .catch((err) => {
+      histogramsLoading.value = false;
+      histogramsLoadingError.value =
+        "Couldn't reach the API. Please try again later.";
+    });
+}
+
 function selectDifficulty(difficulty) {
   selectedDifficulty.value = difficulty;
   loadData();
 }
 loadData();
+loadHistograms();
 
-function loadPlayerData() {
+function loadPlayerHistory() {
   $fetch(
     `${runtimeConfig.public.apiUrl}/wacca/user/${activeCard.value}/music/${song.value.id}`
   ).then((data) => {
@@ -263,8 +364,8 @@ watch(playerHistory, () => {
     chart.value.updateChart();
   }, 0); //?
 });
-watch(activeCard, loadPlayerData);
-loadPlayerData();
+watch(activeCard, loadPlayerHistory);
+loadPlayerHistory();
 
 // Jump to song on next login
 

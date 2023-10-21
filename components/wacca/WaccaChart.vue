@@ -30,12 +30,7 @@
 </style>
 
 <script setup>
-import { Chart, registerables } from "chart.js";
-import "chartjs-adapter-moment";
-import zoomPlugin from "chartjs-plugin-zoom";
-
-Chart.register(zoomPlugin);
-Chart.register(...registerables);
+import { Chart } from "chart.js";
 
 const props = defineProps({
   playerHistory: Array,
@@ -119,6 +114,9 @@ onMounted(() => {
         },
       },
       plugins: {
+        legend: {
+          display: false,
+        },
         zoom: {
           pan: {
             enabled: true,

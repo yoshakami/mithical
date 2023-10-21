@@ -16,7 +16,6 @@
   color: white;
   background-color: #888;
   transition: background-color 0.2s;
-  cursor: pointer;
 
   &.active,
   &:hover {
