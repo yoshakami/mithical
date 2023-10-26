@@ -398,7 +398,17 @@ const sortOptions = [
     text: "Rating",
     defaultSort: "desc",
     sortFunction(a, b) {
-      return 1;
+      if (sortOrder.value == "asc") {
+        return (
+          (profile.value.songs[a.id]?.rating ?? 0) -
+          (profile.value.songs[b.id]?.rating ?? 0)
+        );
+      } else {
+        return (
+          (profile.value.songs[b.id]?.rating ?? 0) -
+          (profile.value.songs[a.id]?.rating ?? 0)
+        );
+      }
     },
   },
   {
@@ -874,17 +884,20 @@ const songsFiltered = computed(() => {
 });
 
 function clickSort(sortOption) {
+  console.log(activeSort.value.text, sortOption.text);
   if (activeSort.value.text == sortOption.text) {
+    // clicked the same
     if (sortOrder.value == "asc") {
       sortOrder.value = "desc";
     } else {
       sortOrder.value = "asc";
     }
-  }
-
-  if (!sortOption.subItems) {
-    sortOrder.value = sortOption.defaultSort ?? "asc";
-    activeSort.value = sortOption;
+  } else {
+    // new sort
+    if (!sortOption.subItems) {
+      sortOrder.value = sortOption.defaultSort ?? "asc";
+      activeSort.value = sortOption;
+    }
   }
 }
 

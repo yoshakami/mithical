@@ -68,6 +68,7 @@ function findMusic(song, difficulty) {
 function cacheSongInfo(song) {
   let favorite = profile.value.favorite_music.includes(song.id);
   let playCount = 0;
+  let rating = 0;
   let scores = [];
 
   for (let difficulty = 1; difficulty <= song.sheets.length; difficulty++) {
@@ -76,6 +77,7 @@ function cacheSongInfo(song) {
     if (music) {
       playCount += music.play_count;
       scores.push(music);
+      rating = Math.max(rating, music.rating);
     } else {
       scores.push(null);
     }
@@ -85,6 +87,7 @@ function cacheSongInfo(song) {
     favorite,
     scores,
     playCount,
+    rating,
   };
 }
 

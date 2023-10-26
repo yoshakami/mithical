@@ -13,6 +13,10 @@
           <div class="song-artist">
             {{ song.artist }}
           </div>
+          <!-- <div class="player-stats">
+            <div>Plays: {{ playerData.playCount }}</div>
+            <div>Rating: {{ playerData.rating }}</div>
+          </div> -->
         </div>
 
         <div class="song-header-right">
@@ -91,6 +95,11 @@ $song-paddings: 10px;
 
 .song-header-right {
   flex-shrink: 0;
+}
+
+.player-stats {
+  display: flex;
+  gap: 20px;
 }
 
 .v-theme--waccaOled .song {
