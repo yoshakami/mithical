@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "chartjs-plugin-annotation": "^3.0.1",
-    "vite-plugin-image-optimizer": "^1.1.7"
+    "vite-plugin-image-optimizer": "^1.1.7",
+    "vue-collapsed": "^1.2.9"
   }
 }

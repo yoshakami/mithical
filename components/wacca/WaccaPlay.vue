@@ -44,55 +44,70 @@
               {{ props.play.score }}
             </div>
 
-            <!-- <div class="play-pb" v-if="props.play.is_new_record">
-              New Record!
-            </div> -->
-
-            <div class="play-spacer"></div>
-
             <WaccaMedal :medal="medal" class="play-medal" />
           </div>
         </div>
       </div>
 
-      <div class="play-detail">
-        <div class="play-judgements">
-          <div
-            class="play-judgement"
-            :class="`judgement-${judgement}`"
-            v-for="judgement in judgements"
-            :key="judgement"
-          >
-            <div class="play-judgement-label">{{ judgement }}</div>
-            <div class="play-judgement-value">
-              {{ play[`judge_${judgement.toLowerCase()}`] }}
+      <Collapse :when="expanded">
+        <div class="collapsible">
+          <div class="play-detail">
+            <div class="play-judgements">
+              <div
+                class="play-judgement"
+                :class="`judgement-${judgement}`"
+                v-for="judgement in judgements"
+                :key="judgement"
+              >
+                <div class="play-judgement-label">{{ judgement }}</div>
+                <div class="play-judgement-value">
+                  {{ play[`judge_${judgement.toLowerCase()}`] }}
+                </div>
+              </div>
+            </div>
+
+            <div class="play-judgements">
+              <div class="play-judgement judgement-Fast">
+                <div class="play-judgement-label">Fast</div>
+                <div class="play-judgement-value">
+                  {{ play.fast }}
+                </div>
+              </div>
+
+              <div class="play-judgement judgement-Late">
+                <div class="play-judgement-label">Late</div>
+                <div class="play-judgement-value">
+                  {{ play.late }}
+                </div>
+              </div>
+
+              <div class="play-judgement judgement-Combo">
+                <div class="play-judgement-label">Combo</div>
+                <div class="play-judgement-value">
+                  {{ play.combo }}
+                </div>
+              </div>
+
+              <div
+                class="play-judgement play-pb"
+                v-if="props.play.is_new_record"
+              >
+                <div class="play-judgement-label">New Record!</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timing-bar">
+            <div class="fast" :style="{ width: fastPercentage + '%' }">
+              Fast
+            </div>
+            <div class="perfect"></div>
+            <div class="late" :style="{ width: `${latePercentage}%` }">
+              Late
             </div>
           </div>
         </div>
-
-        <div class="play-judgements">
-          <div class="play-judgement judgement-Fast">
-            <div class="play-judgement-label">Fast</div>
-            <div class="play-judgement-value">
-              {{ play.fast }}
-            </div>
-          </div>
-
-          <div class="play-judgement judgement-Late">
-            <div class="play-judgement-label">Late</div>
-            <div class="play-judgement-value">
-              {{ play.late }}
-            </div>
-          </div>
-
-          <div class="play-judgement judgement-Combo">
-            <div class="play-judgement-label">Combo</div>
-            <div class="play-judgement-value">
-              {{ play.combo }}
-            </div>
-          </div>
-        </div>
-      </div>
+      </Collapse>
 
       <div class="play-expand">
         <v-btn rounded @click.prevent="expand" color="primary">
@@ -201,6 +216,7 @@ $cover-size: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 
   background: white;
   color: black;
@@ -249,14 +265,6 @@ $cover-size: 100px;
   font-size: 1.5rem;
   font-weight: 600;
   padding-left: 10px;
-}
-
-.play-pb {
-  font-weight: 300;
-  padding-left: 10px;
-}
-
-.play-spacer {
   flex-grow: 1;
 }
 
@@ -268,8 +276,14 @@ $cover-size: 100px;
   }
 }
 
+.collapsible {
+  padding-bottom: 30px;
+}
+
 .play-detail {
+  margin-bottom: 10px 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   // margin-top: $paddings;
   line-height: 1;
@@ -278,25 +292,13 @@ $cover-size: 100px;
   color: white;
   flex-wrap: wrap;
   justify-content: space-around;
-  max-height: 0px;
-  overflow: hidden;
-  transition: max-height 0.5s;
-}
-
-.play.expanded .play-detail {
-  max-height: 156px;
-}
-
-.play-judgements {
-  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .play-judgement {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 0;
-  margin-top: -10px;
 
   .play-judgement-label {
     letter-spacing: -2px;
@@ -331,6 +333,50 @@ $cover-size: 100px;
   &.judgement-Combo .play-judgement-label {
     background-image: -webkit-linear-gradient(#fff, #ccc);
   }
+
+  &.play-pb .play-judgement-label {
+    background-image: -webkit-linear-gradient(#ffe868, #ffd700);
+  }
+}
+
+.timing-bar {
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  margin-top: 10px;
+  font-size: 0.8em;
+
+  .perfect,
+  .fast,
+  .late {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    // margin-left: -7.5px;
+    // margin-right: -7.5px;
+    // @include slanted(15px);
+  }
+
+  .perfect {
+    color: black;
+    height: 100%;
+    background: white;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .fast {
+    height: 100%;
+    background: #d63c2e;
+  }
+
+  .late {
+    height: 100%;
+    background: #5247fe;
+  }
 }
 
 .play-expand {
@@ -350,6 +396,7 @@ $cover-size: 100px;
 </style>
 
 <script setup>
+import { Collapse } from "vue-collapsed";
 import { formatDifficulty } from "~/assets/js/util";
 const difficultyInternal = useState("difficultyInternal");
 
@@ -409,5 +456,19 @@ const getTitle = computed(() => {
   } else {
     return song.value.titleEnglish || song.value.title;
   }
+});
+
+const totalNotesHit = computed(() => {
+  return (
+    props.play.judge_marvelous + props.play.judge_great + props.play.judge_good
+  );
+});
+
+const fastPercentage = computed(() => {
+  return (props.play.fast / totalNotesHit.value) * 100;
+});
+
+const latePercentage = computed(() => {
+  return (props.play.late / totalNotesHit.value) * 100;
 });
 </script>
