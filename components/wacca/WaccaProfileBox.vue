@@ -7,22 +7,21 @@
 </template>
 
 <style scoped lang="scss">
-@mixin slanted($dist) {
+.profile-box-wrapper {
+  display: inline-block;
 }
 
 .profile-box {
   position: relative;
-  display: inline-block;
   font-weight: 700;
   font-size: 2rem;
   color: white;
   padding: 10px 40px;
   z-index: 0;
-
-  &.slanted {
-    @include slanted(30px);
-  }
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .profile-box:after {
   content: "";
   position: absolute;

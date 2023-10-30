@@ -241,7 +241,7 @@
 
 .highscore-grade,
 .highscore-icon {
-  height: 30px;
+  height: 40px;
   vertical-align: middle;
 }
 
