@@ -139,6 +139,7 @@ onMounted(() => {
 });
 
 function updateChart() {
+  if (!chart) return;
   chart.data.datasets = playerHistoryFormatted.value;
   chart.update();
   chart.resetZoom();

@@ -1,5 +1,5 @@
 <template>
-  <span :class="`rating-${ratingColor}`">{{ realRate }}</span>
+  <span :class="`rating-${ratingColor}`">{{ realRateFormatted }}</span>
 </template>
 
 <style scoped lang="scss">
@@ -112,6 +112,10 @@ const props = defineProps({
 
 const realRate = computed(() => {
   return (props.rating ?? 0) / 10;
+});
+
+const realRateFormatted = computed(() => {
+  return realRate.value.toFixed(1);
 });
 
 const ratingColor = computed(() => {

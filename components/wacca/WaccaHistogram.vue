@@ -14,6 +14,7 @@ const props = defineProps({
   label: String,
 });
 
+const scoresFlat = ref([]);
 const histogramChart = ref(null);
 const start = 70;
 
@@ -25,9 +26,13 @@ const histogramData = computed(() => {
   }
 
   props.scores.forEach((score) => {
-    const index = Math.floor(score * 0.0001);
+    const index = Math.floor(score.score * 0.0001);
 
-    dataset[index]++;
+    dataset[index] += parseInt(score.count);
+
+    for (let i = 0; i < parseInt(score.count); i++) {
+      scoresFlat.value.push(score.score);
+    }
   });
 
   // remove the first x elements
@@ -50,7 +55,7 @@ function bisectRight(arr, value, lo = 0, hi = arr.length) {
 
 const percentile = computed(() => {
   let percentile =
-    1 - bisectRight(props.scores, props.score) / props.scores.length;
+    1 - bisectRight(scoresFlat.value, props.score) / scoresFlat.value.length;
 
   return Math.round(percentile * 1000) / 10;
 });

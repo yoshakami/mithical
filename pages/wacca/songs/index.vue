@@ -884,7 +884,6 @@ const songsFiltered = computed(() => {
 });
 
 function clickSort(sortOption) {
-  console.log(activeSort.value.text, sortOption.text);
   if (activeSort.value.text == sortOption.text) {
     // clicked the same
     if (sortOrder.value == "asc") {

@@ -26,11 +26,12 @@
           <span class="light">Level</span> {{ level }}
         </div>
         <div class="profile-stat mr-5">
-          <span class="light">Rate</span>&nbsp;
-          <WaccaRating :rating="profile.rating" />
+          <span class="light">RP</span> {{ profile.points }}
         </div>
         <div class="profile-stat">
-          <span class="light">Points</span> {{ profile.points }}
+          <span class="light">Rate</span>&nbsp;<WaccaRating
+            :rating="profile.version_data[4].rating"
+          />
         </div>
       </WaccaProfileBox>
     </v-container>
@@ -96,19 +97,14 @@ const level = computed(() => {
 });
 
 const navigator = computed(() => {
-  let navigatorId =
-    profile.value.options.find((option) => {
-      return option.option_id == 1004;
-    })?.value || 310001;
+  let navigatorId = profile.value.options[1004] || 310001;
 
   return waccaNavigators.find((n) => n.id === navigatorId);
 });
 
 const iconId = computed(() => {
-  let iconId = profile.value.options.find((option) => {
-    return option.option_id == 1003;
-  })?.value;
+  let iconId = profile.value.options[1003] ?? 102001;
 
-  return iconId ?? 102001;
+  return iconId;
 });
 </script>

@@ -51,6 +51,7 @@ async function loadProfile() {
         cachePlayerSongs();
       })
       .catch((err) => {
+        console.error(err);
         profileLoading.value = false;
         profileError.value = "Couldn't reach the API. Please try again later.";
       });
@@ -66,7 +67,7 @@ function findMusic(song, difficulty) {
 // getting the song and sheet data by id/difficulty
 // is a lot of .find so we cache them in playerData
 function cacheSongInfo(song) {
-  let favorite = profile.value.favorite_music.includes(song.id);
+  let favorite = profile.value.favorite_music_entries.includes(song.id);
   let playCount = 0;
   let rating = 0;
   let scores = [];

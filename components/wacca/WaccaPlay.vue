@@ -18,30 +18,30 @@
             </div>
 
             <div class="play-header-right">
-              {{ formatDate(play.user_play_date) }}
+              {{ formatDate(play.info.user_play_date) }}
             </div>
           </div>
 
           <div class="play-stats">
             <div
               class="play-difficulty"
-              :class="`difficulty-${play.music_difficulty}`"
+              :class="`difficulty-${play.info.music_difficulty}`"
             >
               <span class="play-difficulty-number">{{
                 formatDifficulty(
-                  song.sheets[play.music_difficulty - 1],
+                  song.sheets[play.info.music_difficulty - 1],
                   difficultyInternal
                 )
               }}</span>
-              {{ difficulties[play.music_difficulty] }}
+              {{ difficulties[play.info.music_difficulty] }}
             </div>
 
             <div class="play-grade">
-              <WaccaGrade :grade="play.grade" />
+              <WaccaGrade :grade="play.info.grade" />
             </div>
 
             <div class="play-score">
-              {{ props.play.score }}
+              {{ props.play.info.score }}
             </div>
 
             <WaccaMedal :medal="medal" class="play-medal" />
@@ -67,32 +67,32 @@
             </div>
 
             <div class="play-judgements">
+              <div
+                class="play-judgement play-pb"
+                v-if="props.play.info.is_new_record"
+              >
+                <div class="play-judgement-label">New Record!</div>
+              </div>
+
               <div class="play-judgement judgement-Fast">
                 <div class="play-judgement-label">Fast</div>
                 <div class="play-judgement-value">
-                  {{ play.fast }}
+                  {{ play.info.fast }}
                 </div>
               </div>
 
               <div class="play-judgement judgement-Late">
                 <div class="play-judgement-label">Late</div>
                 <div class="play-judgement-value">
-                  {{ play.late }}
+                  {{ play.info.late }}
                 </div>
               </div>
 
               <div class="play-judgement judgement-Combo">
                 <div class="play-judgement-label">Combo</div>
                 <div class="play-judgement-value">
-                  {{ play.combo }}
+                  {{ play.info.combo }}
                 </div>
-              </div>
-
-              <div
-                class="play-judgement play-pb"
-                v-if="props.play.is_new_record"
-              >
-                <div class="play-judgement-label">New Record!</div>
               </div>
             </div>
           </div>
@@ -407,7 +407,7 @@ const props = defineProps({
 });
 
 const song = computed(() => {
-  let song = waccaSongs.find((song) => song.id === props.play.music_id);
+  let song = waccaSongs.find((song) => song.id === props.play.info.music_id);
 
   return song;
 });
@@ -435,13 +435,13 @@ const difficulties = {
 const judgements = ["Marvelous", "Great", "Good", "Miss"];
 
 const medal = computed(() => {
-  if (props.play.is_all_marvelous) {
+  if (props.play.info.clear_status.is_all_marvelous) {
     return "allmarvelous";
-  } else if (props.play.is_full_combo) {
+  } else if (props.play.info.clear_status.is_full_combo) {
     return "fullcombo";
-  } else if (props.play.is_missless) {
+  } else if (props.play.info.clear_status.is_missless) {
     return "missless";
-  } else if (props.play.is_clear) {
+  } else if (props.play.info.clear_status.is_clear) {
     return "clear";
   } else {
     return "failed";
@@ -460,15 +460,17 @@ const getTitle = computed(() => {
 
 const totalNotesHit = computed(() => {
   return (
-    props.play.judge_marvelous + props.play.judge_great + props.play.judge_good
+    props.play.info.judge.marvelous +
+    props.play.info.judge.great +
+    props.play.info.judge.good
   );
 });
 
 const fastPercentage = computed(() => {
-  return (props.play.fast / totalNotesHit.value) * 100;
+  return (props.play.info.fast / totalNotesHit.value) * 100;
 });
 
 const latePercentage = computed(() => {
-  return (props.play.late / totalNotesHit.value) * 100;
+  return (props.play.info.late / totalNotesHit.value) * 100;
 });
 </script>

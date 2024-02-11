@@ -127,6 +127,7 @@ function addCard() {
       luid.value = "";
     })
     .catch((error) => {
+      console.error(error);
       errorMessage.value =
         error.data || "Couldn't reach the API. Please try again later.";
       loading.value = false;

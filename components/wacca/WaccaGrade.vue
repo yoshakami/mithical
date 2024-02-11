@@ -1,5 +1,5 @@
 <template>
-  <img :src="url" />
+  <img :src="url" v-if="props.grade != 0" />
 </template>
 
 <script setup>

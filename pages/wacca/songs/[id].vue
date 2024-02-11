@@ -1,44 +1,43 @@
 <template>
   <WaccaProfileRequired>
-    <div style="padding-bottom: 4em">
-      <v-container class="elevation-1 mt-4">
-        <div class="single-song">
-          <div class="single-song-cover">
-            <v-img :src="fullUrl" />
+    <v-container class="elevation-1 mt-4">
+      <div class="single-song">
+        <div class="single-song-cover">
+          <v-img :src="fullUrl" />
+        </div>
+
+        <div class="single-song-details">
+          <div class="single-song-header">
+            <div class="single-song-header-left">
+              <h1 class="title">{{ getTitle }}</h1>
+              <h2 class="artist">{{ song.artist }}</h2>
+            </div>
+            <div class="single-song-header-right">
+              <WaccaFavorite :song-id="song.id" />
+            </div>
           </div>
 
-          <div class="single-song-details">
-            <div class="single-song-header">
-              <div class="single-song-header-left">
-                <h1 class="title">{{ getTitle }}</h1>
-                <h2 class="artist">{{ song.artist }}</h2>
-              </div>
-              <div class="single-song-header-right">
-                <WaccaFavorite :song-id="song.id" />
-              </div>
-            </div>
+          <div class="single-song-pills">
+            <v-chip prepend-icon="mdi-pulse">{{ song.bpm }} bpm</v-chip>
+            <v-chip prepend-icon="mdi-plus">
+              {{ formatDate(song.dateAdded) }}</v-chip
+            >
+            <v-chip v-if="song.dateRemoved != 0" prepend-icon="mdi-minus">
+              {{ formatDate(song.dateRemoved) }}</v-chip
+            >
+            <v-chip v-if="profile" prepend-icon="mdi-pound">
+              {{ profile.songs[song.id].playCount }}
+              play{{ profile.songs[song.id].playCount == 1 ? "" : "s" }}
+            </v-chip>
+            <v-chip
+              v-if="profile && profile.songs[song.id].favorite"
+              prepend-icon="mdi-star"
+            >
+              Favorite
+            </v-chip>
+          </div>
 
-            <div class="single-song-pills">
-              <v-chip prepend-icon="mdi-pulse">{{ song.bpm }} bpm</v-chip>
-              <v-chip prepend-icon="mdi-plus">
-                {{ formatDate(song.dateAdded) }}</v-chip
-              >
-              <v-chip v-if="song.dateRemoved != 0" prepend-icon="mdi-minus">
-                {{ formatDate(song.dateRemoved) }}</v-chip
-              >
-              <v-chip v-if="profile" prepend-icon="mdi-pound">
-                {{ profile.songs[song.id].playCount }}
-                play{{ profile.songs[song.id].playCount == 1 ? "" : "s" }}
-              </v-chip>
-              <v-chip
-                v-if="profile && profile.songs[song.id].favorite"
-                prepend-icon="mdi-star"
-              >
-                Favorite
-              </v-chip>
-            </div>
-
-            <!-- <v-btn
+          <!-- <v-btn
             class="mt-4"
             color="primary"
             block
@@ -49,130 +48,129 @@
           </v-btn>
 
           <div class="text-center mt-4">{{ goToSongMessage }}</div> -->
-          </div>
-
-          <div class="single-song-game">
-            <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
-          </div>
         </div>
-      </v-container>
 
-      <v-container class="elevation-1 mt-4">
-        <h2 class="container-heading">Your scores</h2>
+        <div class="single-song-game">
+          <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
+        </div>
+      </div>
+    </v-container>
 
-        <WaccaSongSheets :song="song" :player-data="profile.songs[song.id]" />
-        <WaccaChart ref="chart" :player-history="playerHistory" :song="song" />
-      </v-container>
+    <v-container class="elevation-1 mt-4">
+      <h2 class="container-heading">Your scores</h2>
 
-      <v-container class="elevation-1 mt-4">
-        <h2 class="container-heading">
-          Histograms
+      <WaccaSongSheets :song="song" :player-data="profile.songs[song.id]" />
+      <WaccaChart ref="chart" :player-history="playerHistory" :song="song" />
+    </v-container>
 
-          <v-tooltip location="end">
-            <template v-slot:activator="{ props }">
-              <v-icon v-bind="props" color="primary"
-                >mdi-information-outline</v-icon
-              >
-            </template>
-            <span
-              >Histograms show the distribution of scores of everyone on the
-              network.</span
+    <v-container class="elevation-1 mt-4">
+      <h2 class="container-heading">
+        Histograms
+
+        <v-tooltip location="end">
+          <template v-slot:activator="{ props }">
+            <v-icon v-bind="props" color="primary"
+              >mdi-information-outline</v-icon
             >
-          </v-tooltip>
-        </h2>
-        <div v-if="histogramsLoading" class="d-flex justify-center">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-            :size="80"
-            :width="10"
-            class="mt-4"
-          ></v-progress-circular>
-        </div>
+          </template>
+          <span
+            >Histograms show the distribution of scores of everyone on the
+            network.</span
+          >
+        </v-tooltip>
+      </h2>
+      <div v-if="histogramsLoading" class="d-flex justify-center">
+        <v-progress-circular
+          indeterminate
+          color="primary"
+          :size="80"
+          :width="10"
+          class="mt-4"
+        ></v-progress-circular>
+      </div>
 
-        <div v-else>
-          <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
-            leaderboardsLoadingError
-          }}</v-alert>
+      <div v-else>
+        <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
+          leaderboardsLoadingError
+        }}</v-alert>
 
-          <div v-else class="histograms">
-            <WaccaHistogram
-              v-for="(difficulty, i) in song.sheets"
-              :key="i"
-              :scores="histograms[i]"
-              :color="waccaDifficulties[i].color"
-              :label="waccaDifficulties[i].name"
-              :score="profile.songs[song.id]?.scores[i]?.score"
-            />
-          </div>
-        </div>
-      </v-container>
-
-      <v-container class="elevation-1 mt-4">
-        <h2 class="container-heading">Leaderboards</h2>
-        <div class="song-sheets difficulty-selection mt-4">
-          <div
+        <div v-else class="histograms">
+          <WaccaHistogram
             v-for="(difficulty, i) in song.sheets"
             :key="i"
-            class="song-difficulty"
-          >
-            <WaccaDifficultyPill
-              v-ripple
-              :i="i + 1"
-              :difficulty="difficulty"
-              :class="{ active: i + 1 == selectedDifficulty }"
-              @click="selectDifficulty(i + 1)"
-            />
-          </div>
+            :scores="histograms[i].score_entries"
+            :color="waccaDifficulties[i].color"
+            :label="waccaDifficulties[i].name"
+            :score="profile.songs[song.id]?.scores[i]?.score"
+          />
         </div>
+      </div>
+    </v-container>
 
-        <div v-if="leaderboardsLoading" class="d-flex justify-center">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-            :size="80"
-            :width="10"
-            class="mt-4"
-          ></v-progress-circular>
+    <v-container class="elevation-1 mt-4">
+      <h2 class="container-heading">Leaderboards</h2>
+      <div class="song-sheets difficulty-selection mt-4">
+        <div
+          v-for="(difficulty, i) in song.sheets"
+          :key="i"
+          class="song-difficulty"
+        >
+          <WaccaDifficultyPill
+            v-ripple
+            :i="i + 1"
+            :difficulty="difficulty"
+            :class="{ active: i + 1 == selectedDifficulty }"
+            @click="selectDifficulty(i + 1)"
+          />
         </div>
+      </div>
 
-        <div v-else>
-          <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
-            leaderboardsLoadingError
-          }}</v-alert>
+      <div v-if="leaderboardsLoading" class="d-flex justify-center">
+        <v-progress-circular
+          indeterminate
+          color="primary"
+          :size="80"
+          :width="10"
+          class="mt-4"
+        ></v-progress-circular>
+      </div>
 
-          <v-table v-else>
-            <thead>
-              <tr>
-                <th width="1%">Rank</th>
-                <th>Name</th>
-                <th>Score</th>
-                <th>Date</th>
-              </tr>
-            </thead>
+      <div v-else>
+        <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
+          leaderboardsLoadingError
+        }}</v-alert>
 
-            <tbody>
-              <tr v-for="(score, i) in highscores" :key="i">
-                <td class="text-right">{{ i + 1 }}</td>
-                <td>
-                  <WaccaIcon class="highscore-icon" :icon="score.user_icon" />
-                  {{ score.user_name }}
-                </td>
-                <td>
-                  <WaccaGrade class="highscore-grade" :grade="score.grade" />
-                  {{ score.score }}
-                </td>
-                <td>{{ new Date(score.user_play_date).toLocaleString() }}</td>
-              </tr>
+        <v-table v-else>
+          <thead>
+            <tr>
+              <th width="1%">Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Date</th>
+            </tr>
+          </thead>
 
-              <tr v-if="highscores.length === 0">
-                <td colspan="5" class="text-center">No scores yet!</td>
-              </tr>
-            </tbody>
-          </v-table>
-        </div>
-      </v-container>
-    </div>
+          <tbody>
+            <tr v-for="(score, i) in highscores" :key="i">
+              <td class="text-right">{{ i + 1 }}</td>
+              <td>
+                <WaccaIcon class="highscore-icon" :icon="score.user_icon_id" />
+                {{ score.user_name }}
+              </td>
+              <td>
+                <WaccaGrade class="highscore-grade" :grade="score.grade" />
+                {{ score.score }}
+              </td>
+              <td>{{ formatDateLeaderboard(score.user_play_date) }}</td>
+            </tr>
+
+            <tr v-if="highscores.length === 0">
+              <td colspan="5" class="text-center">No scores yet!</td>
+            </tr>
+          </tbody>
+        </v-table>
+      </div>
+    </v-container>
   </WaccaProfileRequired>
 </template>
 
@@ -329,7 +327,7 @@ function loadData() {
 function loadHistograms() {
   histogramsLoading.value = ref(true);
   $fetch(
-    `${runtimeConfig.public.apiUrl}/wacca/music/${song.value.id}/allscores`
+    `${runtimeConfig.public.apiUrl}/wacca/music/${song.value.id}/histogram`
   )
     .then((data) => {
       histogramsLoading.value = false;
@@ -413,6 +411,14 @@ function formatDate(date) {
   let month = strDate.slice(4, 6);
   let day = strDate.slice(6, 8);
   return new Date(`${year}-${month}-${day}`).toLocaleDateString();
+}
+
+function formatDateLeaderboard(date) {
+  if (date == "1970-01-01T00:00:00+00:00") {
+    return "Unknown";
+  }
+
+  return new Date(date).toLocaleString();
 }
 
 useSeoMeta({

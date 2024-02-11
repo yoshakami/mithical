@@ -68,6 +68,7 @@
 .medal-fullcombo {
   span {
     color: #dfff01;
+    -webkit-text-stroke: #190b32 0.1px;
     background: linear-gradient(180deg, #fb0298, 33%, #fb0298, 66%, #530bc8);
     background-clip: text;
     // evil vendor prefix stuff

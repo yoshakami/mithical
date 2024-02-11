@@ -50,7 +50,7 @@ const playlogGrouped = computed(() => {
   const grouped = [];
 
   profile.value.playlog.forEach((play) => {
-    const date = new Date(play.user_play_date);
+    const date = new Date(play.info.user_play_date);
     const dateStr = date.toLocaleDateString();
 
     const group = grouped.find((group) => group.date === dateStr);

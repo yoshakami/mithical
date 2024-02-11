@@ -29,7 +29,10 @@
             <tr v-for="(profile, i) in leaderboardData" :key="i">
               <td class="text-right">{{ i + 1 }}</td>
               <td>
-                <WaccaIcon class="leaderboard-icon" :icon="profile.user_icon" />
+                <WaccaIcon
+                  class="leaderboard-icon"
+                  :icon="profile.user_icon_id"
+                />
                 {{ profile.user_name }}
               </td>
               <td>
