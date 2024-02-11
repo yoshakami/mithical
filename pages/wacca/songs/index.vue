@@ -633,37 +633,37 @@ const filters = ref([
       },
     ],
   },
-  {
-    type: "buttons",
-    text: "Contributes to rating",
-    subItems: [
-      {
-        text: "All",
-        icon: "mdi-circle-outline",
-        iconActive: "mdi-circle",
-        filterFunction() {
-          return true;
-        },
-        active: true,
-      },
-      {
-        text: "No",
-        icon: "mdi-close-circle-outline",
-        iconActive: "mdi-close-circle",
-        filterFunction(song) {
-          return true;
-        },
-      },
-      {
-        text: "Yes",
-        icon: "mdi-check-circle-outline",
-        iconActive: "mdi-check-circle",
-        filterFunction(song) {
-          return true;
-        },
-      },
-    ],
-  },
+  // {
+  //   type: "buttons",
+  //   text: "Contributes to rating",
+  //   subItems: [
+  //     {
+  //       text: "All",
+  //       icon: "mdi-circle-outline",
+  //       iconActive: "mdi-circle",
+  //       filterFunction() {
+  //         return true;
+  //       },
+  //       active: true,
+  //     },
+  //     {
+  //       text: "No",
+  //       icon: "mdi-close-circle-outline",
+  //       iconActive: "mdi-close-circle",
+  //       filterFunction(song) {
+  //         return true;
+  //       },
+  //     },
+  //     {
+  //       text: "Yes",
+  //       icon: "mdi-check-circle-outline",
+  //       iconActive: "mdi-check-circle",
+  //       filterFunction(song) {
+  //         return true;
+  //       },
+  //     },
+  //   ],
+  // },
   {
     type: "heading",
     text: "Clear Status",
