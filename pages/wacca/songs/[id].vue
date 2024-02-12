@@ -35,6 +35,13 @@
             >
               Favorite
             </v-chip>
+            <v-chip
+              v-if="profile.songs[song.id].rating != 0"
+              prepend-icon="mdi-arrow-up-bold"
+            >
+              {{ profile.songs[song.id].rating / 10 }}
+              Rating
+            </v-chip>
           </div>
 
           <!-- <v-btn
@@ -152,7 +159,11 @@
 
           <tbody>
             <tr v-for="(score, i) in highscores" :key="i">
-              <td class="text-right">{{ i + 1 }}</td>
+              <td class="text-right">
+                <span v-if="i == 0 || highscores[i - 1].score != score.score">
+                  {{ i + 1 }}
+                </span>
+              </td>
               <td>
                 <WaccaIcon class="highscore-icon" :icon="score.user_icon_id" />
                 {{ score.user_name }}
