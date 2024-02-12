@@ -1,27 +1,40 @@
 <template>
   <WaccaProfileRequired>
     <v-container>
-      <div v-for="group in playlogGrouped">
-        <div class="playlog-hr">{{ group.date }}</div>
-        <WaccaPlay v-for="play in group.plays" :play="play" />
-      </div>
+      <div class="play-log">
+        <div v-for="group in playlogGrouped" class="play-log-day">
+          <div class="playlog-hr">{{ group.date }}</div>
+          <WaccaPlay v-for="play in group.plays" :play="play" />
+        </div>
 
-      <div v-if="profile.playlog.length === 0">
-        <v-alert type="info" border="left" prominent>
-          Looks like you haven't played anything yet!
-        </v-alert>
-      </div>
+        <div v-if="profile.playlog.length === 0">
+          <v-alert type="info" border="left" prominent>
+            Looks like you haven't played anything yet!
+          </v-alert>
+        </div>
 
-      <div v-if="profile.playlog.length == 100">
-        <p class="text-grey-darken-2 text-center">
-          Only the most recent 100 plays are shown.
-        </p>
+        <div v-if="profile.playlog.length == 100">
+          <p class="text-grey-darken-2 text-center">
+            Only the most recent 100 plays are shown.
+          </p>
+        </div>
       </div>
     </v-container>
   </WaccaProfileRequired>
 </template>
 
 <style scoped lang="scss">
+.play-log {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.play-log-day {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
 .playlog-hr {
   display: flex;
   align-items: center;

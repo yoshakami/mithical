@@ -1,6 +1,10 @@
 <template>
   <NuxtLink :to="`/wacca/songs/${song.id}`" style="text-decoration: none">
-    <div class="play" :class="{ expanded }" v-ripple="{ class: 'text-white' }">
+    <div
+      class="play"
+      :class="{ expanded, 'is-record': props.play.info.is_new_record }"
+      v-ripple="{ class: 'text-white' }"
+    >
       <div class="player-header">
         <div class="play-cover">
           <v-img :src="fullUrl" />
@@ -139,13 +143,16 @@ $cover-size: 100px;
   position: relative;
 
   padding-bottom: 0;
-  margin: 1em 0;
 
   border-radius: $paddings;
 
   background-color: rgb(var(--v-theme-boxcolor));
   overflow: hidden;
   transition: background-color 0.2s, box-shadow 0.2s;
+
+  &.is-record {
+    box-shadow: 0px 0px 5px orange, 0px 0px 10px orange;
+  }
 
   &:hover {
     background-color: #444;

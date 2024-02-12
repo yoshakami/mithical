@@ -97,8 +97,8 @@
       </div>
 
       <div v-else>
-        <v-alert v-if="leaderboardsLoadingError" type="error" class="mt-4">{{
-          leaderboardsLoadingError
+        <v-alert v-if="histogramsLoadingError" type="error" class="mt-4">{{
+          histogramsLoadingError
         }}</v-alert>
 
         <div v-else class="histograms">
@@ -132,7 +132,7 @@
         </div>
       </div>
 
-      <div v-if="leaderboardsLoading" class="d-flex justify-center">
+      <div v-if="leaderboardsLoading" class="d-flex justify-center py-5">
         <v-progress-circular
           indeterminate
           color="primary"
@@ -327,6 +327,7 @@ function loadData() {
     .then((data) => {
       leaderboardsLoading.value = false;
       highscores.value = data;
+      leaderboardsLoadingError.value = null;
     })
     .catch((err) => {
       leaderboardsLoading.value = false;
@@ -343,6 +344,7 @@ function loadHistograms() {
     .then((data) => {
       histogramsLoading.value = false;
       histograms.value = data;
+      histogramsLoadingError.value = null;
     })
     .catch((err) => {
       histogramsLoading.value = false;

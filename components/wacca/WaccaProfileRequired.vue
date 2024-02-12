@@ -9,7 +9,11 @@
       ></v-progress-circular>
     </div>
 
-    <v-alert v-if="profileError" type="error">
+    <v-alert
+      v-if="profileError"
+      type="error"
+      style="max-width: 500px; margin: 0 auto"
+    >
       Couldn't reach the API. Please try again later.
     </v-alert>
 
