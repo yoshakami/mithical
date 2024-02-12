@@ -97,7 +97,7 @@
             </div>
           </div>
 
-          <div class="timing-bar">
+          <!-- <div class="timing-bar">
             <div class="fast" :style="{ width: fastPercentage + '%' }">
               Fast
             </div>
@@ -105,7 +105,7 @@
             <div class="late" :style="{ width: `${latePercentage}%` }">
               Late
             </div>
-          </div>
+          </div> -->
         </div>
       </Collapse>
 

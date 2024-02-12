@@ -25,18 +25,20 @@ const histogramData = computed(() => {
     dataset.push(0);
   }
 
-  props.scores.forEach((score) => {
-    const index = Math.floor(score.score * 0.0001);
+  if (props.scores) {
+    props.scores.forEach((score) => {
+      const index = Math.floor(score.score * 0.0001);
 
-    dataset[index] += parseInt(score.count);
+      dataset[index] += parseInt(score.count);
 
-    for (let i = 0; i < parseInt(score.count); i++) {
-      scoresFlat.value.push(score.score);
-    }
-  });
+      for (let i = 0; i < parseInt(score.count); i++) {
+        scoresFlat.value.push(score.score);
+      }
+    });
 
-  // remove the first x elements
-  dataset.splice(0, start);
+    // remove the first x elements
+    dataset.splice(0, start);
+  }
 
   return dataset;
 });

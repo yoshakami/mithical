@@ -5,7 +5,7 @@
     </div>
 
     <WaccaNav />
-    <NuxtPage />
+    <NuxtPage style="padding-bottom: 200px" />
   </v-theme-provider>
 </template>
 

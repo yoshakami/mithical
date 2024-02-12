@@ -105,7 +105,7 @@
           <WaccaHistogram
             v-for="(difficulty, i) in song.sheets"
             :key="i"
-            :scores="histograms[i].score_entries"
+            :scores="histograms[i]?.score_entries"
             :color="waccaDifficulties[i].color"
             :label="waccaDifficulties[i].name"
             :score="profile.songs[song.id]?.scores[i]?.score"

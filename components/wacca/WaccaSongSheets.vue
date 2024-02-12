@@ -14,6 +14,7 @@
         v-if="playerData && playerData.scores[i]"
       >
         <div class="song-score">
+          <WaccaGrade :grade="getHighestGrade(playerData.scores[i])" />
           {{ playerData.scores[i].score }}
         </div>
       </div>
@@ -39,6 +40,17 @@
   margin-bottom: -20px;
   text-align: center;
 }
+
+.song-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  img {
+    height: 22px;
+  }
+}
 </style>
 
 <script setup>
@@ -46,6 +58,31 @@ const props = defineProps({
   song: Object,
   playerData: Object,
 });
+
+const grades = [
+  "grade_d_count",
+  "grade_c_count",
+  "grade_b_count",
+  "grade_a_count",
+  "grade_aa_count",
+  "grade_aaa_count",
+  "grade_s_count",
+  "grade_s_plus_count",
+  "grade_ss_count",
+  "grade_ss_plus_count",
+  "grade_sss_count",
+  "grade_sss_plus_count",
+  "grade_master_count",
+];
+function getHighestGrade(music) {
+  for (let i = grades.length - 1; i >= 0; i--) {
+    if (music[grades[i]] > 0) {
+      return i + 1;
+    }
+  }
+
+  return 0;
+}
 
 function medal(difficulty) {
   if (!props.playerData || !props.playerData.scores[difficulty]) {
