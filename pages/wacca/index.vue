@@ -51,9 +51,9 @@
   width: 2048px * $size;
   height: 2048px * $size;
   background-size: contain;
-  background-position: center;
+  background-position: 40% top;
   overflow: hidden;
-  top: -100px;
+  top: 0px;
   right: -600px;
 }
 
