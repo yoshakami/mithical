@@ -158,7 +158,11 @@
           </thead>
 
           <tbody>
-            <tr v-for="(score, i) in highscores" :key="i">
+            <tr
+              v-for="(score, i) in highscores"
+              :key="i"
+              :class="{ highlight: score.user_name == profile.user_name }"
+            >
               <td class="text-right">
                 <span v-if="i == 0 || highscores[i - 1].score != score.score">
                   {{ i + 1 }}
@@ -275,6 +279,10 @@
   :deep(.song-difficulty-pill) {
     cursor: pointer;
   }
+}
+
+tr.highlight {
+  background-color: rgba(var(--v-theme-primary), 0.1);
 }
 </style>
 

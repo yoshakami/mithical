@@ -2,7 +2,7 @@
   <NuxtLink :to="`/wacca/songs/${song.id}`" style="text-decoration: none">
     <div
       class="play"
-      :class="{ expanded, 'is-record': props.play.info.is_new_record }"
+      :class="{ expanded, 'is-record': play.info.is_new_record }"
       v-ripple="{ class: 'text-white' }"
     >
       <div class="player-header">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="play-score">
-              {{ props.play.info.score }}
+              {{ play.info.score }}
             </div>
 
             <WaccaMedal :medal="medal" class="play-medal" />
@@ -65,7 +65,7 @@
               >
                 <div class="play-judgement-label">{{ judgement }}</div>
                 <div class="play-judgement-value">
-                  {{ play[`judge_${judgement.toLowerCase()}`] }}
+                  {{ play.info.judge[judgement.toLowerCase()] }}
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@
             <div class="play-judgements">
               <div
                 class="play-judgement play-pb"
-                v-if="props.play.info.is_new_record"
+                v-if="play.info.is_new_record"
               >
                 <div class="play-judgement-label">New Record!</div>
               </div>

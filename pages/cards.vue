@@ -6,7 +6,7 @@
       <v-card-text>
         <v-text-field
           v-model="luid"
-          label="Card ID/Access Code"
+          label="Access Code"
           maxlength="24"
           pattern="[0-9]*"
           inputmode="numeric"

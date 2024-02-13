@@ -2,7 +2,7 @@
   <div class="player-chart">
     <canvas ref="playerChart"></canvas>
     <div v-if="playerHistory.length == 0" class="player-chart-text">
-      <div>No scores yet. Go for it!</div>
+      <div>Missing API support</div>
     </div>
   </div>
 </template>
