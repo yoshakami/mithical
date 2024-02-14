@@ -1,7 +1,7 @@
 <template>
   <div class="song">
     <div class="song-cover">
-      <v-img :src="fullUrl" />
+      <WaccaJacket :url="song.imageName" />
     </div>
     <div class="song-info">
       <div class="song-header">
@@ -111,10 +111,6 @@ $song-paddings: 10px;
 const props = defineProps({
   song: Object,
   playerData: Object,
-});
-
-const fullUrl = computed(() => {
-  return `/wacca/img/covers/${props.song.imageName}`;
 });
 
 const language = useState("language");

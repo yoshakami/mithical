@@ -333,6 +333,7 @@
 <script setup>
 import fuzzysort from "fuzzysort";
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
+import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 
 const language = useState("language");
 const profile = useState("profile");
@@ -681,12 +682,10 @@ const filters = ref([
   },
 ]);
 
-const difficulties = ["Normal", "Hard", "Expert", "Inferno"];
-
-for (let i = 0; i < difficulties.length; i++) {
+for (let i = 0; i < waccaDifficulties.length; i++) {
   filters.value.push({
     type: "buttons",
-    text: difficulties[i],
+    text: waccaDifficulties[i].name,
     subItems: [
       {
         text: "All",
@@ -765,7 +764,7 @@ filters.value.push({
 //   };
 // }
 
-for (let i = 0; i < difficulties.length; i++) {
+for (let i = 0; i < waccaDifficulties.length; i++) {
   let model = ref([0, 1000000]);
   // let modelDebounced = ref([0, 1000000]);
 
@@ -779,7 +778,7 @@ for (let i = 0; i < difficulties.length; i++) {
 
   filters.value.push({
     type: "range-slider",
-    text: difficulties[i],
+    text: waccaDifficulties[i].name,
     min: 0,
     max: 1000000,
     model: model,

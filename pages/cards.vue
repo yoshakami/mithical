@@ -1,20 +1,22 @@
 <template>
   <v-container class="cards-container">
     <v-card class="card">
-      <v-card-title> Add a card </v-card-title>
+      <v-card-title>Add a card</v-card-title>
 
       <v-card-text>
-        <v-text-field
-          v-model="luid"
-          label="Access Code"
-          maxlength="24"
-          pattern="[0-9]*"
-          inputmode="numeric"
-          :error-messages="errorMessage"
-          :messages="message"
-          @keydown.enter="addCard"
-          :loading="loading"
-        ></v-text-field>
+        <div class="access-code-wrap">
+          <v-text-field
+            v-model="luid"
+            label="Access Code"
+            maxlength="24"
+            pattern="[0-9]*"
+            inputmode="numeric"
+            :error-messages="errorMessage"
+            :messages="message"
+            @keydown.enter="addCard"
+            :loading="loading"
+          ></v-text-field>
+        </div>
 
         <v-btn
           color="primary"
@@ -27,11 +29,6 @@
         </v-btn>
 
         <div style="margin-top: 1em">
-          <div v-if="cards.length == 0" class="text-center text-grey">
-            Add your card on every device you wanna use it on, as it is stored
-            in your browser.
-          </div>
-
           <v-btn
             v-if="cards.length > 0"
             color="primary"
@@ -67,6 +64,16 @@
   transform: perspective(600px) rotateX(90deg);
   transform-origin: top;
 }
+
+.access-code-wrap {
+  display: flex;
+  align-items: top;
+  gap: 10px;
+
+  a {
+    margin-top: 6px;
+  }
+}
 </style>
 
 <script setup>
@@ -94,7 +101,7 @@ watch(luid, () => {
   luid.value = formatLuid(luid.value);
 });
 
-function addCard() {
+async function addCard() {
   // check that the card is valid by asking the API
   const inputLuid = luid.value.replace(/[^0-9]/gi, "");
 
@@ -103,35 +110,99 @@ function addCard() {
     return;
   }
 
-  if (cards.value.find((card) => card.luid === inputLuid)) {
-    errorMessage.value = "You already added this card.";
-    return;
-  }
-
   loading.value = true;
-  $fetch(`${runtimeConfig.public.apiUrl}/card/${inputLuid}`)
-    .then((data) => {
-      loading.value = false;
-      errorMessage.value = "";
 
-      cards.value.push({
-        luid: inputLuid,
-        user_name: data.user_name,
+  await attemptAddCard(inputLuid).catch(async () => {
+    await attemptAddCard(inputLuid, true).catch(() => {});
+  });
+}
+
+async function attemptAddCard(addluid, convert) {
+  return new Promise(async (resolve, reject) => {
+    await getCardInfo(addluid, convert)
+      .then((data) => {
+        loading.value = false;
+        errorMessage.value = "";
+
+        cards.value.push(data);
+
+        localStorage.setItem("cards", JSON.stringify(cards.value));
+        activeCard.value = data.luid;
+        localStorage.setItem("activeCard", activeCard.value);
+
+        message.value = "Card added successfully!";
+        luid.value = "";
+
+        resolve();
+      })
+      .catch((error, data) => {
+        if (convert) {
+          loading.value = false;
+          switch (error) {
+            case "failedconvert":
+              errorMessage.value = "Failed to find the card on the network.";
+              break;
+            case "alreadyadded":
+              errorMessage.value = "You already added this card.";
+              break;
+            case "failedapi":
+              errorMessage.value = "Failed to find the card on the network.";
+              break;
+            case "apidown":
+              errorMessage.value = "The card network is down or had an error.";
+              break;
+          }
+        }
+
+        reject();
       });
+  });
+}
 
-      localStorage.setItem("cards", JSON.stringify(cards.value));
-      activeCard.value = inputLuid;
-      localStorage.setItem("activeCard", activeCard.value);
+async function getCardInfo(addluid, convert) {
+  return new Promise(async (resolve, reject) => {
+    if (cards.value.find((card) => card.luid === addluid)) {
+      reject("alreadyadded");
+      return;
+    }
 
-      message.value = "Card added successfully!";
-      luid.value = "";
-    })
-    .catch((error) => {
-      console.error(error);
-      errorMessage.value =
-        error.data || "Couldn't reach the API. Please try again later.";
-      loading.value = false;
-    });
+    if (convert) {
+      // attempt to convert the ID using bsnk api
+      await $fetch(`https://card.bsnk.me/card/${addluid}`)
+        .then((data) => {
+          if (data.ids["0008"]) {
+            addluid = data.ids["0008"];
+          } else {
+            reject("failedconvert");
+          }
+        })
+        .catch((error) => {
+          reject("failedapi");
+        });
+    }
+
+    if (cards.value.find((card) => card.luid === addluid)) {
+      reject("alreadyadded");
+      return;
+    }
+
+    $fetch(`${runtimeConfig.public.apiUrl}/card/${addluid}`)
+      .then((data) => {
+        if (!data.user_name) {
+          reject("failedapi");
+          return;
+        }
+
+        data = {
+          luid: addluid,
+          user_name: data.user_name,
+        };
+        resolve(data);
+      })
+      .catch((error) => {
+        reject("apidown");
+      });
+  });
 }
 
 function deleteCard(card) {

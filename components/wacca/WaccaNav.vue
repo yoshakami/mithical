@@ -3,7 +3,8 @@
     <NuxtLink to="/wacca">Home</NuxtLink>
     <NuxtLink to="/wacca/recent">Recent Plays</NuxtLink>
     <NuxtLink to="/wacca/songs">All Songs</NuxtLink>
+    <NuxtLink to="/wacca/rating">Rating</NuxtLink>
     <NuxtLink to="/wacca/leaderboards">Leaderboards</NuxtLink>
-    <NuxtLink to="/wacca/settings">Settings</NuxtLink>
+    <!-- <NuxtLink to="/wacca/settings">Settings</NuxtLink> -->
   </div>
 </template>
