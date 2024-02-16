@@ -29,7 +29,7 @@
 }
 
 .rating-white {
-  color: white;
+  color: grey;
 }
 
 .rating-darkblue {
