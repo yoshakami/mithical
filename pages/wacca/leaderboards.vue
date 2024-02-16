@@ -36,7 +36,11 @@
                 {{ profile.user_name }}
               </td>
               <td>
-                <WaccaRating class="rating" :rating="profile.rating" />
+                <WaccaRating
+                  class="rating"
+                  :rating="profile.rating"
+                  :simple="i >= 10"
+                />
               </td>
             </tr>
           </tbody>

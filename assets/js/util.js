@@ -1,9 +1,13 @@
-function formatDifficulty(difficulty, difficultyInternal) {
+function formatDifficulty(difficulty, difficultyInternal, includeZero = false) {
   if (difficultyInternal) {
-    return difficulty;
+    if (includeZero) {
+      return difficulty.toFixed(1);
+    } else {
+      return difficulty;
+    }
   } else {
     if (difficulty % 1 > 0.6) {
-      return `${Math.floor(difficulty)}+`;
+      return Math.floor(difficulty) + "+";
     } else {
       return Math.floor(difficulty);
     }

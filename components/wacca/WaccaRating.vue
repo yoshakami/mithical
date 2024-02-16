@@ -1,5 +1,7 @@
 <template>
-  <span :class="`rating-${ratingColor}`">{{ realRateFormatted }}</span>
+  <span :class="[`rating-${ratingColor}`, { simple }]">{{
+    realRateFormatted
+  }}</span>
 </template>
 
 <style scoped lang="scss">
@@ -50,7 +52,19 @@
   color: #009de6;
 }
 
-.rating-silver {
+.rating-silver.simple {
+  color: #b7b7b7;
+}
+
+.rating-gold.simple {
+  color: #bf953f;
+}
+
+.rating-rainbow.simple {
+  color: violet;
+}
+
+.rating-silver:not(.simple) {
   @include animate;
 
   background-image: repeating-linear-gradient(
@@ -63,7 +77,7 @@
   );
 }
 
-.rating-gold {
+.rating-gold:not(.simple) {
   @include animate;
 
   background-image: repeating-linear-gradient(
@@ -76,7 +90,7 @@
   );
 }
 
-.rating-rainbow {
+.rating-rainbow:not(.simple) {
   @include animate;
 
   background-image: repeating-linear-gradient(
@@ -95,19 +109,21 @@
 
 <script setup>
 const ratingColors = [
-  { from: 0, color: "white" },
-  { from: 300, color: "darkblue" },
-  { from: 600, color: "yellow" },
-  { from: 1000, color: "red" },
-  { from: 1300, color: "purple" },
-  { from: 1600, color: "blue" },
-  { from: 1900, color: "silver" },
-  { from: 2200, color: "gold" },
   { from: 2500, color: "rainbow" },
+  { from: 2200, color: "gold" },
+  { from: 1900, color: "silver" },
+  { from: 1600, color: "blue" },
+  { from: 1300, color: "purple" },
+  { from: 1000, color: "red" },
+  { from: 600, color: "yellow" },
+  { from: 300, color: "darkblue" },
+  { from: 0, color: "white" },
 ];
 
 const props = defineProps({
-  rating: String,
+  rating: Number,
+  divide: Number,
+  simple: Boolean,
 });
 
 const realRate = computed(() => {
@@ -119,10 +135,8 @@ const realRateFormatted = computed(() => {
 });
 
 const ratingColor = computed(() => {
-  for (let i = ratingColors.length - 1; i >= 0; i--) {
-    if (realRate.value >= ratingColors[i].from) {
-      return ratingColors[i].color;
-    }
-  }
+  return ratingColors.find(
+    (color) => realRate.value >= color.from / (props.divide ?? 1)
+  ).color;
 });
 </script>

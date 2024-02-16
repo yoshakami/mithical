@@ -26,12 +26,34 @@
                     {{ getTitle(song) }}
                   </div>
 
-                  <div class="rating-right">
+                  <div
+                    class="rating-right"
+                    v-if="profile.songs[song.id].rating"
+                  >
                     <div
-                      class="rating-rating"
-                      :class="`difficulty-${highestDiff[song.id]}`"
+                      v-for="potential in ratingPotentials[song.id]"
+                      class="rating-suggestion"
+                      :class="`difficulty-${potential.difficulty}`"
                     >
-                      {{ formatRating(profile.songs[song.id].rating) }}
+                      <div>SC +{{ potential.scoreDiff }}</div>
+                      <div>
+                        R +{{ potential.ratingDiff.toFixed(1) }} / +{{
+                          Math.max(0, potential.ratingGain.toFixed(1))
+                        }}
+                      </div>
+                    </div>
+                    <div class="rating-difficulty">
+                      <WaccaDifficultyPillSmall
+                        :i="highestDiff[song.id]"
+                        :difficulty="song.sheets[highestDiff[song.id] - 1]"
+                      />
+                    </div>
+                    <div class="rating-rating">
+                      <WaccaRating
+                        :rating="profile.songs[song.id].rating"
+                        :divide="50"
+                        :simple="true"
+                      />
                     </div>
                   </div>
                 </div>
@@ -84,25 +106,17 @@
   padding: 10px;
 }
 
+.rating-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
 .rating-rating {
   padding: 10px;
   font-weight: 700;
-
-  &.difficulty-1 {
-    color: #009de6;
-  }
-
-  &.difficulty-2 {
-    color: #fed131;
-  }
-
-  &.difficulty-3 {
-    color: #fc06a3;
-  }
-
-  &.difficulty-4 {
-    color: #4a004f;
-  }
+  font-size: 1.5em;
 }
 
 .cutoff {
@@ -124,10 +138,36 @@
     line-height: 0px;
   }
 }
+
+.rating-suggestion {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.difficulty-0 {
+    color: #009de6;
+  }
+
+  &.difficulty-1 {
+    color: #fed131;
+  }
+
+  &.difficulty-2 {
+    color: #fc06a3;
+  }
+
+  &.difficulty-3 {
+    color: #4a004f;
+  }
+}
 </style>
 
 <script setup>
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
+import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
+import waccaRateMulBorders from "~/assets/wacca/waccaRateMulBorders";
 
 const language = useState("language");
 const profile = useState("profile");
@@ -138,9 +178,9 @@ definePageMeta({
 
 const tab = ref(0);
 const highestDiff = [];
+const ratingPotentials = [];
 
 const songFolders = computed(() => {
-  console.log("Calculcating songfolders");
   const folders = [
     {
       name: "Previous versions",
@@ -173,6 +213,58 @@ const songFolders = computed(() => {
     });
   }
 
+  // calculate rating potentials
+  for (const song of waccaSongs) {
+    ratingPotentials[song.id] = [];
+
+    for (let difficulty = 0; difficulty < song.sheets.length; difficulty++) {
+      // find next rating border
+      let nextBorder;
+
+      for (let i = waccaRateMulBorders.length - 1; i >= 0; i--) {
+        const border = waccaRateMulBorders[i];
+        const rating = border.multiplier * song.sheets[difficulty];
+
+        if (
+          border.min > profile.value.songs[song.id].scores[difficulty]?.score &&
+          rating > profile.value.songs[song.id].rating / 10
+        ) {
+          nextBorder = border;
+          break;
+        }
+      }
+
+      if (nextBorder) {
+        const songFolder = song.gameVersion < 5 ? folders[0] : folders[1];
+        const lowestRating =
+          profile.value.songs[songFolder.songs[songFolder.count - 1].id]
+            .rating / 10;
+
+        const ratingDiff =
+          nextBorder.multiplier * song.sheets[difficulty] -
+          profile.value.songs[song.id].rating / 10;
+
+        let ratingGain =
+          nextBorder.multiplier * song.sheets[difficulty] - lowestRating;
+
+        if (profile.value.songs[song.id].rating / 10 >= lowestRating) {
+          ratingGain = ratingDiff;
+        }
+
+        ratingPotentials[song.id].push({
+          difficulty,
+          score: nextBorder.min,
+          scoreDiff:
+            nextBorder.min -
+            profile.value.songs[song.id].scores[difficulty]?.score,
+          rating: nextBorder.multiplier * song.sheets[difficulty],
+          ratingDiff,
+          ratingGain,
+        });
+      }
+    }
+  }
+
   // trim array for performance reasons
   // for (const folder of folders) {
   //   folder.songs = folder.songs.slice(0, folder.count * 2);
@@ -182,7 +274,6 @@ const songFolders = computed(() => {
 });
 
 function findHighestRatingDifficulty(song) {
-  console.log("finding highest diff");
   for (const score of profile.value.songs[song.id].scores) {
     if (score != null) {
       if (score.rating == profile.value.songs[song.id].rating) {
@@ -191,89 +282,6 @@ function findHighestRatingDifficulty(song) {
     }
   }
 }
-
-function formatRating(rating) {
-  return (rating / 10).toFixed(1);
-}
-
-const ratingBorders = [
-  {
-    min: 990000,
-    multiplier: 4,
-  },
-  {
-    min: 980000,
-    multiplier: 3.75,
-  },
-  {
-    min: 970000,
-    multiplier: 3.5,
-  },
-  {
-    min: 960000,
-    multiplier: 3.25,
-  },
-  {
-    min: 950000,
-    multiplier: 3,
-  },
-  {
-    min: 940000,
-    multiplier: 2.75,
-  },
-  {
-    min: 920000,
-    multiplier: 2.5,
-  },
-  {
-    min: 900000,
-    multiplier: 2,
-  },
-  {
-    min: 850000,
-    multiplier: 1.5,
-  },
-  {
-    min: 800000,
-    multiplier: 1,
-  },
-  {
-    min: 700000,
-    multiplier: 0.8,
-  },
-  {
-    min: 600000,
-    multiplier: 0.7,
-  },
-  {
-    min: 500000,
-    multiplier: 0.6,
-  },
-  {
-    min: 400000,
-    multiplier: 0.5,
-  },
-  {
-    min: 300000,
-    multiplier: 0.4,
-  },
-  {
-    min: 200000,
-    multiplier: 0.3,
-  },
-  {
-    min: 100000,
-    multiplier: 0.2,
-  },
-  {
-    min: 1,
-    multiplier: 0.1,
-  },
-  {
-    min: 0,
-    multiplier: 0,
-  },
-];
 
 function getTitle(song) {
   if (language.value === "ja") {
