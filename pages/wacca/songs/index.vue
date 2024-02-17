@@ -202,6 +202,7 @@
   > .v-btn-group {
     display: flex;
     height: auto;
+    min-height: 56px;
   }
 }
 
@@ -289,7 +290,7 @@
 
     .v-slider {
       width: 100%;
-      max-width: 320px;
+      max-width: calc(100% - 126px);
       margin-right: 32px;
     }
   }
@@ -326,6 +327,22 @@
 
   .option-heading {
     font-weight: bold;
+  }
+}
+
+@media (max-width: 500px) {
+  .song-filter-buttons {
+    gap: 2px !important;
+  }
+
+  .song-filter-buttons button {
+    padding: 0 12px !important;
+    min-width: 0 !important;
+  }
+
+  .song-filter-help > div {
+    width: 42px !important;
+    font-size: 0.8em;
   }
 }
 </style>

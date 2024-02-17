@@ -27,34 +27,43 @@
                   </div>
 
                   <div
-                    class="rating-right"
+                    v-for="potential in ratingPotentials[song.id]"
+                    class="rating-suggestion"
+                    :class="`difficulty-${potential.difficulty}`"
                     v-if="profile.songs[song.id].rating"
                   >
-                    <div
-                      v-for="potential in ratingPotentials[song.id]"
-                      class="rating-suggestion"
-                      :class="`difficulty-${potential.difficulty}`"
-                    >
-                      <div>SC +{{ potential.scoreDiff }}</div>
-                      <div>
-                        R +{{ potential.ratingDiff.toFixed(1) }} / +{{
-                          Math.max(0, potential.ratingGain.toFixed(1))
-                        }}
-                      </div>
+                    <div>
+                      {{
+                        waccaDifficulties[potential.difficulty].name
+                          .toUpperCase()
+                          .slice(0, 3)
+                      }}
+                      +{{ potential.scoreDiff }}
                     </div>
-                    <div class="rating-difficulty">
-                      <WaccaDifficultyPillSmall
-                        :i="highestDiff[song.id]"
-                        :difficulty="song.sheets[highestDiff[song.id] - 1]"
-                      />
+                    <div>
+                      R +{{ potential.ratingDiff.toFixed(1) }} / +{{
+                        Math.max(0, potential.ratingGain.toFixed(1))
+                      }}
                     </div>
-                    <div class="rating-rating">
-                      <WaccaRating
-                        :rating="profile.songs[song.id].rating"
-                        :divide="50"
-                        :simple="true"
-                      />
-                    </div>
+                  </div>
+                  <div
+                    class="rating-difficulty"
+                    v-if="profile.songs[song.id].rating"
+                  >
+                    <WaccaDifficultyPillSmall
+                      :i="highestDiff[song.id]"
+                      :difficulty="song.sheets[highestDiff[song.id] - 1]"
+                    />
+                  </div>
+                  <div
+                    class="rating-rating"
+                    v-if="profile.songs[song.id].rating"
+                  >
+                    <WaccaRating
+                      :rating="profile.songs[song.id].rating"
+                      :divide="50"
+                      :simple="true"
+                    />
                   </div>
                 </div>
               </NuxtLink>
@@ -85,7 +94,6 @@
   border-radius: 5px;
   border: 1px solid #333;
   background: rgb(var(--v-theme-surface));
-  height: 50px;
   overflow: hidden;
 }
 
@@ -94,27 +102,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
 }
 
 .rating-jacket {
-  height: 100%;
+  height: 60px;
   aspect-ratio: 1;
   flex-shrink: 1;
 }
 
 .rating-title {
-  padding: 10px;
-}
-
-.rating-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  white-space: nowrap;
+  flex-grow: 1;
 }
 
 .rating-rating {
-  padding: 10px;
   font-weight: 700;
   font-size: 1.5em;
 }

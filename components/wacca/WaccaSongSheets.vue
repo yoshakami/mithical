@@ -23,6 +23,9 @@
 </template>
 
 <style scoped lang="scss">
+.song-difficulty {
+  margin-bottom: 5px;
+}
 .song-difficulty-bottom {
   background-color: white;
   color: black;
