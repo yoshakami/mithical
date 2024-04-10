@@ -26,7 +26,7 @@
           </thead>
 
           <tbody>
-            <tr v-for="(profile, i) in leaderboardData" :key="i">
+            <tr v-for="(profile, i) in leaderboardsDataFiltered" :key="i">
               <td class="text-right">{{ i + 1 }}</td>
               <td>
                 <WaccaIcon
@@ -90,6 +90,10 @@ function loadData() {
         "Couldn't reach the API. Please try again later.";
     });
 }
+
+const leaderboardsDataFiltered = computed(() => {
+  return leaderboardData.value.filter((profile, i) => profile.version == 4);
+});
 
 loadData();
 </script>

@@ -1,8 +1,14 @@
 <template>
   <div class="player-chart">
     <canvas ref="playerChart"></canvas>
-    <div v-if="playerHistory.length == 0" class="player-chart-text">
-      <div>Missing API support</div>
+    <div v-if="props.loading" class="player-chart-text">
+      <div>Loading...</div>
+    </div>
+    <div
+      v-if="!props.loading && playerHistory.length == 0"
+      class="player-chart-text"
+    >
+      <div>No plays yet. Go for it!</div>
     </div>
   </div>
 </template>
@@ -35,33 +41,35 @@ import { Chart } from "chart.js";
 const props = defineProps({
   playerHistory: Array,
   song: Object,
+  loading: Boolean,
 });
 
 const playerChart = ref(null);
 
 let chart;
 
+const pointRadius = 4;
 const playerHistoryFormatted = computed(() => {
   const datasets = [
     {
       label: "Normal",
       backgroundColor: "#009de6",
       borderColor: "#009de6",
-      pointRadius: 10,
+      pointRadius: pointRadius,
       data: [],
     },
     {
       label: "Hard",
       backgroundColor: "#fed131",
       borderColor: "#fed131",
-      pointRadius: 10,
+      pointRadius: pointRadius,
       data: [],
     },
     {
       label: "Expert",
       backgroundColor: "#fc06a3",
       borderColor: "#fc06a3",
-      pointRadius: 10,
+      pointRadius: pointRadius,
       data: [],
     },
   ];
@@ -71,16 +79,27 @@ const playerHistoryFormatted = computed(() => {
       label: "Inferno",
       backgroundColor: "#4a004f",
       borderColor: "#4a004f",
-      pointRadius: 10,
+      pointRadius: pointRadius,
       data: [],
     });
   }
 
-  for (const score of props.playerHistory) {
-    datasets[score.music_difficulty - 1].data.push({
-      x: new Date(score.user_play_date),
-      y: score.score,
-    });
+  for (let i = props.playerHistory.length - 1; i >= 0; i--) {
+    const score = props.playerHistory[i];
+
+    if (!score.info.clear_status.is_give_up) {
+      if (score.info.user_play_date == "1970-01-01T00:00:00+00:00") {
+        datasets[score.info.music_difficulty - 1].data.unshift({
+          x: new Date("2022-09-01T00:00:00+09:00"),
+          y: score.info.score,
+        });
+      } else {
+        datasets[score.info.music_difficulty - 1].data.push({
+          x: new Date(score.info.user_play_date),
+          y: score.info.score,
+        });
+      }
+    }
   }
 
   return datasets;

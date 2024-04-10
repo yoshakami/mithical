@@ -21,19 +21,25 @@
         </WaccaProfileBox>
       </div>
 
-      <WaccaProfileBox>
-        <div class="profile-stat mr-5">
-          <span class="light">Level</span> {{ level }}
-        </div>
-        <div class="profile-stat mr-5">
-          <span class="light">RP</span> {{ profile.points }}
-        </div>
-        <div class="profile-stat">
-          <span class="light">Rate</span>&nbsp;<WaccaRating
-            :rating="profile.version_data[4].rating"
-          />
-        </div>
-      </WaccaProfileBox>
+      <div class="profile-stats">
+        <WaccaProfileBox>
+          <div class="profile-stat mr-5">
+            <span class="light">Level</span> {{ level }}
+          </div>
+          <div class="profile-stat mr-5">
+            <span class="light">RP</span> {{ profile.points }}
+          </div>
+          <div class="profile-stat">
+            <span class="light">Rate</span>&nbsp;<WaccaRating
+              :rating="profile.version_data[4].rating"
+            />
+          </div>
+        </WaccaProfileBox>
+        <WaccaStageUp
+          :rank="profile.version_data[4].rank"
+          :danRank="profile.version_data[4].dan_rank"
+        />
+      </div>
     </v-container>
   </WaccaProfileRequired>
 </template>
@@ -78,8 +84,19 @@
   }
 }
 
+.profile-stats {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .light {
   font-weight: 200;
+}
+
+.stage-up {
+  margin-left: -40px;
+  width: 150px;
 }
 </style>
 

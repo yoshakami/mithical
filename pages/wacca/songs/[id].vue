@@ -67,7 +67,12 @@
       <h2 class="container-heading">Your scores</h2>
 
       <WaccaSongSheets :song="song" :player-data="profile.songs[song.id]" />
-      <WaccaChart ref="chart" :player-history="playerHistory" :song="song" />
+      <WaccaChart
+        ref="chart"
+        :player-history="playerHistory"
+        :loading="playerHistoryLoading"
+        :song="song"
+      />
     </v-container>
 
     <v-container class="elevation-1 mt-4">
@@ -173,7 +178,10 @@
                 {{ score.user_name }}
               </td>
               <td>
-                <WaccaGrade class="highscore-grade" :grade="score.grade" />
+                <WaccaGrade
+                  class="highscore-grade"
+                  :grade="fillGrade(score.grade, score.score)"
+                />
                 {{ score.score }}
               </td>
               <td>{{ formatDateLeaderboard(score.user_play_date) }}</td>
@@ -298,6 +306,7 @@ Chart.register(annotationPlugin);
 
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
 import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
+import waccaGradeBorders from "~/assets/wacca/waccaGradeBorders";
 
 const profile = useState("profile");
 
@@ -368,10 +377,15 @@ function selectDifficulty(difficulty) {
 loadData();
 loadHistograms();
 
+const playerHistoryLoading = ref(true);
+
 function loadPlayerHistory() {
+  playerHistoryLoading.value = true;
+
   $fetch(
     `${runtimeConfig.public.apiUrl}/wacca/user/${activeCard.value}/music/${song.value.id}`
   ).then((data) => {
+    playerHistoryLoading.value = false;
     playerHistory.value = data;
   });
 }
@@ -380,7 +394,9 @@ const chart = ref(null);
 
 watch(playerHistory, () => {
   setTimeout(() => {
-    chart.value.updateChart();
+    if (chart.value) {
+      chart.value.updateChart();
+    }
   }, 0); //?
 });
 watch(activeCard, loadPlayerHistory);
@@ -436,10 +452,23 @@ function formatDate(date) {
 
 function formatDateLeaderboard(date) {
   if (date == "1970-01-01T00:00:00+00:00") {
-    return "Unknown";
+    return new Date("2022-09-01T00:00:00+09:00").toLocaleString();
   }
 
   return new Date(date).toLocaleString();
+}
+
+function fillGrade(grade, score) {
+  if (grade > 0) {
+    return grade;
+  }
+
+  // infer the grade from score
+  for (let i = 0; i < waccaGradeBorders.length; i++) {
+    if (score >= waccaGradeBorders[i].min) {
+      return waccaGradeBorders[i].grade;
+    }
+  }
 }
 
 useSeoMeta({
