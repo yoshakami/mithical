@@ -437,7 +437,7 @@ const waccaSongs = [
   {
     id: 1051,
     title: "ルーンファクトリー４スペシャルより「この想いを乗せて」",
-    titleEnglish: 'Rune Factory 4 Special \\"Kono Omoi wo Nosete\\"',
+    titleEnglish: 'Rune Factory 4 Special "Kono Omoi wo Nosete"',
     artist: "ジョー・リノイエ with 安西美貴",
     dateAdded: 0,
     dateRemoved: 0,
@@ -1773,7 +1773,7 @@ const waccaSongs = [
   {
     id: 1265,
     title: "ナイト・オブ・ナイツ (かめりあ’s“ワンス・アポン・ア・ナイト”Remix)",
-    titleEnglish: 'Night of Nights (Carmelia\'s \\"Once Upon a Night\\" Remix)',
+    titleEnglish: 'Night of Nights (Carmelia\'s "Once Upon a Night" Remix)',
     artist: "かめりあ",
     dateAdded: 20200123,
     dateRemoved: 0,

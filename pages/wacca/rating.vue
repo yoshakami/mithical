@@ -2,65 +2,59 @@
   <WaccaProfileRequired>
     <v-container>
       <v-tabs fixed-tabs v-model="tab" bg-color="primary">
-        <v-tab v-for="(folder, i) in songFolders" :key="i">
+        <v-tab v-for="(folder, i) in sheetFolders" :key="i">
           {{ folder.name }}
           <v-chip>{{ folder.count }}</v-chip>
         </v-tab>
       </v-tabs>
 
       <v-window v-model="tab">
-        <div v-for="(folder, i) in songFolders" :key="i" v-show="tab == i">
+        <div v-for="(folder, i) in sheetFolders" :key="i" v-show="tab == i">
           <div class="rating-holder">
-            <div v-for="(song, j) in folder.songs" :key="song.id">
+            <div v-for="(sheet, j) in folder.sheets" :key="sheet">
               <NuxtLink
                 style="text-decoration: none"
-                :to="`/wacca/songs/${song.id}`"
+                :to="`/wacca/songs/${sheet.song.id}`"
                 class="rating-song"
               >
                 <div class="rating-jacket">
-                  <WaccaJacket :url="song.imageName" />
+                  <WaccaJacket :url="sheet.song.imageName" />
                 </div>
 
                 <div class="rating-info">
                   <div class="rating-title">
-                    {{ getTitle(song) }}
+                    {{ getTitle(sheet.song) }}
                   </div>
 
                   <div
-                    v-for="potential in ratingPotentials[song.id]"
+                    v-if="sheet.nextScore"
                     class="rating-suggestion"
-                    :class="`difficulty-${potential.difficulty}`"
-                    v-if="profile.songs[song.id].rating"
+                    :class="`difficulty-${sheet.difficulty}`"
                   >
                     <div>
                       {{
-                        waccaDifficulties[potential.difficulty].name
+                        waccaDifficulties[sheet.difficulty].name
                           .toUpperCase()
                           .slice(0, 3)
                       }}
-                      +{{ potential.scoreDiff }}
+                      +{{ sheet.nextScoreDiff }}
                     </div>
                     <div>
-                      R +{{ potential.ratingDiff.toFixed(1) }} / +{{
-                        Math.max(0, potential.ratingGain.toFixed(1))
+                      R +{{ sheet.ratingDiff.toFixed(1) }} / +{{
+                        Math.max(0, sheet.ratingGain).toFixed(1)
                       }}
                     </div>
                   </div>
-                  <div
-                    class="rating-difficulty"
-                    v-if="profile.songs[song.id].rating"
-                  >
+
+                  <div class="rating-difficulty" v-if="sheet.rating">
                     <WaccaDifficultyPillSmall
-                      :i="highestDiff[song.id]"
-                      :difficulty="song.sheets[highestDiff[song.id] - 1]"
+                      :i="sheet.difficulty + 1"
+                      :difficulty="sheet.song.sheets[sheet.difficulty]"
                     />
                   </div>
-                  <div
-                    class="rating-rating"
-                    v-if="profile.songs[song.id].rating"
-                  >
+                  <div class="rating-rating" v-if="sheet.rating">
                     <WaccaRating
-                      :rating="profile.songs[song.id].rating"
+                      :rating="sheet.rating"
                       :divide="50"
                       :simple="true"
                     />
@@ -183,108 +177,81 @@ const tab = ref(0);
 const highestDiff = [];
 const ratingPotentials = [];
 
-const songFolders = computed(() => {
+const sheetFolders = computed(() => {
   const folders = [
     {
       name: "Previous versions",
-      songs: [],
+      sheets: [],
       count: 35,
     },
     {
       name: "Wacca Reverse",
-      songs: [],
+      sheets: [],
       count: 15,
     },
   ];
 
-  for (const song of waccaSongs) {
-    if (song.gameVersion < 5) {
-      folders[0].songs.push(song);
-    } else {
-      folders[1].songs.push(song);
-    }
+  // calculate rating potentials
+  for (const music of profile.value.music) {
+    let sheet = {};
+    sheet.difficulty = music.music_difficulty - 1;
+    sheet.score = music.score;
+    sheet.rating = music.rating;
+    sheet.song = waccaSongs.find((song) => song.id == music.music_id);
 
-    highestDiff[song.id] = findHighestRatingDifficulty(song);
+    if (sheet.song && sheet.song.sheets[sheet.difficulty]) {
+      // filters for unknown songs or difficulties (wacca plus)
+      if (sheet.song.gameVersion < 5) {
+        folders[0].sheets.push(sheet);
+      } else {
+        folders[1].sheets.push(sheet);
+      }
+    }
   }
 
   // sort by rating
   for (const folder of folders) {
-    folder.songs.sort((a, b) => {
-      return (
-        profile.value.songs[b.id].rating - profile.value.songs[a.id].rating
-      );
+    folder.sheets.sort((a, b) => {
+      return b.rating - a.rating;
     });
-  }
 
-  // calculate rating potentials
-  for (const song of waccaSongs) {
-    ratingPotentials[song.id] = [];
-
-    for (let difficulty = 0; difficulty < song.sheets.length; difficulty++) {
+    for (const sheet of folder.sheets) {
       // find next rating border
       let nextBorder;
 
       for (let i = waccaRateMulBorders.length - 1; i >= 0; i--) {
         const border = waccaRateMulBorders[i];
-        const rating = border.multiplier * song.sheets[difficulty];
 
-        if (
-          border.min > profile.value.songs[song.id].scores[difficulty]?.score &&
-          rating > profile.value.songs[song.id].rating / 10
-        ) {
+        if (border.min > sheet.score) {
           nextBorder = border;
           break;
         }
       }
 
       if (nextBorder) {
-        const songFolder = song.gameVersion < 5 ? folders[0] : folders[1];
-        const lowestRating =
-          profile.value.songs[songFolder.songs[songFolder.count - 1].id]
-            .rating / 10;
+        const sheetDifficulty = sheet.song.sheets[sheet.difficulty];
+        const lowestRating = folder.sheets[folder.count - 1].rating / 10;
 
         const ratingDiff =
-          nextBorder.multiplier * song.sheets[difficulty] -
-          profile.value.songs[song.id].rating / 10;
+          nextBorder.multiplier * sheetDifficulty - sheet.rating / 10;
 
-        let ratingGain =
-          nextBorder.multiplier * song.sheets[difficulty] - lowestRating;
+        let ratingGain = nextBorder.multiplier * sheetDifficulty - lowestRating;
 
-        if (profile.value.songs[song.id].rating / 10 >= lowestRating) {
+        if (sheet.rating / 10 >= lowestRating) {
           ratingGain = ratingDiff;
         }
 
-        ratingPotentials[song.id].push({
-          difficulty,
-          score: nextBorder.min,
-          scoreDiff:
-            nextBorder.min -
-            profile.value.songs[song.id].scores[difficulty]?.score,
-          rating: nextBorder.multiplier * song.sheets[difficulty],
-          ratingDiff,
-          ratingGain,
-        });
+        sheet.nextScore = nextBorder.min;
+        sheet.nextScoreDiff = nextBorder.min - sheet.score;
+        sheet.nextRating = nextBorder.multiplier * sheetDifficulty;
+        sheet.ratingDiff = ratingDiff;
+        sheet.ratingGain = ratingGain;
       }
     }
   }
-
-  // trim array for performance reasons
-  // for (const folder of folders) {
-  //   folder.songs = folder.songs.slice(0, folder.count * 2);
-  // }
 
   return folders;
 });
-
-function findHighestRatingDifficulty(song) {
-  for (const score of profile.value.songs[song.id].scores) {
-    if (score != null) {
-      if (score.rating == profile.value.songs[song.id].rating) {
-        return score.music_difficulty;
-      }
-    }
-  }
-}
 
 function getTitle(song) {
   if (language.value === "ja") {
@@ -292,10 +259,5 @@ function getTitle(song) {
   }
 
   return song.titleEnglish || song.title;
-}
-
-function calculateRating(score, difficulty) {
-  const border = ratingBorders.find((border) => score >= border.min);
-  return difficulty * border.multiplier;
 }
 </script>
