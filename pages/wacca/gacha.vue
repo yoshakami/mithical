@@ -2,6 +2,7 @@
   <WaccaProfileRequired>
     <v-container class="box-container">
       <v-select
+        class="backgrounded"
         v-model="selectedBox"
         :items="waccaBoxes"
         item-title="nameEnglish"
@@ -11,7 +12,7 @@
       />
 
       <WaccaGacha
-        class="elevation-1 mt-4"
+        class="mt-4"
         ref="waccaGacha"
         :box="selectedBox"
         :received-item="receivedItem"
@@ -23,7 +24,7 @@
         >
       </div>
 
-      <v-container class="elevation-1 mt-4 pa-4">
+      <v-container class="elevation-1 mt-4 pa-4 backgrounded">
         <h2 class="container-heading">Items in {{ boxName(selectedBox) }}:</h2>
 
         <div class="box-items">
@@ -41,9 +42,12 @@
 </template>
 
 <style scoped lang="scss">
+.backgrounded {
+  background: rgb(var(--v-theme-surface));
+}
+
 .v-container {
   padding: 0;
-  background: rgb(var(--v-theme-surface));
 }
 
 .container-heading {

@@ -37,6 +37,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  transition: box-shadow 0.1s;
+
+  &.highlight {
+    box-shadow: 0px 0px 10px 2px rgba(var(--v-theme-primary), 0.5);
+  }
 }
 
 .gacha-item-preview-kind {

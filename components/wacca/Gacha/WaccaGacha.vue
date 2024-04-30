@@ -1,12 +1,14 @@
 <template>
   <div class="gacha-border">
     <div class="gacha-holder">
-      <div class="gacha-roulette" ref="roulette">
+      <div class="gacha-roulette" ref="rouletteRef">
         <WaccaGachaItem
-          v-for="item of itemList"
+          v-for="(item, i) in itemList"
           :rarity="item.rarity"
           :kind="item.kind"
           :id="item.id"
+          ref="itemsRefs"
+          :class="{ highlight: i === currentRouletteItem }"
         />
       </div>
     </div>
@@ -18,7 +20,6 @@
 .gacha-border {
   position: relative;
   overflow: hidden;
-  background: rgb(var(--v-theme-surface));
 
   width: 100%;
   padding: 10px;
@@ -37,9 +38,6 @@
   padding-right: 5px;
   height: 100%;
   width: 100%;
-
-  transition: transform 6s cubic-bezier(0.25, 1, 0.5, 1);
-  transform: translateX(v-bind(offsetPx));
 }
 
 .gacha-line {
@@ -88,25 +86,70 @@ function updateItemList() {
 }
 
 let scrollDistance;
-const offsetPx = computed(() => `${-offset.value}px`);
 
-const offset = ref(-1000);
-const roulette = ref(null);
+const offset = ref(0);
+const rouletteRef = ref(null);
+let spinTimer;
+let spinStartTime;
+const spinTime = 6;
 
 function spin() {
   updateItemList();
 
   // reset offset in css
-  offset.value = -1000;
-  roulette.value.style.transition = "none";
+  offset.value = 0;
 
   scrollDistance = position * itemWidth + Math.random() * 130;
 
-  setTimeout(() => {
-    roulette.value.style.transition =
-      "transform 6s cubic-bezier(0.25, 1, 0.5, 1)";
-    offset.value = scrollDistance;
-  }, 100);
+  spinTimer = 0;
+  spinStartTime = null;
+  requestAnimationFrame(animateSpin);
+}
+
+const currentRouletteItem = ref(0);
+let lastRouletteItem = 0;
+
+const rouletteClickSound = [new Audio("/wacca/sound/rouletteclick.wav")];
+rouletteClickSound[0].volume = 0.5;
+const rouletteClickCount = 5;
+for (let i = 1; i < rouletteClickCount; i++) {
+  rouletteClickSound[i] = rouletteClickSound[0].cloneNode();
+  rouletteClickSound[i].volume = 0.5;
+}
+
+let lastSound = 0;
+
+function animateSpin(currentTime) {
+  if (spinTimer < spinTime) {
+    if (!spinStartTime) {
+      spinStartTime = currentTime;
+    }
+
+    spinTimer = Math.min(spinTime, (currentTime - spinStartTime) / 1000);
+
+    const progress = spinTimer / spinTime;
+    // console.log(progress);
+    const progressEased = 1 - Math.pow(1 - progress, 4);
+
+    offset.value = (scrollDistance + 1000) * progressEased - 1000;
+
+    rouletteRef.value.style.transform = `translateX(${-offset.value}px)`;
+
+    const currentItem = Math.floor(offset.value / itemWidth);
+    currentRouletteItem.value = currentItem;
+
+    // play clicking noise if the item switched
+    if (currentItem >= 0 && currentItem !== lastRouletteItem) {
+      lastRouletteItem = currentItem;
+
+      // play sound
+      lastSound = (lastSound + 1) % rouletteClickCount;
+      rouletteClickSound[lastSound].currentTime = 0;
+      rouletteClickSound[lastSound].play();
+    }
+
+    requestAnimationFrame(animateSpin);
+  }
 }
 
 defineExpose({ spin });
