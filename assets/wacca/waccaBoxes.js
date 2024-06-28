@@ -20,6 +20,8 @@ const waccaBoxes = [
     name: "リリィBOX",
     nameEnglish: "Lily Box",
     price: 500,
+    color: "#0e706f",
+    image: "/wacca/img/navigators/BP_Chara001_00.webp",
     items: [
       {
         kind: 10,
@@ -287,6 +289,8 @@ const waccaBoxes = [
     name: "アールBOX",
     nameEnglish: "R Box",
     price: 500,
+    color: "#d52e6c",
+    image: "/wacca/img/navigators/BP_Chara000_00.webp",
     items: [
       {
         kind: 10,
@@ -560,6 +564,8 @@ const waccaBoxes = [
     name: "リバースBOX",
     nameEnglish: "Reverse Box",
     price: 1500,
+    color: "#651888",
+    image: "/wacca/img/navigators/BP_Chara002_00.webp",
     items: [
       {
         kind: 16,
@@ -809,6 +815,8 @@ const waccaBoxes = [
     name: "ラストスパートイベントBOX",
     nameEnglish: "Last Spurt Event Box",
     price: 30000,
+    color: "#232228",
+    image: "/wacca/img/navigators/BP_Chara003_00.webp",
     items: [
       {
         kind: 6,

@@ -29,10 +29,11 @@
   padding: 0px 5px;
   box-sizing: border-box;
   position: relative;
+  font-size: 16px;
 
   background-color: #f0f0f0;
-  width: 120px;
-  height: 100%;
+  width: 150px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +42,8 @@
   transition: box-shadow 0.1s;
 
   &.highlight {
-    box-shadow: 0px 0px 10px 2px rgba(var(--v-theme-primary), 0.5);
+    // box-shadow: 0px 0px 10px 2px rgba(var(--v-theme-primary), 0.5);
+    transform: scale(1.1);
   }
 }
 
@@ -52,7 +54,6 @@
 .gacha-item-preview {
   height: 80%;
   overflow: hidden;
-  height: 75%;
 }
 
 .gacha-item-preview-item {
