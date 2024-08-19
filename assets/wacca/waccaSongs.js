@@ -1,4 +1,4 @@
-const waccaSongs = [
+ const waccaSongs = [
   {
     id: 3,
     title: "Rainbow Dream",
@@ -8,11 +8,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 180,
-    imageName:
-      "e7f2de4d9fc3ba66dd1ce15966708d4acd1d155e3b16ffb083296be9b893e5b0.webp",
+    imageName: "e7f2de4d9fc3ba66dd1ce15966708d4acd1d155e3b16ffb083296be9b893e5b0.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [3, 8.7, 11.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 4,
@@ -23,11 +38,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "f2774f75c0a2830f2804e7bda0fdc3b8bf6972d00892b42c90ffcb4c1c587a78.webp",
+    imageName: "f2774f75c0a2830f2804e7bda0fdc3b8bf6972d00892b42c90ffcb4c1c587a78.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [6, 10.9, 13.3],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 5,
@@ -38,11 +68,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 155,
-    imageName:
-      "544a0487889573ce85bf8ebad8a143d098e9107fe691d95416de1404c1dbdebb.webp",
+    imageName: "544a0487889573ce85bf8ebad8a143d098e9107fe691d95416de1404c1dbdebb.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [5, 9.9, 13.8],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 6,
@@ -53,11 +98,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 180,
-    imageName:
-      "9276b2ec3e628e1540322f04edc6ec93421e640c3397dc721c53218f9a5a9c3f.webp",
+    imageName: "9276b2ec3e628e1540322f04edc6ec93421e640c3397dc721c53218f9a5a9c3f.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [3, 7.7, 10.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 7,
@@ -68,11 +128,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 154,
-    imageName:
-      "38cf54ac6dae6f949715cd52deea722ac44aa0cf69e37e40c9fc3144fb68cb37.webp",
+    imageName: "38cf54ac6dae6f949715cd52deea722ac44aa0cf69e37e40c9fc3144fb68cb37.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [2, 7.9, 10.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 8,
@@ -83,11 +158,26 @@ const waccaSongs = [
     dateRemoved: 20211018,
     gameVersion: 1,
     bpm: 132,
-    imageName:
-      "3b66721c86cf49334cdbc482fc14a7462b9175916132d5129f22e584e04e0b46.webp",
+    imageName: "3b66721c86cf49334cdbc482fc14a7462b9175916132d5129f22e584e04e0b46.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-18",
-    sheets: [2, 7, 10.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 9,
@@ -98,11 +188,26 @@ const waccaSongs = [
     dateRemoved: 20220124,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "66eaa0c22b1e4068f058cbe52ab55fc80b7103a192f9bb208b8ac853fe4244d6.webp",
+    imageName: "66eaa0c22b1e4068f058cbe52ab55fc80b7103a192f9bb208b8ac853fe4244d6.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [2, 6.9, 9.8],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 10,
@@ -113,11 +218,26 @@ const waccaSongs = [
     dateRemoved: 20211018,
     gameVersion: 1,
     bpm: 142,
-    imageName:
-      "a3c77ed0c115bd0f5eb9bbbfb1968e86c82837a097515cd55a207aa39e039ae3.webp",
+    imageName: "a3c77ed0c115bd0f5eb9bbbfb1968e86c82837a097515cd55a207aa39e039ae3.webp",
     category: "2.5次元",
     releaseDate: "2019-07-18",
-    sheets: [1, 5.3, 9.6],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 20,
@@ -128,11 +248,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 175,
-    imageName:
-      "953422f24184eb7b15a3e7836f867e16c9d534e6fb10151a6d1e6e1c8fc1ca39.webp",
+    imageName: "953422f24184eb7b15a3e7836f867e16c9d534e6fb10151a6d1e6e1c8fc1ca39.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [3, 8.1, 10],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 21,
@@ -143,11 +278,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 191,
-    imageName:
-      "4b7b39f5d86087e22dd5e6c87b190a9ff068d7bcf30d84312730f5af9313c559.webp",
+    imageName: "4b7b39f5d86087e22dd5e6c87b190a9ff068d7bcf30d84312730f5af9313c559.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [4, 8.9, 12.9],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 23,
@@ -158,11 +308,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 179,
-    imageName:
-      "e392e8e627fbc48161d8a3b6840d3d5719ed8cc395d8e16c0675850a8636dcc4.webp",
+    imageName: "e392e8e627fbc48161d8a3b6840d3d5719ed8cc395d8e16c0675850a8636dcc4.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [2, 6.8, 9.5],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 24,
@@ -173,11 +338,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "4a7627e09891b97d1a273326546f3bada20129ac08760ade1a4c070175530474.webp",
+    imageName: "4a7627e09891b97d1a273326546f3bada20129ac08760ade1a4c070175530474.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [4, 8.8, 11.9],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 25,
@@ -188,11 +368,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "87f8ae1e778028e884cee72c603844af958f9cb0ba1e8f25d33ee5b67ed72336.webp",
+    imageName: "87f8ae1e778028e884cee72c603844af958f9cb0ba1e8f25d33ee5b67ed72336.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [4, 10.7, 12.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 26,
@@ -203,11 +398,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "9fde4819488483e8a5abb84d4bb1a607cacc036c35fdc765471fc939199dfb61.webp",
+    imageName: "9fde4819488483e8a5abb84d4bb1a607cacc036c35fdc765471fc939199dfb61.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-09-21",
-    sheets: [2, 8, 11, 13.8],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 27,
@@ -218,11 +433,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 152,
-    imageName:
-      "9007ffc8de24e2aa43b2f677c0f3f05ab71e257c66cb445bef63ae32f4e7832f.webp",
+    imageName: "9007ffc8de24e2aa43b2f677c0f3f05ab71e257c66cb445bef63ae32f4e7832f.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [2, 6.7, 10.5],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 30,
@@ -233,11 +463,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 95,
-    imageName:
-      "58129a3f45ff089e9b3eee033e9ba14b9df526b91b7d9436df04b64c44fe4dc5.webp",
+    imageName: "58129a3f45ff089e9b3eee033e9ba14b9df526b91b7d9436df04b64c44fe4dc5.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [3, 8.7, 10.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 31,
@@ -248,11 +493,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 205,
-    imageName:
-      "6149b2a6a18ffcd54d9dd62c78bf408b4f9a896e2b111139a820c19498255748.webp",
+    imageName: "6149b2a6a18ffcd54d9dd62c78bf408b4f9a896e2b111139a820c19498255748.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [3, 8.2, 10.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 32,
@@ -263,11 +523,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 185,
-    imageName:
-      "15ac30127d43f254c69acdb4006d2823406f6bf04a08c95f924321e22a43b523.webp",
+    imageName: "15ac30127d43f254c69acdb4006d2823406f6bf04a08c95f924321e22a43b523.webp",
     category: "オリジナル",
     releaseDate: "2019-07-17",
-    sheets: [3, 9.7, 11.8, 13.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1003,
@@ -278,11 +558,26 @@ const waccaSongs = [
     dateRemoved: 20210525,
     gameVersion: 1,
     bpm: 139,
-    imageName:
-      "e3bdf3f01cfc768d6d43f9da60fb65593a020136199557bd94c8f84f513cb6d5.webp",
+    imageName: "e3bdf3f01cfc768d6d43f9da60fb65593a020136199557bd94c8f84f513cb6d5.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-18",
-    sheets: [1, 5.2, 9.5],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1006,
@@ -293,11 +588,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 172,
-    imageName:
-      "5933e3ae26bc8de0b35882424d58420754de4f1138d9d5b031ef2427944e3324.webp",
+    imageName: "5933e3ae26bc8de0b35882424d58420754de4f1138d9d5b031ef2427944e3324.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [3, 6.9, 9.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1010,
@@ -308,11 +618,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 142,
-    imageName:
-      "5450cf5897236b06d8a1c13bfe2c25103837ac4d166c56faa91dbe52ecb5412b.webp",
+    imageName: "5450cf5897236b06d8a1c13bfe2c25103837ac4d166c56faa91dbe52ecb5412b.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [3, 7.8, 11.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1011,
@@ -323,11 +648,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "2c2b26356dc6040bcf2060867c0ef2fffd12334698d6f39aab17ce89c15acb24.webp",
+    imageName: "2c2b26356dc6040bcf2060867c0ef2fffd12334698d6f39aab17ce89c15acb24.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [2, 7.6, 10.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1014,
@@ -338,11 +678,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "5da980709d7792824a2a8c639722ec14f4b10b197a26815903aedc93c05aa520.webp",
+    imageName: "5da980709d7792824a2a8c639722ec14f4b10b197a26815903aedc93c05aa520.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [4, 9.4, 11.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1017,
@@ -353,11 +708,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 116,
-    imageName:
-      "32917d692ff9dd99eb0a4a56c0d534b9598f7505726b60ecbe552f3f16fb9607.webp",
+    imageName: "32917d692ff9dd99eb0a4a56c0d534b9598f7505726b60ecbe552f3f16fb9607.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [1, 6.8, 9.8],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1027,
@@ -368,11 +738,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 220,
-    imageName:
-      "7ed03d81e2998cce63e37a29095d11633d34abf502a3c0a893e2e73650b7fb7e.webp",
+    imageName: "7ed03d81e2998cce63e37a29095d11633d34abf502a3c0a893e2e73650b7fb7e.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [4, 10.3, 12.9],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1035,
@@ -383,11 +768,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 120,
-    imageName:
-      "136a2809d31c8cf310aeca499734b1845505c8813e769b88b1efe6b98232bb7d.webp",
+    imageName: "136a2809d31c8cf310aeca499734b1845505c8813e769b88b1efe6b98232bb7d.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [1, 7.1, 10.2],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1036,
@@ -398,11 +798,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 144,
-    imageName:
-      "f1c3d4420c3b83df5c82530cc22b643e81243d9f44ca7f8c61e0e7327f1fe422.webp",
+    imageName: "f1c3d4420c3b83df5c82530cc22b643e81243d9f44ca7f8c61e0e7327f1fe422.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [2, 9.3, 11.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1041,
@@ -413,11 +828,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 127,
-    imageName:
-      "d577c6d3a3bd9454e38f4ae1aa2031344f37a217b1390ffab07c64f0b3c95735.webp",
+    imageName: "d577c6d3a3bd9454e38f4ae1aa2031344f37a217b1390ffab07c64f0b3c95735.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [1, 7, 10.3],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1049,
@@ -428,26 +858,56 @@ const waccaSongs = [
     dateRemoved: 20200717,
     gameVersion: 1,
     bpm: 144,
-    imageName:
-      "a5dcb041b9d58f166a5886c503c94fc9e210bddd805aef854400c2612d1ee8be.webp",
+    imageName: "a5dcb041b9d58f166a5886c503c94fc9e210bddd805aef854400c2612d1ee8be.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-18",
-    sheets: [1, 6, 9.1],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1051,
     title: "ルーンファクトリー４スペシャルより「この想いを乗せて」",
-    titleEnglish: 'Rune Factory 4 Special "Kono Omoi wo Nosete"',
+    titleEnglish: "Rune Factory 4 Special \\\"Kono Omoi wo Nosete\\\",
     artist: "ジョー・リノイエ with 安西美貴",
     dateAdded: 0,
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 165,
-    imageName:
-      "367ce305b3de8119e27fae674a8802f2a8552a1ddf9106e420bc589155b02d68.webp",
+    imageName: "367ce305b3de8119e27fae674a8802f2a8552a1ddf9106e420bc589155b02d68.webp",
     category: "バラエティ",
     releaseDate: "2019-07-17",
-    sheets: [1, 5.6, 9],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1054,
@@ -458,11 +918,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 181,
-    imageName:
-      "e934eab848138ecfbcd45ef3633de5cac17ee44355dba4f621e8e3f123fc3c54.webp",
+    imageName: "e934eab848138ecfbcd45ef3633de5cac17ee44355dba4f621e8e3f123fc3c54.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [4, 9.1, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1055,
@@ -473,11 +948,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 240,
-    imageName:
-      "307695dd3114ab48eb3fb0ccd85bfd1b00419863d5d165ce572ccbf9aa508094.webp",
+    imageName: "307695dd3114ab48eb3fb0ccd85bfd1b00419863d5d165ce572ccbf9aa508094.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [6, 11, 13.8],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1056,
@@ -488,11 +978,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "63b962eed9de8c738e483090bc5d93dde1af21cc300234eb4f9d86979f222fa8.webp",
+    imageName: "63b962eed9de8c738e483090bc5d93dde1af21cc300234eb4f9d86979f222fa8.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [5, 10.6, 12.8, 13.9],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1057,
@@ -503,11 +1013,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "566d1da7e865ac875b081e48c895934296bfa8750e6bd141c8a857d8c89e50e3.webp",
+    imageName: "566d1da7e865ac875b081e48c895934296bfa8750e6bd141c8a857d8c89e50e3.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [5, 10.4, 12.7, 13.9],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1058,
@@ -518,11 +1048,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 180,
-    imageName:
-      "44c56f69eb010eab7e7dcb2d9e0b21f7b18eb71ac06a48068d5aa3e043082624.webp",
+    imageName: "44c56f69eb010eab7e7dcb2d9e0b21f7b18eb71ac06a48068d5aa3e043082624.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [4, 9.5, 12],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1059,
@@ -533,11 +1078,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 175,
-    imageName:
-      "9deaf9a7e3290ebb3641096e257af1c9431023b0fcf65f9bc32d4ae55a99e09f.webp",
+    imageName: "9deaf9a7e3290ebb3641096e257af1c9431023b0fcf65f9bc32d4ae55a99e09f.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [4, 10.1, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1060,
@@ -548,11 +1108,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 175,
-    imageName:
-      "6c6be2066507003888dd9d5684fb0a3dd81832ad7a947ca3b7a61dacb8167459.webp",
+    imageName: "6c6be2066507003888dd9d5684fb0a3dd81832ad7a947ca3b7a61dacb8167459.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-07-17",
-    sheets: [3, 9.2, 11.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1069,
@@ -563,11 +1138,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "1a14a7415c953ca5175b2eab1428f9aed6ffac1e88301b9a6e689581080ef721.webp",
+    imageName: "1a14a7415c953ca5175b2eab1428f9aed6ffac1e88301b9a6e689581080ef721.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [4, 8.2, 11.3],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1070,
@@ -578,11 +1168,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "013f2aedc3dc32e6aeb4d4468732e84150d850d9611d4686497eea681c6a6ec8.webp",
+    imageName: "013f2aedc3dc32e6aeb4d4468732e84150d850d9611d4686497eea681c6a6ec8.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [4, 8.8, 10.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1071,
@@ -593,11 +1198,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "9af1419eeb415cc738765148dd9b62b87d26f221a61801aa974401f07fb9c647.webp",
+    imageName: "9af1419eeb415cc738765148dd9b62b87d26f221a61801aa974401f07fb9c647.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [3, 8.3, 10.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1072,
@@ -608,11 +1228,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "06c6518943f4563ec84038234c080eedb19587eb170748618b5cf681026848cd.webp",
+    imageName: "06c6518943f4563ec84038234c080eedb19587eb170748618b5cf681026848cd.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [4, 10.6, 12.3],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1073,
@@ -623,11 +1258,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 175,
-    imageName:
-      "a1dbf65563d28ba47412b1e284a5426e75ee1f95f5efde1a4ba34864b6fc506c.webp",
+    imageName: "a1dbf65563d28ba47412b1e284a5426e75ee1f95f5efde1a4ba34864b6fc506c.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [3, 7.6, 10.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1076,
@@ -638,11 +1288,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 190,
-    imageName:
-      "4970131765281eb0a6d8a0f4a2f483e7150dfddafdc14094475d7da01063a16a.webp",
+    imageName: "4970131765281eb0a6d8a0f4a2f483e7150dfddafdc14094475d7da01063a16a.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [5, 10.8, 12.8, 13.9],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1088,
@@ -653,11 +1323,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 195,
-    imageName:
-      "054c088ad4a8c8f8760be35ad89f0d8e4752deb7483d2fc76ae0e2618a7bf2ce.webp",
+    imageName: "054c088ad4a8c8f8760be35ad89f0d8e4752deb7483d2fc76ae0e2618a7bf2ce.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [3, 7.5, 10.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1089,
@@ -668,27 +1353,56 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 134,
-    imageName:
-      "ea4fb881dfd779cb23419bfeb933d76f83df42586380c27ff35c6318e40bff95.webp",
+    imageName: "ea4fb881dfd779cb23419bfeb933d76f83df42586380c27ff35c6318e40bff95.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [3, 8, 10.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1090,
     title: "五等分の気持ち",
     titleEnglish: "Gotoubun no Kimochi",
-    artist:
-      "中野家の五つ子（花澤香菜・竹達彩奈・伊藤美来・佐倉綾音・水瀬いのり）",
+    artist: "中野家の五つ子（花澤香菜・竹達彩奈・伊藤美来・佐倉綾音・水瀬いのり）",
     dateAdded: 0,
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 175,
-    imageName:
-      "c461d89a43d89f885f786acded6dc3345b7020d5dc91dd258b669ae3d0f196a7.webp",
+    imageName: "c461d89a43d89f885f786acded6dc3345b7020d5dc91dd258b669ae3d0f196a7.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [2, 6.1, 9.9],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1094,
@@ -699,11 +1413,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 138,
-    imageName:
-      "1c1cbe5e109731d758c4d0446a5b20395d0cac85900384f696d346cf05839eaa.webp",
+    imageName: "1c1cbe5e109731d758c4d0446a5b20395d0cac85900384f696d346cf05839eaa.webp",
     category: "バラエティ",
     releaseDate: "2019-07-17",
-    sheets: [2, 7.7, 11.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1095,
@@ -714,11 +1443,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "11a978dadb99ca5c94a5c464c25ed7191c04a6ef2495a86aa957a9f381a12483.webp",
+    imageName: "11a978dadb99ca5c94a5c464c25ed7191c04a6ef2495a86aa957a9f381a12483.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-07-17",
-    sheets: [3, 9.3, 12],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1099,
@@ -729,11 +1473,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 134,
-    imageName:
-      "0bbc0279d0bef8e6a9f65502eb43dd6f05e9a3f3404f5aa48812498f1d3be31e.webp",
+    imageName: "0bbc0279d0bef8e6a9f65502eb43dd6f05e9a3f3404f5aa48812498f1d3be31e.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [3, 7.3, 9.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1100,
@@ -744,11 +1503,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "e82b473cead728daad379bee51c2f8e6b3047857674d5cc28aaf15d20b2d6177.webp",
+    imageName: "e82b473cead728daad379bee51c2f8e6b3047857674d5cc28aaf15d20b2d6177.webp",
     category: "ボカロ",
     releaseDate: "2019-07-17",
-    sheets: [3, 8.4, 11],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1101,
@@ -759,11 +1533,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "0ceae99280ec30dae5d45a85f39f31391b454c7526bc946c15c5c3a59a125e25.webp",
+    imageName: "0ceae99280ec30dae5d45a85f39f31391b454c7526bc946c15c5c3a59a125e25.webp",
     category: "TANO*C",
     releaseDate: "2019-07-17",
-    sheets: [4, 9.6, 12.2],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1079,
@@ -774,11 +1563,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "7ab27d493cb338454cd63cea8926185ebcf69c5cd90c0d53f04079129979e739.webp",
+    imageName: "7ab27d493cb338454cd63cea8926185ebcf69c5cd90c0d53f04079129979e739.webp",
     category: "TANO*C",
     releaseDate: "2019-07-31",
-    sheets: [4, 9.7, 11.3],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1081,
@@ -789,11 +1593,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 174,
-    imageName:
-      "0533222b804bdc385aea9ef7f7577608119ac7f8c0cdc45f1b9488c6019c0fc5.webp",
+    imageName: "0533222b804bdc385aea9ef7f7577608119ac7f8c0cdc45f1b9488c6019c0fc5.webp",
     category: "TANO*C",
     releaseDate: "2019-07-31",
-    sheets: [4, 8.3, 11.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1104,
@@ -804,11 +1623,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "131df2951b9b7c742b3df4281d29418150fd7d3fa2aff80fe6d3bf8f3f11b674.webp",
+    imageName: "131df2951b9b7c742b3df4281d29418150fd7d3fa2aff80fe6d3bf8f3f11b674.webp",
     category: "バラエティ",
     releaseDate: "2019-07-31",
-    sheets: [5, 10.3, 13.4],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1105,
@@ -819,11 +1653,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "4189c1a52e4f9a4a611757eadef1866f358b3f165375a7c67d5f8d88247c0736.webp",
+    imageName: "4189c1a52e4f9a4a611757eadef1866f358b3f165375a7c67d5f8d88247c0736.webp",
     category: "TANO*C",
     releaseDate: "2019-07-31",
-    sheets: [6, 10.5, 13.7, 14.1],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1043,
@@ -834,11 +1688,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 168,
-    imageName:
-      "2c52485cf60072d6383faf9a4520dbe7e7796c91ee025630d423aca73cb4e27c.webp",
+    imageName: "2c52485cf60072d6383faf9a4520dbe7e7796c91ee025630d423aca73cb4e27c.webp",
     category: "バラエティ",
     releaseDate: "2019-07-31",
-    sheets: [3, 7.5, 10.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1044,
@@ -849,11 +1718,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 205,
-    imageName:
-      "b9f34c06376e97f16ad2fd15e922bd1b08407f6ecfc8c7db99f8df7c9a49f72e.webp",
+    imageName: "b9f34c06376e97f16ad2fd15e922bd1b08407f6ecfc8c7db99f8df7c9a49f72e.webp",
     category: "バラエティ",
     releaseDate: "2019-07-31",
-    sheets: [4, 9.6, 12.6, 13.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1026,
@@ -864,11 +1753,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 151,
-    imageName:
-      "a8d086c533f5ea9b44008a5f8617f9b869c5076cd3f610acf4dae86f458d1211.webp",
+    imageName: "a8d086c533f5ea9b44008a5f8617f9b869c5076cd3f610acf4dae86f458d1211.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-08-13",
-    sheets: [1, 6.5, 10],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1068,
@@ -879,11 +1783,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 260,
-    imageName:
-      "36ac5b48792c713640ace2a93cd6702db1d6e9b2d1c8fea17f7528d8df168dd1.webp",
+    imageName: "36ac5b48792c713640ace2a93cd6702db1d6e9b2d1c8fea17f7528d8df168dd1.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-08-13",
-    sheets: [6, 11, 14.1],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1082,
@@ -894,11 +1813,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "368703e2e31c7754e99d0a457926ef1952ed19412fa4ee3d7a6fb1c73774a763.webp",
+    imageName: "368703e2e31c7754e99d0a457926ef1952ed19412fa4ee3d7a6fb1c73774a763.webp",
     category: "TANO*C",
     releaseDate: "2019-08-13",
-    sheets: [3, 8.7, 11.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1093,
@@ -909,11 +1843,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 142,
-    imageName:
-      "cb0af66a359c85a13f346a7fc1f3b21b40f58753ba3389a1c8520f392976441a.webp",
+    imageName: "cb0af66a359c85a13f346a7fc1f3b21b40f58753ba3389a1c8520f392976441a.webp",
     category: "ボカロ",
     releaseDate: "2019-08-13",
-    sheets: [5, 10.5, 13.3],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1062,
@@ -924,11 +1873,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "d88f295f50619748777e2175a9f5c3bba382a23d06bb9ebb42a94b3b76ebabc8.webp",
+    imageName: "d88f295f50619748777e2175a9f5c3bba382a23d06bb9ebb42a94b3b76ebabc8.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-09-03",
-    sheets: [4, 8.6, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1064,
@@ -939,11 +1903,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 155,
-    imageName:
-      "8c0b9c0ff0a2ac7cfa48fc12f1aeb33c2da622b128928a05860ee6f3a6a3fd05.webp",
+    imageName: "8c0b9c0ff0a2ac7cfa48fc12f1aeb33c2da622b128928a05860ee6f3a6a3fd05.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-09-03",
-    sheets: [2, 8.4, 12.2],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1065,
@@ -954,11 +1933,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "29e219426a1eb2a821b013bc7d2588bc1246fa17b687161e4cc12e7201a772dc.webp",
+    imageName: "29e219426a1eb2a821b013bc7d2588bc1246fa17b687161e4cc12e7201a772dc.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-09-03",
-    sheets: [5, 10.2, 13.4],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1077,
@@ -969,11 +1963,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 169,
-    imageName:
-      "2f0a36f0ad5881d81e36f0c0cca67c3409de2e719da3a97576ccf372fa277b50.webp",
+    imageName: "2f0a36f0ad5881d81e36f0c0cca67c3409de2e719da3a97576ccf372fa277b50.webp",
     category: "TANO*C",
     releaseDate: "2019-09-03",
-    sheets: [3, 8.5, 12.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1080,
@@ -984,11 +1993,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 190,
-    imageName:
-      "c4f828b9d77924f8c3608a12673c53502273d02277672f792a372a5c3de4c34a.webp",
+    imageName: "c4f828b9d77924f8c3608a12673c53502273d02277672f792a372a5c3de4c34a.webp",
     category: "TANO*C",
     releaseDate: "2019-09-03",
-    sheets: [3, 8.1, 11.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1015,
@@ -999,11 +2023,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "ba9616c4027cf4d4cb37be9b7fcbdb9889a48eb6465a18199435e897c85b654a.webp",
+    imageName: "ba9616c4027cf4d4cb37be9b7fcbdb9889a48eb6465a18199435e897c85b654a.webp",
     category: "ボカロ",
     releaseDate: "2019-09-17",
-    sheets: [3, 7.4, 10.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1016,
@@ -1014,11 +2053,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "2fea6352ef78d3a2b45adb37368789b2a83a7441b4378dd1a4922a86ec4c1572.webp",
+    imageName: "2fea6352ef78d3a2b45adb37368789b2a83a7441b4378dd1a4922a86ec4c1572.webp",
     category: "ボカロ",
     releaseDate: "2019-09-17",
-    sheets: [2, 7.4, 10.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1037,
@@ -1029,11 +2083,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 136,
-    imageName:
-      "36ffc2eae3d5057d77ad5d849de002a0bf26d776ef5911bfc8adc53f0ca8e099.webp",
+    imageName: "36ffc2eae3d5057d77ad5d849de002a0bf26d776ef5911bfc8adc53f0ca8e099.webp",
     category: "ボカロ",
     releaseDate: "2019-09-17",
-    sheets: [3, 8.5, 11.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1083,
@@ -1044,11 +2113,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 180,
-    imageName:
-      "2653163e34cf97e90f1ed803790a8380e1aef3bfb31aab11b94d31796054fca2.webp",
+    imageName: "2653163e34cf97e90f1ed803790a8380e1aef3bfb31aab11b94d31796054fca2.webp",
     category: "TANO*C",
     releaseDate: "2019-09-17",
-    sheets: [3, 8.5, 11.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1084,
@@ -1059,11 +2143,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 300,
-    imageName:
-      "478a03461af30bef87684403310ffede8c770b0d9ed2a4f9061b59b3e357e650.webp",
+    imageName: "478a03461af30bef87684403310ffede8c770b0d9ed2a4f9061b59b3e357e650.webp",
     category: "TANO*C",
     releaseDate: "2019-09-17",
-    sheets: [4, 8.9, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1001,
@@ -1074,11 +2173,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 138,
-    imageName:
-      "f718ec596f26ef6dceede2bd2ed61a610c8910dbb28ef37e3bfb16c0add0ad24.webp",
+    imageName: "f718ec596f26ef6dceede2bd2ed61a610c8910dbb28ef37e3bfb16c0add0ad24.webp",
     category: "東方アレンジ",
     releaseDate: "2019-10-08",
-    sheets: [1, 5.5, 9.3],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1002,
@@ -1089,11 +2203,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 180,
-    imageName:
-      "10d5995f636155cd21e276273a7deaaa8ce1c0325f4016690cb1f16764b1fbf9.webp",
+    imageName: "10d5995f636155cd21e276273a7deaaa8ce1c0325f4016690cb1f16764b1fbf9.webp",
     category: "東方アレンジ",
     releaseDate: "2019-10-08",
-    sheets: [3, 9, 12],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1119,
@@ -1104,11 +2233,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 172,
-    imageName:
-      "7ed127f09d936503213429c69247290b1efe118c701901d14d3084f4fe651215.webp",
+    imageName: "7ed127f09d936503213429c69247290b1efe118c701901d14d3084f4fe651215.webp",
     category: "東方アレンジ",
     releaseDate: "2019-10-08",
-    sheets: [3, 7.7, 11.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1124,
@@ -1119,11 +2263,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 143,
-    imageName:
-      "d4f001eccf01bb8d77a9e0114770afc4ba3d17fe7e272824d256c50ba7cf0850.webp",
+    imageName: "d4f001eccf01bb8d77a9e0114770afc4ba3d17fe7e272824d256c50ba7cf0850.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-10-08",
-    sheets: [3, 7.4, 10.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1125,
@@ -1134,11 +2293,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 110,
-    imageName:
-      "0cbff660a545a64824d241939ca3c40e0f2a0c0e8a2205d4bbf788200ddef641.webp",
+    imageName: "0cbff660a545a64824d241939ca3c40e0f2a0c0e8a2205d4bbf788200ddef641.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-10-08",
-    sheets: [1, 5.2, 9],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1052,
@@ -1149,11 +2323,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 134,
-    imageName:
-      "14446cbb8dbf5f02b501ddddea72bdc775eaf3b28efc9fc183b3c11179cf4539.webp",
+    imageName: "14446cbb8dbf5f02b501ddddea72bdc775eaf3b28efc9fc183b3c11179cf4539.webp",
     category: "バラエティ",
     releaseDate: "2019-10-16",
-    sheets: [2, 6.3, 10.9],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1107,
@@ -1164,11 +2353,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 175,
-    imageName:
-      "e0f2bf3f479be1a263827925014d583337091d26bf2cd09adbc476e2e1e15286.webp",
+    imageName: "e0f2bf3f479be1a263827925014d583337091d26bf2cd09adbc476e2e1e15286.webp",
     category: "東方アレンジ",
     releaseDate: "2019-10-16",
-    sheets: [3, 9.2, 11.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1108,
@@ -1179,11 +2383,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 180,
-    imageName:
-      "8d97e8a4a3fc3e4e2f693ce42cba7811ac728441bf57159d0a70e4d6d8d696d5.webp",
+    imageName: "8d97e8a4a3fc3e4e2f693ce42cba7811ac728441bf57159d0a70e4d6d8d696d5.webp",
     category: "東方アレンジ",
     releaseDate: "2019-10-16",
-    sheets: [4, 9.8, 12.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1118,
@@ -1194,11 +2413,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "d2571510951af6d68175d6ce7587282da5a807c47b1c12377569d3cc5090fd4b.webp",
+    imageName: "d2571510951af6d68175d6ce7587282da5a807c47b1c12377569d3cc5090fd4b.webp",
     category: "東方アレンジ",
     releaseDate: "2019-10-16",
-    sheets: [2, 6.4, 10.5],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1063,
@@ -1209,11 +2443,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 128,
-    imageName:
-      "2a0f7c7db09712917fd4bd5b57130745e6f7a05988f77c5cf4195bdf7e1ecd5e.webp",
+    imageName: "2a0f7c7db09712917fd4bd5b57130745e6f7a05988f77c5cf4195bdf7e1ecd5e.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-10-30",
-    sheets: [3, 8.6, 12.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1097,
@@ -1224,11 +2473,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "ed9d3e586ac7c48e6998376589554fe7b0fd873eb55035fff689cdac5f0fa35e.webp",
+    imageName: "ed9d3e586ac7c48e6998376589554fe7b0fd873eb55035fff689cdac5f0fa35e.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-10-30",
-    sheets: [3, 7.8, 12.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1098,
@@ -1239,11 +2503,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 128,
-    imageName:
-      "6894935c7ca7b4feecaeea03bf48fde6e0d1d732a05491515df038dad21b6455.webp",
+    imageName: "6894935c7ca7b4feecaeea03bf48fde6e0d1d732a05491515df038dad21b6455.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-10-30",
-    sheets: [1, 6.4, 9.4],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1109,
@@ -1254,11 +2533,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "d0f1bae67c92c497ced75ab2e038a88c6bf8e8821266ddc44637ffaa826fc088.webp",
+    imageName: "d0f1bae67c92c497ced75ab2e038a88c6bf8e8821266ddc44637ffaa826fc088.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-10-30",
-    sheets: [2, 7.1, 11.2],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1018,
@@ -1269,11 +2563,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 140,
-    imageName:
-      "422483e1ff106b9567a83d1d1694514c14f56e26da35327b238e334d1f237732.webp",
+    imageName: "422483e1ff106b9567a83d1d1694514c14f56e26da35327b238e334d1f237732.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-11-14",
-    sheets: [3, 7, 9.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1078,
@@ -1284,11 +2593,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "b322fee1ba75240bc288cdb59a07741dffd13117d3942589b6f73524e03e7bb8.webp",
+    imageName: "b322fee1ba75240bc288cdb59a07741dffd13117d3942589b6f73524e03e7bb8.webp",
     category: "TANO*C",
     releaseDate: "2019-11-14",
-    sheets: [4, 7.9, 12.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1091,
@@ -1299,11 +2623,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 129,
-    imageName:
-      "5a38994ba55318aeb657d88856678385b93fe3579ba1e6d4a3d35cbf558566d5.webp",
+    imageName: "5a38994ba55318aeb657d88856678385b93fe3579ba1e6d4a3d35cbf558566d5.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-11-14",
-    sheets: [1, 5.3, 9.3],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1110,
@@ -1314,11 +2653,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "75d98280f93128ba0543c04f3fbae54fa0d58896291352ffed124ae739d152e8.webp",
+    imageName: "75d98280f93128ba0543c04f3fbae54fa0d58896291352ffed124ae739d152e8.webp",
     category: "バラエティ",
     releaseDate: "2019-11-14",
-    sheets: [2, 7.2, 10.8],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1121,
@@ -1329,11 +2683,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 165,
-    imageName:
-      "d6693ab94ed95031b65e2a596f1aa4de301ecdf2be17ff6aa4f21649d638fa50.webp",
+    imageName: "d6693ab94ed95031b65e2a596f1aa4de301ecdf2be17ff6aa4f21649d638fa50.webp",
     category: "オリジナル",
     releaseDate: "2019-11-14",
-    sheets: [5, 9.4, 12.6],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1004,
@@ -1344,11 +2713,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 126,
-    imageName:
-      "8bf230313591d3a7df7cc09fbfa5424fef32a0722dc066b3dd81a5067da481bb.webp",
+    imageName: "8bf230313591d3a7df7cc09fbfa5424fef32a0722dc066b3dd81a5067da481bb.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-11-27",
-    sheets: [1, 5.4, 9.1],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1005,
@@ -1359,11 +2743,26 @@ const waccaSongs = [
     dateRemoved: 20210525,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "e557c85412a83d4ccfe6dfb58ebe2811928d7f094da26403a9931077b9a01584.webp",
+    imageName: "e557c85412a83d4ccfe6dfb58ebe2811928d7f094da26403a9931077b9a01584.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2019-11-28",
-    sheets: [3, 7.8, 10.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1042,
@@ -1374,11 +2773,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "5e69174847bb2c2e26c3dade7b8a7f9fd98fcacbf899370f3d482a2ebfa9e38e.webp",
+    imageName: "5e69174847bb2c2e26c3dade7b8a7f9fd98fcacbf899370f3d482a2ebfa9e38e.webp",
     category: "ボカロ",
     releaseDate: "2019-11-27",
-    sheets: [3, 8, 11.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1122,
@@ -1389,11 +2803,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 175,
-    imageName:
-      "25177669afc4cfac15f372a6d7d3f8abd9a58dcd925c135b15b01a716cbf491f.webp",
+    imageName: "25177669afc4cfac15f372a6d7d3f8abd9a58dcd925c135b15b01a716cbf491f.webp",
     category: "オリジナル",
     releaseDate: "2019-11-27",
-    sheets: [4, 9.8, 12.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1127,
@@ -1404,11 +2833,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 190,
-    imageName:
-      "65116708a74ec68c67fc3158e7336e73c5c06ccfccfe51353b0ce77c842b2b23.webp",
+    imageName: "65116708a74ec68c67fc3158e7336e73c5c06ccfccfe51353b0ce77c842b2b23.webp",
     category: "バラエティ",
     releaseDate: "2019-11-27",
-    sheets: [3, 9.4, 12.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1030,
@@ -1419,11 +2863,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 240,
-    imageName:
-      "8f552e76c1c52e461a2b5e1dc62cb44ef55cf2baa8007f99478a037cabe91685.webp",
+    imageName: "8f552e76c1c52e461a2b5e1dc62cb44ef55cf2baa8007f99478a037cabe91685.webp",
     category: "ボカロ",
     releaseDate: "2019-12-11",
-    sheets: [5, 10.6, 13.8],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1061,
@@ -1434,11 +2893,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 245,
-    imageName:
-      "8c29e74a237df05ce701bec384f9a7f589546e1fc75a0df6afb53cb87527aed5.webp",
+    imageName: "8c29e74a237df05ce701bec384f9a7f589546e1fc75a0df6afb53cb87527aed5.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-12-11",
-    sheets: [7, 11, 14],
+    sheets: [
+      {
+        difficulty: 7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1111,
@@ -1449,11 +2923,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 222,
-    imageName:
-      "24b298ad97f0f60be0fc4ffc4db800d6c540672d23b4d89918cbda208e31ffaa.webp",
+    imageName: "24b298ad97f0f60be0fc4ffc4db800d6c540672d23b4d89918cbda208e31ffaa.webp",
     category: "バラエティ",
     releaseDate: "2019-12-11",
-    sheets: [6, 10.9, 13.9],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1045,
@@ -1464,11 +2953,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "35e4385a02785f265a3c9d707baa84e69e491ed33f8eb796c284498b47239425.webp",
+    imageName: "35e4385a02785f265a3c9d707baa84e69e491ed33f8eb796c284498b47239425.webp",
     category: "バラエティ",
     releaseDate: "2019-12-23",
-    sheets: [3, 8.8, 11.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1047,
@@ -1479,11 +2983,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 150,
-    imageName:
-      "8e3d7c4281470e6ca72ac904d2769104223ddac9745415a59cf190eaa7ab23a9.webp",
+    imageName: "8e3d7c4281470e6ca72ac904d2769104223ddac9745415a59cf190eaa7ab23a9.webp",
     category: "バラエティ",
     releaseDate: "2019-12-23",
-    sheets: [1, 5.7, 12.6],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1050,
@@ -1494,11 +3013,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 200,
-    imageName:
-      "6730d2b544ba7292b94436857766e119f3da5b9f615b81e1d24621a49721e348.webp",
+    imageName: "6730d2b544ba7292b94436857766e119f3da5b9f615b81e1d24621a49721e348.webp",
     category: "バラエティ",
     releaseDate: "2019-12-23",
-    sheets: [3, 6.3, 10.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1123,
@@ -1509,11 +3043,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 222,
-    imageName:
-      "ecf4de3d02f5c8df7adbb23aa2fa0676ea41736b49355b24a33a1960bb3b964c.webp",
+    imageName: "ecf4de3d02f5c8df7adbb23aa2fa0676ea41736b49355b24a33a1960bb3b964c.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2019-12-23",
-    sheets: [4, 10.4, 13.2],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1126,
@@ -1524,11 +3073,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 160,
-    imageName:
-      "951277121b4ae791018224327606caa7cc3b5487bf98d546f5dcd958a5988b14.webp",
+    imageName: "951277121b4ae791018224327606caa7cc3b5487bf98d546f5dcd958a5988b14.webp",
     category: "2.5次元",
     releaseDate: "2019-12-23",
-    sheets: [1, 5.6, 9.4],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1085,
@@ -1539,11 +3103,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 187,
-    imageName:
-      "bf69d7cf45e7968699a93bf93ba8f2fd58fdf8f97194efd06b6552c40fafe4d8.webp",
+    imageName: "bf69d7cf45e7968699a93bf93ba8f2fd58fdf8f97194efd06b6552c40fafe4d8.webp",
     category: "オリジナル",
     releaseDate: "2020-01-07",
-    sheets: [4, 9.3, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1117,
@@ -1554,11 +3133,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 182,
-    imageName:
-      "791b604bcb3177e2b98eef71e512b9b00853653640332e8c7c142ef4256e3caa.webp",
+    imageName: "791b604bcb3177e2b98eef71e512b9b00853653640332e8c7c142ef4256e3caa.webp",
     category: "オリジナル",
     releaseDate: "2020-01-07",
-    sheets: [3, 7.2, 12.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.2,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1128,
@@ -1569,11 +3163,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 1,
     bpm: 170,
-    imageName:
-      "0ae4d790692382c32b10546a3574bf636808155f907fae84af96aa16a162046d.webp",
+    imageName: "0ae4d790692382c32b10546a3574bf636808155f907fae84af96aa16a162046d.webp",
     category: "TANO*C",
     releaseDate: "2020-01-07",
-    sheets: [4, 10, 12.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 1,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 1,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1009,
@@ -1584,11 +3193,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 143,
-    imageName:
-      "bc91c26599c06799a87e3e41968859df174a00c984d969d2f85e07ec65a70297.webp",
+    imageName: "bc91c26599c06799a87e3e41968859df174a00c984d969d2f85e07ec65a70297.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-01-22",
-    sheets: [3, 6.7, 9.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1013,
@@ -1599,11 +3223,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 210,
-    imageName:
-      "2702631eaedefaa773b957ab45af5088298966f590f27db6889494a46b04f7ae.webp",
+    imageName: "2702631eaedefaa773b957ab45af5088298966f590f27db6889494a46b04f7ae.webp",
     category: "ボカロ",
     releaseDate: "2020-01-22",
-    sheets: [3, 9, 11.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1086,
@@ -1614,11 +3253,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 190,
-    imageName:
-      "39d7ad009113ebe6b8ef6b70b7cd12f32dac7003e891c5201abdb379ea7f2a36.webp",
+    imageName: "39d7ad009113ebe6b8ef6b70b7cd12f32dac7003e891c5201abdb379ea7f2a36.webp",
     category: "TANO*C",
     releaseDate: "2020-01-22",
-    sheets: [3, 9.8, 12.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1113,
@@ -1629,11 +3283,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 172,
-    imageName:
-      "77f3c132935e0c269f3c2832627de539eb1d5bac0ed81f7bb4327e2c084f7361.webp",
+    imageName: "77f3c132935e0c269f3c2832627de539eb1d5bac0ed81f7bb4327e2c084f7361.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-01-22",
-    sheets: [3, 7.9, 10.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1115,
@@ -1644,11 +3313,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 195,
-    imageName:
-      "bb8db03c48091e08a14eadaf317f321589314c4f58000520dbbfb40eeb26bdd3.webp",
+    imageName: "bb8db03c48091e08a14eadaf317f321589314c4f58000520dbbfb40eeb26bdd3.webp",
     category: "バラエティ",
     releaseDate: "2020-01-22",
-    sheets: [2, 7.7, 11.1],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1207,
@@ -1659,11 +3343,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 162,
-    imageName:
-      "cdd148c656d97ec961c67737f6df6d71eb2c98153b5072a63fb98281e330f98d.webp",
+    imageName: "cdd148c656d97ec961c67737f6df6d71eb2c98153b5072a63fb98281e330f98d.webp",
     category: "ボカロ",
     releaseDate: "2020-01-22",
-    sheets: [4, 8.3, 12.2],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1208,
@@ -1674,11 +3373,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 145,
-    imageName:
-      "0e4da16d6c06fb74b158466c078b415c7307dfbc62a01580cdc601c906ac0c6d.webp",
+    imageName: "0e4da16d6c06fb74b158466c078b415c7307dfbc62a01580cdc601c906ac0c6d.webp",
     category: "ボカロ",
     releaseDate: "2020-01-22",
-    sheets: [2, 6.5, 10],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1210,
@@ -1689,11 +3403,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 192,
-    imageName:
-      "f949a370369896f25ea5ec37841c18b1a5c8cf079ff6feedd52d28eed4dfd40f.webp",
+    imageName: "f949a370369896f25ea5ec37841c18b1a5c8cf079ff6feedd52d28eed4dfd40f.webp",
     category: "東方アレンジ",
     releaseDate: "2020-01-22",
-    sheets: [2, 8.6, 12.3],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1211,
@@ -1704,11 +3433,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 173,
-    imageName:
-      "116692ac76bc1d374cdce73548f4ae00fb812b41c06075a2f85cbec69e6e3df7.webp",
+    imageName: "116692ac76bc1d374cdce73548f4ae00fb812b41c06075a2f85cbec69e6e3df7.webp",
     category: "東方アレンジ",
     releaseDate: "2020-01-22",
-    sheets: [4, 9.2, 11.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1212,
@@ -1719,11 +3463,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 170,
-    imageName:
-      "fe32b8cdbd5578f67366f258ef9c862637a34fcf2d85d27678c19ba541b67f2b.webp",
+    imageName: "fe32b8cdbd5578f67366f258ef9c862637a34fcf2d85d27678c19ba541b67f2b.webp",
     category: "オリジナル",
     releaseDate: "2020-01-22",
-    sheets: [5, 10, 12.8],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1213,
@@ -1734,11 +3493,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 180,
-    imageName:
-      "7786d2552f5068ec96d68f7f10e1a77e12d9f3aa8845a5a53eb2269fa209e27b.webp",
+    imageName: "7786d2552f5068ec96d68f7f10e1a77e12d9f3aa8845a5a53eb2269fa209e27b.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-01-22",
-    sheets: [3, 7.5, 12.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1214,
@@ -1749,11 +3523,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 155,
-    imageName:
-      "303af6aa5d0c435a5964bccb34c23b01755e38417586737b17df98e1f1281a7c.webp",
+    imageName: "303af6aa5d0c435a5964bccb34c23b01755e38417586737b17df98e1f1281a7c.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-01-22",
-    sheets: [4, 10.8, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1217,
@@ -1764,26 +3553,56 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 149,
-    imageName:
-      "0672d2dfef5412f5868e0e707a95262319bf550954c2696819b60f7bb75eb288.webp",
+    imageName: "0672d2dfef5412f5868e0e707a95262319bf550954c2696819b60f7bb75eb288.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-01-22",
-    sheets: [2, 7.4, 10.1],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1265,
     title: "ナイト・オブ・ナイツ (かめりあ’s“ワンス・アポン・ア・ナイト”Remix)",
-    titleEnglish: 'Night of Nights (Carmelia\'s "Once Upon a Night" Remix)',
+    titleEnglish: "Night of Nights (Carmelia's \\\"Once Upon a Night\\\" Remix),
     artist: "かめりあ",
     dateAdded: 20200123,
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 188,
-    imageName:
-      "465b94ca3cde7913410c9b612a9153be42ab4e47871060cc29986d265512b57d.webp",
+    imageName: "465b94ca3cde7913410c9b612a9153be42ab4e47871060cc29986d265512b57d.webp",
     category: "東方アレンジ",
     releaseDate: "2020-01-22",
-    sheets: [5, 10.5, 13.1],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1267,
@@ -1794,11 +3613,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 200,
-    imageName:
-      "197be068231fbdaea7022d5de96fb6e28d910923033af5024a855984893e2e60.webp",
+    imageName: "197be068231fbdaea7022d5de96fb6e28d910923033af5024a855984893e2e60.webp",
     category: "TANO*C",
     releaseDate: "2020-01-22",
-    sheets: [6, 10.4, 13.6],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1268,
@@ -1809,11 +3643,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 150,
-    imageName:
-      "7048d6d5c17d9bdf243a02498e9abb41f4b984dc2d4c25b0545051232e1f3c79.webp",
+    imageName: "7048d6d5c17d9bdf243a02498e9abb41f4b984dc2d4c25b0545051232e1f3c79.webp",
     category: "TANO*C",
     releaseDate: "2020-01-22",
-    sheets: [3, 8.1, 11.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1215,
@@ -1824,11 +3673,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 128,
-    imageName:
-      "4926d0164c88a89b2be9c2664987bdd216438caeb844fb5394bc713891edcbc5.webp",
+    imageName: "4926d0164c88a89b2be9c2664987bdd216438caeb844fb5394bc713891edcbc5.webp",
     category: "バラエティ",
     releaseDate: "2020-02-04",
-    sheets: [4, 9.9, 12.2],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1216,
@@ -1839,11 +3703,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 260,
-    imageName:
-      "ceafb0be7a84719a384db96f857e64efa21c1087e8bbe728ce5e3716d2a8b09c.webp",
+    imageName: "ceafb0be7a84719a384db96f857e64efa21c1087e8bbe728ce5e3716d2a8b09c.webp",
     category: "バラエティ",
     releaseDate: "2020-02-04",
-    sheets: [6, 10.7, 12.7],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1218,
@@ -1854,11 +3733,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 145,
-    imageName:
-      "953d656957865589aa421cb04a68ebff4a8529e1bc3d9a3c535eb34524414543.webp",
+    imageName: "953d656957865589aa421cb04a68ebff4a8529e1bc3d9a3c535eb34524414543.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-02-04",
-    sheets: [3, 7.1, 10.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1269,
@@ -1869,11 +3763,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 168,
-    imageName:
-      "ae8e0747f2837d8ad73a3bb4831118c14624533d8a26e40d4d2eab54808e8c85.webp",
+    imageName: "ae8e0747f2837d8ad73a3bb4831118c14624533d8a26e40d4d2eab54808e8c85.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-02-11",
-    sheets: [3, 6.5, 10.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1270,
@@ -1884,11 +3793,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 136,
-    imageName:
-      "22da1c7d12b2528557d21c44b0bb220ba2006479cafc916ddda82d8ca8f113ab.webp",
+    imageName: "22da1c7d12b2528557d21c44b0bb220ba2006479cafc916ddda82d8ca8f113ab.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-02-11",
-    sheets: [2, 7.5, 11.2],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1273,
@@ -1899,11 +3823,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 173,
-    imageName:
-      "8bb9ce616d23b7e17b189ceddc4813cab9b3b6344b85051a769cbdd5614e223f.webp",
+    imageName: "8bb9ce616d23b7e17b189ceddc4813cab9b3b6344b85051a769cbdd5614e223f.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-02-11",
-    sheets: [3, 7.2, 10.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1021,
@@ -1914,11 +3853,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 157,
-    imageName:
-      "648a5a29830f678641998519a271946af859542e4ca951d356740e6535d40eaa.webp",
+    imageName: "648a5a29830f678641998519a271946af859542e4ca951d356740e6535d40eaa.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-02-18",
-    sheets: [1, 6.3, 9.4],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1203,
@@ -1929,11 +3883,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 140,
-    imageName:
-      "d9c0dad6795eb91bea7297206aa65b6b66c61343b2797c8d920da9603536b91c.webp",
+    imageName: "d9c0dad6795eb91bea7297206aa65b6b66c61343b2797c8d920da9603536b91c.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-02-18",
-    sheets: [2, 7.1, 10.2],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1221,
@@ -1944,11 +3913,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 145,
-    imageName:
-      "fd61222762004e6a4d5557c19dc5b62c908932d07198999f1ddbbfa87a109544.webp",
+    imageName: "fd61222762004e6a4d5557c19dc5b62c908932d07198999f1ddbbfa87a109544.webp",
     category: "ボカロ",
     releaseDate: "2020-02-25",
-    sheets: [3, 9, 12.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1222,
@@ -1959,11 +3943,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 200,
-    imageName:
-      "5f116745b811923ea48ed2ccb6be0ad4dc4fd48df6cd590e5270c5de4b348c18.webp",
+    imageName: "5f116745b811923ea48ed2ccb6be0ad4dc4fd48df6cd590e5270c5de4b348c18.webp",
     category: "ボカロ",
     releaseDate: "2020-02-25",
-    sheets: [4, 9.5, 11.3],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1272,
@@ -1974,11 +3973,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 200,
-    imageName:
-      "a42918eaa6b904d88ed07a730d2a78fb75201f816b0d647ad12748f1ccd8cf29.webp",
+    imageName: "a42918eaa6b904d88ed07a730d2a78fb75201f816b0d647ad12748f1ccd8cf29.webp",
     category: "ボカロ",
     releaseDate: "2020-02-25",
-    sheets: [3, 7.3, 10.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1226,
@@ -1989,11 +4003,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 172,
-    imageName:
-      "dbf83efa1c92cbaf22494a671c5b9d93830647bb990688d07f848c7c9b19243f.webp",
+    imageName: "dbf83efa1c92cbaf22494a671c5b9d93830647bb990688d07f848c7c9b19243f.webp",
     category: "東方アレンジ",
     releaseDate: "2020-03-03",
-    sheets: [2, 6.2, 11.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1227,
@@ -2004,11 +4033,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 168,
-    imageName:
-      "efe74b622b89d96268eeb6284f8b61dc304d67677471a6caf64150e6d294dfee.webp",
+    imageName: "efe74b622b89d96268eeb6284f8b61dc304d67677471a6caf64150e6d294dfee.webp",
     category: "東方アレンジ",
     releaseDate: "2020-03-03",
-    sheets: [3, 7.3, 11],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1228,
@@ -2019,11 +4063,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 160,
-    imageName:
-      "d12cbc6fb3c8d9476a5f1a17a921aa5e631a1fcfab931973534b33865d287908.webp",
+    imageName: "d12cbc6fb3c8d9476a5f1a17a921aa5e631a1fcfab931973534b33865d287908.webp",
     category: "東方アレンジ",
     releaseDate: "2020-03-03",
-    sheets: [3, 8.2, 12.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1229,
@@ -2034,11 +4093,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 180,
-    imageName:
-      "16c3b45f05b64292b5fc3a018f8a800402353f710667541a93b163f1488dd187.webp",
+    imageName: "16c3b45f05b64292b5fc3a018f8a800402353f710667541a93b163f1488dd187.webp",
     category: "東方アレンジ",
     releaseDate: "2020-03-03",
-    sheets: [4, 10.8, 13.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1274,
@@ -2049,11 +4123,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 188,
-    imageName:
-      "50765ed6497fda9abc5bc7905717f8d1ac69f72d0e1ebb6e024be95732f15bda.webp",
+    imageName: "50765ed6497fda9abc5bc7905717f8d1ac69f72d0e1ebb6e024be95732f15bda.webp",
     category: "東方アレンジ",
     releaseDate: "2020-03-03",
-    sheets: [3, 7.1, 10.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1230,
@@ -2064,11 +4153,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 175,
-    imageName:
-      "eb96d2b51c8d3c752f1b9713b024f7e985b79632e8cc3c89a4f1173abf6f6a7a.webp",
+    imageName: "eb96d2b51c8d3c752f1b9713b024f7e985b79632e8cc3c89a4f1173abf6f6a7a.webp",
     category: "オリジナル",
     releaseDate: "2020-03-17",
-    sheets: [4, 10.1, 12.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1275,
@@ -2079,11 +4183,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 110,
-    imageName:
-      "d160524e48855ddcc43894a34e50aed9e55ea7e693b66095818381548837f855.webp",
+    imageName: "d160524e48855ddcc43894a34e50aed9e55ea7e693b66095818381548837f855.webp",
     category: "TANO*C",
     releaseDate: "2020-03-17",
-    sheets: [3, 10.2, 12.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1092,
@@ -2094,11 +4213,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 196,
-    imageName:
-      "df1983d7ea1b51a9f6323d79c76d2647299f4ef63b9c68256ac2ea4d812fa919.webp",
+    imageName: "df1983d7ea1b51a9f6323d79c76d2647299f4ef63b9c68256ac2ea4d812fa919.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-03-25",
-    sheets: [3, 9.2, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1114,
@@ -2109,11 +4243,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 208,
-    imageName:
-      "501fdff9243aa75cac141672e5f46de39cabab24ae13744262fa859c92815952.webp",
+    imageName: "501fdff9243aa75cac141672e5f46de39cabab24ae13744262fa859c92815952.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-03-25",
-    sheets: [3, 8.7, 11.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1232,
@@ -2124,11 +4273,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 168,
-    imageName:
-      "72d13eae7b726fa7fe863573eb55380a5750eb03c1e349056dad1bbe8cae5611.webp",
+    imageName: "72d13eae7b726fa7fe863573eb55380a5750eb03c1e349056dad1bbe8cae5611.webp",
     category: "バラエティ",
     releaseDate: "2020-03-31",
-    sheets: [3, 7.7, 12.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1242,
@@ -2139,11 +4303,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 165,
-    imageName:
-      "9143e3645ec7e8ce8e05240afa35a2518a2c426788d8cae143e409a2db560180.webp",
+    imageName: "9143e3645ec7e8ce8e05240afa35a2518a2c426788d8cae143e409a2db560180.webp",
     category: "バラエティ",
     releaseDate: "2020-03-31",
-    sheets: [2, 9.1, 12.6],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1243,
@@ -2154,11 +4333,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 90,
-    imageName:
-      "e196c34954f4f3a0a7dec5affbafd05d5da2b6f0027c0f7bac2c7e7bb223f798.webp",
+    imageName: "e196c34954f4f3a0a7dec5affbafd05d5da2b6f0027c0f7bac2c7e7bb223f798.webp",
     category: "バラエティ",
     releaseDate: "2020-03-31",
-    sheets: [4, 9.3, 12.3],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1260,
@@ -2169,11 +4363,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 178,
-    imageName:
-      "ee2a09b0c18b4ae055de12207edf07733c99e6c931fe416ee499a66d6a8c3a2d.webp",
+    imageName: "ee2a09b0c18b4ae055de12207edf07733c99e6c931fe416ee499a66d6a8c3a2d.webp",
     category: "バラエティ",
     releaseDate: "2020-04-07",
-    sheets: [3, 8.2, 10.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1262,
@@ -2184,11 +4393,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 192,
-    imageName:
-      "8b03620d396f026e373fe4dda7dd0c0f74909a259a7a85c84d16f46edaad8178.webp",
+    imageName: "8b03620d396f026e373fe4dda7dd0c0f74909a259a7a85c84d16f46edaad8178.webp",
     category: "バラエティ",
     releaseDate: "2020-04-07",
-    sheets: [5, 10.8, 13.6],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1261,
@@ -2199,11 +4423,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 169,
-    imageName:
-      "232a18d1c34dfdf2665a914b778475ecee4e457de90e810228fcb3b3274f1e3c.webp",
+    imageName: "232a18d1c34dfdf2665a914b778475ecee4e457de90e810228fcb3b3274f1e3c.webp",
     category: "バラエティ",
     releaseDate: "2020-04-15",
-    sheets: [2, 7.6, 12.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1263,
@@ -2214,11 +4453,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 200,
-    imageName:
-      "82cfabc2d2dc1841dfba08633859bca27ef67d776dfbee215b4c1f192862dbba.webp",
+    imageName: "82cfabc2d2dc1841dfba08633859bca27ef67d776dfbee215b4c1f192862dbba.webp",
     category: "バラエティ",
     releaseDate: "2020-04-15",
-    sheets: [4, 10.9, 13.9],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1116,
@@ -2229,11 +4483,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 170,
-    imageName:
-      "34dad32f9e7263757f18e2c19864cce166601d737ebd18348d6983b749745976.webp",
+    imageName: "34dad32f9e7263757f18e2c19864cce166601d737ebd18348d6983b749745976.webp",
     category: "バラエティ",
     releaseDate: "2020-06-15",
-    sheets: [4, 9.7, 13],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1258,
@@ -2244,11 +4513,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 170,
-    imageName:
-      "fdb101888910354d32532dece3276e46e0e5da79d8e6cd530c6d7ebed0acf15c.webp",
+    imageName: "fdb101888910354d32532dece3276e46e0e5da79d8e6cd530c6d7ebed0acf15c.webp",
     category: "TANO*C",
     releaseDate: "2020-06-15",
-    sheets: [3, 9.6, 12.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1259,
@@ -2259,11 +4543,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 175,
-    imageName:
-      "c005d0b36abf43ff96477c5263e8ee2ea41b8df40944b46fd2e8e1fc15b74e4c.webp",
+    imageName: "c005d0b36abf43ff96477c5263e8ee2ea41b8df40944b46fd2e8e1fc15b74e4c.webp",
     category: "TANO*C",
     releaseDate: "2020-06-15",
-    sheets: [5, 10.5, 13.5],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1102,
@@ -2274,11 +4573,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 134,
-    imageName:
-      "b6c0b25c6de057936565d44d794d21125117442f81def9a09a47e772c147ac11.webp",
+    imageName: "b6c0b25c6de057936565d44d794d21125117442f81def9a09a47e772c147ac11.webp",
     category: "2.5次元",
     releaseDate: "2020-06-29",
-    sheets: [2, 6, 9.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1278,
@@ -2289,11 +4603,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 155,
-    imageName:
-      "d83a36cb7a6881a5572704edd104aa2f51a1c7754643c4fe397c69c1f42b5ee6.webp",
+    imageName: "d83a36cb7a6881a5572704edd104aa2f51a1c7754643c4fe397c69c1f42b5ee6.webp",
     category: "2.5次元",
     releaseDate: "2020-06-29",
-    sheets: [2, 6.1, 9.5],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1279,
@@ -2304,11 +4633,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 155,
-    imageName:
-      "990408afa009efba27595caf828f8739d4c01dd73797eccaf897ab39d412669d.webp",
+    imageName: "990408afa009efba27595caf828f8739d4c01dd73797eccaf897ab39d412669d.webp",
     category: "2.5次元",
     releaseDate: "2020-06-29",
-    sheets: [3, 7.3, 10.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1236,
@@ -2319,11 +4663,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 152,
-    imageName:
-      "31c73de24a61376ec89dbf5c3edaebed1849627710a9436da995db82c310d0a4.webp",
+    imageName: "31c73de24a61376ec89dbf5c3edaebed1849627710a9436da995db82c310d0a4.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-07-06",
-    sheets: [2, 7.7, 11.5],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1237,
@@ -2334,11 +4693,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 164,
-    imageName:
-      "569fc916713567ca354dcbdef1250ba20c98b68e7a43013e74778da88e4f460e.webp",
+    imageName: "569fc916713567ca354dcbdef1250ba20c98b68e7a43013e74778da88e4f460e.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-07-06",
-    sheets: [2, 5.7, 10],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1031,
@@ -2349,11 +4723,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 232,
-    imageName:
-      "055f13a2529854cc1dfdbaf0f9d076008c8d196aa78dffe184052d5ab1a088bc.webp",
+    imageName: "055f13a2529854cc1dfdbaf0f9d076008c8d196aa78dffe184052d5ab1a088bc.webp",
     category: "ボカロ",
     releaseDate: "2020-07-20",
-    sheets: [6, 10.2, 13.7],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1244,
@@ -2364,11 +4753,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 220,
-    imageName:
-      "0c8a7dc0680f1d2767bdf4a89d7ba084dc228c5f2e6b7e7a3de555258e45d415.webp",
+    imageName: "0c8a7dc0680f1d2767bdf4a89d7ba084dc228c5f2e6b7e7a3de555258e45d415.webp",
     category: "ボカロ",
     releaseDate: "2020-07-20",
-    sheets: [4, 8.3, 12.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1245,
@@ -2379,11 +4783,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 148,
-    imageName:
-      "8fa2a8e85b660759a0ef0538a56ad189e58213956c0ca8898fede41330e5fb6a.webp",
+    imageName: "8fa2a8e85b660759a0ef0538a56ad189e58213956c0ca8898fede41330e5fb6a.webp",
     category: "ボカロ",
     releaseDate: "2020-07-20",
-    sheets: [3, 8, 11.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1246,
@@ -2394,11 +4813,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 152,
-    imageName:
-      "e25c0c3f35b9ef2317e607b2818781a0d7970a618d689de6184494e71385fcca.webp",
+    imageName: "e25c0c3f35b9ef2317e607b2818781a0d7970a618d689de6184494e71385fcca.webp",
     category: "ボカロ",
     releaseDate: "2020-07-20",
-    sheets: [3, 7.5, 12.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1247,
@@ -2409,11 +4843,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 160,
-    imageName:
-      "5f0a5d71448b760ef250e3471845af9d29b0e492b35fb40f4c92056ce6c2731e.webp",
+    imageName: "5f0a5d71448b760ef250e3471845af9d29b0e492b35fb40f4c92056ce6c2731e.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-08-03",
-    sheets: [4, 10.3, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1248,
@@ -2424,11 +4873,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 198,
-    imageName:
-      "d6cf229550efccb6c90df34d48f28a21c4891f5218d3bef5de4c18b79d66b689.webp",
+    imageName: "d6cf229550efccb6c90df34d48f28a21c4891f5218d3bef5de4c18b79d66b689.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-08-03",
-    sheets: [4, 10, 13.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1249,
@@ -2439,11 +4903,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 200,
-    imageName:
-      "9acb5bd894388ce400d32102395861f85b89bc10efd2f29bbe4dce9693e1978b.webp",
+    imageName: "9acb5bd894388ce400d32102395861f85b89bc10efd2f29bbe4dce9693e1978b.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-08-03",
-    sheets: [5, 10.9, 13.8],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1250,
@@ -2454,11 +4933,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 205,
-    imageName:
-      "06b44e158a7dbf4e88362760b93b38aab1907e090b7fabd3e0a5fdaad5d38b68.webp",
+    imageName: "06b44e158a7dbf4e88362760b93b38aab1907e090b7fabd3e0a5fdaad5d38b68.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-08-03",
-    sheets: [6, 11, 12.9, 14],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1251,
@@ -2469,11 +4968,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 203,
-    imageName:
-      "9aa7ee0b336353c9dd98ec3737c25236c8431d5b37fbf7a575e695c1fbd1b0bd.webp",
+    imageName: "9aa7ee0b336353c9dd98ec3737c25236c8431d5b37fbf7a575e695c1fbd1b0bd.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-08-03",
-    sheets: [7, 11, 13.2, 14.1],
+    sheets: [
+      {
+        difficulty: 7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1276,
@@ -2484,11 +5003,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 108,
-    imageName:
-      "3998c81dab18ddebf2fc73700301077b137c68bc7420595bfd0a7a33c508906a.webp",
+    imageName: "3998c81dab18ddebf2fc73700301077b137c68bc7420595bfd0a7a33c508906a.webp",
     category: "TANO*C",
     releaseDate: "2020-08-03",
-    sheets: [3, 9.4, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1205,
@@ -2499,11 +5033,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 135,
-    imageName:
-      "ef2e0f4cc10c43b8e764a9bc394f2391860cfebb2984d8b58f214b8465c87e53.webp",
+    imageName: "ef2e0f4cc10c43b8e764a9bc394f2391860cfebb2984d8b58f214b8465c87e53.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-09-21",
-    sheets: [2, 6.8, 9.3, 11],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1206,
@@ -2514,11 +5068,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 180,
-    imageName:
-      "ec99c9063fee60a9165355d29bb87e67aeb860bf15e96e7287b9635f7d584dee.webp",
+    imageName: "ec99c9063fee60a9165355d29bb87e67aeb860bf15e96e7287b9635f7d584dee.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-08-17",
-    sheets: [3, 7.8, 12],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1238,
@@ -2529,11 +5098,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 152,
-    imageName:
-      "2aaec1397b9538c515da9f49962658f8ecec01a8ef0698228d7e5d5b00563221.webp",
+    imageName: "2aaec1397b9538c515da9f49962658f8ecec01a8ef0698228d7e5d5b00563221.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-08-17",
-    sheets: [1, 6.5, 9.5],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1254,
@@ -2544,11 +5128,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 142,
-    imageName:
-      "f7ddcd3cb9dfac8704125b8a5fc0edc22ad9bfed586e69d72c6dfdee01eb2bdd.webp",
+    imageName: "f7ddcd3cb9dfac8704125b8a5fc0edc22ad9bfed586e69d72c6dfdee01eb2bdd.webp",
     category: "バラエティ",
     releaseDate: "2020-08-31",
-    sheets: [3, 7.7, 10.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1255,
@@ -2559,11 +5158,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 2,
     bpm: 186,
-    imageName:
-      "c9088599c47536dbdb993f75905bb13b61b6fea89b0942652d82b0f27d14f48e.webp",
+    imageName: "c9088599c47536dbdb993f75905bb13b61b6fea89b0942652d82b0f27d14f48e.webp",
     category: "バラエティ",
     releaseDate: "2020-08-31",
-    sheets: [3, 8, 10.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 2,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 2,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1008,
@@ -2574,11 +5188,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 138,
-    imageName:
-      "53e8ca5d8255e6a1637af3dd05b36eb9a615e7d99621c73b5c31e2055ba5291e.webp",
+    imageName: "53e8ca5d8255e6a1637af3dd05b36eb9a615e7d99621c73b5c31e2055ba5291e.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [3, 7.9, 10],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1020,
@@ -2589,11 +5218,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 175,
-    imageName:
-      "e15c6137e3f464ebed319b104125651c518aabcf4be34676b8a52cf7312fc9a9.webp",
+    imageName: "e15c6137e3f464ebed319b104125651c518aabcf4be34676b8a52cf7312fc9a9.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [2, 7.7, 11.1],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1087,
@@ -2604,11 +5248,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 175,
-    imageName:
-      "794fed8f770284c926e522bb8732896384f237e1b2a47360b5648a99600d7dfc.webp",
+    imageName: "794fed8f770284c926e522bb8732896384f237e1b2a47360b5648a99600d7dfc.webp",
     category: "TANO*C",
     releaseDate: "2020-09-16",
-    sheets: [3, 8.6, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1224,
@@ -2619,11 +5278,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 172,
-    imageName:
-      "989244a625a54e5b5ff0bbf97d66915a79b32e7491b496395b68eeddd475bb81.webp",
+    imageName: "989244a625a54e5b5ff0bbf97d66915a79b32e7491b496395b68eeddd475bb81.webp",
     category: "ボカロ",
     releaseDate: "2020-09-16",
-    sheets: [3, 7.9, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1231,
@@ -2634,11 +5308,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 160,
-    imageName:
-      "8ac7be89fedd48d5dc0dd5d4bdd6a20a9174045e247ec46160f46d1112b43f78.webp",
+    imageName: "8ac7be89fedd48d5dc0dd5d4bdd6a20a9174045e247ec46160f46d1112b43f78.webp",
     category: "オリジナル",
     releaseDate: "2020-09-16",
-    sheets: [3, 8, 12.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1264,
@@ -2649,11 +5338,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 240,
-    imageName:
-      "02347653dfc0c948a6b0b9e8182325d68e0dcec3cdb41a63e4d2781bd2ef2c6a.webp",
+    imageName: "02347653dfc0c948a6b0b9e8182325d68e0dcec3cdb41a63e4d2781bd2ef2c6a.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [3, 8.4, 9.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2001,
@@ -2664,27 +5368,56 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 130,
-    imageName:
-      "d6136b3d8116a0fde5f012a3d8421aeee0cd9ae3085fb7ce09189309a4e14467.webp",
+    imageName: "d6136b3d8116a0fde5f012a3d8421aeee0cd9ae3085fb7ce09189309a4e14467.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [2, 6.8, 11],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2002,
     title: "ガヴリールドロップキック",
     titleEnglish: "Gabriel Dropkick",
-    artist:
-      "ガヴリール(CV:富田美憂)、ヴィーネ(CV:大西沙織)、サターニャ(CV:大空直美)、ラフィエル(CV:花澤香菜)",
+    artist: "ガヴリール(CV:富田美憂)、ヴィーネ(CV:大西沙織)、サターニャ(CV:大空直美)、ラフィエル(CV:花澤香菜)",
     dateAdded: 20200917,
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 168,
-    imageName:
-      "ed73a7d69bc7b9441660f4a5fdff265378ae9751bcb20cff82ea1d7ca2845ea0.webp",
+    imageName: "ed73a7d69bc7b9441660f4a5fdff265378ae9751bcb20cff82ea1d7ca2845ea0.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [3, 6.9, 11],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2003,
@@ -2695,11 +5428,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 147,
-    imageName:
-      "f3a7e749202316ea4d63032482677283e1c6cb6f6c308a10ee2290581ff17927.webp",
+    imageName: "f3a7e749202316ea4d63032482677283e1c6cb6f6c308a10ee2290581ff17927.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [2, 7.6, 10.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2004,
@@ -2710,11 +5458,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 210,
-    imageName:
-      "06498d7c7dbc103652a89668002e6ed4f25e31ea704905d322f11d97c5432156.webp",
+    imageName: "06498d7c7dbc103652a89668002e6ed4f25e31ea704905d322f11d97c5432156.webp",
     category: "ボカロ",
     releaseDate: "2020-09-16",
-    sheets: [3, 8.9, 11.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2005,
@@ -2725,11 +5488,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 105,
-    imageName:
-      "9ea90b46d6b17d3adbdaafea55e252132de7211f16ab8ce6f1512e96e3051e97.webp",
+    imageName: "9ea90b46d6b17d3adbdaafea55e252132de7211f16ab8ce6f1512e96e3051e97.webp",
     category: "ボカロ",
     releaseDate: "2020-09-16",
-    sheets: [2, 8.1, 12],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2006,
@@ -2740,11 +5518,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 130,
-    imageName:
-      "858c6f44463537a1c7a8e7e60df50c42b7ca5af418d550402315daafee9ded21.webp",
+    imageName: "858c6f44463537a1c7a8e7e60df50c42b7ca5af418d550402315daafee9ded21.webp",
     category: "ボカロ",
     releaseDate: "2020-09-16",
-    sheets: [2, 7.4, 10.9],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2007,
@@ -2755,11 +5548,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 140,
-    imageName:
-      "6a3624e75e2612421cf87de3fc7ae7058f660c56d6f0002a9df7fa79d307c43a.webp",
+    imageName: "6a3624e75e2612421cf87de3fc7ae7058f660c56d6f0002a9df7fa79d307c43a.webp",
     category: "東方アレンジ",
     releaseDate: "2020-09-16",
-    sheets: [3, 7.5, 12],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2008,
@@ -2770,11 +5578,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 163,
-    imageName:
-      "46bb96103ee195362abe16a57857c4dd6cebd543271f421b94085814f8ab503a.webp",
+    imageName: "46bb96103ee195362abe16a57857c4dd6cebd543271f421b94085814f8ab503a.webp",
     category: "東方アレンジ",
     releaseDate: "2020-09-16",
-    sheets: [2, 7.5, 11.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2009,
@@ -2785,11 +5608,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 200,
-    imageName:
-      "bcd1dd82845b886e2ee6e86bd202e3f6847449cb844fb2c82d182424491b0c6c.webp",
+    imageName: "bcd1dd82845b886e2ee6e86bd202e3f6847449cb844fb2c82d182424491b0c6c.webp",
     category: "東方アレンジ",
     releaseDate: "2020-09-16",
-    sheets: [4, 10, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2011,
@@ -2800,11 +5638,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 128,
-    imageName:
-      "91f711573de4f5655f2e31c977ee8f732b8289694f18f903db8c0c3dbe0cf23a.webp",
+    imageName: "91f711573de4f5655f2e31c977ee8f732b8289694f18f903db8c0c3dbe0cf23a.webp",
     category: "バラエティ",
     releaseDate: "2020-09-16",
-    sheets: [2, 7.5, 12.9],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2012,
@@ -2815,11 +5668,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 155,
-    imageName:
-      "8b8fb8b70e6ba196be49878e880b4a4d7dacb53f39b1fe0ef0f6de4fd0c75ff7.webp",
+    imageName: "8b8fb8b70e6ba196be49878e880b4a4d7dacb53f39b1fe0ef0f6de4fd0c75ff7.webp",
     category: "オリジナル",
     releaseDate: "2020-09-16",
-    sheets: [3, 7.9, 11.8, 13.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2013,
@@ -2830,11 +5703,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 150,
-    imageName:
-      "1113fa97a84c5bc8970ceb90157bcd7214e3355d904ba64eeee7634ad6f449bd.webp",
+    imageName: "1113fa97a84c5bc8970ceb90157bcd7214e3355d904ba64eeee7634ad6f449bd.webp",
     category: "オリジナル",
     releaseDate: "2020-09-16",
-    sheets: [3, 7.9, 11.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2014,
@@ -2845,11 +5733,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 213,
-    imageName:
-      "3a998ed730b9b9a59a725b9481a6acb24342fbb0a5a98c1fb15f8aafb00dc048.webp",
+    imageName: "3a998ed730b9b9a59a725b9481a6acb24342fbb0a5a98c1fb15f8aafb00dc048.webp",
     category: "オリジナル",
     releaseDate: "2020-09-16",
-    sheets: [4, 9.8, 13.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2015,
@@ -2860,11 +5763,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 152,
-    imageName:
-      "d52af8dc27ecad5903bbb67ded3166242f07dd9bbd96de6fb453977b85e67a47.webp",
+    imageName: "d52af8dc27ecad5903bbb67ded3166242f07dd9bbd96de6fb453977b85e67a47.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-09-16",
-    sheets: [4, 8.2, 13],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2016,
@@ -2875,11 +5793,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 158,
-    imageName:
-      "f4852b3973216a9628660c9b5f64fe18876d5742cc9cfeb9b7611d4a768d8ae8.webp",
+    imageName: "f4852b3973216a9628660c9b5f64fe18876d5742cc9cfeb9b7611d4a768d8ae8.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-09-16",
-    sheets: [2, 8.5, 12.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2017,
@@ -2890,11 +5823,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 250,
-    imageName:
-      "cd3fb085a7706d3e8b5490b3389b800713d8e7b194f90ac5130060af2d5827e8.webp",
+    imageName: "cd3fb085a7706d3e8b5490b3389b800713d8e7b194f90ac5130060af2d5827e8.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-09-16",
-    sheets: [6, 11, 14.1],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2019,
@@ -2905,11 +5853,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 170,
-    imageName:
-      "0e7b4fc6eec3df7165cc523c9af277997a04f1caaf87a4bfd2fb39dac4d1c0c2.webp",
+    imageName: "0e7b4fc6eec3df7165cc523c9af277997a04f1caaf87a4bfd2fb39dac4d1c0c2.webp",
     category: "TANO*C",
     releaseDate: "2020-09-16",
-    sheets: [3, 7.8, 11],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2023,
@@ -2920,11 +5883,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 182,
-    imageName:
-      "89ddd8297fb0502968980503c0995ad55afab90a8f585c9d50e1fbd0d171c723.webp",
+    imageName: "89ddd8297fb0502968980503c0995ad55afab90a8f585c9d50e1fbd0d171c723.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [2, 7, 11.5],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2027,
@@ -2935,11 +5913,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 178,
-    imageName:
-      "dd89e5046e637c9e6ed1964fc69ac481f31ffc114631c8b29b6e93ca5e92e7c8.webp",
+    imageName: "dd89e5046e637c9e6ed1964fc69ac481f31ffc114631c8b29b6e93ca5e92e7c8.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [4, 8.2, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2028,
@@ -2950,11 +5943,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 172,
-    imageName:
-      "8e562535ed7e30fa809a55654118f75f5c1ad05f62c59998a238f754ef46dff1.webp",
+    imageName: "8e562535ed7e30fa809a55654118f75f5c1ad05f62c59998a238f754ef46dff1.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [3, 7.8, 11.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2029,
@@ -2965,11 +5973,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 140,
-    imageName:
-      "fbcd7ab3cb5e3473c72ef2143ec5a97f439e9eea2c34f339c22e467a0c49fa41.webp",
+    imageName: "fbcd7ab3cb5e3473c72ef2143ec5a97f439e9eea2c34f339c22e467a0c49fa41.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [1, 6, 10.1],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2030,
@@ -2980,11 +6003,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 172,
-    imageName:
-      "c8092ef108427de9e12e6e1dcf8c602fd7fe9dc99ebc7292665c378edfce0743.webp",
+    imageName: "c8092ef108427de9e12e6e1dcf8c602fd7fe9dc99ebc7292665c378edfce0743.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [1, 5.1, 9.4],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 5.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2031,
@@ -2995,11 +6033,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 168,
-    imageName:
-      "6fc34930a3a73510bd2e3fa2d342845e89072b95ca1e291a0d476cfb77780048.webp",
+    imageName: "6fc34930a3a73510bd2e3fa2d342845e89072b95ca1e291a0d476cfb77780048.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-09-16",
-    sheets: [2, 7.4, 10.2],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2065,
@@ -3010,11 +6063,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 150,
-    imageName:
-      "97d1c8d812f3e1466122f9e3fc97b2b5b0ab79369ce587e6275f6193a33c65b2.webp",
+    imageName: "97d1c8d812f3e1466122f9e3fc97b2b5b0ab79369ce587e6275f6193a33c65b2.webp",
     category: "2.5次元",
     releaseDate: "2020-09-16",
-    sheets: [2, 6.1, 9.3],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2032,
@@ -3025,11 +6093,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 185,
-    imageName:
-      "222d40b6450662187cad4d455c7b035fb9bc7b6eebc2131a4395d41cd2b31e35.webp",
+    imageName: "222d40b6450662187cad4d455c7b035fb9bc7b6eebc2131a4395d41cd2b31e35.webp",
     category: "ボカロ",
     releaseDate: "2020-09-28",
-    sheets: [3, 7.6, 11.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2033,
@@ -3040,11 +6123,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 140,
-    imageName:
-      "b504ed0a449ad2b8395217c5cbebcfd57675f55fd20226a822f93d1265469676.webp",
+    imageName: "b504ed0a449ad2b8395217c5cbebcfd57675f55fd20226a822f93d1265469676.webp",
     category: "ボカロ",
     releaseDate: "2020-09-28",
-    sheets: [3, 8.4, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2034,
@@ -3055,11 +6153,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 155,
-    imageName:
-      "a0c5a20e1be2f2ad467ebe195e307f3a1fcd260f024796964a85104a0673fdb1.webp",
+    imageName: "a0c5a20e1be2f2ad467ebe195e307f3a1fcd260f024796964a85104a0673fdb1.webp",
     category: "ボカロ",
     releaseDate: "2020-09-28",
-    sheets: [5, 9.5, 13.5],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2010,
@@ -3070,11 +6183,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 190,
-    imageName:
-      "9c01fe7a70edaa36678417c6a19b011dcd5fd11a0232aa4eea96ab7623bfe752.webp",
+    imageName: "9c01fe7a70edaa36678417c6a19b011dcd5fd11a0232aa4eea96ab7623bfe752.webp",
     category: "バラエティ",
     releaseDate: "2020-10-05",
-    sheets: [3, 9.6, 13.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2036,
@@ -3085,11 +6213,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 186,
-    imageName:
-      "7629d2e989f875f3990d1ec6b2602a45458d4140a59f17ea8e6508a0be780468.webp",
+    imageName: "7629d2e989f875f3990d1ec6b2602a45458d4140a59f17ea8e6508a0be780468.webp",
     category: "オリジナル",
     releaseDate: "2020-10-05",
-    sheets: [4, 10.6, 13.9],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2047,
@@ -3100,11 +6243,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 175,
-    imageName:
-      "7939f3e28b7272e4bc67d346294e75ab191b2788720b0558e605e921f97db4cd.webp",
+    imageName: "7939f3e28b7272e4bc67d346294e75ab191b2788720b0558e605e921f97db4cd.webp",
     category: "TANO*C",
     releaseDate: "2020-10-05",
-    sheets: [3, 9.8, 12.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1240,
@@ -3115,11 +6273,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 199,
-    imageName:
-      "8955aaa4fade748abae735d95235b38c8f0c800354e10f696c1e40e2197c5994.webp",
+    imageName: "8955aaa4fade748abae735d95235b38c8f0c800354e10f696c1e40e2197c5994.webp",
     category: "東方アレンジ",
     releaseDate: "2020-10-13",
-    sheets: [3, 8.6, 12.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2040,
@@ -3130,11 +6303,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 190,
-    imageName:
-      "69cfb4e68a14b57554c6a3c97d50455770af9524a16dc0f18a8ac316a8de9d2e.webp",
+    imageName: "69cfb4e68a14b57554c6a3c97d50455770af9524a16dc0f18a8ac316a8de9d2e.webp",
     category: "東方アレンジ",
     releaseDate: "2020-10-13",
-    sheets: [3, 9.2, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2042,
@@ -3145,11 +6333,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 184,
-    imageName:
-      "ad50af4ca81e7142543766932d62f2589e811c86285b1b407e24bf1c66aa92fb.webp",
+    imageName: "ad50af4ca81e7142543766932d62f2589e811c86285b1b407e24bf1c66aa92fb.webp",
     category: "東方アレンジ",
     releaseDate: "2020-10-13",
-    sheets: [3, 7.7, 11.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2068,
@@ -3160,11 +6363,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 160,
-    imageName:
-      "1f9f81a88ca248db244efe9a912376c0d5ebe98dbba9ea111a4c6a3cfb6f8754.webp",
+    imageName: "1f9f81a88ca248db244efe9a912376c0d5ebe98dbba9ea111a4c6a3cfb6f8754.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-10-20",
-    sheets: [1, 6.5, 9.7],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2069,
@@ -3175,11 +6393,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 170,
-    imageName:
-      "70c5b7ede17cf5e4bd1c13e78559bd890df6c3cd3f5d3c3bc195a2f5cdf16a2c.webp",
+    imageName: "70c5b7ede17cf5e4bd1c13e78559bd890df6c3cd3f5d3c3bc195a2f5cdf16a2c.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-10-20",
-    sheets: [2, 7.5, 10.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2084,
@@ -3190,11 +6423,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 162,
-    imageName:
-      "4bf0d16066ef637540863e57a7dc41f9e14a549f34791bf18ccda0820c77c0e0.webp",
+    imageName: "4bf0d16066ef637540863e57a7dc41f9e14a549f34791bf18ccda0820c77c0e0.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-10-20",
-    sheets: [2, 7.5, 10.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1204,
@@ -3205,11 +6453,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 132,
-    imageName:
-      "03115b8281cb176ef67f85fd0a5a8b03131df2b9680fd1817a7541844610b973.webp",
+    imageName: "03115b8281cb176ef67f85fd0a5a8b03131df2b9680fd1817a7541844610b973.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-11-03",
-    sheets: [1, 7.7, 10.7],
+    sheets: [
+      {
+        difficulty: 1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2043,
@@ -3220,11 +6483,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 132,
-    imageName:
-      "e2beb7ea5dacbe53d513d87abda5fb9722b9dd2ec8ee25edf9fc18bf8b3a2e45.webp",
+    imageName: "e2beb7ea5dacbe53d513d87abda5fb9722b9dd2ec8ee25edf9fc18bf8b3a2e45.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-11-03",
-    sheets: [2, 6.6, 12.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2021,
@@ -3235,11 +6513,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 180,
-    imageName:
-      "0835e1128ce13a0f58ba812456e635744f85a6348a5f82121e30edcb85c8fe28.webp",
+    imageName: "0835e1128ce13a0f58ba812456e635744f85a6348a5f82121e30edcb85c8fe28.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-11-18",
-    sheets: [4, 8.4, 11.2, 13.2],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2024,
@@ -3250,11 +6548,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 170,
-    imageName:
-      "ee6bfd298768df39b5085ffb1fe6eaeba2b2cfe20ff51a685b8718d849f13351.webp",
+    imageName: "ee6bfd298768df39b5085ffb1fe6eaeba2b2cfe20ff51a685b8718d849f13351.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-11-18",
-    sheets: [3, 8.6, 12.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2066,
@@ -3265,11 +6578,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 180,
-    imageName:
-      "7c5c07b47c32341aa6056aa91a89bb1a986e36c27886b8bd18ab493d0f4b25c6.webp",
+    imageName: "7c5c07b47c32341aa6056aa91a89bb1a986e36c27886b8bd18ab493d0f4b25c6.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-11-18",
-    sheets: [2, 7.7, 11.3],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2067,
@@ -3280,11 +6608,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 132,
-    imageName:
-      "ce903004e8df957b4009b747f3d9e72455906d6ffe312f06ebf6716cf089293b.webp",
+    imageName: "ce903004e8df957b4009b747f3d9e72455906d6ffe312f06ebf6716cf089293b.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2020-11-18",
-    sheets: [2, 7.5, 12.6],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2037,
@@ -3295,11 +6638,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 230,
-    imageName:
-      "c1e5c576e1e2a055ceb798f2201a9d7cf030ab03ee88d987cdf404ef556969c2.webp",
+    imageName: "c1e5c576e1e2a055ceb798f2201a9d7cf030ab03ee88d987cdf404ef556969c2.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-12-01",
-    sheets: [5, 10, 13.3],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2048,
@@ -3310,11 +6668,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 172,
-    imageName:
-      "143c891879bd709a508d00641f1986396c6829b34344c71face47284520dec35.webp",
+    imageName: "143c891879bd709a508d00641f1986396c6829b34344c71face47284520dec35.webp",
     category: "TANO*C",
     releaseDate: "2020-12-01",
-    sheets: [4, 7.9, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2049,
@@ -3325,11 +6698,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 175,
-    imageName:
-      "9d0c1726e2b1a8877570a044f72a5965635b98830a7ef1949bfed751ace7ab6c.webp",
+    imageName: "9d0c1726e2b1a8877570a044f72a5965635b98830a7ef1949bfed751ace7ab6c.webp",
     category: "TANO*C",
     releaseDate: "2020-12-01",
-    sheets: [3, 7.8, 12.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2070,
@@ -3340,11 +6728,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 165,
-    imageName:
-      "13bca3858de2618db3bd3528f35f2e5eb2934bf91b50230d13aa1441c8385d2e.webp",
+    imageName: "13bca3858de2618db3bd3528f35f2e5eb2934bf91b50230d13aa1441c8385d2e.webp",
     category: "TANO*C",
     releaseDate: "2020-12-01",
-    sheets: [4, 8, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2088,
@@ -3355,11 +6758,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 285,
-    imageName:
-      "c70a2a7ec51b5e2eb5a6d0cf4726120c869680e6fbcc91cd45d83f8dc2f5d335.webp",
+    imageName: "c70a2a7ec51b5e2eb5a6d0cf4726120c869680e6fbcc91cd45d83f8dc2f5d335.webp",
     category: "バラエティ",
     releaseDate: "2020-12-16",
-    sheets: [5, 10.7, 13.7],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2089,
@@ -3370,11 +6788,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 266,
-    imageName:
-      "d2c68f67d11af57437e67b6dcb353636965cdc57fff58e707632691d15af3ad0.webp",
+    imageName: "d2c68f67d11af57437e67b6dcb353636965cdc57fff58e707632691d15af3ad0.webp",
     category: "バラエティ",
     releaseDate: "2020-12-16",
-    sheets: [6, 10.9, 13.5],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2090,
@@ -3385,11 +6818,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 190,
-    imageName:
-      "3a050e44b53b35cf78095f2d7a68824c081436487eef0100756910af78681358.webp",
+    imageName: "3a050e44b53b35cf78095f2d7a68824c081436487eef0100756910af78681358.webp",
     category: "バラエティ",
     releaseDate: "2020-12-16",
-    sheets: [4, 8.5, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2091,
@@ -3400,11 +6848,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 200,
-    imageName:
-      "de6d74e8ca7e824743fb0ad53379ba8f702c063a79c68671ee0d5fdcab134da6.webp",
+    imageName: "de6d74e8ca7e824743fb0ad53379ba8f702c063a79c68671ee0d5fdcab134da6.webp",
     category: "オリジナル",
     releaseDate: "2020-12-16",
-    sheets: [6, 11, 13.9],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1256,
@@ -3415,11 +6878,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 165,
-    imageName:
-      "2b6e9d555d227894425c78f9bec42d8bb2b5bca23da6637979d7bebd8512dd10.webp",
+    imageName: "2b6e9d555d227894425c78f9bec42d8bb2b5bca23da6637979d7bebd8512dd10.webp",
     category: "TANO*C",
     releaseDate: "2020-12-23",
-    sheets: [3, 8.8, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2059,
@@ -3430,11 +6908,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 147,
-    imageName:
-      "2dc626c7725737a966a8856ce52f19a8056e51cc0eabc65dc0b4c8a35eba2471.webp",
+    imageName: "2dc626c7725737a966a8856ce52f19a8056e51cc0eabc65dc0b4c8a35eba2471.webp",
     category: "バラエティ",
     releaseDate: "2020-12-23",
-    sheets: [4, 9, 11.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2060,
@@ -3445,11 +6938,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 150,
-    imageName:
-      "c2d6f1473fe81c49bb0344a9b5f116b57c85b96d5b88dc5713d6dcf46d97ec2e.webp",
+    imageName: "c2d6f1473fe81c49bb0344a9b5f116b57c85b96d5b88dc5713d6dcf46d97ec2e.webp",
     category: "バラエティ",
     releaseDate: "2020-12-23",
-    sheets: [4, 9.1, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2062,
@@ -3460,11 +6968,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 150,
-    imageName:
-      "995d676035ed10af759b03775d85fc934a846350fe0a41919d0bce0906fbcb55.webp",
+    imageName: "995d676035ed10af759b03775d85fc934a846350fe0a41919d0bce0906fbcb55.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2020-12-23",
-    sheets: [4, 8.8, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2075,
@@ -3475,11 +6998,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 158,
-    imageName:
-      "271875d9c6ac1a25c6d2733fdcdf5d800f384448cf8f6fe834a8d4bd25a14302.webp",
+    imageName: "271875d9c6ac1a25c6d2733fdcdf5d800f384448cf8f6fe834a8d4bd25a14302.webp",
     category: "2.5次元",
     releaseDate: "2020-12-23",
-    sheets: [3, 6.7, 11.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1239,
@@ -3490,11 +7028,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 120,
-    imageName:
-      "332b273a486da9aec2c9c9e63c59ca9417f9738a8c151ed8d8e00e5b96a13eaf.webp",
+    imageName: "332b273a486da9aec2c9c9e63c59ca9417f9738a8c151ed8d8e00e5b96a13eaf.webp",
     category: "ボカロ",
     releaseDate: "2021-01-05",
-    sheets: [3, 7.3, 12.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2076,
@@ -3505,11 +7058,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 165,
-    imageName:
-      "ec515a700fb69c66c892520a760504070563bc7b5e01597720eecfdfdb17e833.webp",
+    imageName: "ec515a700fb69c66c892520a760504070563bc7b5e01597720eecfdfdb17e833.webp",
     category: "ボカロ",
     releaseDate: "2021-01-05",
-    sheets: [3, 8.3, 11.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2077,
@@ -3520,11 +7088,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 122,
-    imageName:
-      "88e91a709946a088b48f015665bfdfdd8961269af770808e186149d73dd04875.webp",
+    imageName: "88e91a709946a088b48f015665bfdfdd8961269af770808e186149d73dd04875.webp",
     category: "ボカロ",
     releaseDate: "2021-01-05",
-    sheets: [4, 9.1, 13.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2078,
@@ -3535,11 +7118,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 200,
-    imageName:
-      "9141ce8fa22a6e80f57086ddeb3e5a97332b6f26fef443d84997dfb6216f6b3b.webp",
+    imageName: "9141ce8fa22a6e80f57086ddeb3e5a97332b6f26fef443d84997dfb6216f6b3b.webp",
     category: "ボカロ",
     releaseDate: "2021-01-05",
-    sheets: [4, 8.5, 13.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2071,
@@ -3550,11 +7148,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 160,
-    imageName:
-      "3526054d8582a865c74e6c5b2a249cefd09ab044ebcbdec9857724a8ecdf3b4a.webp",
+    imageName: "3526054d8582a865c74e6c5b2a249cefd09ab044ebcbdec9857724a8ecdf3b4a.webp",
     category: "バラエティ",
     releaseDate: "2021-02-02",
-    sheets: [3, 7.7, 11.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2072,
@@ -3565,11 +7178,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 140,
-    imageName:
-      "fd3332dbd6d7eee8f45f5453f1cca906449611372febe04c17299570f9990f18.webp",
+    imageName: "fd3332dbd6d7eee8f45f5453f1cca906449611372febe04c17299570f9990f18.webp",
     category: "バラエティ",
     releaseDate: "2021-02-02",
-    sheets: [4, 8.7, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2073,
@@ -3580,11 +7208,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 170,
-    imageName:
-      "b0d3f00fd1287b3497399f454dfe583598460fa69f4150781e2e56ec15d85586.webp",
+    imageName: "b0d3f00fd1287b3497399f454dfe583598460fa69f4150781e2e56ec15d85586.webp",
     category: "バラエティ",
     releaseDate: "2021-02-02",
-    sheets: [3, 8.8, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2074,
@@ -3595,11 +7238,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 180,
-    imageName:
-      "9adcfa281f68c1f94accb5dd889f0a458e2fb44638a7ee44301122e5ad9b1c31.webp",
+    imageName: "9adcfa281f68c1f94accb5dd889f0a458e2fb44638a7ee44301122e5ad9b1c31.webp",
     category: "バラエティ",
     releaseDate: "2021-02-02",
-    sheets: [3, 9.1, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2046,
@@ -3610,11 +7268,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 140,
-    imageName:
-      "47b67be668f9136e73a15cf5f7c1345bf4a6726fc04cc7422fda13ed83a46e63.webp",
+    imageName: "47b67be668f9136e73a15cf5f7c1345bf4a6726fc04cc7422fda13ed83a46e63.webp",
     category: "オリジナル",
     releaseDate: "2021-02-16",
-    sheets: [6, 10.6, 13.7],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2053,
@@ -3625,11 +7298,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 180,
-    imageName:
-      "b2fcbaf38886d691751fd8dcc893c521af95b35b72f16c972c4a799eb1289aca.webp",
+    imageName: "b2fcbaf38886d691751fd8dcc893c521af95b35b72f16c972c4a799eb1289aca.webp",
     category: "オリジナル",
     releaseDate: "2021-02-16",
-    sheets: [4, 8.8, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2054,
@@ -3640,11 +7328,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 155,
-    imageName:
-      "ac261381f3399380cad798e2607cf5e8cdd9bee46cd496632476a0f4223d5f27.webp",
+    imageName: "ac261381f3399380cad798e2607cf5e8cdd9bee46cd496632476a0f4223d5f27.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-02-16",
-    sheets: [4, 9.5, 13.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.1,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2055,
@@ -3655,11 +7358,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 210,
-    imageName:
-      "6d8f5431a0581e7615aebece00f75154be37b5609e4f15e0442eee8da1e37597.webp",
+    imageName: "6d8f5431a0581e7615aebece00f75154be37b5609e4f15e0442eee8da1e37597.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-02-16",
-    sheets: [6, 10.9, 13.8],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2056,
@@ -3670,11 +7388,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 3,
     bpm: 160,
-    imageName:
-      "9a088e49971fe41c9b152e59bfc13a5346430ec6583b6b15444e1229a77170b5.webp",
+    imageName: "9a088e49971fe41c9b152e59bfc13a5346430ec6583b6b15444e1229a77170b5.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-02-16",
-    sheets: [7, 11, 14],
+    sheets: [
+      {
+        difficulty: 7,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 3,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 3,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1209,
@@ -3685,11 +7418,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 186,
-    imageName:
-      "e6ccc26a6452dcad96b89d8261b900611f737b9ee30af6019d437f938d9cdb68.webp",
+    imageName: "e6ccc26a6452dcad96b89d8261b900611f737b9ee30af6019d437f938d9cdb68.webp",
     category: "ボカロ",
     releaseDate: "2021-03-10",
-    sheets: [4, 8.9, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1219,
@@ -3700,11 +7448,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 192,
-    imageName:
-      "c9c56adfec65017958d8f7bcb940a3f2dd338895aef5af950af1209555a0413a.webp",
+    imageName: "c9c56adfec65017958d8f7bcb940a3f2dd338895aef5af950af1209555a0413a.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-03-10",
-    sheets: [3, 9.1, 12.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1241,
@@ -3715,11 +7478,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 170,
-    imageName:
-      "5bba02cf5f7431932f777c257b8a27ae2384c792d2ae4feb746374943b36737b.webp",
+    imageName: "5bba02cf5f7431932f777c257b8a27ae2384c792d2ae4feb746374943b36737b.webp",
     category: "バラエティ",
     releaseDate: "2021-03-10",
-    sheets: [3, 7, 11.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2058,
@@ -3730,11 +7508,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 144,
-    imageName:
-      "712aec6ab2cbf4940fc1781b69f6b5b320d9f2e34c607bed18ee345c326b4f30.webp",
+    imageName: "712aec6ab2cbf4940fc1781b69f6b5b320d9f2e34c607bed18ee345c326b4f30.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-03-10",
-    sheets: [2, 6, 10.1],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2079,
@@ -3745,11 +7538,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 188,
-    imageName:
-      "c8fdcade2a5d82a94cb88915ea0b4d6af5509666da7eb2909aad7b20aa54cd5f.webp",
+    imageName: "c8fdcade2a5d82a94cb88915ea0b4d6af5509666da7eb2909aad7b20aa54cd5f.webp",
     category: "バラエティ",
     releaseDate: "2021-03-10",
-    sheets: [3, 8.6, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2080,
@@ -3760,11 +7568,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 220,
-    imageName:
-      "17356f1b8878e053bb502d6f04355788f654d7fa4c3a5eb3e78208c4340cf397.webp",
+    imageName: "17356f1b8878e053bb502d6f04355788f654d7fa4c3a5eb3e78208c4340cf397.webp",
     category: "バラエティ",
     releaseDate: "2021-03-10",
-    sheets: [2, 7.6, 12.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2081,
@@ -3775,11 +7598,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 180,
-    imageName:
-      "13e7f0da79dad006646cae162c00c4a8fe0c39bf87e3a12b5055bacccc9fcc69.webp",
+    imageName: "13e7f0da79dad006646cae162c00c4a8fe0c39bf87e3a12b5055bacccc9fcc69.webp",
     category: "バラエティ",
     releaseDate: "2021-03-10",
-    sheets: [4, 9.9, 13.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2082,
@@ -3790,11 +7628,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 163,
-    imageName:
-      "08e5154f757cac9d09490162b95607d5a0bb6b1b94c648375e05e1c121c723de.webp",
+    imageName: "08e5154f757cac9d09490162b95607d5a0bb6b1b94c648375e05e1c121c723de.webp",
     category: "バラエティ",
     releaseDate: "2021-03-10",
-    sheets: [3, 10, 13.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2083,
@@ -3805,11 +7658,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 180,
-    imageName:
-      "5e84dd24b72c7eece7e8f565afda72a4bf03ed78dfaa574344d00e9155bcc267.webp",
+    imageName: "5e84dd24b72c7eece7e8f565afda72a4bf03ed78dfaa574344d00e9155bcc267.webp",
     category: "バラエティ",
     releaseDate: "2021-03-10",
-    sheets: [3, 10.2, 13.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2092,
@@ -3820,11 +7688,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 195,
-    imageName:
-      "af671f750e25e40657cdbebf992ae0e1069176022d2f2fe97c84178eced14fd3.webp",
+    imageName: "af671f750e25e40657cdbebf992ae0e1069176022d2f2fe97c84178eced14fd3.webp",
     category: "東方アレンジ",
     releaseDate: "2021-03-10",
-    sheets: [3, 7.7, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2202,
@@ -3835,11 +7718,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 150,
-    imageName:
-      "bc55f70466a0f1e98e5a6842d89278513158c1a0b55a3ad15066e13430cb0d85.webp",
+    imageName: "bc55f70466a0f1e98e5a6842d89278513158c1a0b55a3ad15066e13430cb0d85.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-03-10",
-    sheets: [3, 7.7, 11.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2203,
@@ -3850,11 +7748,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 158,
-    imageName:
-      "43481f6869666d2e6929670f591379a3b2c873bb46d4fe2eff79aedf15f9e375.webp",
+    imageName: "43481f6869666d2e6929670f591379a3b2c873bb46d4fe2eff79aedf15f9e375.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-03-10",
-    sheets: [3, 8.5, 12.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2206,
@@ -3865,11 +7778,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 165,
-    imageName:
-      "f3c5096fed9421ad1e5155335ca411809ef94c00000bc22357a7bc056c7ab058.webp",
+    imageName: "f3c5096fed9421ad1e5155335ca411809ef94c00000bc22357a7bc056c7ab058.webp",
     category: "東方アレンジ",
     releaseDate: "2021-03-10",
-    sheets: [4, 8.1, 12.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2207,
@@ -3880,11 +7808,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 150,
-    imageName:
-      "4a09f7111ced87cc860c027bca2c1539cbb41955652b21caececc8b324ced80e.webp",
+    imageName: "4a09f7111ced87cc860c027bca2c1539cbb41955652b21caececc8b324ced80e.webp",
     category: "バラエティ",
     releaseDate: "2021-03-10",
-    sheets: [4, 8.1, 12.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2208,
@@ -3895,11 +7838,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 220,
-    imageName:
-      "d0b6718662cc40750f5a29733d81f31c300258c87f6b7823d9badc589b0604a9.webp",
+    imageName: "d0b6718662cc40750f5a29733d81f31c300258c87f6b7823d9badc589b0604a9.webp",
     category: "TANO*C",
     releaseDate: "2021-03-10",
-    sheets: [5, 10, 13.6],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2209,
@@ -3910,11 +7868,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 175,
-    imageName:
-      "e19d3a40c7c7510e8776e73419f933951de0212459d21d8afa1dd820d809f58f.webp",
+    imageName: "e19d3a40c7c7510e8776e73419f933951de0212459d21d8afa1dd820d809f58f.webp",
     category: "TANO*C",
     releaseDate: "2021-03-10",
-    sheets: [5, 9.1, 12.9],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2210,
@@ -3925,11 +7898,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 250,
-    imageName:
-      "6bb9aa9501f623e5314f9360232de790b7884e07fba4268a813ededf99ee8dfb.webp",
+    imageName: "6bb9aa9501f623e5314f9360232de790b7884e07fba4268a813ededf99ee8dfb.webp",
     category: "オリジナル",
     releaseDate: "2021-03-10",
-    sheets: [4, 9, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2211,
@@ -3940,11 +7928,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 191,
-    imageName:
-      "c6aef61fa2501481c1bc1f85761e74e67d40ceea59b1514bd7b87d7075cba822.webp",
+    imageName: "c6aef61fa2501481c1bc1f85761e74e67d40ceea59b1514bd7b87d7075cba822.webp",
     category: "オリジナル",
     releaseDate: "2021-03-10",
-    sheets: [3, 9.6, 12.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2212,
@@ -3955,11 +7958,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 180,
-    imageName:
-      "bc3200a18e39d76224075729cdbb012c08850e8236fdc583180e3840bd05c39d.webp",
+    imageName: "bc3200a18e39d76224075729cdbb012c08850e8236fdc583180e3840bd05c39d.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-03-10",
-    sheets: [4, 9.5, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2213,
@@ -3970,11 +7988,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 200,
-    imageName:
-      "5d55dfeb21e6aa589e4b3e31cb8e5788f12e276d4266a241e8b96224d25ef935.webp",
+    imageName: "5d55dfeb21e6aa589e4b3e31cb8e5788f12e276d4266a241e8b96224d25ef935.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-03-10",
-    sheets: [6, 10.8, 13.8],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2205,
@@ -3985,11 +8018,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 182,
-    imageName:
-      "7d72de57b85291fd82c4f448c3bc6c91201409ef7b67c822cae2c9c65093374c.webp",
+    imageName: "7d72de57b85291fd82c4f448c3bc6c91201409ef7b67c822cae2c9c65093374c.webp",
     category: "ボカロ",
     releaseDate: "2021-03-23",
-    sheets: [3, 8.9, 11.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2214,
@@ -4000,11 +8048,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 150,
-    imageName:
-      "9afa7c3b731465edad8f94c6f6e72760dedfa7c4c87d3c98c97b204ed74cabac.webp",
+    imageName: "9afa7c3b731465edad8f94c6f6e72760dedfa7c4c87d3c98c97b204ed74cabac.webp",
     category: "ボカロ",
     releaseDate: "2021-03-23",
-    sheets: [3, 8.2, 11.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2215,
@@ -4015,11 +8078,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 135,
-    imageName:
-      "cacbb5997115f880fe1ac358f0308196ee99e6bede85ba95c6f9a3a779e15248.webp",
+    imageName: "cacbb5997115f880fe1ac358f0308196ee99e6bede85ba95c6f9a3a779e15248.webp",
     category: "ボカロ",
     releaseDate: "2021-03-23",
-    sheets: [3, 7.3, 12.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2216,
@@ -4030,11 +8108,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 145,
-    imageName:
-      "5175dd340258412f0e51b70bcc544422a6b6c2b57448240cd3c66e75019fa084.webp",
+    imageName: "5175dd340258412f0e51b70bcc544422a6b6c2b57448240cd3c66e75019fa084.webp",
     category: "ボカロ",
     releaseDate: "2021-03-23",
-    sheets: [3, 7.8, 12.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2038,
@@ -4045,11 +8138,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 200,
-    imageName:
-      "13a562a1ccce4939dee4cec168591ecc8d5835dccb6c33f9e1c248624d7c076a.webp",
+    imageName: "13a562a1ccce4939dee4cec168591ecc8d5835dccb6c33f9e1c248624d7c076a.webp",
     category: "東方アレンジ",
     releaseDate: "2021-04-06",
-    sheets: [3, 9.8, 13.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2039,
@@ -4060,11 +8168,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 180,
-    imageName:
-      "1776844ca83165b5ae1ce78911bddedbed4d0c0653d6713f0dd3664b00d758d3.webp",
+    imageName: "1776844ca83165b5ae1ce78911bddedbed4d0c0653d6713f0dd3664b00d758d3.webp",
     category: "東方アレンジ",
     releaseDate: "2021-04-06",
-    sheets: [4, 9.9, 12.2],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2085,
@@ -4075,11 +8198,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 202,
-    imageName:
-      "feece5b0bedb3f7e37190b6f16247efff8356523e5b2571e0da4516c2fd6cefa.webp",
+    imageName: "feece5b0bedb3f7e37190b6f16247efff8356523e5b2571e0da4516c2fd6cefa.webp",
     category: "バラエティ",
     releaseDate: "2021-04-13",
-    sheets: [4, 8.6, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2217,
@@ -4090,11 +8228,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 90,
-    imageName:
-      "aba8290ff05294e2b72607b3b9682222820bcc6c68a7d73c01d0217bdab9823a.webp",
+    imageName: "aba8290ff05294e2b72607b3b9682222820bcc6c68a7d73c01d0217bdab9823a.webp",
     category: "バラエティ",
     releaseDate: "2021-04-13",
-    sheets: [5, 8.7, 13],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2218,
@@ -4105,11 +8258,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 100,
-    imageName:
-      "44ceb2fa1dca869c148645ba1611f5b930f4c8b1bafa76c0b578b09f2b8183fb.webp",
+    imageName: "44ceb2fa1dca869c148645ba1611f5b930f4c8b1bafa76c0b578b09f2b8183fb.webp",
     category: "バラエティ",
     releaseDate: "2021-04-13",
-    sheets: [4, 8.2, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2219,
@@ -4120,11 +8288,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 180,
-    imageName:
-      "f628a540634458175a9b665e528cb6225fe49f5821d826fa8687ae3ae6454ff9.webp",
+    imageName: "f628a540634458175a9b665e528cb6225fe49f5821d826fa8687ae3ae6454ff9.webp",
     category: "TANO*C",
     releaseDate: "2021-04-27",
-    sheets: [4, 8.5, 12.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2220,
@@ -4135,11 +8318,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 180,
-    imageName:
-      "dd76c14414624f5311289c8f3e0292919b149b79c6ac4a989b0648a8eb225ec2.webp",
+    imageName: "dd76c14414624f5311289c8f3e0292919b149b79c6ac4a989b0648a8eb225ec2.webp",
     category: "TANO*C",
     releaseDate: "2021-04-27",
-    sheets: [5, 9.9, 12.8],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2221,
@@ -4150,11 +8348,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 220,
-    imageName:
-      "c7836946b9bee08a0104208a67bc10de3b823876cd93b4409417e9f89401c0f1.webp",
+    imageName: "c7836946b9bee08a0104208a67bc10de3b823876cd93b4409417e9f89401c0f1.webp",
     category: "TANO*C",
     releaseDate: "2021-04-27",
-    sheets: [4, 10.9, 13.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2222,
@@ -4165,11 +8378,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 174,
-    imageName:
-      "d39003477e2204615badd168c99b0b8a3df210d23c7b143a88c7cde04c16456b.webp",
+    imageName: "d39003477e2204615badd168c99b0b8a3df210d23c7b143a88c7cde04c16456b.webp",
     category: "東方アレンジ",
     releaseDate: "2021-05-11",
-    sheets: [3, 8.6, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2223,
@@ -4180,11 +8408,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 155,
-    imageName:
-      "35d576cbc1252915f65e360b5cb08692d6e60c90141c1637564cee70d2d90c73.webp",
+    imageName: "35d576cbc1252915f65e360b5cb08692d6e60c90141c1637564cee70d2d90c73.webp",
     category: "東方アレンジ",
     releaseDate: "2021-05-11",
-    sheets: [3, 8.4, 11.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2224,
@@ -4195,11 +8438,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 180,
-    imageName:
-      "2014cf84e109a7add29540731e9fac58c94e7caed5370ec3b86fc90e5c094137.webp",
+    imageName: "2014cf84e109a7add29540731e9fac58c94e7caed5370ec3b86fc90e5c094137.webp",
     category: "東方アレンジ",
     releaseDate: "2021-05-11",
-    sheets: [5, 9.2, 12.6],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2225,
@@ -4210,11 +8468,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 135,
-    imageName:
-      "792c3e70cc49b0860b655588b11f664d759ed3056729a04754c2d27fa4aa0b97.webp",
+    imageName: "792c3e70cc49b0860b655588b11f664d759ed3056729a04754c2d27fa4aa0b97.webp",
     category: "東方アレンジ",
     releaseDate: "2021-05-11",
-    sheets: [2, 9.1, 12.7],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2226,
@@ -4225,11 +8498,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 495,
-    imageName:
-      "3e05b39464c2af38cc9632c435e48234a199529036a68939561f8537dac36f97.webp",
+    imageName: "3e05b39464c2af38cc9632c435e48234a199529036a68939561f8537dac36f97.webp",
     category: "東方アレンジ",
     releaseDate: "2021-05-11",
-    sheets: [5, 10.9, 13.9],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2243,
@@ -4240,11 +8528,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 157,
-    imageName:
-      "7d5866da27e421e0a66da110f030e336b2cee82cb6be68d9b8654ed058f6cd41.webp",
+    imageName: "7d5866da27e421e0a66da110f030e336b2cee82cb6be68d9b8654ed058f6cd41.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-05-26",
-    sheets: [4, 8.7, 12.4, 13.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2244,
@@ -4255,11 +8563,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 179,
-    imageName:
-      "6fdb6f8d1adfa6937be3a6e40292c5a94d49ef9963f525cebf232ce158879f2d.webp",
+    imageName: "6fdb6f8d1adfa6937be3a6e40292c5a94d49ef9963f525cebf232ce158879f2d.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-05-26",
-    sheets: [3, 8.3, 11.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2245,
@@ -4270,11 +8593,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 139,
-    imageName:
-      "9f18a4d96da7dd20c550312d32397d80692fcd352a318daa2b6890b973212250.webp",
+    imageName: "9f18a4d96da7dd20c550312d32397d80692fcd352a318daa2b6890b973212250.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-05-26",
-    sheets: [4, 7.8, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2246,
@@ -4285,11 +8623,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 128,
-    imageName:
-      "a19f5c0e7f8f2551b898639335ff4f52d6b3afceebf7cc2ab4a363c71cc53aa6.webp",
+    imageName: "a19f5c0e7f8f2551b898639335ff4f52d6b3afceebf7cc2ab4a363c71cc53aa6.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-05-26",
-    sheets: [3, 7.7, 11.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2251,
@@ -4300,11 +8653,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 220,
-    imageName:
-      "0c632d28155d98f7076eeb9b2c5f5ab1fd75b4cf5f5eac0ef9530d4df1f0857b.webp",
+    imageName: "0c632d28155d98f7076eeb9b2c5f5ab1fd75b4cf5f5eac0ef9530d4df1f0857b.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-05-26",
-    sheets: [4, 10.1, 12.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2247,
@@ -4315,11 +8683,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 220,
-    imageName:
-      "6b3b6039403ace643c2cde7f86206178d2e083e8c41019b9ae42dd94157d074a.webp",
+    imageName: "6b3b6039403ace643c2cde7f86206178d2e083e8c41019b9ae42dd94157d074a.webp",
     category: "TANO*C",
     releaseDate: "2021-06-08",
-    sheets: [3, 10.3, 13.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2248,
@@ -4330,11 +8713,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 170,
-    imageName:
-      "dc59c35a84fdce2488c4749675261d5769a889dd67cde2fe3265b38138e7a9bf.webp",
+    imageName: "dc59c35a84fdce2488c4749675261d5769a889dd67cde2fe3265b38138e7a9bf.webp",
     category: "TANO*C",
     releaseDate: "2021-06-08",
-    sheets: [2, 8.4, 12.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2249,
@@ -4345,11 +8743,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 160,
-    imageName:
-      "8603ec91379055726538a015f3591da57889bd0b08c3b9d2ee9a84031136bd96.webp",
+    imageName: "8603ec91379055726538a015f3591da57889bd0b08c3b9d2ee9a84031136bd96.webp",
     category: "TANO*C",
     releaseDate: "2021-06-08",
-    sheets: [4, 9.8, 13.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2250,
@@ -4360,11 +8773,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 155,
-    imageName:
-      "d43aba573228f252c2948893bcdef95792068a4dfbdac69b75f99df34ae1f1ca.webp",
+    imageName: "d43aba573228f252c2948893bcdef95792068a4dfbdac69b75f99df34ae1f1ca.webp",
     category: "TANO*C",
     releaseDate: "2021-06-08",
-    sheets: [4, 8.8, 13.3],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2229,
@@ -4375,11 +8803,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 120,
-    imageName:
-      "285e014d10872bc428e1f3a0e5a7f9b9c4297a4068323277c70745bc4c1a86a7.webp",
+    imageName: "285e014d10872bc428e1f3a0e5a7f9b9c4297a4068323277c70745bc4c1a86a7.webp",
     category: "バラエティ",
     releaseDate: "2021-06-23",
-    sheets: [2, 6.8, 12.5],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2230,
@@ -4390,11 +8833,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 138,
-    imageName:
-      "6dfff158b6877b32755499f7d84ebf0da8bb3ea59b6d061bedcd7a7c54a8e814.webp",
+    imageName: "6dfff158b6877b32755499f7d84ebf0da8bb3ea59b6d061bedcd7a7c54a8e814.webp",
     category: "オリジナル",
     releaseDate: "2021-06-23",
-    sheets: [4, 8.7, 12.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2231,
@@ -4405,11 +8863,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 185,
-    imageName:
-      "e182a0ba93a7c56a68c0f11f313fa0bc31c98ba4e95c9493c5e9de21ed697b9d.webp",
+    imageName: "e182a0ba93a7c56a68c0f11f313fa0bc31c98ba4e95c9493c5e9de21ed697b9d.webp",
     category: "オリジナル",
     releaseDate: "2021-06-23",
-    sheets: [3, 8.4, 12.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2252,
@@ -4420,11 +8893,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 170,
-    imageName:
-      "9aaa9d7dc2d5bb086a67a106962245a279cd4cbf261d7f1f58ce5ab1d1a6ab88.webp",
+    imageName: "9aaa9d7dc2d5bb086a67a106962245a279cd4cbf261d7f1f58ce5ab1d1a6ab88.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-06-29",
-    sheets: [3, 7.8, 13.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2253,
@@ -4435,11 +8923,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 188,
-    imageName:
-      "bd89a3f43fb76481adb6b2a21488a010ebc33c828b5bb54b5b0136e7c52f1b9f.webp",
+    imageName: "bd89a3f43fb76481adb6b2a21488a010ebc33c828b5bb54b5b0136e7c52f1b9f.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-06-29",
-    sheets: [3, 8.7, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2254,
@@ -4450,11 +8953,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 178,
-    imageName:
-      "d9a2fc196cd9a4f69470a005de7c4f63bd08179749cdd5d90797e27c2459527e.webp",
+    imageName: "d9a2fc196cd9a4f69470a005de7c4f63bd08179749cdd5d90797e27c2459527e.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-06-29",
-    sheets: [3, 8.4, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2232,
@@ -4465,11 +8983,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 200,
-    imageName:
-      "58cbbaa8d29c7936af95bb27088c08a6f2156e83a42385f4b28539731ca16c35.webp",
+    imageName: "58cbbaa8d29c7936af95bb27088c08a6f2156e83a42385f4b28539731ca16c35.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-07-13",
-    sheets: [4, 9.2, 13.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2234,
@@ -4480,26 +9013,61 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 135,
-    imageName:
-      "6b7dc7e3972e6a1fec1bf97a9c648a280132d28fb1163f36dd742a8d83bba849.webp",
+    imageName: "6b7dc7e3972e6a1fec1bf97a9c648a280132d28fb1163f36dd742a8d83bba849.webp",
     category: "オリジナル",
     releaseDate: "2021-07-13",
-    sheets: [4, 10.7, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2235,
     title: "eden",
     titleEnglish: null,
-    artist: '漆黒の堕天使《Gram》†Versus† "聖刻"の熾天使《Gram》',
+    artist: "漆黒の堕天使《Gram》†Versus† \"聖刻\"の熾天使《Gram》,
     dateAdded: 20210715,
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 245,
-    imageName:
-      "3afce4c0b8feb273da8d498133d37a11e137c60b01e5723335bab07733980df9.webp",
+    imageName: "3afce4c0b8feb273da8d498133d37a11e137c60b01e5723335bab07733980df9.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-07-13",
-    sheets: [4, 10.5, 13.3, 14.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2236,
@@ -4510,11 +9078,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 290,
-    imageName:
-      "ed772b255b7968e315d9bd3fc59626a8c37a47aaee7846a0fb00588bbbf1160b.webp",
+    imageName: "ed772b255b7968e315d9bd3fc59626a8c37a47aaee7846a0fb00588bbbf1160b.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-07-13",
-    sheets: [4, 10.3, 13.6, 14.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2255,
@@ -4525,11 +9113,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 400,
-    imageName:
-      "c7a60f32e24e6ac90796c46012c8c68c96ee47ae9034bf74cd1c9166ecc0020e.webp",
+    imageName: "c7a60f32e24e6ac90796c46012c8c68c96ee47ae9034bf74cd1c9166ecc0020e.webp",
     category: "TANO*C",
     releaseDate: "2021-07-13",
-    sheets: [5, 10.9, 13.4],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2256,
@@ -4540,11 +9143,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 4,
     bpm: 140,
-    imageName:
-      "e76ae15b0244740abe8f6321f8ff476d617f651b5e0c57008a48a97eeacdf71a.webp",
+    imageName: "e76ae15b0244740abe8f6321f8ff476d617f651b5e0c57008a48a97eeacdf71a.webp",
     category: "バラエティ",
     releaseDate: "2021-07-27",
-    sheets: [2, 7.9, 12.4],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 4,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 4,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2239,
@@ -4555,11 +9173,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 135,
-    imageName:
-      "1b5cebb191e7db0da7d3be2dc73a89382e385305fc1a078dab38e5c19861867e.webp",
+    imageName: "1b5cebb191e7db0da7d3be2dc73a89382e385305fc1a078dab38e5c19861867e.webp",
     category: "ボカロ",
     releaseDate: "2021-08-09",
-    sheets: [3, 7.7, 12.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3003,
@@ -4570,11 +9203,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 150,
-    imageName:
-      "6974da4b6c8db1a1d9d57100bac1476e033d5c12da8693c4644e9265538baae8.webp",
+    imageName: "6974da4b6c8db1a1d9d57100bac1476e033d5c12da8693c4644e9265538baae8.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-08-09",
-    sheets: [3, 8.2, 11.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3005,
@@ -4585,11 +9233,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 166,
-    imageName:
-      "68e1dd456b16e0720e1ec8aaf8f3029828f394755388c2262478c87a2560c5f0.webp",
+    imageName: "68e1dd456b16e0720e1ec8aaf8f3029828f394755388c2262478c87a2560c5f0.webp",
     category: "ボカロ",
     releaseDate: "2021-08-09",
-    sheets: [2, 8, 11.6],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3006,
@@ -4600,11 +9263,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 153,
-    imageName:
-      "7eab87c6dad838a1bb345933a23a6385f2db0d42d81aaf2f10472457a4d3c486.webp",
+    imageName: "7eab87c6dad838a1bb345933a23a6385f2db0d42d81aaf2f10472457a4d3c486.webp",
     category: "ボカロ",
     releaseDate: "2021-08-09",
-    sheets: [2, 8.7, 12.8],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3007,
@@ -4615,11 +9293,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 185,
-    imageName:
-      "aaf5e2d403e985c47328d8a806f41ee42e3ecec80f8f040b301df42453d8c032.webp",
+    imageName: "aaf5e2d403e985c47328d8a806f41ee42e3ecec80f8f040b301df42453d8c032.webp",
     category: "ボカロ",
     releaseDate: "2021-08-09",
-    sheets: [3, 7.8, 11.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3008,
@@ -4630,11 +9323,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "8d733ddfcce404ffce2757a54f3f444a40cb28a0f866c5d2572d6954e79634bc.webp",
+    imageName: "8d733ddfcce404ffce2757a54f3f444a40cb28a0f866c5d2572d6954e79634bc.webp",
     category: "TANO*C",
     releaseDate: "2021-08-09",
-    sheets: [4, 8.5, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3009,
@@ -4645,11 +9353,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 175,
-    imageName:
-      "27b8cadb830a6fad411a276216ce1be19f9b8f4d7856868d6696a6ce1226f838.webp",
+    imageName: "27b8cadb830a6fad411a276216ce1be19f9b8f4d7856868d6696a6ce1226f838.webp",
     category: "TANO*C",
     releaseDate: "2021-08-09",
-    sheets: [3, 7.8, 12.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3011,
@@ -4660,11 +9383,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 200,
-    imageName:
-      "1b74151ef7a98c68f85579c219f8500f011523150fdd7e00b844845cef8bc934.webp",
+    imageName: "1b74151ef7a98c68f85579c219f8500f011523150fdd7e00b844845cef8bc934.webp",
     category: "オリジナル",
     releaseDate: "2021-08-09",
-    sheets: [3, 9.6, 13.3, 14],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3012,
@@ -4675,11 +9418,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 160,
-    imageName:
-      "a1fd5fceb401d835593700b8a354350e5f08c2422b9598b939bb6c66096c9332.webp",
+    imageName: "a1fd5fceb401d835593700b8a354350e5f08c2422b9598b939bb6c66096c9332.webp",
     category: "オリジナル",
     releaseDate: "2021-08-09",
-    sheets: [4, 8.4, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3013,
@@ -4690,11 +9448,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 205,
-    imageName:
-      "3954db3c156d9177e53548b6563f11f491021fc5f7ee9ede05bdf0a9384fc893.webp",
+    imageName: "3954db3c156d9177e53548b6563f11f491021fc5f7ee9ede05bdf0a9384fc893.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-08-09",
-    sheets: [5, 9.7, 13.7],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3015,
@@ -4705,11 +9478,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 201,
-    imageName:
-      "beac9430988072ce57c2532da4e4d554355b255e231101a0d6d7811ec6321f5a.webp",
+    imageName: "beac9430988072ce57c2532da4e4d554355b255e231101a0d6d7811ec6321f5a.webp",
     category: "オリジナル",
     releaseDate: "2021-08-09",
-    sheets: [4, 9.7, 13.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3016,
@@ -4720,11 +9508,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 205,
-    imageName:
-      "b2220ad58ea1bbbc315d86a13662afeb020c442d6dddd2694f5804a0dd318c7e.webp",
+    imageName: "b2220ad58ea1bbbc315d86a13662afeb020c442d6dddd2694f5804a0dd318c7e.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-08-09",
-    sheets: [6, 11, 14.1],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3017,
@@ -4735,11 +9538,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 200,
-    imageName:
-      "98871d98029612d929e5c08f9dc9fe575fb14d5ab86c2140b21ec76a576594d4.webp",
+    imageName: "98871d98029612d929e5c08f9dc9fe575fb14d5ab86c2140b21ec76a576594d4.webp",
     category: "バラエティ",
     releaseDate: "2021-08-09",
-    sheets: [3, 8, 12.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3018,
@@ -4750,11 +9568,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 181,
-    imageName:
-      "ea34dd9c2ba7cd3ecb0cd85e0277de7234bfb07ed77038434e25d38121777e8b.webp",
+    imageName: "ea34dd9c2ba7cd3ecb0cd85e0277de7234bfb07ed77038434e25d38121777e8b.webp",
     category: "バラエティ",
     releaseDate: "2021-08-09",
-    sheets: [3, 10.9, 13.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3019,
@@ -4765,11 +9598,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 191,
-    imageName:
-      "a36c9861ffe4d5a327b1e157b5055fd51f8a256cd7d76d41ddeba4b419c90fa2.webp",
+    imageName: "a36c9861ffe4d5a327b1e157b5055fd51f8a256cd7d76d41ddeba4b419c90fa2.webp",
     category: "バラエティ",
     releaseDate: "2021-08-09",
-    sheets: [3, 10.5, 13.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3020,
@@ -4780,11 +9628,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 205,
-    imageName:
-      "641fd96700ee92cfa920972b92359aa00dfe4c70a6e2bf49791c4355d4e6bca7.webp",
+    imageName: "641fd96700ee92cfa920972b92359aa00dfe4c70a6e2bf49791c4355d4e6bca7.webp",
     category: "バラエティ",
     releaseDate: "2021-08-09",
-    sheets: [5, 10.6, 14],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3021,
@@ -4795,11 +9658,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 200,
-    imageName:
-      "22cb6e0190eabc6f3e8e60e3af68f419e03927875777158ee06e512171be9d25.webp",
+    imageName: "22cb6e0190eabc6f3e8e60e3af68f419e03927875777158ee06e512171be9d25.webp",
     category: "バラエティ",
     releaseDate: "2021-08-09",
-    sheets: [4, 10.3, 13.3],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3022,
@@ -4810,11 +9688,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 185,
-    imageName:
-      "057348477eb69e9fe507270e528fe8ab6ffaba100408ab33cc84963437d6f2e3.webp",
+    imageName: "057348477eb69e9fe507270e528fe8ab6ffaba100408ab33cc84963437d6f2e3.webp",
     category: "バラエティ",
     releaseDate: "2021-08-09",
-    sheets: [4, 8.7, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3023,
@@ -4825,11 +9718,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 178,
-    imageName:
-      "b815e2c9a9017d15d34bba1425397a95b499090c9d960f8c01f6dc89f250b834.webp",
+    imageName: "b815e2c9a9017d15d34bba1425397a95b499090c9d960f8c01f6dc89f250b834.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-12-07",
-    sheets: [3, 9.6, 12.2, 13.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3028,
@@ -4840,11 +9753,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 190,
-    imageName:
-      "4b3864506e40834f01dcc108d6de0cc49563e1ff9968613e3a2cbe95c267375f.webp",
+    imageName: "4b3864506e40834f01dcc108d6de0cc49563e1ff9968613e3a2cbe95c267375f.webp",
     category: "オリジナル",
     releaseDate: "2021-08-09",
-    sheets: [5, 9.6, 12.9],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3029,
@@ -4855,11 +9783,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 156,
-    imageName:
-      "25280b213975ea67579b9357816124bb7c45d208f085516695f6f66ef526d9c0.webp",
+    imageName: "25280b213975ea67579b9357816124bb7c45d208f085516695f6f66ef526d9c0.webp",
     category: "東方アレンジ",
     releaseDate: "2021-08-09",
-    sheets: [3, 8.1, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2204,
@@ -4870,11 +9813,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 160,
-    imageName:
-      "02464df8f7fbc2eb87e8541dad8368d1e9548faac1e9b37d5e9136c1c265bb95.webp",
+    imageName: "02464df8f7fbc2eb87e8541dad8368d1e9548faac1e9b37d5e9136c1c265bb95.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-12-07",
-    sheets: [2, 7.3, 12.3, 13.8],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2227,
@@ -4885,11 +9848,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 140,
-    imageName:
-      "34a5cfe80c8fcd561992bc5ecb07e1b9ddd0f5712c517d39b48319d895c02a9b.webp",
+    imageName: "34a5cfe80c8fcd561992bc5ecb07e1b9ddd0f5712c517d39b48319d895c02a9b.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-08-25",
-    sheets: [3, 7.6, 11.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2228,
@@ -4900,11 +9878,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 158,
-    imageName:
-      "9acfb2799d1441be4c93d667f14cdd178b28cc8114726d523056d063f621ea5a.webp",
+    imageName: "9acfb2799d1441be4c93d667f14cdd178b28cc8114726d523056d063f621ea5a.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-08-25",
-    sheets: [3, 8.3, 12.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3031,
@@ -4915,11 +9908,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 200,
-    imageName:
-      "01b1ab3218b98d39e1489fd6bba704f0668f1ae2d7cd0c9182754f5bf16c886a.webp",
+    imageName: "01b1ab3218b98d39e1489fd6bba704f0668f1ae2d7cd0c9182754f5bf16c886a.webp",
     category: "TANO*C",
     releaseDate: "2021-09-07",
-    sheets: [4, 10.2, 13.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3033,
@@ -4930,11 +9938,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "bdff7b505e30dad647d57954233f724b4eb6b52a7d58085850d2897e90d363b2.webp",
+    imageName: "bdff7b505e30dad647d57954233f724b4eb6b52a7d58085850d2897e90d363b2.webp",
     category: "TANO*C",
     releaseDate: "2021-09-07",
-    sheets: [3, 9.2, 12.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3034,
@@ -4945,11 +9968,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 175,
-    imageName:
-      "92ee1542d37e20b3184628c311f04a8671fd826d90d8b100b1e236b3b7f2788a.webp",
+    imageName: "92ee1542d37e20b3184628c311f04a8671fd826d90d8b100b1e236b3b7f2788a.webp",
     category: "TANO*C",
     releaseDate: "2021-09-07",
-    sheets: [4, 9.9, 13.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2240,
@@ -4960,11 +9998,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 154,
-    imageName:
-      "aa229c8d8c90d3aa974f35206387120a911fd27540ea7f18dba6d2b6c587c95d.webp",
+    imageName: "aa229c8d8c90d3aa974f35206387120a911fd27540ea7f18dba6d2b6c587c95d.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-09-21",
-    sheets: [3, 7.8, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3024,
@@ -4975,11 +10028,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 128,
-    imageName:
-      "557840c61c0b3e86120c07fd4f8e499b4f3e343a6b94f4861d8a82f274d29bde.webp",
+    imageName: "557840c61c0b3e86120c07fd4f8e499b4f3e343a6b94f4861d8a82f274d29bde.webp",
     category: "ボカロ",
     releaseDate: "2021-10-05",
-    sheets: [3, 9.1, 13.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3026,
@@ -4990,11 +10058,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "b6fc5227e6ebabdffb7ab17e7fea9ae3165346d2c3aa3514479e00637c42d322.webp",
+    imageName: "b6fc5227e6ebabdffb7ab17e7fea9ae3165346d2c3aa3514479e00637c42d322.webp",
     category: "ボカロ",
     releaseDate: "2021-10-05",
-    sheets: [4, 9.3, 11.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3035,
@@ -5005,11 +10088,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 181,
-    imageName:
-      "19aef4366d5f8430e56a95a3c1603f849106de6541c4d6a070b18e2ac05bb299.webp",
+    imageName: "19aef4366d5f8430e56a95a3c1603f849106de6541c4d6a070b18e2ac05bb299.webp",
     category: "ボカロ",
     releaseDate: "2021-10-05",
-    sheets: [4, 9.7, 12.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 1032,
@@ -5020,11 +10118,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 171,
-    imageName:
-      "f84f4ee0cf7527a23d05d877137c94827ffe09796f4fef2cc5a5ee4c1962f306.webp",
+    imageName: "f84f4ee0cf7527a23d05d877137c94827ffe09796f4fef2cc5a5ee4c1962f306.webp",
     category: "ボカロ",
     releaseDate: "2021-10-20",
-    sheets: [3, 8.6, 12.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 2238,
@@ -5035,11 +10148,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 165,
-    imageName:
-      "274e4ac71da11274c2be3e0926037b685f36b9e7f3207895aacc82aee47f9702.webp",
+    imageName: "274e4ac71da11274c2be3e0926037b685f36b9e7f3207895aacc82aee47f9702.webp",
     category: "ボカロ",
     releaseDate: "2021-10-20",
-    sheets: [2, 8.6, 12.2],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3025,
@@ -5050,11 +10178,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 190,
-    imageName:
-      "31e3b164c0827515f2a98302d9dfb89bd6ad29bcdcf25b6c258ea48ce6a210f4.webp",
+    imageName: "31e3b164c0827515f2a98302d9dfb89bd6ad29bcdcf25b6c258ea48ce6a210f4.webp",
     category: "ボカロ",
     releaseDate: "2021-10-20",
-    sheets: [3, 8.7, 13.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3036,
@@ -5065,11 +10208,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "9b69a1f9c178d4e0032fb494dc2f1b2e64bf00d803a9add9997cbcc424fbef3b.webp",
+    imageName: "9b69a1f9c178d4e0032fb494dc2f1b2e64bf00d803a9add9997cbcc424fbef3b.webp",
     category: "バラエティ",
     releaseDate: "2021-11-03",
-    sheets: [3, 9.9, 12],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3040,
@@ -5080,11 +10238,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 198,
-    imageName:
-      "b2faaf897e0842a9826215de35a09dbbc3122eba97b525fcfe16bbf66888aedf.webp",
+    imageName: "b2faaf897e0842a9826215de35a09dbbc3122eba97b525fcfe16bbf66888aedf.webp",
     category: "バラエティ",
     releaseDate: "2021-11-03",
-    sheets: [3, 8.1, 13.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3041,
@@ -5095,11 +10268,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 128,
-    imageName:
-      "f087b22e6acb98c9676eccc08a92753c37f6f662031def0c79b5aaf6d517acc6.webp",
+    imageName: "f087b22e6acb98c9676eccc08a92753c37f6f662031def0c79b5aaf6d517acc6.webp",
     category: "バラエティ",
     releaseDate: "2021-11-03",
-    sheets: [4, 9.5, 13.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3037,
@@ -5110,11 +10298,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 202,
-    imageName:
-      "1050c89b965b5ccfdd7aa71c013318e17a2b258ef77423cf30f4b8229e415e19.webp",
+    imageName: "1050c89b965b5ccfdd7aa71c013318e17a2b258ef77423cf30f4b8229e415e19.webp",
     category: "バラエティ",
     releaseDate: "2021-11-17",
-    sheets: [5, 11, 14],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3038,
@@ -5125,11 +10328,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "5e1b68f10175468f6fb5395a9f4fe8ee27535b813150607461123ce804e6c538.webp",
+    imageName: "5e1b68f10175468f6fb5395a9f4fe8ee27535b813150607461123ce804e6c538.webp",
     category: "バラエティ",
     releaseDate: "2021-11-17",
-    sheets: [5, 9.9, 13.3],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3039,
@@ -5140,11 +10358,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 128,
-    imageName:
-      "90adcb85396dee6accd729726ee9e73d5d0c45abb19cf72a3e74f7a0962f7e2e.webp",
+    imageName: "90adcb85396dee6accd729726ee9e73d5d0c45abb19cf72a3e74f7a0962f7e2e.webp",
     category: "バラエティ",
     releaseDate: "2021-11-17",
-    sheets: [2, 8, 11.8],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3027,
@@ -5155,11 +10388,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 187,
-    imageName:
-      "3f79bf851a2c72cd84d6f02199d1a3ff57dd3d7e72bd442f6938ef7909ca1f06.webp",
+    imageName: "3f79bf851a2c72cd84d6f02199d1a3ff57dd3d7e72bd442f6938ef7909ca1f06.webp",
     category: "バラエティ",
     releaseDate: "2021-11-30",
-    sheets: [3, 9.8, 12.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3042,
@@ -5170,11 +10418,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 151,
-    imageName:
-      "8b1d7caf4d69011dcff629a7acd7e452451e118eb9307fa6ae82c503847d97f9.webp",
+    imageName: "8b1d7caf4d69011dcff629a7acd7e452451e118eb9307fa6ae82c503847d97f9.webp",
     category: "バラエティ",
     releaseDate: "2021-11-30",
-    sheets: [3, 10, 13],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3030,
@@ -5185,11 +10448,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 150,
-    imageName:
-      "d4479681124a15fbfe98a8d5bca37b456f69a6686c05af6cc0cd173aaaa89b8f.webp",
+    imageName: "d4479681124a15fbfe98a8d5bca37b456f69a6686c05af6cc0cd173aaaa89b8f.webp",
     category: "アニメ／ＰＯＰ",
     releaseDate: "2021-12-07",
-    sheets: [3, 9.7, 12.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3044,
@@ -5200,11 +10478,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 160,
-    imageName:
-      "07c3255b3148dc794c15d6c701572fba6e5ad49b78466e07b893648b0eaa3413.webp",
+    imageName: "07c3255b3148dc794c15d6c701572fba6e5ad49b78466e07b893648b0eaa3413.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-12-23",
-    sheets: [3, 10.6, 13.4, 14.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3045,
@@ -5215,11 +10513,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 343,
-    imageName:
-      "8193056f16db5df3f3df8b0f09aa0b9245a6f1402d0bdfcdab92a7653922df70.webp",
+    imageName: "8193056f16db5df3f3df8b0f09aa0b9245a6f1402d0bdfcdab92a7653922df70.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-12-23",
-    sheets: [4, 10.8, 13.4, 14.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3046,
@@ -5230,11 +10548,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 202,
-    imageName:
-      "e657225f11be3ab8bcaa12bdf32a7eac623d9bff1f3742282abee5ab142ebe39.webp",
+    imageName: "e657225f11be3ab8bcaa12bdf32a7eac623d9bff1f3742282abee5ab142ebe39.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-12-23",
-    sheets: [4, 10.7, 13.2, 14.1],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3047,
@@ -5245,11 +10583,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 230,
-    imageName:
-      "8073a6da9209aafc6ca44bb285f44c175f99cb9aa7257a0c27334d595e305c42.webp",
+    imageName: "8073a6da9209aafc6ca44bb285f44c175f99cb9aa7257a0c27334d595e305c42.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2021-12-23",
-    sheets: [8, 11.7, 13.7, 14.2],
+    sheets: [
+      {
+        difficulty: 8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3048,
@@ -5260,11 +10618,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 170,
-    imageName:
-      "710913864d84c3b9735122f3e9c8689b2548243d71e86542a70a9fe2b3b93ee9.webp",
+    imageName: "710913864d84c3b9735122f3e9c8689b2548243d71e86542a70a9fe2b3b93ee9.webp",
     category: "ボカロ",
     releaseDate: "2022-01-11",
-    sheets: [3, 8.7, 12.6],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3049,
@@ -5275,11 +10648,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 232,
-    imageName:
-      "54350416bdfd1bf76f066353a232c084ef6bc1c29e65f82d2feebc58dcc49b20.webp",
+    imageName: "54350416bdfd1bf76f066353a232c084ef6bc1c29e65f82d2feebc58dcc49b20.webp",
     category: "ボカロ",
     releaseDate: "2022-01-11",
-    sheets: [3, 8.6, 12.7],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3050,
@@ -5290,11 +10678,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 192,
-    imageName:
-      "8f235c5325a066792f4d98680583ecb58e9de07907e015289254293fd6f25318.webp",
+    imageName: "8f235c5325a066792f4d98680583ecb58e9de07907e015289254293fd6f25318.webp",
     category: "ボカロ",
     releaseDate: "2022-01-11",
-    sheets: [3, 8.3, 12.4],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3055,
@@ -5305,27 +10708,56 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "fd6af8df7600b3d57ae716667fb8b419ab22308bbc7a1cb5d81707f1d31ca804.webp",
+    imageName: "fd6af8df7600b3d57ae716667fb8b419ab22308bbc7a1cb5d81707f1d31ca804.webp",
     category: "バラエティ",
     releaseDate: "2022-01-18",
-    sheets: [4, 10.5, 13.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3056,
     title: "ファムファタール",
     titleEnglish: "Femme Fatale",
-    artist:
-      "ギルガメッシュ（CV：大塚剛央）、千極兆司（CV：立花慎之介）、緋野天魔（CV：小野賢章）、神水鶴久遠（CV：広瀬裕也）、皇麗夢（CV：豊永利行）",
+    artist: "ギルガメッシュ（CV：大塚剛央）、千極兆司（CV：立花慎之介）、緋野天魔（CV：小野賢章）、神水鶴久遠（CV：広瀬裕也）、皇麗夢（CV：豊永利行）",
     dateAdded: 20220127,
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 124,
-    imageName:
-      "cf8a0588221c6df6113c1272cb81f2baea39397909a695a0999a87f4b0ad47fc.webp",
+    imageName: "cf8a0588221c6df6113c1272cb81f2baea39397909a695a0999a87f4b0ad47fc.webp",
     category: "バラエティ",
     releaseDate: "2022-01-25",
-    sheets: [3, 8, 11.1],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3057,
@@ -5336,11 +10768,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 150,
-    imageName:
-      "bdaad390ec2ac33073f45808d2bf21b67a04027e0bbca46af6cc9ce79b49d05d.webp",
+    imageName: "bdaad390ec2ac33073f45808d2bf21b67a04027e0bbca46af6cc9ce79b49d05d.webp",
     category: "オリジナル",
     releaseDate: "2022-02-08",
-    sheets: [4, 10.5, 13.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3004,
@@ -5351,11 +10798,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 160,
-    imageName:
-      "5263e5ad7885710afa7de0a24dbcf5e9c6dce238d7a76217dac02e3d0e392e99.webp",
+    imageName: "5263e5ad7885710afa7de0a24dbcf5e9c6dce238d7a76217dac02e3d0e392e99.webp",
     category: "東方アレンジ",
     releaseDate: "2022-02-22",
-    sheets: [3, 8.5, 12],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3059,
@@ -5366,11 +10828,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 195,
-    imageName:
-      "3a4125ea4df77a6859b2deb3da57676bf8b78679dfe103142cdaaba893da459f.webp",
+    imageName: "3a4125ea4df77a6859b2deb3da57676bf8b78679dfe103142cdaaba893da459f.webp",
     category: "東方アレンジ",
     releaseDate: "2022-02-22",
-    sheets: [4, 8.7, 13.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3058,
@@ -5381,11 +10858,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 190,
-    imageName:
-      "865567c59e026a9158c09329f3add9d7e89acce088c63404b1379ac04f649e0c.webp",
+    imageName: "865567c59e026a9158c09329f3add9d7e89acce088c63404b1379ac04f649e0c.webp",
     category: "オリジナル",
     releaseDate: "2022-02-26",
-    sheets: [6, 10.9, 13.7, 14.1],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3052,
@@ -5396,11 +10893,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "ccb1a73ba122fbc3cea84b93af708273aaec32317aab69981f6aad0e05a852a9.webp",
+    imageName: "ccb1a73ba122fbc3cea84b93af708273aaec32317aab69981f6aad0e05a852a9.webp",
     category: "TANO*C",
     releaseDate: "2022-03-22",
-    sheets: [3, 9.5, 13.2],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3053,
@@ -5411,26 +10923,56 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 150,
-    imageName:
-      "ea4949d6d210e5cc39264f213e75009484ef1117c74b6eb7f023bedd5394b6da.webp",
+    imageName: "ea4949d6d210e5cc39264f213e75009484ef1117c74b6eb7f023bedd5394b6da.webp",
     category: "TANO*C",
     releaseDate: "2022-03-22",
-    sheets: [4, 9, 13.2],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3060,
-    title: 'Invisible Frenzy (Camellia\'s "593: Insanely Fluctuated" Remix)',
+    title: "Invisible Frenzy (Camellia's \"593: Insanely Fluctuated\" Remix),
     titleEnglish: null,
     artist: "Camellia",
     dateAdded: 20220414,
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 593,
-    imageName:
-      "186ab1faacc9a110e21720d8ef8c938fa3c9663a0900d414c529b75cdbf0a054.webp",
+    imageName: "186ab1faacc9a110e21720d8ef8c938fa3c9663a0900d414c529b75cdbf0a054.webp",
     category: "TANO*C",
     releaseDate: "2022-04-12",
-    sheets: [6, 11.2, 14.1],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3061,
@@ -5441,11 +10983,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 294,
-    imageName:
-      "c4c090bfadfd0f5466d5792efc2d9f61d83151269c378aab5874337a4dd54eea.webp",
+    imageName: "c4c090bfadfd0f5466d5792efc2d9f61d83151269c378aab5874337a4dd54eea.webp",
     category: "TANO*C",
     releaseDate: "2022-04-19",
-    sheets: [6, 10.7, 14.1],
+    sheets: [
+      {
+        difficulty: 6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3062,
@@ -5456,11 +11013,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 230,
-    imageName:
-      "f66bc0febd20ef74724c9536ebbe49e2119690ba95f88f6d528b91ef70333245.webp",
+    imageName: "f66bc0febd20ef74724c9536ebbe49e2119690ba95f88f6d528b91ef70333245.webp",
     category: "TANO*C（オリジナル）",
     releaseDate: "2022-04-26",
-    sheets: [8, 10.8, 14.1, 15],
+    sheets: [
+      {
+        difficulty: 8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 15,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3063,
@@ -5471,11 +11048,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 210,
-    imageName:
-      "43c5e74dc6566e6a75670b2e182ba09d6d000cf0d248dcb3c038ef4c17e4b809.webp",
+    imageName: "43c5e74dc6566e6a75670b2e182ba09d6d000cf0d248dcb3c038ef4c17e4b809.webp",
     category: "TANO*C",
     releaseDate: "2022-05-17",
-    sheets: [4, 10.7, 13.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3032,
@@ -5486,11 +11078,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 171,
-    imageName:
-      "8cc0ee2a847df260d8a54cb285f01cceb973bc82d0de9f05080d7e70dd98813d.webp",
+    imageName: "8cc0ee2a847df260d8a54cb285f01cceb973bc82d0de9f05080d7e70dd98813d.webp",
     category: "TANO*C",
     releaseDate: "2022-05-31",
-    sheets: [3, 8.8, 12.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3087,
@@ -5501,11 +11108,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 170,
-    imageName:
-      "d3b5661ed6bdbf8a853abc501031963af3f0447694b138380b7280518b66ef67.webp",
+    imageName: "d3b5661ed6bdbf8a853abc501031963af3f0447694b138380b7280518b66ef67.webp",
     category: "TANO*C",
     releaseDate: "2022-06-22",
-    sheets: [3, 8.6, 12.3],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3071,
@@ -5516,11 +11138,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 190,
-    imageName:
-      "5a04a672b3dcdedf0ff087a6af9f6529347ec78ab328973e1e0b93be6a2fec4d.webp",
+    imageName: "5a04a672b3dcdedf0ff087a6af9f6529347ec78ab328973e1e0b93be6a2fec4d.webp",
     category: "TANO*C",
     releaseDate: "2022-06-23",
-    sheets: [5, 8.7, 13.3],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3078,
@@ -5531,11 +11168,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 175,
-    imageName:
-      "75033e90fabe125346487ffb9c020068eb777ff7e0f1e912a190e4359ae371bd.webp",
+    imageName: "75033e90fabe125346487ffb9c020068eb777ff7e0f1e912a190e4359ae371bd.webp",
     category: "TANO*C",
     releaseDate: "2022-06-24",
-    sheets: [4, 10.4, 12.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3092,
@@ -5546,11 +11198,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 190,
-    imageName:
-      "4be7d138569ae06341edf21e7867f518a05c0004bade4a9bf17cf8817c820ca4.webp",
+    imageName: "4be7d138569ae06341edf21e7867f518a05c0004bade4a9bf17cf8817c820ca4.webp",
     category: "TANO*C",
     releaseDate: "2022-06-25",
-    sheets: [4, 10.6, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3083,
@@ -5561,11 +11228,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 300,
-    imageName:
-      "1e8d6071192528676916f710f00d3ac4fc3f810fec497b397c97502f57d1a98c.webp",
+    imageName: "1e8d6071192528676916f710f00d3ac4fc3f810fec497b397c97502f57d1a98c.webp",
     category: "TANO*C",
     releaseDate: "2022-06-26",
-    sheets: [4, 10.7, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3084,
@@ -5576,11 +11258,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 208,
-    imageName:
-      "53b8f53f7457b7906c0e22ef7270c13aacb46bb120a2e73fe8b80ddb828aa494.webp",
+    imageName: "53b8f53f7457b7906c0e22ef7270c13aacb46bb120a2e73fe8b80ddb828aa494.webp",
     category: "TANO*C",
     releaseDate: "2022-06-27",
-    sheets: [4, 11, 14],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3081,
@@ -5591,11 +11288,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 128,
-    imageName:
-      "4063a2de8ba30c0a521b3da82a5fb79e9f89e1b9703f4b98b3f6dc2ac59d895a.webp",
+    imageName: "4063a2de8ba30c0a521b3da82a5fb79e9f89e1b9703f4b98b3f6dc2ac59d895a.webp",
     category: "TANO*C",
     releaseDate: "2022-06-28",
-    sheets: [3, 7.5, 11.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3074,
@@ -5606,11 +11318,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 200,
-    imageName:
-      "1f0eb902a3f0ecafccbbc41c990846779ae8bd1e593e475b7f010863e80e0007.webp",
+    imageName: "1f0eb902a3f0ecafccbbc41c990846779ae8bd1e593e475b7f010863e80e0007.webp",
     category: "TANO*C",
     releaseDate: "2022-06-29",
-    sheets: [4, 10.9, 13.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3090,
@@ -5621,11 +11348,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 210,
-    imageName:
-      "06de017ab06c6978dc0c4e4f6dd2946e699c9eec1785ba3cf1bedd664541a8b7.webp",
+    imageName: "06de017ab06c6978dc0c4e4f6dd2946e699c9eec1785ba3cf1bedd664541a8b7.webp",
     category: "TANO*C",
     releaseDate: "2022-06-30",
-    sheets: [4, 10.9, 13.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3080,
@@ -5636,11 +11378,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 128,
-    imageName:
-      "d45bdc62e85c448777a90118ebaa7db366c79303b8eabceb505be036c2c8e45d.webp",
+    imageName: "d45bdc62e85c448777a90118ebaa7db366c79303b8eabceb505be036c2c8e45d.webp",
     category: "TANO*C",
     releaseDate: "2022-07-01",
-    sheets: [3, 7.9, 12.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3079,
@@ -5651,11 +11408,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 126,
-    imageName:
-      "5ec702bd853d938f4f2d7cea547f21cdb0f7fffa36d1a00340e087eabfce269f.webp",
+    imageName: "5ec702bd853d938f4f2d7cea547f21cdb0f7fffa36d1a00340e087eabfce269f.webp",
     category: "TANO*C",
     releaseDate: "2022-07-02",
-    sheets: [3, 7.6, 12.9],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 7.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3085,
@@ -5666,11 +11438,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 108,
-    imageName:
-      "e063963ef48c6219138e3b09cf3d8a2c656ce2e83cc3379616db37b65bdf3e0c.webp",
+    imageName: "e063963ef48c6219138e3b09cf3d8a2c656ce2e83cc3379616db37b65bdf3e0c.webp",
     category: "TANO*C",
     releaseDate: "2022-07-03",
-    sheets: [2, 6, 13.3],
+    sheets: [
+      {
+        difficulty: 2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3077,
@@ -5681,11 +11468,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 215,
-    imageName:
-      "43e99a4c0f732a587b31a715b64d2d80683677bed6e80368ecbb88e590a563a2.webp",
+    imageName: "43e99a4c0f732a587b31a715b64d2d80683677bed6e80368ecbb88e590a563a2.webp",
     category: "TANO*C",
     releaseDate: "2022-07-04",
-    sheets: [4, 11, 14],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3088,
@@ -5696,11 +11498,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 200,
-    imageName:
-      "049f9ef5fa9c72034b0d13156ddb4d3f3af1d9d1f095fd049e867a186d88b501.webp",
+    imageName: "049f9ef5fa9c72034b0d13156ddb4d3f3af1d9d1f095fd049e867a186d88b501.webp",
     category: "TANO*C",
     releaseDate: "2022-07-05",
-    sheets: [4, 10.7, 13.6],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3086,
@@ -5711,11 +11528,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 220,
-    imageName:
-      "bbf9cb183771a569bbfb95d96872a6c8f58787518754a425bb03403306995b92.webp",
+    imageName: "bbf9cb183771a569bbfb95d96872a6c8f58787518754a425bb03403306995b92.webp",
     category: "TANO*C",
     releaseDate: "2022-07-06",
-    sheets: [4, 11, 13.8],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 11,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3076,
@@ -5726,11 +11558,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 1,
-    imageName:
-      "6c5bb8a334eea44ab33714d1e3c40276eec1d9ba8b823dec6bb9fc90125000fa.webp",
+    imageName: "6c5bb8a334eea44ab33714d1e3c40276eec1d9ba8b823dec6bb9fc90125000fa.webp",
     category: "TANO*C",
     releaseDate: "2022-07-07",
-    sheets: [4, 10.5, 13.7],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.7,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3072,
@@ -5741,11 +11588,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 1962,
-    imageName:
-      "4838f8e3ed246cd9c5c083e75ebf8077f495b3e16a049976367f2b31ffc78466.webp",
+    imageName: "4838f8e3ed246cd9c5c083e75ebf8077f495b3e16a049976367f2b31ffc78466.webp",
     category: "TANO*C",
     releaseDate: "2022-07-08",
-    sheets: [5, 10.8, 13.9],
+    sheets: [
+      {
+        difficulty: 5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3075,
@@ -5756,11 +11618,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 174,
-    imageName:
-      "b6a41fd7689d40967cc57f9d2506bd44786d12e97ba429bcae085ee833da1843.webp",
+    imageName: "b6a41fd7689d40967cc57f9d2506bd44786d12e97ba429bcae085ee833da1843.webp",
     category: "TANO*C",
     releaseDate: "2022-07-09",
-    sheets: [3, 8.8, 13.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3089,
@@ -5771,11 +11648,31 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 150,
-    imageName:
-      "8242e4e93dd621904dad91985d2595dc785fff604f6fe06d20db766285155266.webp",
+    imageName: "8242e4e93dd621904dad91985d2595dc785fff604f6fe06d20db766285155266.webp",
     category: "TANO*C",
     releaseDate: "2022-07-10",
-    sheets: [3, 8.6, 13, 14],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 14,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3091,
@@ -5786,11 +11683,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 175,
-    imageName:
-      "30e2e8134c41332e61f27904d12fca91cb62d545af765f9bdf65dc71d428b1c9.webp",
+    imageName: "30e2e8134c41332e61f27904d12fca91cb62d545af765f9bdf65dc71d428b1c9.webp",
     category: "TANO*C",
     releaseDate: "2022-07-11",
-    sheets: [3, 8.9, 12.5],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 8.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3093,
@@ -5801,11 +11713,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 175,
-    imageName:
-      "5a0f6f79be7e5e6ba4e2ff17a6e3c9393f526ecbc3fa45b57049b3a9634bd9e5.webp",
+    imageName: "5a0f6f79be7e5e6ba4e2ff17a6e3c9393f526ecbc3fa45b57049b3a9634bd9e5.webp",
     category: "TANO*C",
     releaseDate: "2022-07-12",
-    sheets: [4, 9.9, 12.5],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.5,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3073,
@@ -5816,11 +11743,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 176,
-    imageName:
-      "7c84622b3f7af0672506b7f28c8a25894c1710a02079af0de66ae08a11177478.webp",
+    imageName: "7c84622b3f7af0672506b7f28c8a25894c1710a02079af0de66ae08a11177478.webp",
     category: "TANO*C",
     releaseDate: "2022-07-13",
-    sheets: [4, 10.2, 12.9],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 10.2,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.9,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3082,
@@ -5831,11 +11773,26 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 170,
-    imageName:
-      "8b2f3f2e272fe0903b31dab95cfcf6547a12500fdd51d55b45d060a060f1a6af.webp",
+    imageName: "8b2f3f2e272fe0903b31dab95cfcf6547a12500fdd51d55b45d060a060f1a6af.webp",
     category: "TANO*C",
     releaseDate: "2022-07-14",
-    sheets: [4, 9.1, 13.4],
+    sheets: [
+      {
+        difficulty: 4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.1,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.4,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3094,
@@ -5846,28 +11803,62 @@ const waccaSongs = [
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 175,
-    imageName:
-      "f3b48f11be827f4048cb593db197d42c86c29ee579c38b93b0cf0f53e57664ff.webp",
+    imageName: "f3b48f11be827f4048cb593db197d42c86c29ee579c38b93b0cf0f53e57664ff.webp",
     category: "TANO*C",
     releaseDate: "2022-07-15",
-    sheets: [3, 9.6, 12.8],
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12.8,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
   },
   {
     id: 3064,
     title: "DIVE With Ü",
     titleEnglish: null,
-    artist:
-      "HARDCORE TANO*C & エリザベス（CV:大西沙織） & リリィ（CV:青木志貴） & ルーン（CV:河瀬茉希）",
+    artist: "HARDCORE TANO*C & エリザベス（CV:大西沙織） & リリィ（CV:青木志貴） & ルーン（CV:河瀬茉希）",
     dateAdded: 20220718,
     dateRemoved: 0,
     gameVersion: 5,
     bpm: 180,
-    imageName:
-      "7f79cf957915d73bb5b80703a6e84204a4bf99c18fd50a4a11d1bfeb3a1ab5ef.webp",
+    imageName: "7f79cf957915d73bb5b80703a6e84204a4bf99c18fd50a4a11d1bfeb3a1ab5ef.webp",
     category: "オリジナル",
     releaseDate: "2022-07-17",
-    sheets: [3, 9.6, 13.3, 12],
-  },
+    sheets: [
+      {
+        difficulty: 3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 9.6,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 13.3,
+        gameVersion: 5,
+        charter: "Marvelous"
+      },
+      {
+        difficulty: 12,
+        gameVersion: 5,
+        charter: "Marvelous"
+      }
+    ]
+  }
 ];
 
 export default waccaSongs;
