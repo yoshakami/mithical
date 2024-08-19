@@ -203,7 +203,7 @@ const sheetFolders = computed(() => {
     sheet.rating = music.rating;
     sheet.song = waccaSongs.find((song) => song.id == music.music_id);
 
-    if (sheet.song && sheet.song.sheets[sheet.difficulty].difficulty) {
+    if (sheet.song && sheet.song.sheets[sheet.difficulty]) {
       // filters for unknown songs or difficulties (wacca plus)
       if (sheet.song.sheets[sheet.difficulty].gameVersion < 5) {
         folders[0].sheets.push(sheet);
