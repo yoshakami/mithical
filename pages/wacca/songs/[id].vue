@@ -130,7 +130,7 @@
           <WaccaDifficultyPill
             v-ripple
             :i="i + 1"
-            :difficulty="difficulty"
+            :difficulty="difficulty.difficulty"
             :class="{ active: i + 1 == selectedDifficulty }"
             @click="selectDifficulty(i + 1)"
           />

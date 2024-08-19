@@ -437,9 +437,9 @@ const sortOptions = [
         subText: "Normal",
         sortFunction(a, b) {
           if (sortOrder.value == "asc") {
-            return a.sheets[0] - b.sheets[0];
+            return a.sheets[0].difficulty - b.sheets[0].difficulty;
           } else {
-            return b.sheets[0] - a.sheets[0];
+            return b.sheets[0].difficulty - a.sheets[0].difficulty;
           }
         },
       },
@@ -448,9 +448,9 @@ const sortOptions = [
         subText: "Hard",
         sortFunction(a, b) {
           if (sortOrder.value == "asc") {
-            return a.sheets[1] - b.sheets[1];
+            return a.sheets[1].difficulty - b.sheets[1].difficulty;
           } else {
-            return b.sheets[1] - a.sheets[1];
+            return b.sheets[1].difficulty - a.sheets[1].difficulty;
           }
         },
       },
@@ -459,9 +459,9 @@ const sortOptions = [
         subText: "Expert",
         sortFunction(a, b) {
           if (sortOrder.value == "asc") {
-            return a.sheets[2] - b.sheets[2];
+            return a.sheets[2].difficulty - b.sheets[2].difficulty;
           } else {
-            return b.sheets[2] - a.sheets[2];
+            return b.sheets[2].difficulty - a.sheets[2].difficulty;
           }
         },
       },
@@ -470,9 +470,13 @@ const sortOptions = [
         subText: "Inferno",
         sortFunction(a, b) {
           if (sortOrder.value == "asc") {
-            return (a.sheets[3] ?? 16) - (b.sheets[3] ?? 16);
+            return (
+              (a.sheets[3].difficulty ?? 16) - (b.sheets[3].difficulty ?? 16)
+            );
           } else {
-            return (b.sheets[3] ?? 0) - (a.sheets[3] ?? 0);
+            return (
+              (b.sheets[3].difficulty ?? 0) - (a.sheets[3].difficulty ?? 0)
+            );
           }
         },
       },

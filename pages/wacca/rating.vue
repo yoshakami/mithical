@@ -5,6 +5,8 @@
         <v-tab v-for="(folder, i) in sheetFolders" :key="i">
           {{ folder.name }}
           <v-chip>{{ folder.count }}</v-chip>
+
+          {{ folder.rating.toFixed(1) }}
         </v-tab>
       </v-tabs>
 
@@ -49,7 +51,9 @@
                   <div class="rating-difficulty" v-if="sheet.rating">
                     <WaccaDifficultyPillSmall
                       :i="sheet.difficulty + 1"
-                      :difficulty="sheet.song.sheets[sheet.difficulty]"
+                      :difficulty="
+                        sheet.song.sheets[sheet.difficulty].difficulty
+                      "
                     />
                   </div>
                   <div class="rating-rating" v-if="sheet.rating">
@@ -199,9 +203,9 @@ const sheetFolders = computed(() => {
     sheet.rating = music.rating;
     sheet.song = waccaSongs.find((song) => song.id == music.music_id);
 
-    if (sheet.song && sheet.song.sheets[sheet.difficulty]) {
+    if (sheet.song && sheet.song.sheets[sheet.difficulty].difficulty) {
       // filters for unknown songs or difficulties (wacca plus)
-      if (sheet.song.gameVersion < 5) {
+      if (sheet.song.sheets[sheet.difficulty].gameVersion < 5) {
         folders[0].sheets.push(sheet);
       } else {
         folders[1].sheets.push(sheet);
@@ -229,7 +233,7 @@ const sheetFolders = computed(() => {
       }
 
       if (nextBorder) {
-        const sheetDifficulty = sheet.song.sheets[sheet.difficulty];
+        const sheetDifficulty = sheet.song.sheets[sheet.difficulty].difficulty;
         const lowestRating = folder.sheets[folder.count - 1].rating / 10;
 
         const ratingDiff =
@@ -248,6 +252,21 @@ const sheetFolders = computed(() => {
         sheet.ratingGain = ratingGain;
       }
     }
+  }
+
+  // calculate rating for each folder
+  for (const folder of folders) {
+    let rating = 0;
+
+    for (let i = 0; i < folder.count; i++) {
+      if (!folder.sheets[i]) {
+        break;
+      }
+
+      rating += folder.sheets[i].rating;
+    }
+
+    folder.rating = rating / 10;
   }
 
   return folders;

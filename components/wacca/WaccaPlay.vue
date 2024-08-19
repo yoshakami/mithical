@@ -33,7 +33,7 @@
             >
               <span class="play-difficulty-number">{{
                 formatDifficulty(
-                  song.sheets[play.info.music_difficulty - 1],
+                  song.sheets[play.info.music_difficulty - 1].difficulty,
                   difficultyInternal
                 )
               }}</span>

@@ -7,7 +7,11 @@
     >
       <WaccaMedal :medal="medal(i)" />
 
-      <WaccaDifficultyPill :i="i + 1" :difficulty="difficulty" class="active" />
+      <WaccaDifficultyPill
+        :i="i + 1"
+        :difficulty="difficulty.difficulty"
+        class="active"
+      />
 
       <div
         class="song-difficulty-bottom"
