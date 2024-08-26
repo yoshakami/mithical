@@ -6,7 +6,7 @@
           {{ folder.name }}
           <v-chip>{{ folder.count }}</v-chip>
 
-          {{ folder.rating.toFixed(1) }}
+          {{ folder.rating.toFixed(3) }}
         </v-tab>
       </v-tabs>
 
@@ -42,8 +42,8 @@
                       +{{ sheet.nextScoreDiff }}
                     </div>
                     <div>
-                      R +{{ sheet.ratingDiff.toFixed(1) }} / +{{
-                        Math.max(0, sheet.ratingGain).toFixed(1)
+                      R +{{ sheet.ratingDiff.toFixed(3) }} / +{{
+                        Math.max(0, sheet.ratingGain).toFixed(3)
                       }}
                     </div>
                   </div>
@@ -61,6 +61,7 @@
                       :rating="sheet.rating"
                       :divide="50"
                       :simple="true"
+                      :decimals="3"
                     />
                   </div>
                 </div>
@@ -177,9 +178,19 @@ definePageMeta({
   middleware: ["auth"],
 });
 
+function getRating(difficulty, score) {
+  for (let i = 0; i < waccaRateMulBorders.length; i++) {
+    const border = waccaRateMulBorders[i];
+
+    if (score >= border.min) {
+      return border.multiplier * difficulty * 10;
+    }
+  }
+
+  return 0;
+}
+
 const tab = ref(0);
-const highestDiff = [];
-const ratingPotentials = [];
 
 const sheetFolders = computed(() => {
   const folders = [
@@ -200,10 +211,14 @@ const sheetFolders = computed(() => {
     let sheet = {};
     sheet.difficulty = music.music_difficulty - 1;
     sheet.score = music.score;
-    sheet.rating = music.rating;
     sheet.song = waccaSongs.find((song) => song.id == music.music_id);
 
     if (sheet.song && sheet.song.sheets[sheet.difficulty]) {
+      sheet.rating = getRating(
+        sheet.song.sheets[sheet.difficulty].difficulty,
+        sheet.score
+      );
+
       // filters for unknown songs or difficulties (wacca plus)
       if (sheet.song.sheets[sheet.difficulty].gameVersion < 5) {
         folders[0].sheets.push(sheet);

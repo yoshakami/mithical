@@ -124,6 +124,7 @@ const props = defineProps({
   rating: Number,
   divide: Number,
   simple: Boolean,
+  decimals: Number,
 });
 
 const realRate = computed(() => {
@@ -131,7 +132,7 @@ const realRate = computed(() => {
 });
 
 const realRateFormatted = computed(() => {
-  return realRate.value.toFixed(1);
+  return realRate.value.toFixed(props.decimals ?? 1);
 });
 
 const ratingColor = computed(() => {
