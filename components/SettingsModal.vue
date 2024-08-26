@@ -1,5 +1,5 @@
 <template>
-  <v-theme-provider :theme="`wacca${theme}`">
+  <v-theme-provider :theme="`wacca${themeModded}`">
     <div class="modal" :class="{ on: settingsVisible }" @click="hideSettings">
       <div class="modal-content" @click.stop>
         <v-card>
@@ -18,6 +18,14 @@
                 <v-btn to="/cards" block color="primary" @click="hideSettings">
                   Manage your cards
                 </v-btn>
+              </div>
+
+              <div class="settings-setting">
+                <p>Version</p>
+                <v-btn-toggle v-model="version" shaped mandatory>
+                  <v-btn color="primary" :value="5">Reverse</v-btn>
+                  <v-btn color="primary" :value="6">Plus</v-btn>
+                </v-btn-toggle>
               </div>
 
               <div class="settings-setting">
@@ -76,6 +84,9 @@
 
 <script setup>
 const settingsVisible = useState("settingsVisible", () => false);
+const storageVersion = localStorage.getItem("version");
+const version = useState("version", () => parseInt(storageVersion) || 5);
+// todo: need a smarter way to figure out if the user has played plus
 
 function hideSettings() {
   settingsVisible.value = false;
@@ -108,8 +119,24 @@ const themes = [
 ];
 const theme = useState("theme");
 
+const themeModded = computed(() => {
+  let out = theme.value;
+
+  if (version.value == 6) {
+    out += "Plus";
+  }
+
+  return out;
+});
+
 watch(theme, (newVal) => {
   localStorage.setItem("theme", newVal);
+});
+
+// Version
+
+watch(version, (newVal) => {
+  localStorage.setItem("version", newVal);
 });
 
 // Difficulty rounding

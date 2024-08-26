@@ -101,9 +101,11 @@ function loadData() {
     });
 }
 
+const version = useState("version");
+
 const leaderboardsDataFiltered = computed(() => {
   let reverseOnly = leaderboardData.value.filter(
-    (profile, i) => profile.version == 4
+    (profile, i) => profile.version == version.value - 1
   );
 
   let withoutDuplicates = reverseOnly.filter(

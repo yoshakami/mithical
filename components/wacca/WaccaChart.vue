@@ -44,6 +44,12 @@ const props = defineProps({
   loading: Boolean,
 });
 
+const version = useState("version");
+
+const filteredsheets = computed(() => {
+  return props.song.sheets.filter((sheet) => sheet.version <= version.value);
+});
+
 const playerChart = ref(null);
 
 let chart;
@@ -74,7 +80,7 @@ const playerHistoryFormatted = computed(() => {
     },
   ];
 
-  if (props.song.sheets.length === 4) {
+  if (filteredsheets.length === 4) {
     datasets.push({
       label: "Inferno",
       backgroundColor: "#4a004f",
@@ -87,7 +93,10 @@ const playerHistoryFormatted = computed(() => {
   for (let i = props.playerHistory.length - 1; i >= 0; i--) {
     const score = props.playerHistory[i];
 
-    if (!score.info.clear_status.is_give_up) {
+    if (
+      !score.info.clear_status.is_give_up &&
+      datasets[score.info.music_difficulty - 1]
+    ) {
       if (score.info.user_play_date == "1970-01-01T00:00:00+00:00") {
         datasets[score.info.music_difficulty - 1].data.unshift({
           x: new Date("2022-09-01T00:00:00+09:00"),

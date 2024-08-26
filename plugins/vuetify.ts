@@ -32,6 +32,35 @@ const waccaOledTheme: ThemeDefinition = {
     "surface-variant": "#000",
   },
 };
+const waccaLightPlusTheme: ThemeDefinition = {
+  dark: false,
+  colors: {
+    primary: "#00a9fd",
+    navbar: "#00a9fd",
+    boxcolor: "#333",
+  },
+};
+
+const waccaDarkPlusTheme: ThemeDefinition = {
+  dark: true,
+  colors: {
+    primary: "#00a9fd",
+    navbar: "#00a9fd",
+    surface: "#333",
+    boxcolor: "#333",
+  },
+};
+
+const waccaOledPlusTheme: ThemeDefinition = {
+  dark: true,
+  colors: {
+    primary: "#00a9fd",
+    navbar: "#000",
+    surface: "#000",
+    boxcolor: "#000",
+    "surface-variant": "#000",
+  },
+};
 
 // const mithicalLightTheme: ThemeDefinition = {
 //   dark: false,
@@ -71,6 +100,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         mithicalLight: mithicalDarkTheme, // no light mithical theme
         mithicalDark: mithicalDarkTheme,
         mithicalOled: mithicalOledTheme,
+        waccaLightPlus: waccaLightPlusTheme,
+        waccaDarkPlus: waccaDarkPlusTheme,
+        waccaOledPlus: waccaOledPlusTheme,
       },
     },
   });

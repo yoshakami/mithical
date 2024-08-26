@@ -58,7 +58,7 @@
         </div>
 
         <div class="single-song-game">
-          <img :src="`/wacca/img/games/${song.gameVersion}.webp`" />
+          <img :src="`/wacca/img/games/${song.gameVersion}.png`" />
         </div>
       </div>
     </v-container>
@@ -108,7 +108,7 @@
 
         <div v-else class="histograms">
           <WaccaHistogram
-            v-for="(difficulty, i) in song.sheets"
+            v-for="(difficulty, i) in filteredSheets"
             :key="i"
             :scores="histograms[i]?.score_entries"
             :color="waccaDifficulties[i].color"
@@ -123,7 +123,7 @@
       <h2 class="container-heading">Leaderboards</h2>
       <div class="song-sheets difficulty-selection mt-4">
         <div
-          v-for="(difficulty, i) in song.sheets"
+          v-for="(difficulty, i) in filteredSheets"
           :key="i"
           class="song-difficulty"
         >
@@ -326,7 +326,14 @@ const fullUrl = computed(() => {
   return `/wacca/img/covers/${song.value.imageName}`;
 });
 
-const selectedDifficulty = ref(song.value.sheets.length);
+const version = useState("version");
+const filteredSheets = computed(() => {
+  return song.value.sheets.filter(
+    (sheet) => sheet.gameVersion <= version.value
+  );
+});
+
+const selectedDifficulty = ref(filteredSheets.value.length);
 const highscores = ref([]);
 const leaderboardsLoading = ref(false);
 const leaderboardsLoadingError = ref();

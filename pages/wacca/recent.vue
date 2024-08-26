@@ -57,12 +57,32 @@ definePageMeta({
   middleware: ["auth"],
 });
 
+import waccaSongs from "~~/assets/wacca/waccaSongs.js";
+
 const profile = useState("profile");
+const version = useState("version");
+
+const playlogFiltered = computed(() => {
+  return profile.value.playlog.filter((play) => {
+    let song = waccaSongs.find((song) => song.id === play.info.music_id);
+    if (!song) {
+      return false;
+    }
+
+    if (!song.sheets[play.info.music_difficulty - 1]) {
+      return false;
+    }
+
+    return (
+      song.sheets[play.info.music_difficulty - 1].gameVersion <= version.value
+    );
+  });
+});
 
 const playlogGrouped = computed(() => {
   const grouped = [];
 
-  profile.value.playlog.forEach((play) => {
+  playlogFiltered.value.forEach((play) => {
     const date = new Date(play.info.user_play_date);
     const dateStr = date.toLocaleDateString();
 

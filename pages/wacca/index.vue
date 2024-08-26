@@ -4,7 +4,7 @@
       <div
         class="waifu"
         :style="{
-          backgroundImage: `url(/wacca/img/navigators/${navigator.path}.webp)`,
+          backgroundImage: `url(/wacca/img/navigators/${navigator.path}.png)`,
         }"
       ></div>
     </v-container>
@@ -31,13 +31,13 @@
           </div>
           <div class="profile-stat">
             <span class="light">Rate</span>&nbsp;<WaccaRating
-              :rating="profile.version_data[4].rating"
+              :rating="selectedVersionData.rating"
             />
           </div>
         </WaccaProfileBox>
         <WaccaStageUp
-          :rank="profile.version_data[4].rank"
-          :danRank="profile.version_data[4].dan_rank"
+          :rank="selectedVersionData.rank"
+          :danRank="selectedVersionData.dan_rank"
         />
       </div>
     </v-container>
@@ -123,5 +123,16 @@ const iconId = computed(() => {
   let iconId = profile.value.options[1003] ?? 102001;
 
   return iconId;
+});
+
+const version = useState("version");
+
+const selectedVersionData = computed(() => {
+  console.log(version.value);
+  if (profile.value.version_data[version.value - 1]) {
+    return profile.value.version_data[version.value - 1];
+  }
+
+  return profile.value.version_data[4];
 });
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="song-sheets">
     <div
-      v-for="(difficulty, i) in song.sheets"
+      v-for="(difficulty, i) in filteredSheets"
       :key="i"
       class="song-difficulty"
     >
@@ -66,6 +66,8 @@ const props = defineProps({
   playerData: Object,
 });
 
+const version = useState("version");
+
 const grades = [
   "grade_d_count",
   "grade_c_count",
@@ -108,4 +110,10 @@ function medal(difficulty) {
 
   return "none";
 }
+
+const filteredSheets = computed(() => {
+  return props.song.sheets.filter(
+    (sheet) => sheet.gameVersion <= version.value
+  );
+});
 </script>

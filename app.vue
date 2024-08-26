@@ -23,6 +23,7 @@ import { useTheme } from "vuetify";
 
 const layout = ref("wacca");
 const theme = useState("theme");
+const version = useState("version");
 
 let defaultDark =
   window.matchMedia &&
@@ -60,10 +61,17 @@ function updateTheme() {
   }
 
   layout.value = nuxtTheme;
-  vuetifyTheme.global.name.value = nuxtTheme + theme.value;
+
+  let themeModded = theme.value;
+  if (version.value == 6) {
+    themeModded += "Plus";
+  }
+  console.log(nuxtTheme + themeModded);
+  vuetifyTheme.global.name.value = nuxtTheme + themeModded;
 }
 
 watch(theme, updateTheme);
+watch(version, updateTheme);
 watch(() => route.path, updateTheme);
 updateTheme();
 

@@ -1,5 +1,9 @@
 <template>
-  <v-theme-provider :theme="`wacca${theme}`" class="wacca" with-background>
+  <v-theme-provider
+    :theme="`wacca${themeModded}`"
+    class="wacca"
+    with-background
+  >
     <div id="site-logo">
       <img src="/wacca/img/logo.svg" />
     </div>
@@ -98,6 +102,17 @@ function cachePlayerSongs() {
     profile.value.songs[song.id] = cacheSongInfo(song);
   }
 }
+
+const version = useState("version");
+const themeModded = computed(() => {
+  let out = theme.value;
+
+  if (version.value == 6) {
+    out += "Plus";
+  }
+
+  return out;
+});
 
 loadProfile();
 watch(activeCard, loadProfile);

@@ -192,6 +192,8 @@ function getRating(difficulty, score) {
 
 const tab = ref(0);
 
+const version = useState("version");
+
 const sheetFolders = computed(() => {
   const folders = [
     {
@@ -213,14 +215,17 @@ const sheetFolders = computed(() => {
     sheet.score = music.score;
     sheet.song = waccaSongs.find((song) => song.id == music.music_id);
 
-    if (sheet.song && sheet.song.sheets[sheet.difficulty]) {
+    if (
+      sheet.song &&
+      sheet.song.sheets[sheet.difficulty] &&
+      sheet.song.sheets[sheet.difficulty].gameVersion <= version.value
+    ) {
       sheet.rating = getRating(
         sheet.song.sheets[sheet.difficulty].difficulty,
         sheet.score
       );
 
-      // filters for unknown songs or difficulties (wacca plus)
-      if (sheet.song.sheets[sheet.difficulty].gameVersion < 5) {
+      if (sheet.song.sheets[sheet.difficulty].gameVersion <= 4) {
         folders[0].sheets.push(sheet);
       } else {
         folders[1].sheets.push(sheet);
