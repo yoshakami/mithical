@@ -63,10 +63,10 @@ function updateTheme() {
   layout.value = nuxtTheme;
 
   let themeModded = theme.value;
-  if (version.value == 6) {
+  if (nuxtTheme != "mithical" && version.value == 6) {
     themeModded += "Plus";
   }
-  console.log(nuxtTheme + themeModded);
+
   vuetifyTheme.global.name.value = nuxtTheme + themeModded;
 }
 
