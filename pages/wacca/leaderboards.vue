@@ -27,7 +27,17 @@
 
           <tbody>
             <tr v-for="(profile, i) in leaderboardsDataFiltered" :key="i">
-              <td class="text-right">{{ i + 1 }}</td>
+              <td class="text-right">
+                <span
+                  v-if="
+                    i == 0 ||
+                    leaderboardsDataFiltered[i - 1].rating != profile.rating
+                  "
+                >
+                  {{ i + 1 }}
+                </span>
+                <span v-else>=</span>
+              </td>
               <td>
                 <WaccaIcon
                   class="leaderboard-icon"
@@ -92,7 +102,16 @@ function loadData() {
 }
 
 const leaderboardsDataFiltered = computed(() => {
-  return leaderboardData.value.filter((profile, i) => profile.version == 4);
+  let reverseOnly = leaderboardData.value.filter(
+    (profile, i) => profile.version == 4
+  );
+
+  let withoutDuplicates = reverseOnly.filter(
+    (profile, i) =>
+      reverseOnly.findIndex((p) => p.api_id == profile.api_id) == i
+  );
+
+  return withoutDuplicates;
 });
 
 loadData();
