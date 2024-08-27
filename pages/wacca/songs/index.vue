@@ -643,7 +643,10 @@ const filters = ref([
         icon: "mdi-close-circle-outline",
         iconActive: "mdi-close-circle",
         filterFunction(song) {
-          return song.sheets.length <= 3;
+          return (
+            song.sheets.filter((sheet) => sheet.gameVersion <= version.value)
+              .length <= 3
+          );
         },
       },
       {
@@ -651,7 +654,10 @@ const filters = ref([
         icon: "mdi-check-circle-outline",
         iconActive: "mdi-check-circle",
         filterFunction(song) {
-          return song.sheets.length > 3;
+          return (
+            song.sheets.filter((sheet) => sheet.gameVersion <= version.value)
+              .length > 3
+          );
         },
       },
     ],
