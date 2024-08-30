@@ -42,6 +42,9 @@
               {{ profile.songs[song.id].rating / 10 }}
               Rating
             </v-chip>
+            <v-chip prepend-icon="mdi-account">
+              Charted by {{ chartedBy }}
+            </v-chip>
           </div>
 
           <!-- <v-btn
@@ -477,6 +480,18 @@ function fillGrade(grade, score) {
     }
   }
 }
+
+const chartedBy = computed(() => {
+  let charters = [];
+
+  for (const sheet of song.value.sheets) {
+    if (sheet.gameVersion <= version.value) {
+      charters.push(sheet.charter);
+    }
+  }
+
+  return [...new Set(charters)].join(" + ");
+});
 
 useSeoMeta({
   title: `Mithical | ${getTitle.value}`,
