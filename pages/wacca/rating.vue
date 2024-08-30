@@ -1,6 +1,22 @@
 <template>
   <WaccaProfileRequired>
     <v-container>
+      <v-alert type="info" class="mb-2">
+        <p>
+          This page shows you your total rating for your top 35 and 15 songs in
+          the relevant Wacca versions.
+        </p>
+        <p>
+          Each song shows you the achieved rating, as well as a guide on how
+          much rating you will gain by improving your PB to the next rating
+          border.
+        </p>
+        <p>
+          The left number shows the improvement for the song, the right number
+          shows how much rating your whole profile will gain.
+        </p>
+      </v-alert>
+
       <v-tabs fixed-tabs v-model="tab" bg-color="primary">
         <v-tab v-for="(folder, i) in sheetFolders" :key="i">
           {{ folder.name }}
