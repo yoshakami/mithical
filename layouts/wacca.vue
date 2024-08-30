@@ -39,6 +39,7 @@ useHead({
 const profile = useState("profile");
 const profileLoading = useState("profileLoading", () => false);
 const profileError = useState("profileError");
+const version = useState("version");
 
 async function loadProfile() {
   profileLoading.value = true;
@@ -53,6 +54,7 @@ async function loadProfile() {
         profileLoading.value = false;
 
         cachePlayerSongs();
+        selectVersion();
       })
       .catch((err) => {
         console.error(err);
@@ -96,6 +98,18 @@ function cacheSongInfo(song) {
   };
 }
 
+function selectVersion() {
+  if (localStorage.getItem("version")) {
+    return;
+  }
+
+  if (profile.value.version_data[5]) {
+    version.value = 6;
+  } else {
+    version.value = 5;
+  }
+}
+
 function cachePlayerSongs() {
   profile.value.songs = [];
   for (const song of waccaSongs) {
@@ -103,7 +117,6 @@ function cachePlayerSongs() {
   }
 }
 
-const version = useState("version");
 const themeModded = computed(() => {
   let out = theme.value;
 
