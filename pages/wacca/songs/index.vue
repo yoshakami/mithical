@@ -470,14 +470,21 @@ const sortOptions = [
         text: "Inferno Difficulty",
         subText: "Inferno",
         sortFunction(a, b) {
+          let aDiff = 16;
+          let bDiff = 16;
+
+          if (a.sheets[3]) {
+            aDiff = a.sheets[3].difficulty;
+          }
+
+          if (b.sheets[3]) {
+            bDiff = b.sheets[3].difficulty;
+          }
+
           if (sortOrder.value == "asc") {
-            return (
-              (a.sheets[3].difficulty ?? 16) - (b.sheets[3].difficulty ?? 16)
-            );
+            return aDiff - bDiff;
           } else {
-            return (
-              (b.sheets[3].difficulty ?? 0) - (a.sheets[3].difficulty ?? 0)
-            );
+            return bDiff - aDiff;
           }
         },
       },
