@@ -111,12 +111,15 @@
 
         <div v-else class="histograms">
           <WaccaHistogram
-            v-for="(difficulty, i) in filteredSheets"
+            v-for="(histogram, i) in histograms"
             :key="i"
-            :scores="histograms[i]?.score_entries"
-            :color="waccaDifficulties[i].color"
-            :label="waccaDifficulties[i].name"
-            :score="profile.songs[song.id]?.scores[i]?.score"
+            :scores="histogram.score_entries"
+            :color="waccaDifficulties[histogram.music_difficulty - 1].color"
+            :label="waccaDifficulties[histogram.music_difficulty - 1].name"
+            :score="
+              profile.songs[song.id]?.scores[histogram.music_difficulty - 1]
+                ?.score
+            "
           />
         </div>
       </div>
