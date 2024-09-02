@@ -103,7 +103,7 @@
 .gacha-link {
   font-weight: bold;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 15px;
   max-width: 750px;
   overflow: hidden;
