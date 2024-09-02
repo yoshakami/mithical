@@ -35,13 +35,17 @@
     <div class="pa-4">
       <div class="gamba-button">
         <v-btn
+          class="elevation-3"
           @click="spin(i)"
           color="primary"
           size="x-large"
           :disabled="!spinReady || !enoughRP"
           :loading="spinLoading"
         >
-          Gamba ({{ box.price }} RP per spin)
+          <span class="gamba-button-text">
+            Gamba
+            <div class="gamba-button-cost">{{ box.price }} RP per spin</div>
+          </span>
         </v-btn>
       </div>
       <v-expansion-panels class="mt-4">
@@ -105,14 +109,14 @@
 
 .box-image {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 60%;
 
   width: 100%;
   height: 100%;
 
-  background-size: 400px;
-  background-position: top right;
+  background-size: auto 1000px;
+  background-position: top left;
 }
 
 h1 {
@@ -170,6 +174,24 @@ h1 {
 .gamba-button {
   display: flex;
   justify-content: center;
+
+  .v-btn.v-btn--density-default {
+    height: auto;
+    border-radius: 15px;
+    padding: 0.7em 1.3em;
+    border: 3px solid rgba(255, 255, 255, 1);
+  }
+
+  .gamba-button-text {
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .gamba-button-cost {
+    font-size: 0.3em;
+    font-weight: 400;
+  }
 }
 
 .box-items {
@@ -389,11 +411,6 @@ function finishSpin() {
   );
   spinTimer = spinTime;
   resultOpen.value = true;
-  // add a copy of receiveditem
-  profile.value.items.push({
-    item_kind: receivedItem.value.kind,
-    item_id: receivedItem.value.id,
-  });
 }
 
 const resultOpen = ref(false);
@@ -401,6 +418,11 @@ const resultOpen = ref(false);
 function closeResult() {
   resultOpen.value = false;
   spinReady.value = true;
+  // add a copy of receiveditem
+  profile.value.items.push({
+    item_kind: receivedItem.value.kind,
+    item_id: receivedItem.value.id,
+  });
 }
 
 const enoughRP = computed(() => {
