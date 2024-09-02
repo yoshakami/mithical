@@ -17,6 +17,7 @@
 
 const waccaBoxes = [
   {
+    id: 0,
     name: "リリィBOX",
     nameEnglish: "Lily Box",
     price: 500,
@@ -286,6 +287,7 @@ const waccaBoxes = [
     ],
   },
   {
+    id: 1,
     name: "アールBOX",
     nameEnglish: "R Box",
     price: 500,
@@ -561,6 +563,7 @@ const waccaBoxes = [
     ],
   },
   {
+    id: 2,
     name: "リバースBOX",
     nameEnglish: "Reverse Box",
     price: 1500,
@@ -812,6 +815,7 @@ const waccaBoxes = [
     ],
   },
   {
+    id: 3,
     name: "ラストスパートイベントBOX",
     nameEnglish: "Last Spurt Event Box",
     price: 30000,

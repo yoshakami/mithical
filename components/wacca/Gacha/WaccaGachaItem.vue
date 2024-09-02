@@ -18,11 +18,14 @@
     <div class="gacha-item-rarity">
       <v-icon v-for="i in props.rarity" :key="i">mdi-star</v-icon>
     </div>
+
+    <div class="gacha-item-unowned" :class="{ owned }">Owned</div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .gacha-item {
+  overflow: hidden;
   flex-grow: 0;
   flex-shrink: 0;
   color: #000;
@@ -30,6 +33,7 @@
   box-sizing: border-box;
   position: relative;
   font-size: 16px;
+  border-radius: 5px;
 
   background-color: #f0f0f0;
   width: 150px;
@@ -71,6 +75,28 @@
   display: flex;
 }
 
+.gacha-item-unowned {
+  $w: 100px;
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  transform: rotate(-30deg);
+  background: red;
+  font-weight: 800;
+  color: white;
+  padding-left: $w;
+  margin-left: -$w;
+  padding-right: $w;
+  margin-right: -$w;
+
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.owned {
+    opacity: 1;
+  }
+}
+
 .rarity-1 {
   background-color: #009de6;
   color: white;
@@ -100,6 +126,7 @@ import waccaUserPlates from "~/assets/wacca/waccaUserPlates.js";
 import waccaItemKinds from "~/assets/wacca/waccaItemKinds.js";
 
 const language = useState("language");
+const profile = useState("profile");
 
 const props = defineProps({
   rarity: Number,
@@ -129,4 +156,8 @@ function itemName(kind, id) {
     return item.nameEnglish ?? item.name;
   }
 }
+
+const owned = computed(() => {
+  return profile.value.items.some((item) => item.item_id == props.id);
+});
 </script>

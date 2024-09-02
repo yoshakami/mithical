@@ -38,7 +38,8 @@
           @click="spin(i)"
           color="primary"
           size="x-large"
-          :disabled="!spinReady"
+          :disabled="!spinReady || !enoughRP"
+          :loading="spinLoading"
         >
           Gamba ({{ box.price }} RP per spin)
         </v-btn>
@@ -51,7 +52,8 @@
                 <WaccaGachaItem
                   :kind="item.kind"
                   :id="item.id"
-                  :rarity="item.rarity" />
+                  :rarity="item.rarity"
+                />
               </div>
             </div>
           </v-expansion-panel-text>
@@ -59,8 +61,8 @@
       </v-expansion-panels>
     </div>
 
-
-    <div class="item-popup"
+    <div
+      class="item-popup"
       :class="{ active: resultOpen }"
       @click="closeResult"
     >
@@ -73,6 +75,7 @@
             :rarity="receivedItem.rarity"
           />
         </div>
+        <div v-if="isNew" class="item-popup-new">New!</div>
       </div>
     </div>
   </v-container>
@@ -220,14 +223,28 @@ h1 {
     margin: 1.4em 0;
     transform: scale(1.5);
   }
+
+  .item-popup-congrats {
+    font-weight: bold;
+  }
+
+  .item-popup-new {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(255, 255, 122);
+    text-shadow: 0px 0px 10px gold;
+    text-transform: uppercase;
+  }
 }
 </style>
 
 <script setup>
 import { Howl } from "howler";
 
+const runtimeConfig = useRuntimeConfig();
 const language = useState("language");
 const profile = useState("profile");
+const activeCard = useState("activeCard");
 
 const props = defineProps({
   box: Object,
@@ -269,24 +286,40 @@ let spinTimer;
 let spinStartTime;
 const spinTime = 6;
 const spinReady = ref(true);
+const spinLoading = ref(false);
+const isNew = ref(false);
 
 function spin() {
   spinReady.value = false;
-  receivedItem.value =
-    props.box.items[Math.floor(Math.random() * props.box.items.length)];
-  updateItemList();
+  spinLoading.value = true;
 
-  // reset offset in css
-  offset.value = 0;
+  let gachaUrl = `${runtimeConfig.public.apiUrl}/wacca/user/${activeCard.value}/gacha/${props.box.id}`;
+  $fetch(gachaUrl, {
+    method: "POST",
+  })
+    .then((data) => {
+      spinLoading.value = false;
+      receivedItem.value = data.item;
 
-  scrollDistance = position * itemWidth + Math.random() * 130;
+      updateItemList();
 
-  spinTimer = 0;
-  spinStartTime = null;
+      // reset offset in css
+      offset.value = 0;
 
-  profile.value.points -= props.box.price;
+      scrollDistance = position * itemWidth + Math.random() * 130;
 
-  requestAnimationFrame(animateSpin);
+      spinTimer = 0;
+      spinStartTime = null;
+
+      profile.value.points = data.points;
+
+      requestAnimationFrame(animateSpin);
+    })
+    .catch((err) => {
+      console.error(err);
+      spinLoading.value = false;
+      spinReady.value = true;
+    });
 }
 
 const currentRouletteItem = ref(0);
@@ -311,13 +344,11 @@ function animateSpin(currentTime) {
     spinTimer = (currentTime - spinStartTime) / 1000;
 
     if (spinTimer >= spinTime) {
-      rouletteGetSound.play();
-      spinTimer = spinTime;
-      resultOpen.value = true;
+      finishSpin();
     }
 
     const progress = spinTimer / spinTime;
-    // console.log(progress);
+
     const progressEased = 1 - Math.pow(1 - progress, 4);
 
     offset.value = (scrollDistance + 1000) * progressEased - 1000;
@@ -351,10 +382,28 @@ function boxName(box) {
   }
 }
 
+function finishSpin() {
+  rouletteGetSound.play();
+  isNew.value = !profile.value.items.some(
+    (item) => item.item_id === receivedItem.value.id
+  );
+  spinTimer = spinTime;
+  resultOpen.value = true;
+  // add a copy of receiveditem
+  profile.value.items.push({
+    item_kind: receivedItem.value.kind,
+    item_id: receivedItem.value.id,
+  });
+}
+
 const resultOpen = ref(false);
 
 function closeResult() {
   resultOpen.value = false;
   spinReady.value = true;
 }
+
+const enoughRP = computed(() => {
+  return profile.value.points >= props.box.price;
+});
 </script>

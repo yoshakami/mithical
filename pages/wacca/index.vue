@@ -40,6 +40,16 @@
           :danRank="selectedVersionData.dan_rank"
         />
       </div>
+
+      <NuxtLink to="/wacca/gacha" style="text-decoration: none">
+        <div
+          class="gacha-link elevation-3"
+          v-ripple="{ class: 'text-secondary' }"
+        >
+          <div class="gacha-link-background"></div>
+          <div class="gacha-link-text">Play Wacca Gacha</div>
+        </div>
+      </NuxtLink>
     </v-container>
   </WaccaProfileRequired>
 </template>
@@ -87,7 +97,61 @@
 .profile-stats {
   display: flex;
   align-items: center;
+  margin-bottom: 41px;
+}
+
+.gacha-link {
+  font-weight: bold;
+  text-align: center;
   margin-top: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  overflow: hidden;
+
+  background: linear-gradient(90deg, #575afc, #090293);
+
+  position: relative;
+  display: inline-block;
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.3s;
+    z-index: 3;
+  }
+
+  &:hover:after {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.gacha-link-text {
+  margin-left: 100px;
+  z-index: 2;
+  position: relative;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  font-weight: 300;
+  color: white;
+  font-size: 2em;
+  padding: 15px;
+}
+
+.gacha-link-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/wacca/img/gacha-button-background.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  z-index: 1;
 }
 
 .light {
