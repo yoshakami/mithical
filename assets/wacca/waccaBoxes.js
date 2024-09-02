@@ -602,7 +602,7 @@ const waccaBoxes = [
       },
       {
         kind: 11,
-        id: 305002,
+        id: 305001,
         rarity: 3,
       },
       {
