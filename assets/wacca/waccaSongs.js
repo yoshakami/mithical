@@ -12884,7 +12884,7 @@ const waccaSongs = [
     id: 4039,
     title: "ラグトレイン",
     titleEnglish: "Lagtrain",
-    artist: "nabakumori",
+    artist: "inabakumori",
     dateAdded: 20240702,
     dateRemoved: 0,
     gameVersion: 6,
