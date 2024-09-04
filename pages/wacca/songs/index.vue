@@ -473,11 +473,11 @@ const sortOptions = [
           let aDiff = 16;
           let bDiff = 16;
 
-          if (a.sheets[3]) {
+          if (a.sheets[3] && a.sheets[3].gameVersion <= version.value) {
             aDiff = a.sheets[3].difficulty;
           }
 
-          if (b.sheets[3]) {
+          if (b.sheets[3] && b.sheets[3].gameVersion <= version.value) {
             bDiff = b.sheets[3].difficulty;
           }
 
