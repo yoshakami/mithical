@@ -47,7 +47,9 @@ const props = defineProps({
 const version = useState("version");
 
 const filteredsheets = computed(() => {
-  return props.song.sheets.filter((sheet) => sheet.version <= version.value);
+  return props.song.sheets.filter(
+    (sheet) => sheet.gameVersion <= version.value
+  );
 });
 
 const playerChart = ref(null);
@@ -80,7 +82,7 @@ const playerHistoryFormatted = computed(() => {
     },
   ];
 
-  if (filteredsheets.length === 4) {
+  if (filteredsheets.value.length === 4) {
     datasets.push({
       label: "Inferno",
       backgroundColor: "#4a004f",
