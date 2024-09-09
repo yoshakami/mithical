@@ -86,7 +86,7 @@ const playerHistoryFormatted = computed(() => {
     datasets.push({
       label: "Inferno",
       backgroundColor: "#4a004f",
-      borderColor: "#4a004f",
+      borderColor: "#83008c",
       pointRadius: pointRadius,
       data: [],
     });
