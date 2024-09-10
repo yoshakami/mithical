@@ -270,7 +270,11 @@ const sheetFolders = computed(() => {
 
       if (nextBorder) {
         const sheetDifficulty = sheet.song.sheets[sheet.difficulty].difficulty;
-        const lowestRating = folder.sheets[folder.count - 1].rating / 10;
+
+        let lowestRating = 0;
+        if (folder.sheets.length >= folder.count) {
+          lowestRating = folder.sheets[folder.count - 1].rating / 10;
+        }
 
         const ratingDiff =
           nextBorder.multiplier * sheetDifficulty - sheet.rating / 10;
