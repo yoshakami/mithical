@@ -1,6 +1,9 @@
 <template>
-  <div class="gacha-item" :class="`rarity-${props.rarity}`">
-    <div v-if="[5, 10, 11, 16].includes(props.kind)" class="gacha-item-preview">
+  <div
+    class="gacha-item"
+    :class="[`rarity-${props.rarity}`, owned || !greyunowned ? 'owned' : '']"
+  >
+    <div v-if="[5, 11].includes(props.kind)" class="gacha-item-preview">
       <div class="gacha-item-preview-kind">
         {{ waccaItemKinds[props.kind] }}
       </div>
@@ -15,6 +18,35 @@
       class="gacha-item-preview"
     />
 
+    <div v-else-if="props.kind == 16" class="gacha-item-plate">
+      <img :src="`/wacca/img/plates/${item.path}.png`" />
+    </div>
+
+    <div v-else-if="props.kind == 15" class="gacha-item-navigator">
+      <img :src="`/wacca/img/navigators/${item.path}.png`" />
+
+      <div class="gacha-item-preview-item">
+        {{ itemName(props.kind, props.id) }}
+      </div>
+    </div>
+
+    <div v-else-if="props.kind == 10" class="gacha-item-colorscheme">
+      <div class="gacha-item-preview-kind">
+        {{ waccaItemKinds[props.kind] }}
+      </div>
+      <div class="gacha-item-preview-item">
+        {{ itemName(props.kind, props.id) }}
+      </div>
+
+      <div class="colorscheme-wrapper">
+        <div
+          v-for="i in [0, 1, 2]"
+          :key="i"
+          :style="{ backgroundColor: `rgb(${item.colors[i].join(',')})` }"
+        ></div>
+      </div>
+    </div>
+
     <div class="gacha-item-rarity">
       <v-icon v-for="i in props.rarity" :key="i">mdi-star</v-icon>
     </div>
@@ -28,12 +60,12 @@
   overflow: hidden;
   flex-grow: 0;
   flex-shrink: 0;
-  color: #000;
   padding: 0px 5px;
   box-sizing: border-box;
   position: relative;
   font-size: 16px;
   border-radius: 5px;
+  color: white;
 
   background-color: #f0f0f0;
   width: 150px;
@@ -62,6 +94,34 @@
 
 .gacha-item-preview-item {
   font-weight: 700;
+}
+
+.gacha-item-plate {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img {
+    width: 600px;
+    position: absolute;
+    top: -15px;
+    left: 20%;
+    height: auto;
+    transform: translateX(-50%);
+  }
+}
+
+.gacha-item-navigator {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img {
+    padding-top: 5px;
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+  }
 }
 
 .gacha-item-rarity {
@@ -97,23 +157,52 @@
   }
 }
 
-.rarity-1 {
-  background-color: #009de6;
-  color: white;
+.gacha-item:not(.owned) {
+  color: rgba(0, 0, 0, 0.7);
+  .gacha-item-preview-kind {
+    color: rgba(0, 0, 0, 0.7);
+  }
 }
 
-.rarity-2 {
-  background-color: #fed131;
+.owned {
+  &.rarity-0 {
+    background-color: #009de6;
+  }
+
+  &.rarity-1 {
+    background-color: #009de6;
+  }
+
+  &.rarity-2 {
+    background-color: #fed131;
+    color: #000;
+  }
+
+  &.rarity-3 {
+    background-color: #fc06a3;
+  }
+
+  &.rarity-4 {
+    background-color: #4a004f;
+  }
 }
 
-.rarity-3 {
-  background-color: #fc06a3;
-  color: white;
+.gacha-item-colorscheme {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.colorscheme-wrapper {
+  width: 90%;
+  display: grid;
+  height: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4px;
 
-.rarity-4 {
-  background-color: #4a004f;
-  color: white;
+  div {
+    height: 100%;
+  }
 }
 </style>
 
@@ -123,6 +212,7 @@ import waccaSoundEffects from "~/assets/wacca/waccaSoundEffects.js";
 import waccaTitles from "~/assets/wacca/waccaTitles.js";
 import waccaSymbolColors from "~/assets/wacca/waccaSymbolColors.js";
 import waccaUserPlates from "~/assets/wacca/waccaUserPlates.js";
+import waccaNavigators from "~/assets/wacca/waccaNavigators";
 import waccaItemKinds from "~/assets/wacca/waccaItemKinds.js";
 
 const language = useState("language");
@@ -132,6 +222,7 @@ const props = defineProps({
   rarity: Number,
   kind: Number,
   id: Number,
+  greyunowned: Boolean,
 });
 
 function findItem(kind, id) {
@@ -143,6 +234,8 @@ function findItem(kind, id) {
     return waccaSymbolColors.find((symbolColor) => symbolColor.id == id);
   } else if (kind == 11) {
     return waccaSoundEffects.find((soundEffect) => soundEffect.id == id);
+  } else if (kind == 15) {
+    return waccaNavigators.find((navigator) => navigator.id == id);
   } else if (kind == 16) {
     return waccaUserPlates.find((userPlate) => userPlate.id == id);
   }
@@ -156,6 +249,10 @@ function itemName(kind, id) {
     return item.nameEnglish ?? item.name;
   }
 }
+
+const item = computed(() => {
+  return findItem(props.kind, props.id);
+});
 
 const owned = computed(() => {
   return profile.value.items.some((item) => item.item_id == props.id);

@@ -1,5 +1,4 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineNuxtConfig({
   css: [
@@ -27,15 +26,15 @@ export default defineNuxtConfig({
 
   ssr: false,
 
-  devtools: {
-    enabled: false,
-  },
+  compatibilityDate: "2024-09-23",
 
   vite: {
-    plugins: [
-      ViteImageOptimizer({
-        /* pass your config */
-      }),
-    ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler", // or "modern"
+        },
+      },
+    },
   },
 });

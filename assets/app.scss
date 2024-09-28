@@ -147,3 +147,11 @@ body {
 .settings-rounding label {
   opacity: 1;
 }
+
+.tippy-box {
+  max-width: 100vw !important;
+
+  img {
+    max-width: calc(100vw - 50px) !important;
+  }
+}

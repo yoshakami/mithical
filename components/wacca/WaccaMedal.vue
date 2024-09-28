@@ -5,6 +5,15 @@
 </template>
 
 <style scoped lang="scss">
+@keyframes marvelous {
+  from {
+    background-position: 0 0px;
+  }
+  to {
+    background-position: 0 30px;
+  }
+}
+
 .song-medal {
   white-space: nowrap;
   font-family: "SHINBI", sans-serif;
@@ -109,15 +118,6 @@
     // evil vendor prefix stuff
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-
-    @keyframes marvelous {
-      from {
-        background-position: 0 0px;
-      }
-      to {
-        background-position: 0 30px;
-      }
-    }
 
     animation: 2s linear infinite marvelous;
   }
