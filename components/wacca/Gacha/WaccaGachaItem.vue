@@ -122,6 +122,10 @@
     height: 70%;
     object-fit: contain;
   }
+
+  .gacha-item-preview-item {
+    margin-top: -7px;
+  }
 }
 
 .gacha-item-rarity {
@@ -184,6 +188,25 @@
 
   &.rarity-4 {
     background-color: #4a004f;
+  }
+
+  &.rarity-5 {
+    // muted rainbow
+    background: linear-gradient(
+      120deg,
+      #ff4e50,
+      #fc913a,
+      #f9d423,
+      #ede574,
+      #e1f5c4,
+      #b3f3f1,
+      #54d3c2,
+      #3b9bbb,
+      #5c6bc0,
+      #5d4c51
+    );
+
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
   }
 }
 

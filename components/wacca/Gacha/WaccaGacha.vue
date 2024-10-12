@@ -110,9 +110,9 @@
 .box-image {
   position: absolute;
   top: 10px;
-  left: 60%;
+  right: -650px;
 
-  width: 100%;
+  width: 1000px;
   height: 100%;
 
   background-size: auto 1000px;

@@ -1,19 +1,19 @@
 <template>
   <WaccaProfileRequired>
     <v-container>
-      <v-btn-toggle v-model="activeCategory" shaped mandatory>
-        <v-btn
-          color="primary"
-          v-for="category of categories"
-          :key="category.id"
-        >
-          {{ category.name }}
-        </v-btn>
-      </v-btn-toggle>
+      <div class="d-flex justify-center mb-6">
+        <v-btn-toggle v-model="activeCategory" shaped mandatory>
+          <v-btn
+            color="primary"
+            v-for="category of categories"
+            :key="category.id"
+          >
+            {{ category.name }}
+          </v-btn>
+        </v-btn-toggle>
+      </div>
 
       <div>
-        <h1>{{ categories[activeCategory].name }}</h1>
-
         <div class="box-items">
           <div
             v-for="item in categories[activeCategory].items"
@@ -52,6 +52,19 @@
   height: 120px;
   width: 150px;
 }
+
+.v-btn-toggle {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.v-btn-group--density-default.v-btn-group {
+  height: auto;
+}
+
+.v-btn-group .v-btn {
+  min-height: 40px;
+}
 </style>
 
 <script setup>
@@ -63,6 +76,11 @@ import waccaUserPlates from "~/assets/wacca/waccaUserPlates.js";
 import waccaNavigators from "~/assets/wacca/waccaNavigators";
 
 const categories = [
+  {
+    name: "Navigators",
+    items: waccaNavigators,
+    id: 15,
+  },
   {
     name: "Color Schemes",
     items: waccaSymbolColors,
@@ -82,11 +100,6 @@ const categories = [
     name: "User Plates",
     items: waccaUserPlates,
     id: 16,
-  },
-  {
-    name: "Navigators",
-    items: waccaNavigators,
-    id: 15,
   },
   {
     name: "Titles",

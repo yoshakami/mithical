@@ -17,6 +17,177 @@
 
 const waccaBoxes = [
   {
+    id: 4,
+    name: "Cirno BOX",
+    nameEnglish: "Cirno Box",
+    price: 5000,
+    color: "#b9f0f3",
+    image: "/wacca/img/gacha_cirno.png",
+    items: [
+      {
+        kind: 15,
+        id: 210061,
+        rarity: 5,
+      },
+      {
+        kind: 10,
+        id: 103007,
+        rarity: 4,
+      },
+      {
+        kind: 10,
+        id: 203007,
+        rarity: 4,
+      },
+      {
+        kind: 16,
+        id: 211010,
+        rarity: 3,
+      },
+      {
+        kind: 16,
+        id: 211038,
+        rarity: 3,
+      },
+      {
+        kind: 6,
+        id: 202113,
+        rarity: 3,
+      },
+      {
+        kind: 6,
+        id: 202114,
+        rarity: 3,
+      },
+      {
+        kind: 6,
+        id: 102070,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 102071,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 102072,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 102096,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 202011,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 202012,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 202079,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 302044,
+        rarity: 2,
+      },
+      // titles
+      {
+        kind: 5,
+        id: 104125,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104126,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104127,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104128,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104129,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104130,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104131,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104132,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104133,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104134,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104135,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104136,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104138,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104146,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104147,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 104148,
+        rarity: 1,
+      },
+      {
+        kind: 5,
+        id: 204147,
+        rarity: 1,
+      },
+    ],
+  },
+  {
     id: 0,
     name: "リリィBOX",
     nameEnglish: "Lily Box",
