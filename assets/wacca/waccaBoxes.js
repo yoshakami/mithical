@@ -18,7 +18,7 @@
 const waccaBoxes = [
   {
     id: 4,
-    name: "Cirno BOX",
+    name: "チルノBOX",
     nameEnglish: "Cirno Box",
     price: 5000,
     color: "#b9f0f3",
@@ -38,11 +38,6 @@ const waccaBoxes = [
         kind: 10,
         id: 203007,
         rarity: 4,
-      },
-      {
-        kind: 16,
-        id: 211010,
-        rarity: 3,
       },
       {
         kind: 16,
