@@ -12490,7 +12490,7 @@ const waccaSongs = [
       {
         difficulty: 13.5,
         gameVersion: 6,
-        charter: "RocketW",
+        charter: "Left:RocketW | Right:Snowball",
       },
     ],
   },
@@ -12658,7 +12658,7 @@ const waccaSongs = [
     releaseDate: "2024-07-02",
     sheets: [
       {
-        difficulty: 5,
+        difficulty: 4,
         gameVersion: 6,
         charter: "Tiiger",
       },
@@ -12803,7 +12803,7 @@ const waccaSongs = [
         charter: "Snowball",
       },
       {
-        difficulty: 13.7,
+        difficulty: 13.8,
         gameVersion: 6,
         charter: "SNOWBÅLL(大未来雪玉)",
       },
