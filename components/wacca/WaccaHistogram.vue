@@ -108,6 +108,16 @@ onMounted(() => {
       },
 
       plugins: {
+        title: {
+          display: true,
+          text: props.label,
+          font: {
+            size: 16,
+          },
+        },
+        legend: {
+          display: false,
+        },
         tooltip: {
           callbacks: {
             title: (context) => {

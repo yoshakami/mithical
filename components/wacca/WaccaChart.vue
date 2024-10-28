@@ -42,6 +42,7 @@ const props = defineProps({
   playerHistory: Array,
   song: Object,
   loading: Boolean,
+  difficultyFilter: Number,
 });
 
 const version = useState("version");
@@ -113,6 +114,10 @@ const playerHistoryFormatted = computed(() => {
     }
   }
 
+  if (props.difficultyFilter) {
+    return [datasets[props.difficultyFilter - 1]];
+  }
+
   return datasets;
 });
 
@@ -175,7 +180,20 @@ function updateChart() {
   chart.resetZoom();
 }
 
+function difficultyFilter(difficulty) {
+  if (!chart) return;
+
+  for (let i = props.playerHistory.length - 1; i >= 0; i--) {
+    // Hide all datasets except the one we filtered to
+    // Show all if filter is set to null, thus disabling
+    chart.setDatasetVisibility(i, !difficulty || i == difficulty - 1);
+  }
+
+  chart.update();
+}
+
 defineExpose({
   updateChart,
+  difficultyFilter,
 });
 </script>

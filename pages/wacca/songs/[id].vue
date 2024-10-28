@@ -74,12 +74,13 @@
     <v-container class="elevation-1 mt-4">
       <h2 class="container-heading">Your scores</h2>
 
-      <WaccaSongSheets :song="song" :player-data="profile.songs[song.id]" />
+      <WaccaSongSheets :song="song" :player-data="profile.songs[song.id]" :selected-difficulty="yourScoreDifficulty" :on-difficulty-click="selectYourScoreDifficulty" />
       <WaccaChart
         ref="chart"
         :player-history="playerHistory"
         :loading="playerHistoryLoading"
         :song="song"
+        :difficulty-filter="yourScoreDifficulty"
       />
     </v-container>
 
@@ -163,46 +164,49 @@
           leaderboardsLoadingError
         }}</v-alert>
 
-        <v-table v-else>
-          <thead>
-            <tr>
-              <th width="1%">Rank</th>
-              <th>Name</th>
-              <th>Score</th>
-              <th>Date</th>
-            </tr>
-          </thead>
+        <div v-else>
+          <h3 class="your-rank">Your Rank: {{ getRankDescription(profile.user_name) }}</h3>
+          <v-table>
+            <thead>
+              <tr>
+                <th width="1%">Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Date</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr
-              v-for="(score, i) in highscores"
-              :key="i"
-              :class="{ highlight: score.user_name == profile.user_name }"
-            >
-              <td class="text-right">
-                <span v-if="i == 0 || highscores[i - 1].score != score.score">
-                  {{ i + 1 }}
-                </span>
-              </td>
-              <td>
-                <WaccaIcon class="highscore-icon" :icon="score.user_icon_id" />
-                {{ score.user_name }}
-              </td>
-              <td>
-                <WaccaGrade
-                  class="highscore-grade"
-                  :grade="fillGrade(score.grade, score.score)"
-                />
-                {{ score.score }}
-              </td>
-              <td>{{ formatDateLeaderboard(score.user_play_date) }}</td>
-            </tr>
+            <tbody>
+              <tr
+                v-for="(score, i) in highscores"
+                :key="i"
+                :class="{ highlight: score.user_name == profile.user_name }"
+              >
+                <td class="text-right">
+                  <span v-if="i == 0 || highscores[i - 1].score != score.score">
+                    {{ i + 1 }}
+                  </span>
+                </td>
+                <td>
+                  <WaccaIcon class="highscore-icon" :icon="score.user_icon_id" />
+                  {{ score.user_name }}
+                </td>
+                <td>
+                  <WaccaGrade
+                    class="highscore-grade"
+                    :grade="fillGrade(score.grade, score.score)"
+                  />
+                  {{ score.score }}
+                </td>
+                <td>{{ formatDateLeaderboard(score.user_play_date) }}</td>
+              </tr>
 
-            <tr v-if="highscores.length === 0">
-              <td colspan="5" class="text-center">No scores yet!</td>
-            </tr>
-          </tbody>
-        </v-table>
+              <tr v-if="highscores.length === 0">
+                <td colspan="5" class="text-center">No scores yet!</td>
+              </tr>
+            </tbody>
+          </v-table>
+        </div>
       </div>
     </v-container>
   </WaccaProfileRequired>
@@ -294,6 +298,11 @@
 tr.highlight {
   background-color: rgba(var(--v-theme-primary), 0.1);
 }
+
+.your-rank {
+  margin-top: 16px;
+  margin-left: 16px;
+}
 </style>
 
 <script setup>
@@ -336,6 +345,7 @@ const filteredSheets = computed(() => {
   );
 });
 
+const yourScoreDifficulty = ref(null);
 const selectedDifficulty = ref(filteredSheets.value.length);
 const highscores = ref([]);
 const leaderboardsLoading = ref(false);
@@ -346,6 +356,41 @@ const histogramsLoadingError = ref();
 
 const playerHistory = ref([]);
 
+function sortScores(scores) {
+  return scores.sort((a, b) => {
+    // When score is identical, prefer the user who achieved it first
+    if (a.score === b.score) {
+      return new Date(a.user_play_date) - new Date(b.user_play_date);
+    }
+    return b.score - a.score;
+  });
+}
+
+function getRankDescription(username) {
+  if (!highscores.value) {
+    return 'Unknown'
+  }
+
+  // If there is more than one user with the same score, the displayed rank is equal to the first listed player with that score
+  let playerRank;
+  let currentRanking;
+  let currentScore;
+  for (let i = 0; i < highscores.value.length; i++) {
+    if (!currentScore || highscores.value[i].score < currentScore) {
+      currentScore = highscores.value[i].score;
+      currentRanking = i + 1;
+    }
+    if (highscores.value[i].user_name === username) {
+      playerRank = currentRanking;
+      break;
+    }
+  }
+
+  const scoreCount = highscores.value.length === 100 ? '100+' : highscores.value.length;
+
+  return !playerRank ? 'Unranked' : `${playerRank} / ${scoreCount}`;
+}
+
 function loadData() {
   leaderboardsLoading.value = ref(true);
   $fetch(
@@ -353,7 +398,7 @@ function loadData() {
   )
     .then((data) => {
       leaderboardsLoading.value = false;
-      highscores.value = data;
+      highscores.value = sortScores(data);
       leaderboardsLoadingError.value = null;
     })
     .catch((err) => {
@@ -378,6 +423,18 @@ function loadHistograms() {
       histogramsLoadingError.value =
         "Couldn't reach the API. Please try again later.";
     });
+}
+
+function selectYourScoreDifficulty(difficulty) {
+  // Make it a toggle. Set to null if the difficulty is already selected.
+  const filterValue = yourScoreDifficulty.value === difficulty ? null : difficulty;
+  yourScoreDifficulty.value = filterValue;
+  // setTimeout is necessary so the chart reloads on the next update cycle, after yourScoreDifficulty is updated.
+  setTimeout(() => {
+    if (chart.value) {
+      chart.value.difficultyFilter(filterValue);
+    }
+  }, 0);
 }
 
 function selectDifficulty(difficulty) {
