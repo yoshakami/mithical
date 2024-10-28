@@ -6,7 +6,13 @@
           <v-img :src="fullUrl" />
         </div>
 
-        <div class="single-song-details">
+        <div
+          class="single-song-details"
+          :style="{
+            'background-image':
+              'url(/wacca/img/games/' + song.gameVersion + '.png)',
+          }"
+        >
           <div class="single-song-header">
             <div class="single-song-header-left">
               <h1 class="title">{{ getTitle }}</h1>
@@ -18,6 +24,9 @@
           </div>
 
           <div class="single-song-pills">
+            <v-chip prepend-icon="mdi-account">
+              {{ categoryName }}
+            </v-chip>
             <v-chip prepend-icon="mdi-pulse">{{ song.bpm }} bpm</v-chip>
             <v-chip prepend-icon="mdi-plus">
               {{ formatDate(song.dateAdded) }}</v-chip
@@ -58,10 +67,6 @@
           </v-btn>
 
           <div class="text-center mt-4">{{ goToSongMessage }}</div> -->
-        </div>
-
-        <div class="single-song-game">
-          <img :src="`/wacca/img/games/${song.gameVersion}.png`" />
         </div>
       </div>
     </v-container>
@@ -231,6 +236,8 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background-size: 150px;
+  background-position: bottom 10px right 10px;
 }
 
 .single-song-header {
@@ -253,17 +260,6 @@
   background-color: rgb(var(--v-theme-surface-variant));
   color: white;
   font-weight: 700;
-}
-
-.single-song-game {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  height: 50px;
-
-  img {
-    height: 100%;
-  }
 }
 
 .highscore-grade,
@@ -313,6 +309,7 @@ Chart.register(annotationPlugin);
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
 import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 import waccaGradeBorders from "~/assets/wacca/waccaGradeBorders";
+import waccaCategories from "~/assets/wacca/waccaCategories";
 
 const profile = useState("profile");
 
@@ -494,6 +491,19 @@ const chartedBy = computed(() => {
   }
 
   return [...new Set(charters)].join(" + ");
+});
+
+const category = computed(() => {
+  return waccaCategories.find(
+    (category) => category.ja === song.value.category
+  );
+});
+
+const categoryName = computed(() => {
+  if (language.value === "ja") {
+    return category.value.ja;
+  }
+  return category.value.en;
 });
 
 useSeoMeta({

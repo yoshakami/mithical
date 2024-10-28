@@ -133,7 +133,7 @@
           <v-menu activator="parent">
             <div class="song-categories" @click.stop>
               <WaccaCategoryToggle
-                v-for="category in categories"
+                v-for="category in waccaCategoriesFiltered"
                 :key="category.ja"
                 :category="category"
                 :active-categories="activeCategories"
@@ -351,6 +351,7 @@
 import fuzzysort from "fuzzysort";
 import waccaSongs from "~/assets/wacca/waccaSongs.js";
 import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
+import waccaCategories from "~/assets/wacca/waccaCategories";
 
 const language = useState("language");
 const profile = useState("profile");
@@ -830,27 +831,6 @@ for (let i = 0; i < waccaDifficulties.length; i++) {
   });
 }
 
-const categories = [
-  {
-    ja: "アニメ／ＰＯＰ",
-    en: "Anime/Pop",
-    img: "animepop.png",
-    color: "#237ccf",
-  },
-  { ja: "ボカロ", en: "Vocaloid", img: "vocaloid.png", color: "#77c9b9" },
-  { ja: "東方アレンジ", en: "Touhou", img: "touhou.png", color: "#e9183a" },
-  { ja: "2.5次元", en: "2.5D", img: "25dmusical.png", color: "#ef7301" },
-  { ja: "バラエティ", en: "Variety", img: "variety.png", color: "#68d35e" },
-  { ja: "オリジナル", en: "Original", img: "original.png", color: "#ea3989" },
-  { ja: "TANO*C", en: "TANO*C", img: "tanoc.png", color: "#232530" },
-  // {
-  //   ja: "TANO*C（オリジナル）",
-  //   en: "TANO*C (Original)",
-  //   img: "tanoc.png",
-  //   color: "#232530",
-  // },
-];
-
 const perPage = 50;
 const page = ref(1);
 const search = ref(null);
@@ -868,6 +848,12 @@ function toggleCategory(category) {
   }
 }
 
+const waccaCategoriesFiltered = computed(() => {
+  return waccaCategories.filter((category) => {
+    return !category.hidden;
+  });
+});
+
 const songsFiltered = computed(() => {
   let results = [...waccaSongs];
 
@@ -881,7 +867,7 @@ const songsFiltered = computed(() => {
   let compareCategories = [...activeCategories.value];
 
   if (compareCategories.length == 0) {
-    compareCategories = categories.map((category) => category.ja);
+    compareCategories = waccaCategories.map((category) => category.ja);
   }
 
   // Tanoc original doesn't exist in game, so this code adds it to the cats
