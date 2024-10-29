@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/wacca/songs/${song.id}`" style="text-decoration: none">
+  <component :is="force-expand ? 'v-fragment' : NuxtLink" :to="`/wacca/songs/${song.id}`" style="text-decoration: none">
     <div
       class="play"
       :class="{ expanded, 'is-record': play.info.is_new_record }"
@@ -54,7 +54,7 @@
       </div>
 
       <Collapse :when="expanded">
-        <div class="collapsible">
+        <div :class="{ collapsible: !props.forceExpand }">
           <div class="play-detail">
             <div class="play-judgements">
               <div
@@ -113,7 +113,7 @@
         </div>
       </Collapse>
 
-      <div class="play-expand">
+      <div class="play-expand" v-if="!props.forceExpand">
         <v-btn rounded @click.prevent="expand" color="primary">
           <div v-if="!expanded">
             <v-icon>mdi-chevron-down</v-icon>
@@ -126,7 +126,7 @@
         </v-btn>
       </div>
     </div>
-  </NuxtLink>
+  </component>
 </template>
 
 <style scoped lang="scss">
@@ -405,12 +405,14 @@ $cover-size: 100px;
 <script setup>
 import { Collapse } from "vue-collapsed";
 import { formatDifficulty } from "~/assets/js/util";
+import { NuxtLink } from "#components";
 const difficultyInternal = useState("difficultyInternal");
 
 import waccaSongs from "~~/assets/wacca/waccaSongs.js";
 
 const props = defineProps({
   play: Object,
+  forceExpand: Boolean,
 });
 
 const song = computed(() => {
@@ -427,7 +429,7 @@ function formatDate(date) {
   return new Date(date).toLocaleString();
 }
 
-const expanded = ref(false);
+const expanded = ref(props.forceExpand || false);
 function expand() {
   expanded.value = !expanded.value;
 }

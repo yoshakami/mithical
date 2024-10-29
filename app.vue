@@ -1,5 +1,6 @@
 <template>
   <v-app :style="{ background }">
+    <div id="modals"></div>
     <MainNav />
     <NuxtLayout :name="layout"></NuxtLayout>
     <SettingsModal />
