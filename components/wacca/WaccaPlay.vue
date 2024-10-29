@@ -1,5 +1,9 @@
 <template>
-  <component :is="force-expand ? 'v-fragment' : NuxtLink" :to="`/wacca/songs/${song.id}`" style="text-decoration: none">
+  <component
+    :is="forceExpand ? 'v-fragment' : NuxtLink"
+    :to="`/wacca/songs/${song.id}`"
+    style="text-decoration: none"
+  >
     <div
       class="play"
       :class="{ expanded, 'is-record': play.info.is_new_record }"
