@@ -24,7 +24,7 @@
           </div>
 
           <div class="single-song-pills">
-            <v-chip prepend-icon="mdi-account">
+            <v-chip prepend-icon="mdi-album">
               {{ categoryName }}
             </v-chip>
             <v-chip prepend-icon="mdi-pulse">{{ song.bpm }} bpm</v-chip>
@@ -74,7 +74,12 @@
     <v-container class="elevation-1 mt-4">
       <h2 class="container-heading">Your scores</h2>
 
-      <WaccaSongSheets :song="song" :player-data="profile.songs[song.id]" :selected-difficulty="yourScoreDifficulty" :on-difficulty-click="selectYourScoreDifficulty" />
+      <WaccaSongSheets
+        :song="song"
+        :player-data="profile.songs[song.id]"
+        :selected-difficulty="yourScoreDifficulty"
+        :on-difficulty-click="selectYourScoreDifficulty"
+      />
       <WaccaChart
         ref="chart"
         :player-history="playerHistory"
@@ -165,7 +170,9 @@
         }}</v-alert>
 
         <div v-else>
-          <h3 class="your-rank">Your Rank: {{ getRankDescription(profile.user_name) }}</h3>
+          <h3 class="your-rank">
+            Your Rank: {{ getRankDescription(profile.user_name) }}
+          </h3>
           <v-table>
             <thead>
               <tr>
@@ -188,7 +195,10 @@
                   </span>
                 </td>
                 <td>
-                  <WaccaIcon class="highscore-icon" :icon="score.user_icon_id" />
+                  <WaccaIcon
+                    class="highscore-icon"
+                    :icon="score.user_icon_id"
+                  />
                   {{ score.user_name }}
                 </td>
                 <td>
@@ -368,7 +378,7 @@ function sortScores(scores) {
 
 function getRankDescription(username) {
   if (!highscores.value) {
-    return 'Unknown'
+    return "Unknown";
   }
 
   // If there is more than one user with the same score, the displayed rank is equal to the first listed player with that score
@@ -386,9 +396,10 @@ function getRankDescription(username) {
     }
   }
 
-  const scoreCount = highscores.value.length === 100 ? '100+' : highscores.value.length;
+  const scoreCount =
+    highscores.value.length === 100 ? "100+" : highscores.value.length;
 
-  return !playerRank ? 'Unranked' : `${playerRank} / ${scoreCount}`;
+  return !playerRank ? "Unranked" : `${playerRank} / ${scoreCount}`;
 }
 
 function loadData() {
@@ -427,7 +438,8 @@ function loadHistograms() {
 
 function selectYourScoreDifficulty(difficulty) {
   // Make it a toggle. Set to null if the difficulty is already selected.
-  const filterValue = yourScoreDifficulty.value === difficulty ? null : difficulty;
+  const filterValue =
+    yourScoreDifficulty.value === difficulty ? null : difficulty;
   yourScoreDifficulty.value = filterValue;
   // setTimeout is necessary so the chart reloads on the next update cycle, after yourScoreDifficulty is updated.
   setTimeout(() => {
