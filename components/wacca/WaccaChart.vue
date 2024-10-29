@@ -11,6 +11,9 @@
       <div>No plays yet. Go for it!</div>
     </div>
   </div>
+  <Teleport to="#modals">
+    <WaccaPlayModal v-if="modalOpen" :play="selectedPlay" @close-modal="closeModal"></WaccaPlayModal>
+  </Teleport>
 </template>
 
 <style scoped lang="scss">
@@ -42,6 +45,7 @@ const props = defineProps({
   playerHistory: Array,
   song: Object,
   loading: Boolean,
+  difficultyFilter: Number,
 });
 
 const version = useState("version");
@@ -53,6 +57,8 @@ const filteredsheets = computed(() => {
 });
 
 const playerChart = ref(null);
+const selectedPlay = ref(null);
+const modalOpen = ref(false);
 
 let chart;
 
@@ -103,14 +109,20 @@ const playerHistoryFormatted = computed(() => {
         datasets[score.info.music_difficulty - 1].data.unshift({
           x: new Date("2022-09-01T00:00:00+09:00"),
           y: score.info.score,
+          historyIndex: i,
         });
       } else {
         datasets[score.info.music_difficulty - 1].data.push({
           x: new Date(score.info.user_play_date),
           y: score.info.score,
+          historyIndex: i,
         });
       }
     }
+  }
+
+  if (props.difficultyFilter) {
+    return [datasets[props.difficultyFilter - 1]];
   }
 
   return datasets;
@@ -164,6 +176,31 @@ onMounted(() => {
           },
         },
       },
+
+      onHover: (event, chartElement) => {
+        const canvas = event.native.target;
+        
+        if (chartElement.length) {
+          canvas.style.cursor = 'pointer'; // Change cursor to pointer on hover
+        } else {
+          canvas.style.cursor = 'default'; // Reset cursor when not hovering
+        }
+      },
+
+      onClick: function(event) {
+        const chart = event.chart;
+        const points = chart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+        if (points.length > 0)
+        {
+          const point = points[0];
+          const datasetInfo = chart.data.datasets[point.datasetIndex];
+          const pointData = datasetInfo.data[point.index];
+          const play = props.playerHistory[pointData.historyIndex];
+
+          selectedPlay.value = play;
+          modalOpen.value = true;
+        }
+      },
     },
   });
 });
@@ -175,7 +212,25 @@ function updateChart() {
   chart.resetZoom();
 }
 
+function difficultyFilter(difficulty) {
+  if (!chart) return;
+
+  for (let i = props.playerHistory.length - 1; i >= 0; i--) {
+    // Hide all datasets except the one we filtered to
+    // Show all if filter is set to null, thus disabling
+    chart.setDatasetVisibility(i, !difficulty || i == difficulty - 1);
+  }
+
+  chart.update();
+}
+
+function closeModal() {
+  selectedPlay.value = null;
+  modalOpen.value = false;
+}
+
 defineExpose({
   updateChart,
+  difficultyFilter,
 });
 </script>
