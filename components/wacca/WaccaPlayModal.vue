@@ -20,9 +20,11 @@
 </template>
 
 <style scoped lang="scss">
-.modal-content {
-  flex: 0 1 1000px;
-  transform: translateX(-10px);
+.modal.on {
+  .modal-content {
+    flex: 0 1 1000px;
+    transform: translateX(-8px);
+  }
 }
 </style>
 
