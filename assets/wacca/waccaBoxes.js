@@ -17,6 +17,148 @@
 
 const waccaBoxes = [
   {
+    id: 5,
+    name: "VIP BOX",
+    nameEnglish: "VIP BOX",
+    price: 5000,
+    color: "#3d8bae",
+    image: "/wacca/img/gacha_vip.png",
+    items: [
+
+      {
+        kind: 10,
+        id: 203002,
+        rarity: 4,
+      },
+      {
+        kind: 10,
+        id: 203009,
+        rarity: 4,
+      },
+      {
+        kind: 10,
+        id: 303005,
+        rarity: 4,
+      },
+      {
+        kind: 11,
+        id: 205008,
+        rarity: 4,
+      },
+      {
+        kind: 6,
+        id: 302009,
+        rarity: 4,
+      },
+      {
+        kind: 11,
+        id: 205002,
+        rarity: 3,
+      },
+      {
+        kind: 11,
+        id: 305003,
+        rarity: 3,
+      },
+      {
+        kind: 6,
+        id: 302046,
+        rarity: 3,
+      },
+      {
+        kind: 6,
+        id: 302047,
+        rarity: 3,
+      },
+      {
+        kind: 6,
+        id: 302048,
+        rarity: 3,
+      },
+
+      {
+        kind: 6,
+        id: 202020,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 202063,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 202086,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 302014,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 302015,
+        rarity: 2,
+      },
+      {
+        kind: 6,
+        id: 302045,
+        rarity: 2,
+      },
+
+
+
+      {
+        kind: 16,
+        id: 211004,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 211018,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 211025,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 211026,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 311004,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 311005,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 311014,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 311015,
+        rarity: 2,
+      },
+      {
+        kind: 16,
+        id: 311016,
+        rarity: 2,
+      },
+
+
+    ]
+  },
+  {
     id: 4,
     name: "チルノBOX",
     nameEnglish: "Cirno Box",
