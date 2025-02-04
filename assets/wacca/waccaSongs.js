@@ -2890,7 +2890,7 @@ const waccaSongs = [
         gameVersion: 1,
         charter: "Marvelous",
       },
-	  {
+      {
         difficulty: 13.7,
         gameVersion: 6,
         charter: "Lightning Sword vs 深红鬼",
@@ -12426,9 +12426,9 @@ const waccaSongs = [
   },
   {
     id: 4020,
-    title: "君のせい",
+    title: "青春コンプレックス",
     titleEnglish: "Seisyun Complex",
-    artist: "青春コンプレックス",
+    artist: "結束バンド「ぼっち・ざ・ろっく！」より",
     dateAdded: 20240702,
     dateRemoved: 0,
     gameVersion: 6,
@@ -12547,7 +12547,7 @@ const waccaSongs = [
         gameVersion: 6,
         charter: "靖",
       },
-	  {
+      {
         difficulty: 14.2,
         gameVersion: 6,
         charter: "CODE:Seraphina",
