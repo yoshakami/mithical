@@ -12582,6 +12582,11 @@ const waccaSongs = [
         gameVersion: 6,
         charter: "「YASU」",
       },
+      {
+        difficulty: 13.2,
+        gameVersion: 6,
+        charter: "やくさんす？",
+      },
     ],
   },
   {
