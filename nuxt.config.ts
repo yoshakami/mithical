@@ -20,7 +20,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiUrl: "http://localhost:3001",
+      apiUrl: process.env.MITHICAL_BACKEND_URL || "http://localhost:3001",
     },
   },
 
