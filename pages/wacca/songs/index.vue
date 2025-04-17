@@ -381,9 +381,9 @@ const sortOptions = [
       }
 
       if (sortOrder.value == "asc") {
-        return aTitle.localeCompare(bTitle);
+        return aTitle.localeCompare(bTitle, language.value);
       } else {
-        return bTitle.localeCompare(aTitle);
+        return bTitle.localeCompare(aTitle, language.value);
       }
     },
   },
@@ -391,9 +391,9 @@ const sortOptions = [
     text: "Artist",
     sortFunction: (a, b) => {
       if (sortOrder.value == "asc") {
-        return a.artist.localeCompare(b.artist);
+        return a.artist.localeCompare(b.artist, language.value);
       } else {
-        return b.artist.localeCompare(a.artist);
+        return b.artist.localeCompare(a.artist, language.value);
       }
     },
   },
