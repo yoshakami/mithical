@@ -105,4 +105,5 @@ function loadData() {
 }
 
 loadData();
+watch(version, loadData);
 </script>
