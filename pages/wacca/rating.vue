@@ -241,7 +241,7 @@ const sheetFolders = computed(() => {
         sheet.score
       );
 
-      if (sheet.song.sheets[sheet.difficulty].gameVersion <= 4) {
+      if (sheet.song.sheets[sheet.difficulty].gameVersion < 300) {
         folders[0].sheets.push(sheet);
       } else {
         folders[1].sheets.push(sheet);
