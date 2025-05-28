@@ -891,7 +891,7 @@ const waccaIcons = [
     "id": 202011,
     "path": "S02/uT_UICN_S02_13_2",
     "name": "クラウン",
-    "nameEnglish": "Clown",
+    "nameEnglish": "Crown",
     "acquisition": "シーズン2の\r\n全トロフィー\r\n獲得",
     "acquisitionEnglish": "Win all\r\nSeason 2\r\ntrophies."
   },
@@ -1915,7 +1915,7 @@ const waccaIcons = [
     "id": 302021,
     "path": "S03/uT_UICN_S03_00_0",
     "name": "光",
-    "nameEnglish": "Light",
+    "nameEnglish": "Hikari",
     "acquisition": "「Arcaea × WACCA」\r\nイベントゲート\r\n達成報酬",
     "acquisitionEnglish": "\"Arcaea X WACCA\"\r\nEvent Gate\r\nachievement reward."
   },
@@ -1923,7 +1923,7 @@ const waccaIcons = [
     "id": 302022,
     "path": "S03/uT_UICN_S03_00_1",
     "name": "対立",
-    "nameEnglish": "Conflict",
+    "nameEnglish": "Tairitsu",
     "acquisition": "「Arcaea × WACCA」\r\nイベントゲート\r\n達成報酬",
     "acquisitionEnglish": "\"Arcaea X WACCA\"\r\nEvent Gate\r\nachievement reward."
   },
@@ -2174,6 +2174,46 @@ const waccaIcons = [
     "nameEnglish": null,
     "acquisition": "DIVE with Üを1回プレイ",
     "acquisitionEnglish": "Play DIVE with Ü once."
+  },
+  {
+    "id": 402000,
+    "path": "S04/uT_UICN_S04_00_00",
+    "name": "IMPULSE // WEAVER",
+    "nameEnglish": null,
+    "acquisition": "Clear IMPULSE // WEAVER\r\non Expert difficulty",
+    "acquisitionEnglish": null
+  },
+  {
+    "id": 402001,
+    "path": "S04/uT_UICN_S04_00_01",
+    "name": "Acid",
+    "nameEnglish": null,
+    "acquisition": "「maimai  × WACCA」 イベントゲート\n達成報酬",
+    "acquisitionEnglish": "\"maimai × Wacca\" Event Gate achievement award"
+  },
+  {
+    "id": 402002,
+    "path": "S04/uT_UICN_S04_00_02",
+    "name": "Kurohime",
+    "nameEnglish": null,
+    "acquisition": "「maimai  × WACCA」 イベントゲート\n達成報酬",
+    "acquisitionEnglish": "\"maimai × Wacca\" Event Gate achievement award"
+  },
+  {
+    "id": 402003,
+    "path": "S04/uT_UICN_S04_00_03",
+    "name": "Kurozakura",
+    "nameEnglish": null,
+    "acquisition": "「maimai  × WACCA」 イベントゲート\n達成報酬",
+    "acquisitionEnglish": "\"maimai × Wacca\" Event Gate achievement award"
+  },
+  {
+    "id": 402004,
+    "path": "S04/uT_UICN_S04_00_04",
+    "name": "Latent Kingdom Emblem",
+    "nameEnglish": null,
+    "acquisition": "「maimai  × WACCA」 イベントゲート\n達成報酬",
+    "acquisitionEnglish": "\"maimai × Wacca\" Event Gate achievement award"
   }
 ]
 
