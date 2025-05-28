@@ -192,11 +192,10 @@ const iconId = computed(() => {
 const version = useState("version");
 
 const selectedVersionData = computed(() => {
-  console.log(version.value);
-  if (profile.value.version_data[version.value - 1]) {
-    return profile.value.version_data[version.value - 1];
+  if (profile.value.version_data[version.value]) {
+    return profile.value.version_data[version.value];
   }
 
-  return profile.value.version_data[4];
+  return profile.value.version_data[300];
 });
 </script>
