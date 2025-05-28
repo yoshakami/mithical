@@ -26,12 +26,11 @@
           </thead>
 
           <tbody>
-            <tr v-for="(profile, i) in leaderboardsDataFiltered" :key="i">
+            <tr v-for="(profile, i) in leaderboardData" :key="i">
               <td class="text-right">
                 <span
                   v-if="
-                    i == 0 ||
-                    leaderboardsDataFiltered[i - 1].rating != profile.rating
+                    i == 0 || leaderboardData[i - 1].rating != profile.rating
                   "
                 >
                   {{ i + 1 }}
@@ -86,10 +85,14 @@ const leaderboardsLoading = ref(false);
 const leaderboardsLoadingError = ref();
 const runtimeConfig = useRuntimeConfig();
 const leaderboardData = ref([]);
+const version = useState("version");
 
 function loadData() {
   leaderboardsLoading.value = ref(true);
-  $fetch(`${runtimeConfig.public.apiUrl}/wacca/user/leaderboards`)
+
+  $fetch(
+    `${runtimeConfig.public.apiUrl}/wacca/user/leaderboards/${version.value}`
+  )
     .then((data) => {
       leaderboardsLoading.value = false;
       leaderboardData.value = data;
@@ -101,20 +104,6 @@ function loadData() {
     });
 }
 
-const version = useState("version");
-
-const leaderboardsDataFiltered = computed(() => {
-  let reverseOnly = leaderboardData.value.filter(
-    (profile, i) => profile.version == version.value - 1
-  );
-
-  let withoutDuplicates = reverseOnly.filter(
-    (profile, i) =>
-      reverseOnly.findIndex((p) => p.api_id == profile.api_id) == i
-  );
-
-  return withoutDuplicates;
-});
-
 loadData();
+watch(version, loadData);
 </script>

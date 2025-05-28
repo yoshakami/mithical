@@ -64,7 +64,7 @@ function updateTheme() {
   layout.value = nuxtTheme;
 
   let themeModded = theme.value;
-  if (nuxtTheme != "mithical" && version.value == 6) {
+  if (nuxtTheme != "mithical" && version.value == 400) {
     themeModded += "Plus";
   }
 

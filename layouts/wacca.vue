@@ -46,7 +46,7 @@ async function loadProfile() {
   profileError.value = null;
 
   if (activeCard.value) {
-    let profileUrl = `${runtimeConfig.public.apiUrl}/wacca/user/${activeCard.value}`;
+    let profileUrl = `${runtimeConfig.public.apiUrl}/wacca/user/${activeCard.value}/${version.value}`;
 
     $fetch(profileUrl)
       .then((data) => {
@@ -103,10 +103,10 @@ function selectVersion() {
     return;
   }
 
-  if (profile.value.version_data[5]) {
-    version.value = 6;
+  if (profile.value.version_data[300]) {
+    version.value = 400;
   } else {
-    version.value = 5;
+    version.value = 300;
   }
 }
 
@@ -120,7 +120,7 @@ function cachePlayerSongs() {
 const themeModded = computed(() => {
   let out = theme.value;
 
-  if (version.value == 6) {
+  if (version.value == 400) {
     out += "Plus";
   }
 
@@ -129,4 +129,5 @@ const themeModded = computed(() => {
 
 loadProfile();
 watch(activeCard, loadProfile);
+watch(version, loadProfile);
 </script>

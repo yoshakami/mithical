@@ -23,8 +23,8 @@
               <div class="settings-setting">
                 <p>Version</p>
                 <v-btn-toggle v-model="version" shaped mandatory>
-                  <v-btn color="primary" :value="5">Reverse</v-btn>
-                  <v-btn color="primary" :value="6">Plus</v-btn>
+                  <v-btn color="primary" :value="300">Reverse</v-btn>
+                  <v-btn color="primary" :value="400">Plus</v-btn>
                 </v-btn-toggle>
               </div>
 
@@ -85,8 +85,11 @@
 <script setup>
 const settingsVisible = useState("settingsVisible", () => false);
 const storageVersion = localStorage.getItem("version");
-const version = useState("version", () => parseInt(storageVersion) || 5);
-// todo: need a smarter way to figure out if the user has played plus
+const version = useState("version", () => parseInt(storageVersion) || 400);
+
+if (version.value != 300 && version.value != 400) {
+  version.value = 400;
+}
 
 function hideSettings() {
   settingsVisible.value = false;
@@ -122,7 +125,7 @@ const theme = useState("theme");
 const themeModded = computed(() => {
   let out = theme.value;
 
-  if (version.value == 6) {
+  if (version.value == 400) {
     out += "Plus";
   }
 
