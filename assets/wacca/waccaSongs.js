@@ -12943,7 +12943,7 @@ const waccaSongs = [
         charter: "ソーラー・ヘキサ",
       },
       {
-        difficulty: 13.7,
+        difficulty: 13.6,
         gameVersion: 6,
         charter: "ソーラー・ヘキサ",
       },
@@ -13068,7 +13068,7 @@ const waccaSongs = [
         charter: "saKe",
       },
       {
-        difficulty: 13.8,
+        difficulty: 13.7,
         gameVersion: 6,
         charter: "saKe v.s. Vespera H.Q.",
       },
@@ -13283,7 +13283,7 @@ const waccaSongs = [
         charter: "Oakleyman",
       },
       {
-        difficulty: 13.6,
+        difficulty: 13.4,
         gameVersion: 6,
         charter: "lI1176 (ヤス remix)",
       },
@@ -13323,7 +13323,7 @@ const waccaSongs = [
         charter: "twis v.s. Vespera H.Q.",
       },
       {
-        difficulty: 12.7,
+        difficulty: 12.3,
         gameVersion: 6,
         charter: "tiiger ft. Vespera H.Q.",
       },
