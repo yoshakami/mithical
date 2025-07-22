@@ -218,7 +218,7 @@ const sheetFolders = computed(() => {
       count: 35,
     },
     {
-      name: "Wacca Reverse",
+      name: "Wacca Reverse+",
       sheets: [],
       count: 15,
     },

@@ -1,7 +1,7 @@
 <template>
   <WaccaProfileRequired>
     <v-container>
-      <div class="d-flex justify-center mb-6">
+      <div class="d-flex ga-10 justify-center mb-6">
         <v-btn-toggle v-model="activeCategory" shaped mandatory>
           <v-btn
             color="primary"
@@ -11,15 +11,23 @@
             {{ category.name }}
           </v-btn>
         </v-btn-toggle>
+
+        <v-btn-toggle v-model="toggleOwneds" multiple color="primary">
+          <v-btn
+            >Owned
+            <v-icon>mdi-check</v-icon>
+          </v-btn>
+
+          <v-btn
+            >Unowned
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-btn-toggle>
       </div>
 
       <div>
         <div class="box-items">
-          <div
-            v-for="item in categories[activeCategory].items"
-            :key="item.id"
-            class="box-item"
-          >
+          <div v-for="item in filteredItems" :key="item.id" class="box-item">
             <tippy
               placement="bottom"
               max-width="none"
@@ -82,7 +90,7 @@ const categories = [
     id: 15,
   },
   {
-    name: "Color Schemes",
+    name: "Colors",
     items: waccaSymbolColors,
     id: 10,
   },
@@ -92,12 +100,12 @@ const categories = [
     id: 6,
   },
   {
-    name: "Note Sounds",
+    name: "Sounds",
     items: waccaSoundEffects,
     id: 11,
   },
   {
-    name: "User Plates",
+    name: "Plates",
     items: waccaUserPlates,
     id: 16,
   },
@@ -112,8 +120,10 @@ definePageMeta({
   middleware: ["auth"],
 });
 
+const profile = useState("profile");
 const activeCategory = ref(0);
 const lang = useState("language");
+const toggleOwneds = ref([0, 1]);
 
 function getTooltip(category, item) {
   const name = (lang.value === "en" && item.nameEnglish) || item.name;
@@ -129,5 +139,22 @@ function getTooltip(category, item) {
   out += `<p>${acquisition}</p>`;
 
   return out;
+}
+
+const filteredItems = computed(() => {
+  return categories[activeCategory.value].items.filter((item) => {
+    let owned = isOwned(item);
+    if (owned && toggleOwneds.value.includes(0)) {
+      return true;
+    }
+    if (!owned && toggleOwneds.value.includes(1)) {
+      return true;
+    }
+    return false;
+  });
+});
+
+function isOwned(check_item) {
+  return profile.value.items.some((item) => item.item_id == check_item.id);
 }
 </script>
