@@ -14546,7 +14546,7 @@ const waccaSongs = [
       gameVersion: 400,
       charter: null,
     }],
-  }
+  },
   {
     id: 6000,
     title: "1, 2, 3, 4!",
@@ -18708,7 +18708,7 @@ const waccaSongs = [
     id: 6145,
     title: "Necroxis Girl",
     titleEnglish: null,
-    artist: "BEMANI Sound Team "HuΣeR" ",
+    artist: "BEMANI Sound Team \"HuΣeR\" ",
     dateAdded: 0,
     dateRemoved: 0,
     gameVersion: 400,
@@ -18998,7 +18998,7 @@ const waccaSongs = [
     id: 6155,
     title: "QQ",
     titleEnglish: null,
-    artist: "BEMANI Sound Team "PHQUASE & ZAQUVA"",
+    artist: "BEMANI Sound Team \"PHQUASE & ZAQUVA\"",
     dateAdded: 0,
     dateRemoved: 0,
     gameVersion: 400,
