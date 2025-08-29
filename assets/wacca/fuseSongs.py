@@ -1,13 +1,18 @@
 import json
 import re
+import os
 
 # Paths
 songs_js_path = "WaccaSongs.js"
 export_json_path = "new.js"
 output_js_path = "WaccaSongs_updated.js"
+music_table_optional = "C:\\Wacca\\Wacca\\Nana+\\WindowsNoEditor\\Mercury\\Content\\Table\\MusicParameterTable" # optional
 
 ScoreGenre = ["アニメ／ＰＯＰ", "ボカロ", "東方アレンジ", "2.5次元", "バラエティ", "オリジナル", "TANO*C"]
-
+if not os.path.exists(export_json_path): # optional
+    print('extracting Table....')
+    os.system(f'wacky unpack --json --output "{export_json_path}" "{music_table_optional}.uasset" "{music_table_optional}.uexp"')
+    
 # Load waccaExport.json
 with open(export_json_path, "r", encoding="utf-8") as f:
     export_data = json.load(f)
