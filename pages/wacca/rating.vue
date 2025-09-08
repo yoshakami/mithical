@@ -3,7 +3,7 @@
     <v-container>
       <v-alert type="info" class="mb-2">
         <p>
-          This page shows you your total rating for your top 50 songs.
+          This page shows you your total rating for your top 100 songs.
         </p>
         <p>
           Each song shows you the achieved rating, as well as a guide on how
@@ -46,12 +46,12 @@
                   <div class="rating-title">
                     {{ getTitle(sheet.song) }}
                   </div>
-
                   <div
                     v-if="sheet.nextScore"
                     class="rating-suggestion"
                     :class="`difficulty-${sheet.difficulty}`"
                   >
+                  
                     <div>
                       {{
                         waccaDifficulties[sheet.difficulty].name
@@ -65,6 +65,15 @@
                         Math.max(0, sheet.ratingGain).toFixed(3)
                       }}
                     </div>
+                  </div>
+                  
+                   <div
+                    class="rating-best-score"
+                    :style="{
+                      background: getScoreGradient(sheet.score),
+                    }"
+                  >
+                    {{ sheet.score.toLocaleString() }}
                   </div>
 
                   <div class="rating-difficulty" v-if="sheet.rating">
@@ -116,6 +125,17 @@
   background: rgb(var(--v-theme-surface));
   overflow: hidden;
 }
+.rating-best-score {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 999px; // pill shape
+  min-width: 90px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
 
 .rating-info {
   flex-grow: 1;
@@ -135,7 +155,11 @@
 
 .rating-title {
   flex-grow: 1;
+  overflow: hidden;        // prevent content from overflowing
+  text-overflow: ellipsis; // add "..." when text is too long
+  white-space: nowrap;     // keep it on a single line
 }
+
 
 .rating-rating {
   font-weight: 700;
@@ -225,7 +249,7 @@ const sheetFolders = computed(() => {
     {
       name: "Wacca Nana+",
       sheets: [],
-      count: 50,
+      count: 100,
     },
   ];
 
@@ -324,4 +348,35 @@ function getTitle(song) {
 
   return song.titleEnglish || song.title;
 }
+function getScoreGradient(score) {
+  const ratio = score / 1000000;
+
+  // Perfect score → rainbow gradient
+  if (score === 1000000) {
+    return `linear-gradient(135deg,
+      red, orange, yellow, green, cyan, blue, violet, red)`;
+  }
+
+  // 0.999 → 0.990 (999000–990000), split into 10 equal bands of 100 points each
+  if (ratio >= 0.990 && ratio < 0.999) {
+    const stepIndex = Math.floor((score - 990000) / 100); // 0 → 89
+    const hue = 300 - stepIndex; // 300° (magenta) → 210° (blueish) as you drop
+    return `linear-gradient(135deg, hsl(${hue}, 80%, 60%), hsl(${hue}, 70%, 50%))`;
+  }
+
+  // 0.989 → 0.901 = pink/fuchsia
+  if (ratio >= 0.901 && ratio < 0.990) {
+    return `linear-gradient(135deg, #ff66cc, #ff3399)`;
+  }
+
+  // 0.900 → 0.800 = yellow
+  if (ratio >= 0.800 && ratio < 0.901) {
+    return `linear-gradient(135deg, #ffe066, #ffcc00)`;
+  }
+
+  // 0.799 or less = blue
+  return `linear-gradient(135deg, #66a3ff, #3366ff)`;
+}
+
+
 </script>
