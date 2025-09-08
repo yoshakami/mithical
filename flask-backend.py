@@ -1,14 +1,20 @@
 from mysql.connector import pooling
-from flask import Flask, jsonify
 from flask_cors import CORS
 from backend_utils import *
 import mysql.connector
 import datetime
+from flask import Flask, request, jsonify, send_file
+import os
+import subprocess
+import tempfile
+
+ROOT_PATH = "C:/Wacca/Wacca/Nana+/WindowsNoEditor"   # only used with WaccaCircle (tool by yosh)
+REPO_SCRIPT = "repo.py"       # only used with WaccaCircle (tool by yosh)
 
 pool = mysql.connector.pooling.MySQLConnectionPool(
     pool_name="mypool",
     pool_size=5,
-    host="192.168.1.22",
+    host="127.0.0.1",
     database="aime",
     user="aime",
     password="ro",
@@ -115,6 +121,47 @@ ITEM_TYPES = {
   :plate => 16,
   :touch_effect => 17
 }"""
+
+@app.route("/upload_snapshot", methods=["POST"])
+def upload_snapshot():
+    """Reçoit repo.gz depuis le laptop et calcule les différences."""
+    if "file" not in request.files:
+        return "No file uploaded", 400
+    
+    snapshot_file = request.files["file"]
+    temp_path = os.path.join(tempfile.gettempdir(), "repo.gz")
+    snapshot_file.save(temp_path)
+
+    # Launch repo.py
+    cmd = ["python", REPO_SCRIPT, "diff", ROOT_PATH, temp_path]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+
+    if result.returncode != 0:
+        return f"Error: {result.stderr}", 500
+
+    # Parse repo.gz
+    changes = []
+    for line in result.stdout.splitlines():
+        line = line.strip()
+        if line.startswith(("+", "-", "~")):
+            changes.append(line)
+
+    return jsonify(changes)
+
+
+@app.route("/download_file", methods=["GET"])
+def download_file():
+    """Permet au laptop de télécharger un fichier modifié."""
+    relpath = request.args.get("path")
+    if not relpath:
+        return "Missing path", 400
+
+    abs_path = os.path.join(ROOT_PATH, relpath)
+    if not os.path.exists(abs_path):
+        return "File not found", 404
+
+    return send_file(abs_path, as_attachment=True)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

@@ -3,8 +3,7 @@
     <v-container>
       <v-alert type="info" class="mb-2">
         <p>
-          This page shows you your total rating for your top 35 and 15 songs in
-          the relevant Wacca versions.
+          This page shows you your total rating for your top 50 songs.
         </p>
         <p>
           Each song shows you the achieved rating, as well as a guide on how
@@ -18,18 +17,22 @@
       </v-alert>
 
       <v-tabs fixed-tabs v-model="tab" bg-color="primary">
-        <v-tab v-for="(folder, i) in sheetFolders" :key="i">
-          {{ folder.name }}
-          <v-chip>{{ folder.count }}</v-chip>
+        <v-tab v-if="sheetFolders.length" :key="sheetFolders.length - 1">
+          {{ sheetFolders[sheetFolders.length - 1].name }}
+          <v-chip>{{ sheetFolders[sheetFolders.length - 1].count }}</v-chip>
 
-          {{ folder.rating.toFixed(3) }}
+          {{ sheetFolders[sheetFolders.length - 1].rating.toFixed(3) }}
         </v-tab>
       </v-tabs>
 
+
       <v-window v-model="tab">
-        <div v-for="(folder, i) in sheetFolders" :key="i" v-show="tab == i">
+        <div v-if="sheetFolders.length" :key="sheetFolders.length - 1">
           <div class="rating-holder">
-            <div v-for="(sheet, j) in folder.sheets" :key="sheet">
+            <div
+              v-for="(sheet, j) in sheetFolders[sheetFolders.length - 1].sheets"
+              :key="sheet"
+            >
               <NuxtLink
                 style="text-decoration: none"
                 :to="`/wacca/songs/${sheet.song.id}`"
@@ -67,9 +70,7 @@
                   <div class="rating-difficulty" v-if="sheet.rating">
                     <WaccaDifficultyPillSmall
                       :i="sheet.difficulty + 1"
-                      :difficulty="
-                        sheet.song.sheets[sheet.difficulty].difficulty
-                      "
+                      :difficulty="sheet.song.sheets[sheet.difficulty].difficulty"
                     />
                   </div>
                   <div class="rating-rating" v-if="sheet.rating">
@@ -82,7 +83,11 @@
                   </div>
                 </div>
               </NuxtLink>
-              <div v-if="j == folder.count - 1" class="cutoff">
+
+              <div
+                v-if="j == sheetFolders[sheetFolders.length - 1].count - 1"
+                class="cutoff"
+              >
                 <v-icon>mdi-content-cut</v-icon>
                 Cutoff
                 <v-icon>mdi-content-cut mdi-rotate-180</v-icon>
@@ -213,14 +218,14 @@ const version = useState("version");
 const sheetFolders = computed(() => {
   const folders = [
     {
-      name: "Previous versions",
+      name: "Hidden",
       sheets: [],
-      count: 35,
+      count: 0,
     },
     {
-      name: "Wacca Reverse+",
+      name: "Wacca Nana+",
       sheets: [],
-      count: 15,
+      count: 50,
     },
   ];
 
