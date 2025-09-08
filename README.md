@@ -1,12 +1,14 @@
 # Mithical (Yosh version)
 
-A Wacca GUI + backend for artemis
+A Wacca GUI (edited by me since the fork) + backend for artemis (completely made by me)
+
+This GUI reflects the behaviour of my version of the game, which is notably different from the owner whose I forked this repo from.
 
 It's a Nuxt application + flask backend
 
 use `yarn dev` to start the development server + `flask-backend.py` to start backend
 
-Make sure a mithical-backend (provided because it's Yosh version!!!!) is running. Create a `.env` file at the root and set URLs to override the defaults. See `.env.example` file.
+Make sure mithical-backend (provided because it's Yosh version!!!!) is running. Create a `.env` file at the root and set URLs to override the defaults. See `.env.example` file.
 
 ## How to add a new song
 edit assets\wacca\waccaSongs.js <br>

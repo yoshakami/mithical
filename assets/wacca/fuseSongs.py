@@ -4,7 +4,7 @@ import os
 
 # Paths
 songs_js_path = "WaccaSongs.js"
-export_json_path = "new.js"
+export_json_path = "new2.js"
 output_js_path = "WaccaSongs_updated.js"
 music_table_optional = "C:\\Wacca\\Wacca\\Nana+\\WindowsNoEditor\\Mercury\\Content\\Table\\MusicParameterTable" # optional
 
@@ -99,13 +99,13 @@ for song_id, song in rows.items():
         # Build a new JS object for this song
         new_entry = {
             "id": song_id,
-            "title": song["MusicMessage"],  # before ｜ as JP title
-            "titleEnglish": song["MusicMessage"].split("｜")[-1].strip() if "｜" in song["MusicMessage"] else None,
-            "artist": song["ArtistMessage"],
+            "title": js_escape(song["MusicMessage"]),  # before ｜ as JP title
+            "titleEnglish": js_escape(song["MusicMessage"].split("｜")[-1].strip()) if "｜" in song["MusicMessage"] else None,
+            "artist": js_escape(song["ArtistMessage"]),
             "dateAdded": 0,
             "dateRemoved": 0,
             "gameVersion": 400,
-            "bpm": song["Bpm"],
+            "bpm": js_escape(song["Bpm"]),
             "imageName": song["JacketAssetName"] + ".png",
             "category": category, 
             "releaseDate": "2025-07-07",  # not in export
