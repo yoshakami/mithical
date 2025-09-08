@@ -538,9 +538,6 @@ function formatDateLeaderboard(date) {
 }
 
 function fillGrade(grade, score) {
-  if (grade > 0) {
-    return grade;
-  }
 
   // infer the grade from score
   for (let i = 0; i < waccaGradeBorders.length; i++) {
