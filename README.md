@@ -10,6 +10,16 @@ use `yarn dev` to start the development server + `flask-backend.py` to start bac
 
 Make sure mithical-backend (provided because it's Yosh version!!!!) is running. Create a `.env` file at the root and set URLs to override the defaults. See `.env.example` file.
 
+## Changelog
+SongList Changed.<br>
+fixed cover directories<br>
+corrected bugs that would display the wrong grade depending on the vue used.<br>
+The rating has changed. it also shows the 100 best songs.<br>
+Max rate per song is x1.1 instead of x4, which makes it easier for spectators to get an idea of which song levels you can easily play. (1400 = 14) <br>
+Each song best score is now displayed in the Rating vue with an appropriate colour depending on your score.<br>
+added backend (of course!)
+
+
 ## How to add a new song
 edit assets\wacca\waccaSongs.js <br>
 add your png to public\wacca\img\covers\{imageName} <br>
