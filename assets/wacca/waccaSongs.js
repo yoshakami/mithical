@@ -38,7 +38,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_140.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -66,7 +66,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "245",
     imageName: "S02/uT_J_S02_235.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -99,7 +99,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_272.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -127,7 +127,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S04/uT_J_S04_062.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -160,7 +160,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "135",
     imageName: "S02/uT_J_S02_239.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -188,7 +188,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "???",
     imageName: "S04/uT_J_S04_027.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 1,
@@ -216,7 +216,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S02/uT_J_S02_206.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -300,7 +300,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S02/uT_J_S02_38.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -328,7 +328,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S01/uT_J_S01_107.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -412,7 +412,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S01/uT_J_S01_044.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -445,7 +445,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S04/uT_J_S04_001.png",
-    category: "5",
+    category: "オリジナル",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -501,7 +501,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S04/uT_J_S04_005.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -529,7 +529,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_123.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -562,7 +562,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "125",
     imageName: "S06/uT_J_S06_004.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -656,7 +656,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "126",
     imageName: "S06/uT_J_S06_084.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -684,7 +684,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S04/uT_J_S04_064.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -712,7 +712,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "166",
     imageName: "S06/uT_J_S06_005.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -740,7 +740,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "174",
     imageName: "S06/uT_J_S06_040.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -768,7 +768,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "194",
     imageName: "S06/uT_J_S06_130.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -829,7 +829,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_186.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -857,7 +857,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_083.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -890,7 +890,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "134",
     imageName: "S06/uT_J_S06_091.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -918,7 +918,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S03/uT_J_S03_36.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1007,7 +1007,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S06/uT_J_S06_145.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -1035,7 +1035,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "199",
     imageName: "S06/uT_J_S06_155.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -1063,7 +1063,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "186",
     imageName: "S02/uT_J_S02_36.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -1091,7 +1091,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_024.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -1119,7 +1119,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "250-200",
     imageName: "S06/uT_J_S06_041.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -1175,7 +1175,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S01/uT_J_S01_122.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -1208,7 +1208,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "108",
     imageName: "S01/uT_J_S01_276.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1236,7 +1236,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "87-110",
     imageName: "S04/uT_J_S04_006.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -1264,7 +1264,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "256",
     imageName: "S04/uT_J_S04_011.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -1292,7 +1292,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S04/uT_J_S04_072.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -1320,7 +1320,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "256",
     imageName: "S06/uT_J_S06_058.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -1404,7 +1404,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "593",
     imageName: "S03/uT_J_S03_60.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -1432,7 +1432,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "夢想曲",
     imageName: "S06/uT_J_S06_181.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -1460,7 +1460,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "178",
     imageName: "S06/uT_J_S06_000.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -1544,7 +1544,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "90",
     imageName: "S04/uT_J_S04_074.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1633,7 +1633,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "210",
     imageName: "S01/uT_J_S01_013.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1661,7 +1661,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S01/uT_J_S01_100.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1689,7 +1689,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "134",
     imageName: "S01/uT_J_S01_099.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1717,7 +1717,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S04/uT_J_S04_049.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -1745,7 +1745,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S03/uT_J_S03_87.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1773,7 +1773,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "230",
     imageName: "S02/uT_J_S02_37.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -1801,7 +1801,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_062.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -1834,7 +1834,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S04/uT_J_S04_084.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -1862,7 +1862,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S02/uT_J_S02_219.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -1890,7 +1890,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_069.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -1918,7 +1918,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S03/uT_J_S03_52.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1946,7 +1946,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S00/uT_J_S00_003.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -1974,7 +1974,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "1",
     imageName: "S03/uT_J_S03_76.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2002,7 +2002,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "215",
     imageName: "S03/uT_J_S03_77.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2030,7 +2030,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S02/uT_J_S02_208.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2058,7 +2058,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "250",
     imageName: "S02/uT_J_S02_17.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -2086,7 +2086,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S01/uT_J_S01_080.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -2114,7 +2114,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_057.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2147,7 +2147,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S00/uT_J_S00_025.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2175,7 +2175,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175 (dB)",
     imageName: "S04/uT_J_S04_048.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2203,7 +2203,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "117.5",
     imageName: "S06/uT_J_S06_001.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2231,7 +2231,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S06/uT_J_S06_021.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -2259,7 +2259,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "202",
     imageName: "S03/uT_J_S03_37.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2287,7 +2287,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "222",
     imageName: "S01/uT_J_S01_123.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2315,7 +2315,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S03/uT_J_S03_31.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2343,7 +2343,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S02/uT_J_S02_220.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2371,7 +2371,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S03/uT_J_S03_58.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -2432,7 +2432,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_010.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2460,7 +2460,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S03/uT_J_S03_82.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2488,7 +2488,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S03/uT_J_S03_92.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2516,7 +2516,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S03/uT_J_S03_53.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2544,7 +2544,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S03/uT_J_S03_16.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -2572,7 +2572,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "198",
     imageName: "S01/uT_J_S01_248.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2600,7 +2600,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_079.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2628,7 +2628,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_056.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2661,7 +2661,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S00/uT_J_S00_024.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2689,7 +2689,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S04/uT_J_S04_032.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2717,7 +2717,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S06/uT_J_S06_022.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2745,7 +2745,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "168",
     imageName: "S06/uT_J_S06_049.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2773,7 +2773,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_081.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2801,7 +2801,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_171.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2829,7 +2829,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_128.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -2857,7 +2857,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S03/uT_J_S03_38.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -2885,7 +2885,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S02/uT_J_S02_91.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -2913,7 +2913,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S06/uT_J_S06_150.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -2941,7 +2941,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_056.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -2997,7 +2997,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "208",
     imageName: "S06/uT_J_S06_094.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3109,7 +3109,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_104.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -3137,7 +3137,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "130",
     imageName: "S06/uT_J_S06_025.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -3165,7 +3165,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_046.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -3193,7 +3193,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_068.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -3249,7 +3249,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "127",
     imageName: "S04/uT_J_S04_076.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -3282,7 +3282,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S02/uT_J_S02_207.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3310,7 +3310,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S03/uT_J_S03_12.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3338,7 +3338,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "183",
     imageName: "S06/uT_J_S06_138.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3366,7 +3366,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "250",
     imageName: "S06/uT_J_S06_099.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -3394,7 +3394,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_141.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -3506,7 +3506,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S06/uT_J_S06_162.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3534,7 +3534,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "191",
     imageName: "S03/uT_J_S03_19.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -3590,7 +3590,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "191",
     imageName: "S06/uT_J_S06_129.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3618,7 +3618,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "191",
     imageName: "S06/uT_J_S06_132.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -3646,7 +3646,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "179",
     imageName: "S06/uT_J_S06_124.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -3679,7 +3679,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_174.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3740,7 +3740,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "136",
     imageName: "S01/uT_J_S01_037.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -3768,7 +3768,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "144",
     imageName: "S01/uT_J_S01_036.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -3796,7 +3796,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150-160",
     imageName: "S06/uT_J_S06_018.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -3824,7 +3824,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S06/uT_J_S06_067.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -3885,7 +3885,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "300",
     imageName: "S03/uT_J_S03_83.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3913,7 +3913,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S02/uT_J_S02_249.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3941,7 +3941,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_249.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -3969,7 +3969,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_128.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -3997,7 +3997,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_082.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -4025,7 +4025,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S01/uT_J_S01_059.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4053,7 +4053,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "174",
     imageName: "S04/uT_J_S04_050.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4081,7 +4081,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S06/uT_J_S06_043.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4109,7 +4109,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_119.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -4137,7 +4137,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "174",
     imageName: "S06/uT_J_S06_156.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4165,7 +4165,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S03/uT_J_S03_34.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4193,7 +4193,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S02/uT_J_S02_10.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -4221,7 +4221,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S01/uT_J_S01_042.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -4254,7 +4254,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S02/uT_J_S02_33.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -4282,7 +4282,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S03/uT_J_S03_88.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4310,7 +4310,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S00/uT_J_S00_032.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -4343,7 +4343,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S03/uT_J_S03_64.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -4404,7 +4404,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S02/uT_J_S02_39.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4521,7 +4521,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S01/uT_J_S01_101.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4549,7 +4549,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "138",
     imageName: "S02/uT_J_S02_230.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4610,7 +4610,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "176",
     imageName: "S06/uT_J_S06_093.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -4638,7 +4638,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_212.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -4666,7 +4666,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S04/uT_J_S04_029.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -4694,7 +4694,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "110",
     imageName: "S04/uT_J_S04_042.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 1,
@@ -4778,7 +4778,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S06/uT_J_S06_193.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -4862,7 +4862,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_020.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -4918,7 +4918,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S03/uT_J_S03_28.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -4946,7 +4946,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S01/uT_J_S01_127.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -4974,7 +4974,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S02/uT_J_S02_72.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5030,7 +5030,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "166",
     imageName: "S03/uT_J_S03_5.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -5114,7 +5114,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "495",
     imageName: "S02/uT_J_S02_226.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5142,7 +5142,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "108",
     imageName: "S03/uT_J_S03_85.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -5170,7 +5170,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "294",
     imageName: "S03/uT_J_S03_61.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -5198,7 +5198,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "343",
     imageName: "S03/uT_J_S03_45.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5231,7 +5231,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "400",
     imageName: "S02/uT_J_S02_255.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5259,7 +5259,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_267.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -5287,7 +5287,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "245",
     imageName: "S01/uT_J_S01_061.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -5315,7 +5315,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "300",
     imageName: "S01/uT_J_S01_084.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5343,7 +5343,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S04/uT_J_S04_047.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5371,7 +5371,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S06/uT_J_S06_035.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5399,7 +5399,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_055.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5432,7 +5432,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S06/uT_J_S06_063.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -5465,7 +5465,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "208",
     imageName: "S03/uT_J_S03_84.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5493,7 +5493,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "152",
     imageName: "S02/uT_J_S02_15.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5521,7 +5521,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S06/uT_J_S06_102.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -5549,7 +5549,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "145",
     imageName: "S01/uT_J_S01_221.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -5577,7 +5577,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S03/uT_J_S03_21.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5605,7 +5605,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S03/uT_J_S03_86.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5633,7 +5633,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S03/uT_J_S03_44.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -5666,7 +5666,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S02/uT_J_S02_209.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5699,7 +5699,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "210",
     imageName: "S02/uT_J_S02_55.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -5727,7 +5727,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S01/uT_J_S01_247.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5760,7 +5760,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "110",
     imageName: "S01/uT_J_S01_275.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -5788,7 +5788,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "260",
     imageName: "S01/uT_J_S01_068.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -5816,7 +5816,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S01/uT_J_S01_076.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5849,7 +5849,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160-256",
     imageName: "S04/uT_J_S04_014.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -5877,7 +5877,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_038.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5905,7 +5905,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S06/uT_J_S06_131.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -5938,7 +5938,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "201",
     imageName: "S04/uT_J_S04_010.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 8,
@@ -5971,7 +5971,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "240",
     imageName: "S06/uT_J_S06_148.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -5999,7 +5999,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S02/uT_J_S02_9.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6055,7 +6055,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "210",
     imageName: "S06/uT_J_S06_117.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 8,
@@ -6116,7 +6116,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "227",
     imageName: "S06/uT_J_S06_122.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -6144,7 +6144,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "106",
     imageName: "S06/uT_J_S06_166.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6172,7 +6172,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S02/uT_J_S02_221.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6200,7 +6200,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S06/uT_J_S06_157.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -6228,7 +6228,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "245",
     imageName: "S06/uT_J_S06_003.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -6289,7 +6289,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "152",
     imageName: "S06/uT_J_S06_014.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6317,7 +6317,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "117-204",
     imageName: "S06/uT_J_S06_142.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -6345,7 +6345,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_168.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -6378,7 +6378,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "132",
     imageName: "S06/uT_J_S06_036.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6467,7 +6467,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_072.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6579,7 +6579,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S02/uT_J_S02_83.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -6607,7 +6607,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "138",
     imageName: "S01/uT_J_S01_001.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 1,
@@ -6635,7 +6635,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "135",
     imageName: "S06/uT_J_S06_127.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -6663,7 +6663,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S02/uT_J_S02_224.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -6691,7 +6691,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S03/uT_J_S03_89.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -6724,7 +6724,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S03/uT_J_S03_13.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -6752,7 +6752,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S02/uT_J_S02_250.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6780,7 +6780,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S02/uT_J_S02_56.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -6808,7 +6808,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S01/uT_J_S01_268.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -6836,7 +6836,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S01/uT_J_S01_064.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -6864,7 +6864,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S00/uT_J_S00_005.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -6892,7 +6892,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S01/uT_J_S01_071.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -6920,7 +6920,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "210",
     imageName: "S03/uT_J_S03_90.png",
-    category: "5",
+    category: "オリジナル",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -6948,7 +6948,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S06/uT_J_S06_002.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -6976,7 +6976,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_106.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7004,7 +7004,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "115",
     imageName: "S06/uT_J_S06_176.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7032,7 +7032,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S04/uT_J_S04_082.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7065,7 +7065,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_015.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7093,7 +7093,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_116.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7149,7 +7149,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S01/uT_J_S01_231.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7177,7 +7177,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_009.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4.2,
@@ -7210,7 +7210,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S06/uT_J_S06_198.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -7238,7 +7238,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S02/uT_J_S02_71.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7266,7 +7266,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "162",
     imageName: "S01/uT_J_S01_207.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7294,7 +7294,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_071.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7462,7 +7462,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "203",
     imageName: "S06/uT_J_S06_107.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7490,7 +7490,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S06/uT_J_S06_187.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -7518,7 +7518,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S03/uT_J_S03_8.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7574,7 +7574,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "321",
     imageName: "S06/uT_J_S06_027.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -7602,7 +7602,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "228",
     imageName: "S06/uT_J_S06_096.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -7630,7 +7630,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S02/uT_J_S02_32.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7658,7 +7658,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S03/uT_J_S03_26.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7686,7 +7686,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S03/uT_J_S03_93.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7714,7 +7714,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S02/uT_J_S02_232.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7742,7 +7742,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S01/uT_J_S01_256.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7770,7 +7770,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S02/uT_J_S02_47.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7798,7 +7798,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_065.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -7826,7 +7826,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S00/uT_J_S00_006.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -7859,7 +7859,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S04/uT_J_S04_015.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -7887,7 +7887,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S06/uT_J_S06_085.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -7915,7 +7915,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "300",
     imageName: "S06/uT_J_S06_158.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7.7,
@@ -7948,7 +7948,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_169.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -7976,7 +7976,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_177.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8009,7 +8009,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_072.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8065,7 +8065,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S06/uT_J_S06_012.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -8093,7 +8093,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_194.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8121,7 +8121,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "178",
     imageName: "S06/uT_J_S06_097.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -8205,7 +8205,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S06/uT_J_S06_026.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -8350,7 +8350,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S01/uT_J_S01_108.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8378,7 +8378,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "176",
     imageName: "S03/uT_J_S03_73.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8406,7 +8406,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "230",
     imageName: "S03/uT_J_S03_47.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 10.7,
@@ -8439,7 +8439,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S02/uT_J_S02_212.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8467,7 +8467,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S02/uT_J_S02_19.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8495,7 +8495,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "169",
     imageName: "S01/uT_J_S01_077.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8528,7 +8528,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "181",
     imageName: "S01/uT_J_S01_054.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8556,7 +8556,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "194",
     imageName: "S04/uT_J_S04_012.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8584,7 +8584,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S06/uT_J_S06_013.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8612,7 +8612,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "181",
     imageName: "S06/uT_J_S06_023.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8645,7 +8645,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S06/uT_J_S06_167.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8673,7 +8673,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_114.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8701,7 +8701,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_258.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8729,7 +8729,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S02/uT_J_S02_40.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8757,7 +8757,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "203",
     imageName: "S01/uT_J_S01_251.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -8790,7 +8790,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_151.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8823,7 +8823,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S00/uT_J_S00_020.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8851,7 +8851,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S04/uT_J_S04_046.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8879,7 +8879,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S06/uT_J_S06_059.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -8940,7 +8940,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S03/uT_J_S03_39.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -8968,7 +8968,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "156",
     imageName: "S03/uT_J_S03_29.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -8996,7 +8996,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "173",
     imageName: "S01/uT_J_S01_211.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9024,7 +9024,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_263.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9052,7 +9052,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S03/uT_J_S03_20.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -9080,7 +9080,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_050.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -9113,7 +9113,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_051.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -9146,7 +9146,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_052.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9174,7 +9174,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S06/uT_J_S06_153.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9202,7 +9202,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "139",
     imageName: "S06/uT_J_S06_144.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9230,7 +9230,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S02/uT_J_S02_13.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -9258,7 +9258,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S04/uT_J_S04_026.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -9370,7 +9370,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S04/uT_J_S04_068.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9431,7 +9431,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S03/uT_J_S03_4.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -9459,7 +9459,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "186",
     imageName: "S06/uT_J_S06_192.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9492,7 +9492,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S02/uT_J_S02_223.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -9520,7 +9520,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S04/uT_J_S04_040.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -9548,7 +9548,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_178.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 1,
@@ -9576,7 +9576,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S03/uT_J_S03_17.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -9604,7 +9604,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_189.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -9665,7 +9665,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_016.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9698,7 +9698,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_047.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -9726,7 +9726,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_065.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -9754,7 +9754,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_191.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -9782,7 +9782,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S01/uT_J_S01_226.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -9866,7 +9866,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_057.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -9894,7 +9894,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "126",
     imageName: "S03/uT_J_S03_79.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -9922,7 +9922,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S03/uT_J_S03_78.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -9950,7 +9950,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S02/uT_J_S02_49.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -9978,7 +9978,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S01/uT_J_S01_213.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -10006,7 +10006,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S01/uT_J_S01_083.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -10034,7 +10034,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S01/uT_J_S01_060.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -10062,7 +10062,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S04/uT_J_S04_045.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -10090,7 +10090,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_032.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -10118,7 +10118,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_121.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10151,7 +10151,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_195.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -10179,7 +10179,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S04/uT_J_S04_037.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10212,7 +10212,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S02/uT_J_S02_213.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -10273,7 +10273,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S06/uT_J_S06_109.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10301,7 +10301,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "130",
     imageName: "S06/uT_J_S06_028.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10329,7 +10329,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S04/uT_J_S04_002.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10385,7 +10385,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "166",
     imageName: "S06/uT_J_S06_066.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -10418,7 +10418,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "171",
     imageName: "S03/uT_J_S03_32.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -10446,7 +10446,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_105.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -10479,7 +10479,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "339",
     imageName: "S06/uT_J_S06_008.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -10507,7 +10507,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_113.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10568,7 +10568,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S06/uT_J_S06_088.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -10629,7 +10629,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S03/uT_J_S03_71.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -10657,7 +10657,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "210",
     imageName: "S03/uT_J_S03_63.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10685,7 +10685,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S02/uT_J_S02_54.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10713,7 +10713,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S01/uT_J_S01_250.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -10746,7 +10746,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S01/uT_J_S01_063.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -10774,7 +10774,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S00/uT_J_S00_004.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -10802,7 +10802,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S01/uT_J_S01_070.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10830,7 +10830,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S04/uT_J_S04_009.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -10858,7 +10858,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S04/uT_J_S04_018.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -10886,7 +10886,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "215",
     imageName: "S04/uT_J_S04_067.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -10914,7 +10914,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S04/uT_J_S04_069.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -10942,7 +10942,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "90-180-210",
     imageName: "S06/uT_J_S06_082.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -10975,7 +10975,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "184",
     imageName: "S06/uT_J_S06_108.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -11003,7 +11003,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_126.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -11031,7 +11031,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "208",
     imageName: "S06/uT_J_S06_173.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -11059,7 +11059,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "212",
     imageName: "S06/uT_J_S06_149.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -11087,7 +11087,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "230",
     imageName: "S03/uT_J_S03_62.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 10.8,
@@ -11120,7 +11120,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S01/uT_J_S01_086.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -11148,7 +11148,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S03/uT_J_S03_11.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -11181,7 +11181,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S04/uT_J_S04_003.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7,
@@ -11237,7 +11237,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_033.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -11293,7 +11293,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "120",
     imageName: "S02/uT_J_S02_229.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -11349,7 +11349,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S06/uT_J_S06_199.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -11405,7 +11405,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_105.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -11433,7 +11433,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "176",
     imageName: "S06/uT_J_S06_133.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -11489,7 +11489,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S04/uT_J_S04_007.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -11517,7 +11517,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S06/uT_J_S06_044.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -11545,7 +11545,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "138",
     imageName: "S06/uT_J_S06_101.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -11601,7 +11601,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "135",
     imageName: "S04/uT_J_S04_070.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -11634,7 +11634,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S02/uT_J_S02_11.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -11662,7 +11662,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "138",
     imageName: "S01/uT_J_S01_094.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -11690,7 +11690,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_112.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -11723,7 +11723,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "222",
     imageName: "S06/uT_J_S06_037.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -11756,7 +11756,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_053.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -11784,7 +11784,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_076.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -11896,7 +11896,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S06/uT_J_S06_039.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -11924,7 +11924,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S06/uT_J_S06_080.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -11952,7 +11952,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S06/uT_J_S06_172.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -11980,7 +11980,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_164.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12041,7 +12041,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S03/uT_J_S03_94.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12069,7 +12069,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S03/uT_J_S03_80.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12097,7 +12097,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S03/uT_J_S03_81.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12125,7 +12125,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "202",
     imageName: "S03/uT_J_S03_46.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12158,7 +12158,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S01/uT_J_S01_214.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12186,7 +12186,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "174",
     imageName: "S01/uT_J_S01_081.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12214,7 +12214,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S01/uT_J_S01_058.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12242,7 +12242,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "126",
     imageName: "S04/uT_J_S04_041.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12270,7 +12270,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_060.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12298,7 +12298,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_136.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -12326,7 +12326,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S02/uT_J_S02_62.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12354,7 +12354,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S01/uT_J_S01_087.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12382,7 +12382,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S02/uT_J_S02_70.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12410,7 +12410,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S03/uT_J_S03_33.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12438,7 +12438,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S06/uT_J_S06_048.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12466,7 +12466,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "145",
     imageName: "S06/uT_J_S06_064.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12494,7 +12494,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S06/uT_J_S06_031.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12522,7 +12522,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "232",
     imageName: "S01/uT_J_S01_031.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -12550,7 +12550,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "240",
     imageName: "S01/uT_J_S01_030.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -12578,7 +12578,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "230",
     imageName: "S06/uT_J_S06_170.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -12611,7 +12611,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S03/uT_J_S03_25.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -12639,7 +12639,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_042.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -12700,7 +12700,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "192",
     imageName: "S06/uT_J_S06_087.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -12817,7 +12817,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "187",
     imageName: "S06/uT_J_S06_154.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -12957,7 +12957,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "147",
     imageName: "S04/uT_J_S04_039.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 1,
@@ -12990,7 +12990,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "144",
     imageName: "S04/uT_J_S04_063.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13018,7 +13018,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S02/uT_J_S02_238.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -13102,7 +13102,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S06/uT_J_S06_200.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3.4,
@@ -13130,7 +13130,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "186",
     imageName: "S01/uT_J_S01_209.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13158,7 +13158,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S06/uT_J_S06_118.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -13186,7 +13186,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "135",
     imageName: "S02/uT_J_S02_225.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -13214,7 +13214,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "135",
     imageName: "S06/uT_J_S06_098.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13242,7 +13242,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "153",
     imageName: "S06/uT_J_S06_115.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -13270,7 +13270,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "120",
     imageName: "S01/uT_J_S01_035.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 1,
@@ -13298,7 +13298,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S03/uT_J_S03_22.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13359,7 +13359,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S04/uT_J_S04_056.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13392,7 +13392,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S01/uT_J_S01_230.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13420,7 +13420,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "107",
     imageName: "S06/uT_J_S06_116.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13476,7 +13476,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_146.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -13504,7 +13504,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "122",
     imageName: "S02/uT_J_S02_77.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13560,7 +13560,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "230",
     imageName: "S04/uT_J_S04_035.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -13593,7 +13593,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "230",
     imageName: "S06/uT_J_S06_006.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -13626,7 +13626,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "339",
     imageName: "S06/uT_J_S06_185.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 7.9,
@@ -13659,7 +13659,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S06/uT_J_S06_184.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 8.7,
@@ -13687,7 +13687,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S01/uT_J_S01_104.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -13715,7 +13715,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "199",
     imageName: "S01/uT_J_S01_240.png",
-    category: "5",
+    category: "オリジナル",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13743,7 +13743,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S03/uT_J_S03_48.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13771,7 +13771,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "165",
     imageName: "S02/uT_J_S02_76.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13799,7 +13799,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "195",
     imageName: "S03/uT_J_S03_59.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13827,7 +13827,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S01/uT_J_S01_229.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13855,7 +13855,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "1962",
     imageName: "S03/uT_J_S03_72.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -13883,7 +13883,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S03/uT_J_S03_74.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13911,7 +13911,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S03/uT_J_S03_9.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13939,7 +13939,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S02/uT_J_S02_247.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -13967,7 +13967,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_078.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -13995,7 +13995,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "240",
     imageName: "S01/uT_J_S01_055.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14023,7 +14023,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "191",
     imageName: "S00/uT_J_S00_021.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -14056,7 +14056,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S04/uT_J_S04_058.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -14084,7 +14084,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_089.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14112,7 +14112,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "215",
     imageName: "S06/uT_J_S06_103.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14140,7 +14140,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_160.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -14168,7 +14168,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S06/uT_J_S06_190.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 8,
@@ -14201,7 +14201,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "231",
     imageName: "S06/uT_J_S06_201.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 12.7,
@@ -14234,7 +14234,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "285",
     imageName: "S02/uT_J_S02_88.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -14262,7 +14262,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S02/uT_J_S02_12.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -14295,7 +14295,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "290",
     imageName: "S02/uT_J_S02_236.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -14328,7 +14328,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S04/uT_J_S04_052.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -14356,7 +14356,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_143.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -14384,7 +14384,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "158",
     imageName: "S02/uT_J_S02_16.png",
-    category: "5",
+    category: "オリジナル",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -14412,7 +14412,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_125.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14445,7 +14445,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "163",
     imageName: "S02/uT_J_S02_82.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -14529,7 +14529,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S06/uT_J_S06_019.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -14557,7 +14557,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "171",
     imageName: "S01/uT_J_S01_032.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -14585,7 +14585,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "222",
     imageName: "S01/uT_J_S01_111.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14641,7 +14641,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "120-180",
     imageName: "S06/uT_J_S06_135.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14753,7 +14753,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "142",
     imageName: "S01/uT_J_S01_093.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -14786,7 +14786,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "153",
     imageName: "S03/uT_J_S03_6.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -14814,7 +14814,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "152",
     imageName: "S01/uT_J_S01_246.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -14842,7 +14842,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S02/uT_J_S02_46.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14870,7 +14870,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "188",
     imageName: "S01/uT_J_S01_265.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -14926,7 +14926,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S06/uT_J_S06_161.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -14959,7 +14959,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S06/uT_J_S06_100.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -14987,7 +14987,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S01/uT_J_S01_215.png",
-    category: "5",
+    category: "オリジナル",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -15015,7 +15015,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "170",
     imageName: "S02/uT_J_S02_248.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -15043,7 +15043,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "181",
     imageName: "S03/uT_J_S03_18.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15071,7 +15071,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "185",
     imageName: "S03/uT_J_S03_7.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15099,7 +15099,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S01/uT_J_S01_222.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -15127,7 +15127,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "228",
     imageName: "S06/uT_J_S06_095.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -15155,7 +15155,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "182",
     imageName: "S02/uT_J_S02_205.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15267,7 +15267,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "135",
     imageName: "S02/uT_J_S02_215.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15295,7 +15295,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "127",
     imageName: "S01/uT_J_S01_041.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 1,
@@ -15323,7 +15323,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S06/uT_J_S06_134.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -15351,7 +15351,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "127",
     imageName: "S06/uT_J_S06_073.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15379,7 +15379,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S06/uT_J_S06_070.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -15407,7 +15407,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "128",
     imageName: "S03/uT_J_S03_24.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15435,7 +15435,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "130",
     imageName: "S04/uT_J_S04_051.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -15463,7 +15463,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "152",
     imageName: "S06/uT_J_S06_045.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15547,7 +15547,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S02/uT_J_S02_214.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15575,7 +15575,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "130",
     imageName: "S02/uT_J_S02_6.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -15603,7 +15603,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "145",
     imageName: "S01/uT_J_S01_208.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -15631,7 +15631,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S01/uT_J_S01_014.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -15659,7 +15659,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S06/uT_J_S06_069.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15687,7 +15687,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "232",
     imageName: "S03/uT_J_S03_49.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15715,7 +15715,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "155",
     imageName: "S02/uT_J_S02_34.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -15743,7 +15743,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S02/uT_J_S02_78.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -15771,7 +15771,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "151",
     imageName: "S03/uT_J_S03_42.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15883,7 +15883,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "120",
     imageName: "S01/uT_J_S01_239.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -15939,7 +15939,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "210",
     imageName: "S02/uT_J_S02_4.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -16135,7 +16135,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "181",
     imageName: "S03/uT_J_S03_35.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -16219,7 +16219,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S01/uT_J_S01_016.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -16247,7 +16247,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "152",
     imageName: "S00/uT_J_S00_027.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -16275,7 +16275,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "95",
     imageName: "S00/uT_J_S00_030.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -16303,7 +16303,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "205",
     imageName: "S00/uT_J_S00_031.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -16359,7 +16359,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "184",
     imageName: "S02/uT_J_S02_42.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -16387,7 +16387,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S01/uT_J_S01_002.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -16443,7 +16443,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "148",
     imageName: "S01/uT_J_S01_245.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -16779,7 +16779,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "202",
     imageName: "S02/uT_J_S02_85.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -16863,7 +16863,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "150",
     imageName: "S06/uT_J_S06_188.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -16919,7 +16919,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "145",
     imageName: "S02/uT_J_S02_216.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -16975,7 +16975,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180-215",
     imageName: "S06/uT_J_S06_077.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -17260,7 +17260,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "192",
     imageName: "S03/uT_J_S03_50.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -17316,7 +17316,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S01/uT_J_S01_015.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -17344,7 +17344,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "180",
     imageName: "S06/uT_J_S06_147.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -17372,7 +17372,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "105",
     imageName: "S02/uT_J_S02_5.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -17400,7 +17400,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "90",
     imageName: "S01/uT_J_S01_243.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -17484,7 +17484,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "220",
     imageName: "S01/uT_J_S01_244.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -17568,7 +17568,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "195",
     imageName: "S02/uT_J_S02_92.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -17680,7 +17680,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "163",
     imageName: "S02/uT_J_S02_8.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -17736,7 +17736,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "126",
     imageName: "S04/uT_J_S04_060.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -17848,7 +17848,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S01/uT_J_S01_224.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -17904,7 +17904,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "168",
     imageName: "S01/uT_J_S01_227.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -17932,7 +17932,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S01/uT_J_S01_119.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -17960,7 +17960,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "186",
     imageName: "S06/uT_J_S06_175.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -17988,7 +17988,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S06/uT_J_S06_202.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -18016,7 +18016,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "174",
     imageName: "S02/uT_J_S02_222.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18044,7 +18044,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "192",
     imageName: "S01/uT_J_S01_210.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -18105,7 +18105,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S03/uT_J_S03_91.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18133,7 +18133,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "172",
     imageName: "S02/uT_J_S02_48.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -18161,7 +18161,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "175",
     imageName: "S01/uT_J_S01_073.png",
-    category: "6",
+    category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18245,7 +18245,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "143",
     imageName: "S06/uT_J_S06_110.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 4,
@@ -18413,7 +18413,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "130",
     imageName: "S06/uT_J_S06_090.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18469,7 +18469,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "190",
     imageName: "S06/uT_J_S06_182.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18553,7 +18553,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "188",
     imageName: "S01/uT_J_S01_274.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18581,7 +18581,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S01/uT_J_S01_118.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -18861,7 +18861,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "140",
     imageName: "S02/uT_J_S02_7.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18889,7 +18889,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "160",
     imageName: "S01/uT_J_S01_228.png",
-    category: "2",
+    category: "東方アレンジ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 3,
@@ -18945,7 +18945,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "154",
     imageName: "S00/uT_J_S00_007.png",
-    category: "1",
+    category: "ボカロ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 2,
@@ -18973,7 +18973,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "200",
     imageName: "S04/uT_J_S04_034.png",
-    category: "4",
+    category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 6,
@@ -19006,7 +19006,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "198",
     imageName: "S06/uT_J_S06_061.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 5,
@@ -19034,7 +19034,7 @@ const waccaSongs = [
     gameVersion: 400,
     bpm: "88",
     imageName: "S06/uT_J_S06_183.png",
-    category: "3",
+    category: "2.5次元",
     releaseDate: "2025-07-07",
     sheets: [      {
             difficulty: 10.2,

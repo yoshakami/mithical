@@ -4,7 +4,7 @@ import os
 
 # Paths
 songs_js_path = "WaccaSongs.js"
-export_json_path = "new2.js"
+export_json_path = "C:\\Wacca\\Nana+T\\WindowsNoEditor\\Mercury\\Content\\Table - Copy\\new2.js"
 output_js_path = "WaccaSongs_updated.js"
 music_table_optional = "C:\\Wacca\\Wacca\\Nana+\\WindowsNoEditor\\Mercury\\Content\\Table\\MusicParameterTable" # optional
 
@@ -95,7 +95,7 @@ for song_id, song in rows.items():
         a = (",\n").join(sheets_js_blocks)
         category = ScoreGenre[0]
         if 0 < song["ScoreGenre"] < len(ScoreGenre):
-            category = song["ScoreGenre"]
+            category = ScoreGenre[song["ScoreGenre"]]
         # Build a new JS object for this song
         new_entry = {
             "id": song_id,
