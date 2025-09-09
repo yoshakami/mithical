@@ -166,26 +166,6 @@ async function getCardInfo(addluid, convert) {
       return;
     }
 
-    if (convert) {
-      // attempt to convert the ID using bsnk api
-      await $fetch(`https://card.bsnk.me/card/${addluid}`)
-        .then((data) => {
-          if (data.ids["0008"]) {
-            addluid = data.ids["0008"];
-          } else {
-            reject("failedconvert");
-          }
-        })
-        .catch((error) => {
-          reject("failedapi");
-        });
-    }
-
-    if (cards.value.find((card) => card.luid === addluid)) {
-      reject("alreadyadded");
-      return;
-    }
-
     $fetch(`${runtimeConfig.public.apiUrl}/card/${addluid}`)
       .then((data) => {
         if (!data.user_name) {
