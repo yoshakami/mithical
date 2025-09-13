@@ -5,10 +5,11 @@ import mysql.connector
 import datetime
 from flask import Flask, request, jsonify, send_file
 import os
+import json
 import subprocess
 import tempfile
 
-ROOT_PATH = "C:/Wacca/Wacca/Nana+/WindowsNoEditor"   # only used with WaccaCircle (tool by yosh)
+ROOT_PATH = "C:\\Wacca\\Nana+\\WindowsNoEditor"   # only used with WaccaCircle (tool by yosh)
 REPO_SCRIPT = "repo.py"       # only used with WaccaCircle (tool by yosh)
 
 pool = mysql.connector.pooling.MySQLConnectionPool(
@@ -132,19 +133,17 @@ def upload_snapshot():
     temp_path = os.path.join(tempfile.gettempdir(), "repo.gz")
     snapshot_file.save(temp_path)
 
-    # Launch repo.py
+    # Lancer repo.py et capturer sa sortie JSON
     cmd = ["python", REPO_SCRIPT, "diff", ROOT_PATH, temp_path]
     result = subprocess.run(cmd, capture_output=True, text=True)
 
     if result.returncode != 0:
         return f"Error: {result.stderr}", 500
 
-    # Parse repo.gz
-    changes = []
-    for line in result.stdout.splitlines():
-        line = line.strip()
-        if line.startswith(("+", "-", "~")):
-            changes.append(line)
+    try:
+        changes = json.loads(result.stdout)
+    except json.JSONDecodeError as e:
+        return f"Invalid JSON from repo.py: {e}", 500
 
     return jsonify(changes)
 
@@ -161,7 +160,6 @@ def download_file():
         return "File not found", 404
 
     return send_file(abs_path, as_attachment=True)
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

@@ -2,10 +2,9 @@
 import os
 import sys
 import gzip
+import json
 import datetime
-from operator import itemgetter
-from collections import OrderedDict
-sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8', buffering=1)
+
 FILE_NAME = "repo.gz"
 
 def snapshot(root_path, out_file_gz):
@@ -24,7 +23,6 @@ def snapshot(root_path, out_file_gz):
                     mtime = datetime.datetime.fromtimestamp(stat.st_mtime).isoformat()
                     f.write(f"{rel_path}|{size}|{mtime}\n")
                 except FileNotFoundError:
-                    # Fichier supprimé entre-temps
                     continue
 
 def load_snapshot(snapshot_path):
@@ -62,32 +60,23 @@ def diff_snapshot_vs_disk(root_path, snapshot_path):
     current = scan_current_state(root_path)
 
     all_paths = set(snapshot) | set(current)
+    changes = []
 
     for path in sorted(all_paths):
         in_snap = path in snapshot
         in_curr = path in current
         p = path.replace('\\', '/')
         if in_snap and not in_curr:
-            print(f"- {p}")  # supprimé
+            changes.append({"action": "-", "path": p})
         elif not in_snap and in_curr:
-            print(f"+ {p}")  # ajouté
+            size, mtime = current[path]
+            changes.append({"action": "+", "path": p, "size": size, "mtime": mtime})
         elif in_snap and in_curr:
             snap_size, snap_mtime = snapshot[path]
             curr_size, curr_mtime = current[path]
-
             if snap_size != curr_size or snap_mtime != curr_mtime:
-                s = print_size(curr_size-snap_size)
-                if s[0] != "-":
-                    s = '+' + s
-                elif s == "0B":
-                    s = ""
-                if snap_mtime != curr_mtime:
-                    dt = datetime.datetime.fromisoformat(curr_mtime)
-                    s += dt.strftime(" %d/%m/%Y %H:%M:%S") # Exemple : 02/06/2025 18:34:12
-
-                print(f"~ {p} {s}")  # modifié
-            # else:
-            #     print(f"= {path}")  # inchangé (optionnel)
+                changes.append({"action": "~", "path": p, "size": curr_size, "mtime": curr_mtime})
+    return changes
 
 def print_size(value):
     if value > 1_073_741_824: # 1GB
@@ -99,18 +88,11 @@ def print_size(value):
     else:
         return f"{value}B"
 
-def bytes_to_kb(bytes_num):
-    return bytes_num >> 10
-
-def bytes_to_mb(bytes_num):
-    return bytes_num >> 20
-
-
-def bytes_to_gb(bytes_num):
-    return bytes_num >> 30
+def bytes_to_kb(bytes_num): return bytes_num >> 10
+def bytes_to_mb(bytes_num): return bytes_num >> 20
+def bytes_to_gb(bytes_num): return bytes_num >> 30
 
 if __name__ == "__main__":
-    import sys
     if len(sys.argv) != 4 or sys.argv[1] != "diff":
         print("CLI Usage: python repo.py diff <ROOT_PATH> <SNAPSHOT_PATH>")
         if not os.path.exists('./' + FILE_NAME):
@@ -119,8 +101,10 @@ if __name__ == "__main__":
             print('done!')
         else:
             print(f"./{FILE_NAME} found! comparing...")
-            diff_snapshot_vs_disk('./', FILE_NAME)
+            changes = diff_snapshot_vs_disk('./', FILE_NAME)
+            print(json.dumps(changes, ensure_ascii=False, indent=2))
     else:
         root = sys.argv[2]
         snap = sys.argv[3]
-        diff_snapshot_vs_disk(root, snap)
+        changes = diff_snapshot_vs_disk(root, snap)
+        print(json.dumps(changes, ensure_ascii=False, indent=2))
