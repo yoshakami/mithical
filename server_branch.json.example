@@ -1,0 +1,4 @@
+{
+'dev' : '/Wacca/dev',
+'prod' : '/Wacca/prod'
+}

@@ -74,3 +74,24 @@ you can (and should) also add a new message entry in IconMessage.uasset, UserPla
 
 ## notes
 no gamba 
+```
+ITEM_TYPES = {
+  :xp => 1,
+  :wp => 2,
+  :music_unlock => 3,
+  :music_difficulty_unlock => 4,
+  :title => 5,
+  :icon => 6,
+  :trophy => 7,
+  :skill => 8,
+  :ticket => 9,
+  :console_color => 10,
+  :note_sound => 11,
+  :title_part => 12,
+  :boost_badge => 13,
+  :gate_point => 14,
+  :navigator => 15,
+  :plate => 16,
+  :touch_effect => 17
+}
+```

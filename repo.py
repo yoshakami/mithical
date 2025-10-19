@@ -5,22 +5,50 @@ import gzip
 import json
 import datetime
 
+ENV_CONFIG = {}
+if os.path.exists('.env'):
+    with open('.env', 'r') as txt:
+        a = txt.readlines()
+    for line in a:
+        if '=' in line:
+            ENV_CONFIG[line.lsplit('=', 1)[0].lower()] = line.lsplit('=', 1)[1]
+
 FILE_NAME = "repo.gz"
 
+def format_utc(ts: float) -> str:
+    """Retourne un timestamp UTC ISO8601 (finissant par Z), sans décalage local."""
+    return (
+        datetime.datetime.utcfromtimestamp(ts)
+        .replace(tzinfo=datetime.timezone.utc, microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
+
+
+def mtimes_equal(m1, m2, tolerance=5):
+    """Compare deux timestamps ISO8601 avec une tolérance de 5 secondes."""
+    try:
+        t1 = datetime.datetime.fromisoformat(m1.replace("Z", "+00:00")).timestamp()
+        t2 = datetime.datetime.fromisoformat(m2.replace("Z", "+00:00")).timestamp()
+        return abs(t1 - t2) <= tolerance
+    except Exception:
+        return False
+
 def snapshot(root_path, out_file_gz):
+    """Crée un snapshot compressé de l’état du répertoire."""
     with gzip.open(out_file_gz, 'wt', encoding='utf-8') as f:
-        now = datetime.datetime.now().isoformat()
+        now = format_utc(datetime.datetime.now(datetime.timezone.utc).timestamp())
         f.write(f"# snapshot: {now}\n")
         for dirpath, _, filenames in os.walk(root_path):
             for file in filenames:
                 path = os.path.join(dirpath, file)
                 if path == root_path + out_file_gz:
                     continue
-                rel_path = os.path.relpath(path, root_path)
+                rel_path = os.path.relpath(path, root_path).replace("\\", "/")
                 try:
                     stat = os.stat(path)
                     size = stat.st_size
-                    mtime = datetime.datetime.fromtimestamp(stat.st_mtime).isoformat()
+                    mtime = format_utc(stat.st_mtime)
                     f.write(f"{rel_path}|{size}|{mtime}\n")
                 except FileNotFoundError:
                     continue
@@ -45,11 +73,11 @@ def scan_current_state(root_path):
             full = os.path.join(dirpath, file)
             if full == root_path + FILE_NAME:
                 continue
-            rel = os.path.relpath(full, root_path)
+            rel = os.path.relpath(full, root_path).replace("\\", "/")
             try:
                 stat = os.stat(full)
                 size = stat.st_size
-                mtime = datetime.datetime.fromtimestamp(stat.st_mtime).isoformat()
+                mtime = format_utc(stat.st_mtime)
                 state[rel] = (size, mtime)
             except FileNotFoundError:
                 continue
@@ -61,7 +89,6 @@ def diff_snapshot_vs_disk(root_path, snapshot_path):
 
     all_paths = set(snapshot) | set(current)
     changes = []
-
     for path in sorted(all_paths):
         in_snap = path in snapshot
         in_curr = path in current
@@ -74,8 +101,13 @@ def diff_snapshot_vs_disk(root_path, snapshot_path):
         elif in_snap and in_curr:
             snap_size, snap_mtime = snapshot[path]
             curr_size, curr_mtime = current[path]
-            if snap_size != curr_size or snap_mtime != curr_mtime:
-                changes.append({"action": "~", "path": p, "size": curr_size, "mtime": curr_mtime})
+            if snap_size != curr_size or not mtimes_equal(snap_mtime, curr_mtime):
+                changes.append({
+                    "action": "~",
+                    "path": p,
+                    "size": curr_size,
+                    "mtime": curr_mtime
+                })
     return changes
 
 def print_size(value):

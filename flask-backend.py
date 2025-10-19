@@ -1,40 +1,37 @@
 from mysql.connector import pooling
-from flask_cors import CORS
 from backend_utils import *
 import mysql.connector
-import datetime
 from flask import Flask, request, jsonify, send_file
 import os
-import json
 import subprocess
 import tempfile
+import datetime
+import sys
+import json
+import repo
 
-ROOT_PATH = "C:\\Wacca\\Nana+\\WindowsNoEditor"   # only used with WaccaCircle (tool by yosh)
+SERVER_BRANCH = {} 
+if os.path.exists('server_branch.json'):
+    with open('server_branch.json', 'r') as file:
+        SERVER_BRANCH = json.load(file)
+else:
+    print('server_branch.json not found! if you need the auto updater, look at server_branch.json.example')
+
 REPO_SCRIPT = "repo.py"       # only used with WaccaCircle (tool by yosh)
 
 pool = mysql.connector.pooling.MySQLConnectionPool(
     pool_name="mypool",
     pool_size=5,
     host="127.0.0.1",
-    database="aime",
-    user="aime",
-    password="ro",
+    database=repo.ENV_CONFIG.get('database'),
+    user=repo.ENV_CONFIG.get('user'),
+    password=repo.ENV_CONFIG.get('password'),
     connection_timeout=9600,
     autocommit=True
 )
 
 
 app = Flask(__name__)
-CORS(app)  # allow all origins (localhost:3000 included)
-
-"""
-conn = mysql.connector.connect(
-    host="192.168.1.22",
-    database="aime",
-    user="aime",
-    password="ro",
-    connection_timeout=9600
-)"""
 
 global_data = {}
 
@@ -102,29 +99,9 @@ def favorite(cardID, songid):
 @app.route("/wacca/user/<string:cardID>/gacha/<int:box>", methods=["POST"])
 def gamba(cardID, box):
     return {"item":{"kind":11,"id":205008,"rarity":4},"points":88480}
-"""
-ITEM_TYPES = {
-  :xp => 1,
-  :wp => 2,
-  :music_unlock => 3,
-  :music_difficulty_unlock => 4,
-  :title => 5,
-  :icon => 6,
-  :trophy => 7,
-  :skill => 8,
-  :ticket => 9,
-  :console_color => 10,
-  :note_sound => 11,
-  :title_part => 12,
-  :boost_badge => 13,
-  :gate_point => 14,
-  :navigator => 15,
-  :plate => 16,
-  :touch_effect => 17
-}"""
 
-@app.route("/upload_snapshot", methods=["POST"])
-def upload_snapshot():
+@app.route("/upload_snapshot/<string:branch>", methods=["POST"])
+def upload_snapshot(branch):
     """Reçoit repo.gz depuis le laptop et calcule les différences."""
     if "file" not in request.files:
         return "No file uploaded", 400
@@ -132,11 +109,12 @@ def upload_snapshot():
     snapshot_file = request.files["file"]
     temp_path = os.path.join(tempfile.gettempdir(), "repo.gz")
     snapshot_file.save(temp_path)
-
-    # Lancer repo.py et capturer sa sortie JSON
-    cmd = ["python", REPO_SCRIPT, "diff", ROOT_PATH, temp_path]
+    selected_branch = SERVER_BRANCH.get(branch)
+    if not selected_branch:
+        return f"Error: Not authorized", 403
+    cmd = [sys.executable, REPO_SCRIPT, "diff", selected_branch, temp_path]
     result = subprocess.run(cmd, capture_output=True, text=True)
-
+    
     if result.returncode != 0:
         return f"Error: {result.stderr}", 500
 
@@ -144,22 +122,26 @@ def upload_snapshot():
         changes = json.loads(result.stdout)
     except json.JSONDecodeError as e:
         return f"Invalid JSON from repo.py: {e}", 500
+    change2 = jsonify(changes)
+    print(change2)
+    return change2
 
-    return jsonify(changes)
 
-
-@app.route("/download_file", methods=["GET"])
-def download_file():
+@app.route("/download_file/<string:branch>", methods=["GET"])
+def download_file(branch):
     """Permet au laptop de télécharger un fichier modifié."""
+    selected_branch = SERVER_BRANCH.get(branch)
+    if not selected_branch:
+        return f"Error: Not authorized", 403
     relpath = request.args.get("path")
     if not relpath:
         return "Missing path", 400
 
-    abs_path = os.path.join(ROOT_PATH, relpath)
+    abs_path = os.path.join(selected_branch, relpath)
     if not os.path.exists(abs_path):
         return "File not found", 404
 
     return send_file(abs_path, as_attachment=True)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=repo.ENV_CONFIG.get('flask_port'))
