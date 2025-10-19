@@ -12,31 +12,30 @@ WACCA = repo.ENV_CONFIG.get('wacca')
 try:
     os.chdir(WACCA)
 
-    # (Re)créer le snapshot local
+    # create local snapshot
     if os.path.exists(repo.FILE_NAME):
         os.remove(repo.FILE_NAME)
     repo.snapshot("./", repo.FILE_NAME)
 
-    # 1. Envoyer snapshot.gz au serveur
+    # send repo.gz to server
     with open(repo.FILE_NAME, "rb") as f:
         r = requests.post(f"{SERVER_IP}/upload_snapshot", files={"file": f})
     print(r)
-    # Vérification des erreurs serveur
     if r.status_code == 500:
-        print("❌ Erreur côté serveur (500)")
+        print("❌ Server Error (500)")
         print(r.text)
         exit()
     elif r.status_code == 503:
-        print("⚠️ Le serveur est éteint (503), veuillez réessayer plus tard")
+        print("⚠️ The server is down (503), please try again later")
         exit()
     elif r.status_code != 200:
-        print(f"⚠️ Erreur HTTP {r.status_code}")
+        print(f"⚠️ HTTP Error {r.status_code}")
         print(r.text)
         
 
     changes = r.json()
 
-    # 2. Télécharger les fichiers modifiés ou ajoutés
+    # download added and modified files
     for change in changes:
         action = change.get("action")
         relpath = change.get("path")
@@ -66,17 +65,17 @@ try:
                     dt = datetime.datetime.fromisoformat(mtime_str.replace("Z", "+00:00"))
                     ts = dt.timestamp()
                     os.utime(relpath, (ts, ts))
-                    print(f"[OK] mtime restauré {dt}")
+                    print(f"[OK] mtime restored {dt}")
                 else:
-                    print("[ERREUR] Pas de mtime pour", relpath)
+                    print(f"[ERROR] No mtime for {relpath}")
 
-                print(f"{action} Mise à jour: {relpath}")
+                print(f"{action} Update: {relpath}")
 
         elif action == "-":
             print("Not on server =>", relpath)
             # os.chmod(relpath, stat.S_IWRITE)  # removes read-only attribute
             # os.remove(relpath)
-            # print("À supprimer (local):", relpath)
+            # print("To delete (local):", relpath)
 
 
 except Exception as e:

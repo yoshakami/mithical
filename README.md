@@ -1,14 +1,22 @@
 # Mithical (Yosh version)
+A Wacca GUI (edited by me since the fork) + backend for artemis (completely made by me) + auto-updater (made by me) <br>
+This GUI reflects the behaviour of my version of the game, which is notably different from the owner whose I forked this repo from. <br>
+It's a Nuxt application + flask backend <br>
+use `yarn dev` to start the development server + `flask-backend.py` to start backend <br>
+use `yarn build` to get the prod optimized version. <br>
+Make sure `flask-backend.py` (provided because it's Yosh version!!!!) is running. Create a `.env` file at the root and set URLs to override the defaults. See `.env.example` file.
 
-A Wacca GUI (edited by me since the fork) + backend for artemis (completely made by me)
+# Runtime config
+`MITHICAL_BACKEND_URL` is the backend api every client webbrowser will ask when visiting the nuxt frontend. don't put 127.0.0.1 if you plan to access this UI from another device. <br>
+`database` should be aime by default<br>
+`user` should be aime by default<br>
+`password` is what you configured for aime<br>
+`flask_port` is the backend api port. default is 5000<br>
+`server_ip` is the url used to auto-update your cab. only used by `wacca-update-repo.py`<br>
+`wacca` is the path to the game running on your cab. only used by `wacca-update-repo.py`<br>
+<br>
+[Optional] if you wanna use the auto-updater, run `wacca-update-repo.py` on your cab with `repo.py` and `.env` in the same dir
 
-This GUI reflects the behaviour of my version of the game, which is notably different from the owner whose I forked this repo from.
-
-It's a Nuxt application + flask backend
-
-use `yarn dev` to start the development server + `flask-backend.py` to start backend
-
-Make sure mithical-backend (provided because it's Yosh version!!!!) is running. Create a `.env` file at the root and set URLs to override the defaults. See `.env.example` file.
 
 ## Changelog
 SongList Changed.<br>
@@ -17,7 +25,9 @@ corrected bugs that would display the wrong grade depending on the vue used.<br>
 The rating has changed. it also shows the 100 best songs.<br>
 Max rate per song is x1.1 instead of x4, which makes it easier for spectators to get an idea of which song levels you can easily play. (1400 = 14) <br>
 Each song best score is now displayed in the Rating vue with an appropriate colour depending on your score.<br>
-added backend (of course!)
+added backend (of course!)<br>
+added auto-updater to the backend + a script to update game on a cab (optional) <br>
+
 
 
 ## How to add a new song

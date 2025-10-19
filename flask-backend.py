@@ -102,7 +102,7 @@ def gamba(cardID, box):
 
 @app.route("/upload_snapshot/<string:branch>", methods=["POST"])
 def upload_snapshot(branch):
-    """Reçoit repo.gz depuis le laptop et calcule les différences."""
+    """used by auto-updater. Get repo.gz then calculates differences."""
     if "file" not in request.files:
         return "No file uploaded", 400
     
@@ -129,7 +129,7 @@ def upload_snapshot(branch):
 
 @app.route("/download_file/<string:branch>", methods=["GET"])
 def download_file(branch):
-    """Permet au laptop de télécharger un fichier modifié."""
+    """used by the auto-updater, allows wacca-update-repo.py to get files from mainstream server."""
     selected_branch = SERVER_BRANCH.get(branch)
     if not selected_branch:
         return f"Error: Not authorized", 403

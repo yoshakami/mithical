@@ -16,7 +16,7 @@ if os.path.exists('.env'):
 FILE_NAME = "repo.gz"
 
 def format_utc(ts: float) -> str:
-    """Retourne un timestamp UTC ISO8601 (finissant par Z), sans décalage local."""
+    """Return timestamp UTC ISO8601 (ending with Z), no local diff."""
     return (
         datetime.datetime.utcfromtimestamp(ts)
         .replace(tzinfo=datetime.timezone.utc, microsecond=0)
@@ -26,7 +26,7 @@ def format_utc(ts: float) -> str:
 
 
 def mtimes_equal(m1, m2, tolerance=5):
-    """Compare deux timestamps ISO8601 avec une tolérance de 5 secondes."""
+    """Compare two timestamps ISO8601 with 5 seconds tolerance."""
     try:
         t1 = datetime.datetime.fromisoformat(m1.replace("Z", "+00:00")).timestamp()
         t2 = datetime.datetime.fromisoformat(m2.replace("Z", "+00:00")).timestamp()
@@ -35,7 +35,7 @@ def mtimes_equal(m1, m2, tolerance=5):
         return False
 
 def snapshot(root_path, out_file_gz):
-    """Crée un snapshot compressé de l’état du répertoire."""
+    """Create a compressed snapshot of the root path file structure."""
     with gzip.open(out_file_gz, 'wt', encoding='utf-8') as f:
         now = format_utc(datetime.datetime.now(datetime.timezone.utc).timestamp())
         f.write(f"# snapshot: {now}\n")
