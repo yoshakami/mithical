@@ -45,7 +45,7 @@
             </div>
 
             <div class="play-grade">
-              <WaccaGrade :grade="play.info.grade" />
+              <WaccaGrade :grade="fillGrade(play.info.grade, play.info.score)" />
             </div>
 
             <div class="play-score">
@@ -413,6 +413,17 @@ import { NuxtLink } from "#components";
 const difficultyInternal = useState("difficultyInternal");
 
 import waccaSongs from "~~/assets/wacca/waccaSongs.js";
+import waccaGradeBorders from "~/assets/wacca/waccaGradeBorders";
+
+function fillGrade(grade, score) {
+
+  // infer the grade from score
+  for (let i = 0; i < waccaGradeBorders.length; i++) {
+    if (score >= waccaGradeBorders[i].min) {
+      return waccaGradeBorders[i].grade;
+    }
+  }
+}
 
 const props = defineProps({
   play: Object,
