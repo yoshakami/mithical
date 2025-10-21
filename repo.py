@@ -11,7 +11,7 @@ if os.path.exists('.env'):
         a = txt.readlines()
     for line in a:
         if '=' in line:
-            ENV_CONFIG[line.lsplit('=', 1)[0].lower()] = line.lsplit('=', 1)[1]
+            ENV_CONFIG[line.strip().split('=', 1)[0].lower()] = line.strip().split('=', 1)[1]
 
 FILE_NAME = "repo.gz"
 

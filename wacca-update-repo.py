@@ -1,13 +1,18 @@
 import os
+import sys
 import repo
 import stat
 import traceback
 import requests
 import datetime
 
+
 # SERVER_IP = "192.168.1.11:5000"
 SERVER_IP = repo.ENV_CONFIG.get('server_ip')
 WACCA = repo.ENV_CONFIG.get('wacca')
+BRANCH = repo.ENV_CONFIG.get('branch')
+if len(sys.argv) > 1:
+    BRANCH = sys.argv[1]
 
 try:
     os.chdir(WACCA)
@@ -19,7 +24,7 @@ try:
 
     # send repo.gz to server
     with open(repo.FILE_NAME, "rb") as f:
-        r = requests.post(f"{SERVER_IP}/upload_snapshot", files={"file": f})
+        r = requests.post(f"{SERVER_IP}/upload_snapshot/{BRANCH}", files={"file": f})
     print(r)
     if r.status_code == 500:
         print("❌ Server Error (500)")
@@ -41,7 +46,7 @@ try:
         relpath = change.get("path")
 
         if action in ("+", "~"):
-            url = f"{SERVER_IP}/download_file?path={relpath}"
+            url = f"{SERVER_IP}/download_file/{BRANCH}?path={relpath}"
             resp = requests.get(url)
             if resp.status_code == 200:
                 dirpath = os.path.dirname(relpath)
