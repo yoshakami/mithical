@@ -52,6 +52,8 @@ try:
                 dirpath = os.path.dirname(relpath)
                 if dirpath:
                     os.makedirs(dirpath, exist_ok=True)
+                if relpath == "repo.gz":
+                    continue
 
                 # Always replace file (breaks hardlinks)
                 if os.path.exists(relpath):
