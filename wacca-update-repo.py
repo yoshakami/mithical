@@ -7,7 +7,6 @@ import requests
 import datetime
 
 
-# SERVER_IP = "192.168.1.11:5000"
 SERVER_IP = repo.ENV_CONFIG.get('server_ip')
 WACCA = repo.ENV_CONFIG.get('wacca')
 BRANCH = repo.ENV_CONFIG.get('branch')
@@ -84,7 +83,8 @@ try:
             # os.remove(relpath)
             # print("To delete (local):", relpath)
 
-
+except requests.exceptions.ConnectionError as e:
+    input(f"Cannot connect to {SERVER_IP}, check your internet connection\npress enter to exit")
 except Exception as e:
     traceback.print_exception(e)
     input("press enter to exit")
