@@ -1,27 +1,27 @@
 const gradeBorders = [
   {
     min: 1000000,
-    grade: 13,
-  },
-  {
-    min: 990000,
-    grade: 12,
-  },
-  {
-    min: 980000,
-    grade: 11,
-  },
-  {
-    min: 970000,
     grade: 10,
   },
   {
-    min: 950000,
+    min: 990000,
+    grade: 13,
+  },
+  {
+    min: 980000,
     grade: 9,
   },
   {
-    min: 930000,
+    min: 970000,
+    grade: 12,
+  },
+  {
+    min: 950000,
     grade: 8,
+  },
+  {
+    min: 930000,
+    grade: 11,
   },
   {
     min: 900000,
@@ -53,7 +53,7 @@ const gradeBorders = [
   },
   {
     min: 0,
-    grade: 1,
+    grade: 0,
   },
 ];
 
