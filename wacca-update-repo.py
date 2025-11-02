@@ -14,6 +14,8 @@ if len(sys.argv) > 1:
     BRANCH = sys.argv[1]
 
 try:
+    if BRANCH == None or SERVER_IP == None or WACCA == None:
+        raise("You didn't setup .env correctly! look at the example")
     os.chdir(WACCA)
 
     # create local snapshot
