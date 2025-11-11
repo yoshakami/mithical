@@ -10,8 +10,27 @@ import datetime
 SERVER_IP = repo.ENV_CONFIG.get('server_ip')
 WACCA = repo.ENV_CONFIG.get('wacca')
 BRANCH = repo.ENV_CONFIG.get('branch')
-if len(sys.argv) > 1:
-    BRANCH = sys.argv[1]
+simulate = False
+ignore_txtp = False
+ignore_bak = False
+ignore_usm = False
+ignore_awb = False
+ignore_NotOnServer = False
+for arg in sys.argv[1:]:
+    if arg == '-s':
+        simulate = True
+    elif arg == '-t':
+        ignore_txtp = True
+    elif arg == '-b':
+        ignore_bak = True
+    elif arg == '-u':
+        ignore_usm = True
+    elif arg == '-a':
+        ignore_awb = True
+    elif arg == '-n':
+        ignore_NotOnServer = True
+    else:
+        BRANCH = arg
 
 try:
     if BRANCH == None or SERVER_IP == None or WACCA == None:
@@ -45,8 +64,20 @@ try:
     for change in changes:
         action = change.get("action")
         relpath = change.get("path")
+        ext = os.path.splitext(relpath)[-1]
+        if ignore_txtp and ext == '.txtp':
+            continue
+        if ignore_bak and ext == '.bak':
+            continue
+        if ignore_usm and ext == '.usm':
+            continue
+        if ignore_awb and ext == '.awb':
+            continue
 
         if action in ("+", "~"):
+            if simulate:
+                print(f"{action} Update: {relpath}")
+                continue
             url = f"{SERVER_IP}/download_file/{BRANCH}?path={relpath}"
             resp = requests.get(url)
             if resp.status_code == 200:
@@ -79,7 +110,7 @@ try:
 
                 print(f"{action} Update: {relpath}")
 
-        elif action == "-":
+        elif action == "-" and not ignore_NotOnServer:
             print("Not on server =>", relpath)
             # os.chmod(relpath, stat.S_IWRITE)  # removes read-only attribute
             # os.remove(relpath)
