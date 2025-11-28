@@ -4,6 +4,14 @@ import sys
 import gzip
 import json
 import datetime
+import hashlib
+
+def md5_of_file(path, chunk_size=65536):
+    h = hashlib.md5()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(chunk_size), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 ENV_CONFIG = {}
 if os.path.exists('.env'):
@@ -34,7 +42,7 @@ def mtimes_equal(m1, m2, tolerance=5):
     except Exception:
         return False
 
-def snapshot(root_path, out_file_gz):
+def snapshot(root_path, out_file_gz, use_md5=0):
     """Create a compressed snapshot of the root path file structure."""
     with gzip.open(out_file_gz, 'wt', encoding='utf-8') as f:
         now = format_utc(datetime.datetime.now(datetime.timezone.utc).timestamp())
@@ -49,7 +57,11 @@ def snapshot(root_path, out_file_gz):
                     stat = os.stat(path)
                     size = stat.st_size
                     mtime = format_utc(stat.st_mtime)
-                    f.write(f"{rel_path}|{size}|{mtime}\n")
+                    if use_md5:
+                        digest = md5_of_file(path)
+                        f.write(f"{rel_path}|{size}|{mtime}|{digest}\n")
+                    else:
+                        f.write(f"{rel_path}|{size}|{mtime}\n")
                 except FileNotFoundError:
                     continue
 
@@ -59,14 +71,16 @@ def load_snapshot(snapshot_path):
         for line in f:
             if line.startswith('#'):
                 continue
-            try:
-                path, size, mtime = line.strip().split('|')
-                snapshot[path] = (int(size), mtime)
-            except ValueError:
-                continue
+            parts = line.strip().split('|')
+            if len(parts) == 3:
+                path, size, mtime = parts
+                snapshot[path] = (int(size), mtime, None)   # md5 missing
+            elif len(parts) == 4:
+                path, size, mtime, digest = parts
+                snapshot[path] = (int(size), mtime, digest)
     return snapshot
 
-def scan_current_state(root_path):
+def scan_current_state(root_path, use_md5=False):
     state = {}
     for dirpath, _, filenames in os.walk(root_path):
         for file in filenames:
@@ -78,37 +92,63 @@ def scan_current_state(root_path):
                 stat = os.stat(full)
                 size = stat.st_size
                 mtime = format_utc(stat.st_mtime)
-                state[rel] = (size, mtime)
+                digest = md5_of_file(full) if use_md5 else None
+                state[rel] = (size, mtime, digest)
             except FileNotFoundError:
                 continue
     return state
-
-def diff_snapshot_vs_disk(root_path, snapshot_path):
+def diff_snapshot_vs_disk(root_path, snapshot_path, use_md5=False):
     snapshot = load_snapshot(snapshot_path)
-    current = scan_current_state(root_path)
+    current = scan_current_state(root_path, use_md5)
 
     all_paths = set(snapshot) | set(current)
     changes = []
+
     for path in sorted(all_paths):
+        p = path.replace('\\', '/')
         in_snap = path in snapshot
         in_curr = path in current
-        p = path.replace('\\', '/')
+
         if in_snap and not in_curr:
             changes.append({"action": "-", "path": p})
-        elif not in_snap and in_curr:
-            size, mtime = current[path]
-            changes.append({"action": "+", "path": p, "size": size, "mtime": mtime})
-        elif in_snap and in_curr:
-            snap_size, snap_mtime = snapshot[path]
-            curr_size, curr_mtime = current[path]
-            if snap_size != curr_size or not mtimes_equal(snap_mtime, curr_mtime):
-                changes.append({
-                    "action": "~",
-                    "path": p,
-                    "size": curr_size,
-                    "mtime": curr_mtime
-                })
+            continue
+
+        if not in_snap and in_curr:
+            size, mtime, digest = current[path]
+            entry = {
+                "action": "+",
+                "path": p,
+                "size": size,
+                "mtime": mtime
+            }
+            if use_md5:
+                entry["md5"] = digest
+            changes.append(entry)
+            continue
+
+        # both present
+        ss, sm, sd = snapshot[path]
+        cs, cm, cd = current[path]
+
+        replaced = False
+        if not use_md5:
+            changed = (ss != cs) or (not mtimes_equal(sm, cm))
+        else:
+            changed = (sd != cd)
+
+        if changed:
+            entry = {
+                "action": "~",
+                "path": p,
+                "size": cs,
+                "mtime": cm
+            }
+            if use_md5:
+                entry["md5"] = cd
+            changes.append(entry)
+
     return changes
+
 
 def print_size(value):
     if value > 1_073_741_824: # 1GB
@@ -125,8 +165,8 @@ def bytes_to_mb(bytes_num): return bytes_num >> 20
 def bytes_to_gb(bytes_num): return bytes_num >> 30
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4 or sys.argv[1] != "diff":
-        print("CLI Usage: python repo.py diff <ROOT_PATH> <SNAPSHOT_PATH>")
+    if len(sys.argv) != 5 or sys.argv[1] != "diff":
+        print("CLI Usage: python repo.py diff <ROOT_PATH> <SNAPSHOT_PATH> <0|1:use_md5>")
         if not os.path.exists('./' + FILE_NAME):
             print(f"./{FILE_NAME} doesn't exist.\ncreating snapshot...")
             snapshot("./", FILE_NAME)
@@ -138,5 +178,6 @@ if __name__ == "__main__":
     else:
         root = sys.argv[2]
         snap = sys.argv[3]
-        changes = diff_snapshot_vs_disk(root, snap)
+        md5 = sys.argv[4] == "1"
+        changes = diff_snapshot_vs_disk(root, snap, md5)
         print(json.dumps(changes, ensure_ascii=False, indent=2))

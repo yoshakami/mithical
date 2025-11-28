@@ -1,7 +1,7 @@
 from mysql.connector import pooling
 from backend_utils import *
 import mysql.connector
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, Response
 import os
 import subprocess
 import tempfile
@@ -100,8 +100,8 @@ def favorite(cardID, songid):
 def gamba(cardID, box):
     return {"item":{"kind":11,"id":205008,"rarity":4},"points":88480}
 
-@app.route("/upload_snapshot/<string:branch>", methods=["POST"])
-def upload_snapshot(branch):
+@app.route("/upload_snapshot/<string:branch>/<int:md5>", methods=["POST"])
+def upload_snapshot(branch, md5=0):
     """used by auto-updater. Get repo.gz then calculates differences."""
     if "file" not in request.files:
         return "No file uploaded", 400
@@ -112,7 +112,7 @@ def upload_snapshot(branch):
     selected_branch = SERVER_BRANCH.get(branch)
     if not selected_branch:
         return f"Error: Not authorized", 403
-    cmd = [sys.executable, REPO_SCRIPT, "diff", selected_branch, temp_path]
+    cmd = [sys.executable, REPO_SCRIPT, "diff", selected_branch, temp_path, str(md5)]
     result = subprocess.run(cmd, capture_output=True, text=True)
     
     if result.returncode != 0:
@@ -126,13 +126,20 @@ def upload_snapshot(branch):
     print(change2)
     return change2
 
+def file_stream_generator(path, chunk=1024*1024):
+    with open(path, "rb") as f:
+        while True:
+            data = f.read(chunk)
+            if not data:
+                break
+            yield data
 
-@app.route("/download_file/<string:branch>", methods=["GET"])
+@app.route("/download_file/<string:branch>")
 def download_file(branch):
-    """used by the auto-updater, allows wacca-update-repo.py to get files from mainstream server."""
     selected_branch = SERVER_BRANCH.get(branch)
     if not selected_branch:
-        return f"Error: Not authorized", 403
+        return "Error: Not authorized", 403
+
     relpath = request.args.get("path")
     if not relpath:
         return "Missing path", 400
@@ -141,7 +148,13 @@ def download_file(branch):
     if not os.path.exists(abs_path):
         return "File not found", 404
 
-    return send_file(abs_path, as_attachment=True)
+    return Response(
+        file_stream_generator(abs_path),
+        mimetype="application/octet-stream",
+        headers={
+            "Content-Disposition": f"attachment; filename={os.path.basename(abs_path)}"
+        },
+    )
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=repo.ENV_CONFIG.get('flask_port'))

@@ -16,6 +16,8 @@ ignore_bak = False
 ignore_usm = False
 ignore_awb = False
 ignore_NotOnServer = False
+md5 = 0
+
 for arg in sys.argv[1:]:
     if arg == '-s':
         simulate = True
@@ -29,6 +31,8 @@ for arg in sys.argv[1:]:
         ignore_awb = True
     elif arg == '-n':
         ignore_NotOnServer = True
+    elif arg == '-m':
+        md5 = 1
     else:
         BRANCH = arg
 
@@ -40,11 +44,11 @@ try:
     # create local snapshot
     if os.path.exists(repo.FILE_NAME):
         os.remove(repo.FILE_NAME)
-    repo.snapshot("./", repo.FILE_NAME)
+    repo.snapshot("./", repo.FILE_NAME, md5)
 
     # send repo.gz to server
     with open(repo.FILE_NAME, "rb") as f:
-        r = requests.post(f"{SERVER_IP}/upload_snapshot/{BRANCH}", files={"file": f})
+        r = requests.post(f"{SERVER_IP}/upload_snapshot/{BRANCH}/{md5}", files={"file": f})
     print(r)
     if r.status_code == 500:
         print("❌ Server Error (500)")
@@ -65,6 +69,8 @@ try:
         action = change.get("action")
         relpath = change.get("path")
         ext = os.path.splitext(relpath)[-1]
+        if relpath == "repo.gz":
+            continue
         if ignore_txtp and ext == '.txtp':
             continue
         if ignore_bak and ext == '.bak':
@@ -79,13 +85,12 @@ try:
                 print(f"{action} Update: {relpath}")
                 continue
             url = f"{SERVER_IP}/download_file/{BRANCH}?path={relpath}"
-            resp = requests.get(url)
+            resp = requests.get(url, stream=True)
+            resp.raise_for_status()
             if resp.status_code == 200:
                 dirpath = os.path.dirname(relpath)
                 if dirpath:
                     os.makedirs(dirpath, exist_ok=True)
-                if relpath == "repo.gz":
-                    continue
 
                 # Always replace file (breaks hardlinks)
                 if os.path.exists(relpath):
@@ -96,8 +101,9 @@ try:
                     os.remove(relpath)
 
                 with open(relpath, "wb") as out:
-                    out.write(resp.content)
-
+                    for chunk in resp.iter_content(chunk_size=1024 * 1024):  # 1MB
+                        if chunk:
+                            out.write(chunk)
                 # Restore mtime
                 mtime_str = change.get("mtime")
                 if mtime_str:
