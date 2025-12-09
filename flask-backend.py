@@ -126,14 +126,6 @@ def upload_snapshot(branch, md5=0):
     print(change2)
     return change2
 
-def file_stream_generator(path, chunk=1024*1024):
-    with open(path, "rb") as f:
-        while True:
-            data = f.read(chunk)
-            if not data:
-                break
-            yield data
-
 @app.route("/download_file/<string:branch>")
 def download_file(branch):
     selected_branch = SERVER_BRANCH.get(branch)
@@ -148,12 +140,14 @@ def download_file(branch):
     if not os.path.exists(abs_path):
         return "File not found", 404
 
-    return Response(
-        file_stream_generator(abs_path),
+    # send_file sets Content-Length and supports range requests (conditional=True).
+    return send_file(
+        abs_path,
+        as_attachment=True,
+        download_name=os.path.basename(abs_path),
         mimetype="application/octet-stream",
-        headers={
-            "Content-Disposition": f"attachment; filename={os.path.basename(abs_path)}"
-        },
+        conditional=True,   # allows resume / range requests
+        max_age=0,
     )
 
 if __name__ == "__main__":

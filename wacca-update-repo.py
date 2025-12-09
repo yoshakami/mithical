@@ -127,3 +127,5 @@ except requests.exceptions.ConnectionError as e:
 except Exception as e:
     traceback.print_exception(e)
     input("press enter to exit")
+except (ChunkedEncodingError, ConnectionError) as e:
+    print(f"⚠️ Download failed: {e}")
