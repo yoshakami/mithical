@@ -33,12 +33,30 @@ def format_utc(ts: float) -> str:
     )
 
 
-def mtimes_equal(m1, m2, tolerance=5):
-    """Compare two timestamps ISO8601 with 5 seconds tolerance."""
+def mtimes_equal(m1, m2, tolerance=2):
+    """
+    Compare two ISO8601 timestamps, allowing for exact hour shifts
+    caused by Windows/Linux timezone or DST discrepancies.
+    """
     try:
+        # Convert ISO strings back to unix timestamps
         t1 = datetime.datetime.fromisoformat(m1.replace("Z", "+00:00")).timestamp()
         t2 = datetime.datetime.fromisoformat(m2.replace("Z", "+00:00")).timestamp()
-        return abs(t1 - t2) <= tolerance
+        
+        diff = abs(t1 - t2)
+
+        # 1. Perfect match within a small jitter tolerance
+        if diff <= tolerance:
+            return True
+
+        # 2. Check for Timezone/DST drift (Multiples of 3600 seconds)
+        # We check if the difference is nearly an exact hour (or 2, or 3...)
+        # This prevents Windows from re-downloading everything on a timezone flip.
+        remainder = diff % 3600
+        if remainder <= tolerance or remainder >= (3600 - tolerance):
+            return True
+
+        return False
     except Exception:
         return False
 
