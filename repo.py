@@ -25,33 +25,32 @@ FILE_NAME = "repo.gz"
 
 def format_utc(ts: float) -> str:
     """Return timestamp UTC ISO8601 (ending with Z), no local diff."""
+    # Use modern timezone-aware UTC conversion to avoid platform-specific bugs
     return (
-        datetime.datetime.utcfromtimestamp(ts)
-        .replace(tzinfo=datetime.timezone.utc, microsecond=0)
+        datetime.datetime.fromtimestamp(ts, datetime.timezone.utc)
+        .replace(microsecond=0)
         .isoformat()
         .replace("+00:00", "Z")
     )
 
-
 def mtimes_equal(m1, m2, tolerance=2):
     """
-    Compare two ISO8601 timestamps, allowing for exact hour shifts
-    caused by Windows/Linux timezone or DST discrepancies.
+    Compare two timestamps, ignoring sub-second precision loss 
+    and exact 1/2 hour timezone/DST shifts.
     """
     try:
-        # Convert ISO strings back to unix timestamps
-        t1 = datetime.datetime.fromisoformat(m1.replace("Z", "+00:00")).timestamp()
-        t2 = datetime.datetime.fromisoformat(m2.replace("Z", "+00:00")).timestamp()
+        # Convert ISO strings to integer Unix timestamps (ignoring sub-seconds)
+        t1 = int(datetime.datetime.fromisoformat(m1.replace("Z", "+00:00")).timestamp())
+        t2 = int(datetime.datetime.fromisoformat(m2.replace("Z", "+00:00")).timestamp())
         
         diff = abs(t1 - t2)
 
-        # 1. Perfect match within a small jitter tolerance
+        # 1. Nearly identical (within tolerance)
         if diff <= tolerance:
             return True
 
-        # 2. Check for Timezone/DST drift (Multiples of 3600 seconds)
-        # We check if the difference is nearly an exact hour (or 2, or 3...)
-        # This prevents Windows from re-downloading everything on a timezone flip.
+        # 2. Exact hour shifts (3600, 7200, 3600*N seconds)
+        # This solves the "Windows/Linux UTC drift" problem.
         remainder = diff % 3600
         if remainder <= tolerance or remainder >= (3600 - tolerance):
             return True
