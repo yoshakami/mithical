@@ -349,7 +349,7 @@
 
 <script setup>
 import fuzzysort from "fuzzysort";
-import waccaSongs from "~/assets/wacca/waccaSongs.js";
+const waccaSongs = useWaccaSongs();
 import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 import waccaCategories from "~/assets/wacca/waccaCategories";
 
@@ -855,7 +855,7 @@ const waccaCategoriesFiltered = computed(() => {
 });
 
 const songsFiltered = computed(() => {
-  let results = [...waccaSongs];
+  let results = [...waccaSongs.value];
 
   // filter out songs based on selected version (reverse or plus)
   results = results.filter((song) => {

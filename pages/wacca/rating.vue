@@ -212,7 +212,7 @@
 </style>
 
 <script setup>
-import waccaSongs from "~/assets/wacca/waccaSongs.js";
+const waccaSongs = useWaccaSongs();
 import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 import waccaRateMulBorders from "~/assets/wacca/waccaRateMulBorders";
 
@@ -258,7 +258,7 @@ const sheetFolders = computed(() => {
     let sheet = {};
     sheet.difficulty = music.music_difficulty - 1;
     sheet.score = music.score;
-    sheet.song = waccaSongs.find((song) => song.id == music.music_id);
+    sheet.song = waccaSongs.value.find((song) => song.id == music.music_id);
 
     if (
       sheet.song &&

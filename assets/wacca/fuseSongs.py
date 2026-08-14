@@ -3,7 +3,7 @@ import re
 import os
 
 # Paths
-songs_js_path = "WaccaSongs.js"
+songs_js_path = "waccaSongs.js"
 songs_js_path_empty = "WaccaSongs-empty.js"
 export_json_path = "yosh_temp.js"
 music_table_optional = "C:\\Wacca\\Menu\\Nana+\\WindowsNoEditor\\Mercury\\Content\\Table\\MusicParameterTable" # optional
