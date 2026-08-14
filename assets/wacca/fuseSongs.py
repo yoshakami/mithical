@@ -4,9 +4,9 @@ import os
 
 # Paths
 songs_js_path = "WaccaSongs.js"
-export_json_path = "C:\\Wacca\\Nana+T\\WindowsNoEditor\\Mercury\\Content\\Table - Copy\\new2.js"
-output_js_path = "WaccaSongs_updated.js"
-music_table_optional = "C:\\Wacca\\Wacca\\Nana+\\WindowsNoEditor\\Mercury\\Content\\Table\\MusicParameterTable" # optional
+songs_js_path_empty = "WaccaSongs-empty.js"
+export_json_path = "yosh_temp.js"
+music_table_optional = "C:\\Wacca\\Menu\\Nana+\\WindowsNoEditor\\Mercury\\Content\\Table\\MusicParameterTable" # optional
 
 ScoreGenre = ["アニメ／ＰＯＰ", "ボカロ", "東方アレンジ", "2.5次元", "バラエティ", "オリジナル", "TANO*C"]
 if not os.path.exists(export_json_path): # optional
@@ -21,8 +21,12 @@ with open(export_json_path, "r", encoding="utf-8") as f:
 rows = export_data[0]["rows"]
 
 # Load WaccaSongs.js as text
-with open(songs_js_path, "r", encoding="utf-8") as f:
-    js_text = f.read()
+if os.path.exists(songs_js_path):
+    with open(songs_js_path, "r", encoding="utf-8") as f:
+        js_text = f.read()
+else:
+    with open(songs_js_path_empty, "r", encoding="utf-8") as f:
+        js_text = f.read()
 
 # Extract existing IDs with regex
 existing_ids = set(map(int, re.findall(r"id:\s*(\d+)", js_text)))
@@ -53,14 +57,13 @@ def fmt_num_compact(v: float) -> str:
         return str(int(v))
     return str(v)
 
-def fmt_diff_one_decimal(v: float) -> str:
-    """WACCA diffs look best at 1 decimal place (e.g., 9.7)."""
+def fmt_diff_two_decimals(v: float) -> str:
+    """Formats up to 2 decimal places, dropping trailing zeros."""
     if v is None:
         return "null"
-    y = round(float(v) + 1e-9, 1)
-    if abs(y - int(y)) < 1e-9:
-        return str(int(y))
-    return f"{y:.1f}"
+    y = round(float(v) + 1e-9, 2)
+    # Convert using 'g' format or strip trailing zeros after formatting
+    return f"{y:g}"
 
 def clean_designer(s):
     """Normalize designer names; treat '-' or '' as null."""
@@ -86,7 +89,7 @@ for song_id, song in rows.items():
 
             sheet_block = (
     f"""      {{
-            difficulty: {fmt_diff_one_decimal(diff_val)},
+            difficulty: {fmt_diff_two_decimals(diff_val)},
             gameVersion: 400,
             charter: {charter_js},
         }}"""
@@ -142,8 +145,12 @@ if new_entries:
     injection = ",\n".join(entry_strs)
     js_text = js_text.replace("];", injection + "\n];")
 
+
+if os.path.exists(songs_js_path):
+    os.rename(songs_js_path, os.path.splitext(songs_js_path)[0] + "-old.js")
+
 # Save updated file
-with open(output_js_path, "w", encoding="utf-8") as f:
+with open(songs_js_path, "w", encoding="utf-8") as f:
     f.write(js_text)
 
-print(f"Added {len(new_entries)} new entries → {output_js_path}")
+print(f"Added {len(new_entries)} new entries → {songs_js_path}")
