@@ -1,11 +1,10 @@
 from mysql.connector import pooling
 from backend_utils import *
 import mysql.connector
-from flask import Flask, request, jsonify, send_file, Response
+from flask import Flask, request, jsonify, send_file
 import os
 import subprocess
 import tempfile
-import datetime
 import sys
 import json
 import repo
@@ -30,22 +29,16 @@ pool = mysql.connector.pooling.MySQLConnectionPool(
     autocommit=True
 )
 
-
 app = Flask(__name__)
-
-global_data = {}
 
 @app.route("/wacca/user/<int:cardID>/<int:stuff>", methods=["GET"])
 def get_user(cardID, stuff):
-    data = global_data.get(cardID)
-    if data is None:
-        try:
-            data = get_info(cardID, pool)
-            global_data[cardID] = data
-            return jsonify(data)
-        except mysql.connector.Error as err:
-            print(f"\nERROR - {err}")
-    return jsonify(data)
+    try:
+        data = get_info(cardID, pool)
+        return jsonify(data)
+    except mysql.connector.Error as err:
+        print(f"\nERROR - {err}")
+        return jsonify({"error": "Database error"}), 500
 
 @app.route("/card/<string:cardID>", methods=["GET"])
 def card_lookup(cardID):
@@ -55,45 +48,29 @@ def card_lookup(cardID):
         return jsonify({}), 404
     return jsonify(data)
 
-
 @app.route("/wacca/user/leaderboards/<int:stuff>", methods=["GET"])
 def leaderboard(stuff):
-    data = global_data.get("leaderboard")
-    if data is None:
-        data = get_leaderboard(pool)
-        global_data["leaderboard"] = data
+    data = get_leaderboard(pool)
     return jsonify(data)
 
 @app.route("/wacca/music/<int:songid>/highscores/<int:diff>", methods=["GET"])
-def score(songid,diff):
-    data = global_data.get(songid)
-    if data is None:
-        data = get_highscores(songid, diff, pool)
-        global_data["score"] = data
+def score(songid, diff):
+    data = get_highscores(songid, diff, pool)
     return jsonify(data)
 
 @app.route("/wacca/music/<int:songid>/histogram", methods=["GET"])
 def histogram(songid):
-    data = global_data.get(f"{songid}h")
-    if data is None:
-        data = get_histogram(songid, pool)
-        global_data[f"{songid}h"] = data
+    data = get_histogram(songid, pool)
     return jsonify(data)
 
 @app.route("/wacca/user/<string:cardID>/music/<int:songid>", methods=["GET"])
 def music(cardID, songid):
-    data = global_data.get(f"{cardID}{songid}")
-    if data is None:
-        data = get_music_playlog(cardID, songid, pool)
-        global_data[f"{cardID}{songid}"] = data
+    data = get_music_playlog(cardID, songid, pool)
     return jsonify(data)
 
 @app.route("/wacca/user/<string:cardID>/favorites/<int:songid>/toggle", methods=["POST"])
 def favorite(cardID, songid):
-    data = global_data.get(songid)
-    if data is None:
-        data = change_fav(cardID, songid, pool)
-        global_data["leaderboard"] = data
+    data = change_fav(cardID, songid, pool)
     return jsonify(data)
 
 @app.route("/wacca/user/<string:cardID>/gacha/<int:box>", methods=["POST"])
@@ -111,7 +88,7 @@ def upload_snapshot(branch, md5=0):
     snapshot_file.save(temp_path)
     selected_branch = SERVER_BRANCH.get(branch)
     if not selected_branch:
-        return f"Error: Not authorized", 403
+        return "Error: Not authorized", 403
     cmd = [sys.executable, REPO_SCRIPT, "diff", selected_branch, temp_path, str(md5)]
     result = subprocess.run(cmd, capture_output=True, text=True)
     
@@ -122,9 +99,8 @@ def upload_snapshot(branch, md5=0):
         changes = json.loads(result.stdout)
     except json.JSONDecodeError as e:
         return f"Invalid JSON from repo.py: {e}", 500
-    change2 = jsonify(changes)
-    print(change2)
-    return change2
+
+    return jsonify(changes)
 
 @app.route("/download_file/<string:branch>")
 def download_file(branch):
@@ -140,7 +116,6 @@ def download_file(branch):
     if not os.path.exists(abs_path):
         return "File not found", 404
 
-    # send_file sets Content-Length and supports range requests (conditional=True).
     return send_file(
         abs_path,
         as_attachment=True,
@@ -152,3 +127,4 @@ def download_file(branch):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=repo.ENV_CONFIG.get('flask_port'))
+    
