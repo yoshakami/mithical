@@ -26,7 +26,7 @@
 </style>
 
 <script setup>
-const waccaSongs = useWaccaSongs();
+import waccaSongs from "~/assets/wacca/waccaSongs.js";
 
 const theme = useState("theme");
 const runtimeConfig = useRuntimeConfig();
@@ -112,7 +112,7 @@ function selectVersion() {
 
 function cachePlayerSongs() {
   profile.value.songs = [];
-  for (const song of waccaSongs.value) {
+  for (const song of waccaSongs) {
     profile.value.songs[song.id] = cacheSongInfo(song);
   }
 }
@@ -130,9 +130,4 @@ const themeModded = computed(() => {
 loadProfile();
 watch(activeCard, loadProfile);
 watch(version, loadProfile);
-watch(waccaSongs, () => {
-  if (profile.value) {
-    cachePlayerSongs();
-  }
-});
 </script>

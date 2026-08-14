@@ -325,7 +325,7 @@ Chart.register(zoomPlugin);
 Chart.register(...registerables);
 Chart.register(annotationPlugin);
 
-const waccaSongs = useWaccaSongs();
+import waccaSongs from "~/assets/wacca/waccaSongs.js";
 import waccaDifficulties from "~/assets/wacca/waccaDifficulties";
 import waccaGradeBorders from "~/assets/wacca/waccaGradeBorders";
 import waccaCategories from "~/assets/wacca/waccaCategories";
@@ -341,7 +341,7 @@ const route = useRoute();
 const activeCard = useState("activeCard");
 
 const song = computed(() => {
-  return waccaSongs.value.find((song) => song.id === parseInt(route.params.id));
+  return waccaSongs.find((song) => song.id === parseInt(route.params.id));
 });
 
 const fullUrl = computed(() => {
