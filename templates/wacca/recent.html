@@ -1,0 +1,11 @@
+{% extends "wacca/base.html" %}
+{% block title %}Recent Plays | Wacca{% endblock %}
+{% block content %}
+<div class="container">
+  <div id="recent-plays" class="play-log"></div>
+  <div id="recent-empty" class="alert alert-info hidden">Looks like you haven't played anything yet!</div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/wacca/recent.js"></script>
+{% endblock %}

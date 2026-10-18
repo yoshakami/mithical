@@ -1,0 +1,28 @@
+{% extends "wacca/base.html" %}
+{% block title %}All Songs | Wacca{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="song-options">
+    <select id="sort-select" class="input" style="width:auto"></select>
+    <button type="button" id="sort-direction" class="btn btn-primary">↑ Asc</button>
+    <input type="search" id="song-search" class="input" placeholder="Find a Song" style="flex:1;min-width:200px">
+    <button type="button" id="toggle-filters" class="btn btn-primary">Filters</button>
+  </div>
+  <div id="song-filters" class="song-filters-panel hidden"></div>
+  <div id="category-toggles" class="category-toggle"></div>
+  <div id="songs-count" style="margin-bottom:12px"></div>
+  <div id="songs-list"></div>
+  <div id="songs-empty" class="alert alert-info hidden">No songs match your filters.</div>
+  <div class="pagination">
+    <button type="button" id="page-prev" class="btn btn-primary">Prev</button>
+    <span id="page-info"></span>
+    <button type="button" id="page-next" class="btn btn-primary">Next</button>
+  </div>
+</div>
+{% endblock %}
+{% block head %}
+<script src="https://cdn.jsdelivr.net/npm/fuzzysort@3.1.0/fuzzysort.min.js"></script>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/wacca/songs.js"></script>
+{% endblock %}

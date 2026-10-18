@@ -1,0 +1,18 @@
+{% extends "wacca/base.html" %}
+{% block title %}Inventory | Wacca{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="song-options">
+    <div class="btn-toggle" id="inventory-tab">
+      <button type="button" data-value="navigators" class="active">Navigators</button>
+      <button type="button" data-value="icons">Icons</button>
+      <button type="button" data-value="titles">Titles</button>
+    </div>
+    <label class="checkbox-row"><input type="checkbox" id="show-unowned"> Show unowned</label>
+  </div>
+  <div id="inventory-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/wacca/inventory.js"></script>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "wacca/base.html" %}
+{% block title %}Settings | Wacca{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="alert alert-info">Test-only in-game option viewer. Settings are read-only and do not persist.</div>
+  <div id="settings-options"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/wacca/settings.js"></script>
+{% endblock %}

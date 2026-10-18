@@ -1,0 +1,14 @@
+{% extends "wacca/base.html" %}
+{% block title %}Gacha | Wacca{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="current-rp">
+    Your current balance: <span id="gacha-rp"></span> RP
+    <div style="font-size:0.7em;font-weight:normal;color:rgba(255,255,255,0.7)">Gamba responsibly.</div>
+  </div>
+  <div id="gacha-boxes"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/wacca/gacha.js"></script>
+{% endblock %}

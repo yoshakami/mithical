@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Mithical{% endblock %}</title>
+<meta name="description" content="Web UI for Wacca">
+<link rel="icon" href="/static/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/static/css/app.css">
+<script>
+  window.MITHICAL = {
+    apiUrl: {{ api_url | tojson }},
+  };
+</script>
+<script type="module" src="/static/js/mithical.js"></script>

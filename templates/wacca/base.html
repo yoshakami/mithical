@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "partials/head.html" %}
+  {% block head %}{% endblock %}
+</head>
+<body class="theme-wacca-dark section-wacca">
+  {% include "partials/nav.html" %}
+  <div class="wacca">
+    <div id="site-logo">
+      <img src="/wacca/img/logo.svg" alt="Wacca">
+    </div>
+    <nav id="wacca-nav">
+      <a href="/wacca">Home</a>
+      <a href="/wacca/inventory">Inventory</a>
+      <a href="/wacca/recent">Recent Plays</a>
+      <a href="/wacca/songs">All Songs</a>
+      <a href="/wacca/rating">Rating</a>
+      <a href="/wacca/leaderboards">Leaderboards</a>
+    </nav>
+    <main class="wacca-content">
+      <div id="profile-loading" class="loading hidden">
+        <div class="spinner"></div>
+      </div>
+      <div id="profile-error" class="alert alert-error hidden"></div>
+      <div id="profile-content" class="hidden">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+  {% include "partials/settings_modal.html" %}
+  <script type="module" src="/static/js/wacca/profile.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

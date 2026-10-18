@@ -1,0 +1,17 @@
+{% extends "wacca/base.html" %}
+{% block title %}Leaderboards | Wacca{% endblock %}
+{% block content %}
+<div class="container">
+  <div id="leaderboards-loading" class="loading"><div class="spinner"></div></div>
+  <div id="leaderboards-error" class="alert alert-error hidden"></div>
+  <table class="data-table hidden" id="leaderboards-table">
+    <thead>
+      <tr><th>Rank</th><th>Name</th><th>Rating</th></tr>
+    </thead>
+    <tbody id="leaderboards-body"></tbody>
+  </table>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/wacca/leaderboards.js"></script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Cards | Mithical{% endblock %}
+{% block content %}
+<div class="container cards-container">
+  <div class="card">
+    <div class="card-header"><h2>Add a card</h2></div>
+    <div class="card-body">
+      <div class="access-code-wrap">
+        <input type="text" id="access-code" class="input" maxlength="24" inputmode="numeric" placeholder="Access Code">
+      </div>
+      <p id="card-error" class="error-text"></p>
+      <p id="card-message" class="success-text"></p>
+      <button type="button" id="add-card-btn" class="btn btn-primary btn-block">Add Card</button>
+      <div id="go-wacca-wrap" class="hidden" style="margin-top:1em">
+        <a href="/wacca" class="btn btn-primary btn-block">Go to the Wacca page</a>
+      </div>
+    </div>
+  </div>
+  <div id="cards-list" class="cards"></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/pages/cards.js"></script>
+{% endblock %}

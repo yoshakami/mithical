@@ -1,13 +1,15 @@
 from mysql.connector import pooling
 from backend_utils import *
 import mysql.connector
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template, send_from_directory
 import os
 import subprocess
 import tempfile
 import sys
 import json
 import repo
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 SERVER_BRANCH = {} 
 if os.path.exists('server_branch.json'):
@@ -29,8 +31,107 @@ pool = mysql.connector.pooling.MySQLConnectionPool(
     autocommit=True
 )
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 
+
+def page_context():
+    return {
+        "api_url": request.url_root.rstrip("/"),
+        "flask_port": repo.ENV_CONFIG.get("flask_port", 5000),
+    }
+
+
+# --- Web UI routes ---
+
+@app.route("/")
+def page_index():
+    return render_template("index.html", **page_context())
+
+
+@app.route("/cards")
+def page_cards():
+    return render_template("cards.html", **page_context())
+
+
+@app.route("/wacca")
+@app.route("/wacca/")
+def page_wacca_index():
+    return render_template("wacca/index.html", **page_context())
+
+
+@app.route("/wacca/recent")
+def page_wacca_recent():
+    return render_template("wacca/recent.html", **page_context())
+
+
+@app.route("/wacca/rating")
+def page_wacca_rating():
+    return render_template("wacca/rating.html", **page_context())
+
+
+@app.route("/wacca/leaderboards")
+def page_wacca_leaderboards():
+    return render_template("wacca/leaderboards.html", **page_context())
+
+
+@app.route("/wacca/gacha")
+def page_wacca_gacha():
+    return render_template("wacca/gacha.html", **page_context())
+
+
+@app.route("/wacca/inventory")
+def page_wacca_inventory():
+    return render_template("wacca/inventory.html", **page_context())
+
+
+@app.route("/wacca/settings")
+def page_wacca_settings():
+    return render_template("wacca/settings.html", **page_context())
+
+
+@app.route("/wacca/songs")
+def page_wacca_songs():
+    return render_template("wacca/songs.html", **page_context())
+
+
+@app.route("/wacca/songs/<int:song_id>")
+def page_wacca_song_detail(song_id):
+    return render_template("wacca/song_detail.html", song_id=song_id, **page_context())
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(BASE_DIR, "public"), "favicon.ico")
+
+
+@app.route("/static/favicon.ico")
+def static_favicon():
+    return send_from_directory(os.path.join(BASE_DIR, "public"), "favicon.ico")
+
+
+@app.route("/wacca/<path:filename>")
+def wacca_public(filename):
+    return send_from_directory(os.path.join(BASE_DIR, "public", "wacca"), filename)
+
+
+@app.route("/assets/wacca/<path:filename>")
+def wacca_data(filename):
+    directory = os.path.join(BASE_DIR, "assets", "wacca")
+    # Windows may store the songs file as WaccaSongs.js
+    requested = os.path.join(directory, filename)
+    if not os.path.exists(requested):
+        alt = os.path.join(directory, filename[0].upper() + filename[1:] if filename else filename)
+        if os.path.exists(alt):
+            filename = os.path.basename(alt)
+    return send_from_directory(directory, filename)
+
+
+@app.route("/assets/font/<path:filename>")
+def font_assets(filename):
+    return send_from_directory(os.path.join(BASE_DIR, "assets", "font"), filename)
+
+
+# --- API routes ---
 @app.route("/wacca/user/<int:cardID>/<int:stuff>", methods=["GET"])
 def get_user(cardID, stuff):
     try:

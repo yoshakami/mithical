@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "partials/head.html" %}
+  {% block head %}{% endblock %}
+</head>
+<body class="theme-mithical-dark section-mithical">
+  {% include "partials/nav.html" %}
+  <main class="main-content">
+    {% block content %}{% endblock %}
+  </main>
+  {% include "partials/settings_modal.html" %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>

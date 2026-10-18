@@ -1,0 +1,23 @@
+{% extends "wacca/base.html" %}
+{% block title %}Song | Wacca{% endblock %}
+{% block content %}
+<div class="container" data-song-id="{{ song_id }}">
+  <div id="song-not-found" class="alert alert-error hidden">Song not found.</div>
+  <div id="song-detail" class="hidden">
+    <div class="profile-name">
+      <div class="profile-icon"><img id="song-cover" alt=""></div>
+      <div class="profile-box-wrapper">
+        <div class="profile-box">
+          <div id="song-title" class="song-title"></div>
+          <div id="song-artist" class="song-artist"></div>
+        </div>
+      </div>
+    </div>
+    <div id="song-sheets" class="song-sheets" style="margin:16px 0"></div>
+    <div id="song-scores"></div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="/static/js/wacca/song_detail.js"></script>
+{% endblock %}
