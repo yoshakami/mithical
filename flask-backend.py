@@ -2,6 +2,7 @@ from mysql.connector import pooling
 from backend_utils import *
 import mysql.connector
 from flask import Flask, request, jsonify, send_file, render_template, send_from_directory
+from flask_cors import CORS
 import os
 import subprocess
 import tempfile
@@ -32,7 +33,7 @@ pool = mysql.connector.pooling.MySQLConnectionPool(
 )
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
-
+CORS(app)
 
 def page_context():
     return {
