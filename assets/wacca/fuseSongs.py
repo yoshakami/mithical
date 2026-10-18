@@ -3,8 +3,8 @@ import re
 import os
 
 # Paths
-songs_js_path = "WaccaSongs.js"
-songs_js_path_empty = "WaccaSongs-empty.js"
+songs_js_path = "waccaSongs.js"
+songs_js_path_empty = "waccaSongs-empty.js"
 export_json_path = "yosh_temp.js"
 music_table_optional = "C:\\Wacca\\Menu\\Nana+\\WindowsNoEditor\\Mercury\\Content\\Table\\MusicParameterTable" # optional
 
@@ -147,6 +147,9 @@ if new_entries:
 
 
 if os.path.exists(songs_js_path):
+    if os.path.exists(os.path.splitext(songs_js_path)[0] + "-old.js"):
+        input("press enter to remove " + os.path.splitext(songs_js_path)[0] + "-old.js")
+        os.remove(os.path.splitext(songs_js_path)[0] + "-old.js")
     os.rename(songs_js_path, os.path.splitext(songs_js_path)[0] + "-old.js")
 
 # Save updated file

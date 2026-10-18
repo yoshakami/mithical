@@ -84,7 +84,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 10.45,
+            difficulty: 10.5,
             gameVersion: 400,
             charter: "mq",
         }],
@@ -196,7 +196,7 @@ const waccaSongs = [
             charter: "Tiiger",
         },
       {
-            difficulty: 10.75,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "Tiiger",
         },
@@ -440,7 +440,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 11.7,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "Tracen Academy trainers Twis & Tiiger",
         }],
@@ -552,12 +552,12 @@ const waccaSongs = [
             charter: "Twis",
         },
       {
-            difficulty: 10.9,
+            difficulty: 11.1,
             gameVersion: 400,
             charter: "Twis",
         },
       {
-            difficulty: 11,
+            difficulty: 13.7,
             gameVersion: 400,
             charter: "Twis",
         }],
@@ -585,7 +585,7 @@ const waccaSongs = [
             charter: "タノシーストア高橋",
         },
       {
-            difficulty: 12,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "タノシーストア高橋",
         }],
@@ -636,7 +636,7 @@ const waccaSongs = [
             charter: "タノシーストア高橋",
         },
       {
-            difficulty: 10.65,
+            difficulty: 10.7,
             gameVersion: 400,
             charter: "タノシーストア高橋",
         },
@@ -659,12 +659,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 4,
+            difficulty: 9.9,
             gameVersion: 400,
             charter: "ぜんにん",
         },
       {
-            difficulty: 10.7,
+            difficulty: 11.1,
             gameVersion: 400,
             charter: "ぜんにん",
         },
@@ -837,7 +837,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 10.25,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "twis",
         },
@@ -1071,7 +1071,7 @@ const waccaSongs = [
             charter: "Sam",
         },
       {
-            difficulty: 11.5,
+            difficulty: 12,
             gameVersion: 400,
             charter: "Sam",
         }],
@@ -1099,7 +1099,7 @@ const waccaSongs = [
             charter: "おてんばＧＥＮＥ",
         },
       {
-            difficulty: 12.4,
+            difficulty: 12.1,
             gameVersion: 400,
             charter: "日焼けしたＧＥＮＥ",
         }],
@@ -1244,7 +1244,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 11.2,
+            difficulty: 12.1,
             gameVersion: 400,
             charter: "twipolis",
         }],
@@ -1272,7 +1272,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 12,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "mq",
         }],
@@ -1374,12 +1374,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "easy skibidi lv 1 [ 速 ]",
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "easy skibidi lv 1 [ ? ] ft. DTT",
         },
@@ -1603,12 +1603,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -1631,12 +1631,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -1781,7 +1781,7 @@ const waccaSongs = [
             charter: "Skyward",
         },
       {
-            difficulty: 10.8,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "Skyward",
         },
@@ -1837,7 +1837,7 @@ const waccaSongs = [
             charter: "Snowball",
         },
       {
-            difficulty: 10.15,
+            difficulty: 10.2,
             gameVersion: 400,
             charter: "Snowball",
         },
@@ -1893,7 +1893,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 10.5,
+            difficulty: 10.7,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -1921,7 +1921,7 @@ const waccaSongs = [
             charter: "MSR",
         },
       {
-            difficulty: 9.8,
+            difficulty: 10,
             gameVersion: 400,
             charter: "MSR",
         },
@@ -1944,12 +1944,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10.4,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "ぜんにん",
         },
       {
-            difficulty: 11.8,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "mq",
         },
@@ -2262,7 +2262,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 10.25,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -2562,7 +2562,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 11.7,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "mq",
         }],
@@ -2618,7 +2618,7 @@ const waccaSongs = [
             charter: "GENE",
         },
       {
-            difficulty: 11.75,
+            difficulty: 12.4,
             gameVersion: 400,
             charter: "GENE",
         }],
@@ -2674,7 +2674,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 11,
+            difficulty: 12.1,
             gameVersion: 400,
             charter: "mq",
         }],
@@ -2720,12 +2720,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 11.9,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "muskit",
         },
@@ -2748,12 +2748,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -2814,7 +2814,7 @@ const waccaSongs = [
             charter: "あおき",
         },
       {
-            difficulty: 10.45,
+            difficulty: 10.5,
             gameVersion: 400,
             charter: "あおき",
         },
@@ -2931,7 +2931,7 @@ const waccaSongs = [
             charter: "DJ Genki",
         },
       {
-            difficulty: 11.6,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "DJ Genki",
         }],
@@ -3043,7 +3043,7 @@ const waccaSongs = [
             charter: "GENE",
         },
       {
-            difficulty: 11.5,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "GENE",
         }],
@@ -3150,12 +3150,12 @@ const waccaSongs = [
     category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10.4,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "ななまがりハリケーン",
         },
       {
-            difficulty: 11.8,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "ななまがりハリケーン",
         },
@@ -3234,12 +3234,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 4,
+            difficulty: 10.1,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 11.4,
+            difficulty: 11.6,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -3323,7 +3323,7 @@ const waccaSongs = [
             charter: "Twis",
         },
       {
-            difficulty: 10.9,
+            difficulty: 11,
             gameVersion: 400,
             charter: "Twis",
         },
@@ -3402,12 +3402,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 5,
+            difficulty: 9.9,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 11.4,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -3519,12 +3519,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 6,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 10.9,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -3618,7 +3618,7 @@ const waccaSongs = [
             charter: "レッドアリスレッド",
         },
       {
-            difficulty: 11.9,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "レッドアリスレッド",
         }],
@@ -3679,7 +3679,7 @@ const waccaSongs = [
             charter: "ミルクプロテイン",
         },
       {
-            difficulty: 11.8,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "ミルクプロテイン",
         }],
@@ -3702,7 +3702,7 @@ const waccaSongs = [
             charter: "Sam",
         },
       {
-            difficulty: 10,
+            difficulty: 10.1,
             gameVersion: 400,
             charter: "Sam",
         },
@@ -3725,12 +3725,12 @@ const waccaSongs = [
     category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 6,
+            difficulty: 10.1,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 11.35,
+            difficulty: 11.4,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -3814,7 +3814,7 @@ const waccaSongs = [
             charter: "エモコサイン",
         },
       {
-            difficulty: 10.25,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "エモコサイン",
         },
@@ -3982,7 +3982,7 @@ const waccaSongs = [
             charter: "Zuum",
         },
       {
-            difficulty: 10.9,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "Zuum the MYsT3ri",
         },
@@ -4061,12 +4061,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 9.9,
+            difficulty: 9.8,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 11.4,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -4122,7 +4122,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.1,
+            difficulty: 11.6,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -4150,7 +4150,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 10.95,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -4295,7 +4295,7 @@ const waccaSongs = [
             charter: "Cyruno",
         },
       {
-            difficulty: 11.7,
+            difficulty: 11.1,
             gameVersion: 400,
             charter: "Cyruno",
         },
@@ -4430,12 +4430,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -4458,12 +4458,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -4491,7 +4491,7 @@ const waccaSongs = [
             charter: "Snowball",
         },
       {
-            difficulty: 10.3,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "Snowball",
         },
@@ -4547,7 +4547,7 @@ const waccaSongs = [
             charter: "RFRAUD",
         },
       {
-            difficulty: 10.7,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "SNWBLL",
         },
@@ -4743,7 +4743,7 @@ const waccaSongs = [
             charter: "BlackY",
         },
       {
-            difficulty: 10.3,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "BlackY",
         },
@@ -4921,7 +4921,7 @@ const waccaSongs = [
             charter: "ぜんにん",
         },
       {
-            difficulty: 10.9,
+            difficulty: 11.4,
             gameVersion: 400,
             charter: "ぜんにん",
         }],
@@ -5043,7 +5043,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.1,
             gameVersion: 400,
             charter: "twiSenketsu",
         }],
@@ -5127,7 +5127,7 @@ const waccaSongs = [
             charter: "とぱぞ",
         },
       {
-            difficulty: 10.1,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "とぱぞ",
         },
@@ -5160,7 +5160,7 @@ const waccaSongs = [
             charter: "1000×1000 shall",
         },
       {
-            difficulty: 11.7,
+            difficulty: 12,
             gameVersion: 400,
             charter: "1000×1000 shall",
         }],
@@ -5267,7 +5267,7 @@ const waccaSongs = [
             charter: "BlackY",
         },
       {
-            difficulty: 10.8,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "BlackY",
         },
@@ -5402,12 +5402,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -5664,12 +5664,12 @@ const waccaSongs = [
     category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 4,
+            difficulty: 10.1,
             gameVersion: 400,
             charter: "るくあんす & ななまがりハリケーン",
         },
       {
-            difficulty: 11.1,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "るくあんす vs ななまがりハリケーン",
         },
@@ -5796,7 +5796,7 @@ const waccaSongs = [
             charter: "とぱぞもやってきちゃった",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "とぱぞは来なくていいよ",
         }],
@@ -5880,7 +5880,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.4,
+            difficulty: 12.5,
             gameVersion: 400,
             charter: "るくあんす",
         }],
@@ -5941,7 +5941,7 @@ const waccaSongs = [
             charter: "あかぞらいと",
         },
       {
-            difficulty: 11.8,
+            difficulty: 12,
             gameVersion: 400,
             charter: "あかぞらいと",
         },
@@ -6180,7 +6180,7 @@ const waccaSongs = [
             charter: "とまらないレッドアリス+みかんのはる",
         },
       {
-            difficulty: 11.5,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "とまらないレッドアリス+みかんのはる",
         }],
@@ -6208,7 +6208,7 @@ const waccaSongs = [
             charter: "とまらないるくあんす",
         },
       {
-            difficulty: 11.3,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "とまらないるくあんす",
         }],
@@ -6282,7 +6282,7 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "Panaman",
         },
@@ -6315,7 +6315,7 @@ const waccaSongs = [
             charter: "Twis",
         },
       {
-            difficulty: 9.7,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "Twis",
         },
@@ -6422,7 +6422,7 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "「YASU」",
         },
@@ -6432,7 +6432,7 @@ const waccaSongs = [
             charter: "「YASU」",
         },
       {
-            difficulty: 11.8,
+            difficulty: 12.1,
             gameVersion: 400,
             charter: "「YASU」",
         },
@@ -6521,7 +6521,7 @@ const waccaSongs = [
             charter: null,
         },
       {
-            difficulty: 11.5,
+            difficulty: 12,
             gameVersion: 400,
             charter: "Twis",
         }],
@@ -6722,7 +6722,7 @@ const waccaSongs = [
             charter: "Kursain",
         },
       {
-            difficulty: 11.5,
+            difficulty: 11.7,
             gameVersion: 400,
             charter: "Kursain",
         }],
@@ -6740,12 +6740,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -6974,7 +6974,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "mq",
         }],
@@ -7025,7 +7025,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 9.6,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "mq",
         },
@@ -7137,7 +7137,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 10.4,
+            difficulty: 10.75,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -7216,12 +7216,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 4,
+            difficulty: 9.9,
             gameVersion: 400,
             charter: "タノシーストア高橋",
         },
       {
-            difficulty: 10.8,
+            difficulty: 11.3,
             gameVersion: 400,
             charter: "タノシーストア高橋",
         },
@@ -7249,12 +7249,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10.25,
+            difficulty: 10.2,
             gameVersion: 400,
             charter: "スズコニ",
         },
       {
-            difficulty: 11.1,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "スズコニ―ル",
         },
@@ -7455,12 +7455,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 4,
+            difficulty: 9.9,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 11.35,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -7605,7 +7605,7 @@ const waccaSongs = [
             charter: "Snowball",
         },
       {
-            difficulty: 11.6,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "SNOWLINER",
         }],
@@ -7768,12 +7768,12 @@ const waccaSongs = [
             charter: "コウメイ",
         },
       {
-            difficulty: 10.75,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "コウメイ",
         },
       {
-            difficulty: 12.8,
+            difficulty: 12.9,
             gameVersion: 400,
             charter: "コウメイ",
         },
@@ -7951,7 +7951,7 @@ const waccaSongs = [
             charter: "エモコサイン",
         },
       {
-            difficulty: 10.6,
+            difficulty: 10.7,
             gameVersion: 400,
             charter: "エモコサイン",
         },
@@ -7979,12 +7979,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 4,
+            difficulty: 10.1,
             gameVersion: 400,
             charter: "スズコニ",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "スズコニ",
         },
@@ -8063,17 +8063,17 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -8190,7 +8190,7 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -8223,7 +8223,7 @@ const waccaSongs = [
             charter: "MSR",
         },
       {
-            difficulty: 10,
+            difficulty: 10.2,
             gameVersion: 400,
             charter: "MSR",
         },
@@ -8279,7 +8279,7 @@ const waccaSongs = [
             charter: "Skyward",
         },
       {
-            difficulty: 11.3,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "Skyward",
         },
@@ -8396,7 +8396,7 @@ const waccaSongs = [
             charter: "BlackY vs みかんのはる",
         },
       {
-            difficulty: 10.75,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "BlackY vs みかんのはる",
         },
@@ -8508,12 +8508,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -8653,7 +8653,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 10.3,
+            difficulty: 10.5,
             gameVersion: 400,
             charter: "mq",
         },
@@ -8737,12 +8737,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -8775,7 +8775,7 @@ const waccaSongs = [
             charter: "レッドアリス",
         },
       {
-            difficulty: 9.3,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "レッドアリス",
         }],
@@ -8803,7 +8803,7 @@ const waccaSongs = [
             charter: "Tiiger",
         },
       {
-            difficulty: 11.8,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "Tiiger",
         }],
@@ -8854,7 +8854,7 @@ const waccaSongs = [
             charter: "あかぞらいと",
         },
       {
-            difficulty: 9.9,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "あかぞらいと",
         },
@@ -8915,7 +8915,7 @@ const waccaSongs = [
             charter: "タノシーストア高橋",
         },
       {
-            difficulty: 11.9,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "タノシーストア高橋",
         }],
@@ -8943,7 +8943,7 @@ const waccaSongs = [
             charter: "えびチャーハン",
         },
       {
-            difficulty: 11.75,
+            difficulty: 12,
             gameVersion: 400,
             charter: "えびチャーハンオオト盛",
         }],
@@ -8966,7 +8966,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.35,
+            difficulty: 11.3,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -9022,7 +9022,7 @@ const waccaSongs = [
             charter: "あおき",
         },
       {
-            difficulty: 9.7,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "あおき",
         },
@@ -9106,12 +9106,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -9190,12 +9190,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -9218,12 +9218,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -9401,7 +9401,7 @@ const waccaSongs = [
             charter: "Twis",
         },
       {
-            difficulty: 11.8,
+            difficulty: 12.5,
             gameVersion: 400,
             charter: "Twis",
         }],
@@ -9518,7 +9518,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 11.6,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "mq",
         }],
@@ -9597,7 +9597,7 @@ const waccaSongs = [
             charter: "Twis",
         },
       {
-            difficulty: 11.1,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "Twis",
         },
@@ -9620,12 +9620,12 @@ const waccaSongs = [
     category: "オリジナル",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 4,
+            difficulty: 10,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 11,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -9704,12 +9704,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -9887,7 +9887,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 11.5,
+            difficulty: 11.7,
             gameVersion: 400,
             charter: "Blue Smurf (Twis)",
         }],
@@ -9933,12 +9933,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -9966,12 +9966,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -9999,7 +9999,7 @@ const waccaSongs = [
             charter: "Tairitsu",
         },
       {
-            difficulty: 10.45,
+            difficulty: 10.5,
             gameVersion: 400,
             charter: "Tairitsu ft. Irrena",
         },
@@ -10228,7 +10228,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 9.7,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "mq",
         },
@@ -10256,7 +10256,7 @@ const waccaSongs = [
             charter: "WAiKURO",
         },
       {
-            difficulty: 10.65,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "WAiKURO",
         },
@@ -10279,17 +10279,17 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -10312,12 +10312,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -10470,11 +10470,6 @@ const waccaSongs = [
             difficulty: 0.1,
             gameVersion: 400,
             charter: "T.W.I.S",
-        },
-      {
-            difficulty: 0.1,
-            gameVersion: 400,
-            charter: null,
         }],
   },
   {
@@ -10523,7 +10518,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 10.15,
+            difficulty: 10.2,
             gameVersion: 400,
             charter: "mq",
         },
@@ -10696,7 +10691,7 @@ const waccaSongs = [
             charter: "mq",
         },
       {
-            difficulty: 10.6,
+            difficulty: 10.75,
             gameVersion: 400,
             charter: "mq",
         },
@@ -10887,7 +10882,7 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 7.7,
+            difficulty: 9.7,
             gameVersion: 400,
             charter: "Tiiger",
         },
@@ -11159,7 +11154,7 @@ const waccaSongs = [
             charter: "あおき",
         },
       {
-            difficulty: 11.5,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "とんかつあおき",
         }],
@@ -11243,7 +11238,7 @@ const waccaSongs = [
             charter: "Tiiger",
         },
       {
-            difficulty: 10.2,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "Tiiger",
         },
@@ -11505,7 +11500,7 @@ const waccaSongs = [
             charter: "えびチャーハンオオト盛",
         },
       {
-            difficulty: 11,
+            difficulty: 11.2,
             gameVersion: 400,
             charter: "えびチャーハンオオト盛",
         }],
@@ -11551,7 +11546,7 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10.7,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -11757,12 +11752,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10.25,
+            difficulty: 10.1,
             gameVersion: 400,
             charter: "レッドアリス",
         },
       {
-            difficulty: 11.41,
+            difficulty: 11.4,
             gameVersion: 400,
             charter: "レッドアリス",
         },
@@ -11973,7 +11968,7 @@ const waccaSongs = [
             charter: "とまらないレッドアリス",
         },
       {
-            difficulty: 11.5,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "とまらないレッドアリス",
         },
@@ -12034,7 +12029,7 @@ const waccaSongs = [
             charter: "コウメイ",
         },
       {
-            difficulty: 11.5,
+            difficulty: 11.7,
             gameVersion: 400,
             charter: "コウメイ",
         }],
@@ -12169,12 +12164,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -12291,7 +12286,7 @@ const waccaSongs = [
             charter: "オオトモ",
         },
       {
-            difficulty: 11.8,
+            difficulty: 12.3,
             gameVersion: 400,
             charter: "オオトモ",
         }],
@@ -12314,7 +12309,7 @@ const waccaSongs = [
             charter: "Kursain",
         },
       {
-            difficulty: 10.65,
+            difficulty: 11,
             gameVersion: 400,
             charter: "Kursain",
         },
@@ -12487,7 +12482,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 8.8,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -12538,7 +12533,7 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "yitiao16★ナイトフィーバー",
         },
@@ -12744,7 +12739,7 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 7.9,
+            difficulty: 10,
             gameVersion: 400,
             charter: "月面基地（Aipoi）",
         },
@@ -12833,12 +12828,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 8,
+            difficulty: 10.4,
             gameVersion: 400,
             charter: "YUKIDAMA",
         },
       {
-            difficulty: 11.6,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "<ヤス>",
         },
@@ -12876,7 +12871,7 @@ const waccaSongs = [
             charter: "Twis",
         },
       {
-            difficulty: 11.8,
+            difficulty: 12.4,
             gameVersion: 400,
             charter: "Twis",
         },
@@ -12927,12 +12922,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -13156,12 +13151,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -13184,12 +13179,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -13334,7 +13329,7 @@ const waccaSongs = [
             charter: "1000×1000 shall",
         },
       {
-            difficulty: 11.5,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "1000×1000 shall",
         }],
@@ -13670,7 +13665,7 @@ const waccaSongs = [
             charter: "TheZx",
         },
       {
-            difficulty: 11,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "TheZx",
         },
@@ -13881,7 +13876,7 @@ const waccaSongs = [
             charter: "タノシーストア高橋+みかんのはる",
         },
       {
-            difficulty: 11.75,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "タノシーストア高橋+みかんのはる",
         }],
@@ -14082,7 +14077,7 @@ const waccaSongs = [
             charter: "とぱぞ",
         },
       {
-            difficulty: 11,
+            difficulty: 11.1,
             gameVersion: 400,
             charter: "とぱぞ",
         },
@@ -14245,12 +14240,12 @@ const waccaSongs = [
     category: "TANO*C",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10.2,
+            difficulty: 10,
             gameVersion: 400,
             charter: "スズコニ",
         },
       {
-            difficulty: 11.9,
+            difficulty: 11.7,
             gameVersion: 400,
             charter: "スズコニ",
         },
@@ -14446,12 +14441,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 12.7,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "Tiiger",
         },
       {
-            difficulty: 12.7,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "Tiiger",
         },
@@ -14479,17 +14474,17 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -14517,7 +14512,7 @@ const waccaSongs = [
             charter: "t+pazolite",
         },
       {
-            difficulty: 10.75,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "t+pazolite",
         },
@@ -14545,7 +14540,7 @@ const waccaSongs = [
             charter: "タノシーストア高橋",
         },
       {
-            difficulty: 10.55,
+            difficulty: 10.6,
             gameVersion: 400,
             charter: "タノシーストア高橋",
         },
@@ -14578,7 +14573,7 @@ const waccaSongs = [
             charter: "とぱぞ",
         },
       {
-            difficulty: 11.8,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "とぱぞ",
         },
@@ -14733,7 +14728,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 11.3,
+            difficulty: 11.7,
             gameVersion: 400,
             charter: "twistwis",
         },
@@ -14845,7 +14840,7 @@ const waccaSongs = [
             charter: "TANO*C Fumen Team",
         },
       {
-            difficulty: 10.45,
+            difficulty: 10.5,
             gameVersion: 400,
             charter: "TANO*C Fumen Team",
         },
@@ -15028,7 +15023,7 @@ const waccaSongs = [
             charter: "AdeleineSummy",
         },
       {
-            difficulty: 10.75,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "KnovosxoSummy",
         },
@@ -15168,7 +15163,7 @@ const waccaSongs = [
             charter: "レッドアリス",
         },
       {
-            difficulty: 10.75,
+            difficulty: 11.1,
             gameVersion: 400,
             charter: "レッドアリス",
         },
@@ -15229,7 +15224,7 @@ const waccaSongs = [
             charter: "GENE",
         },
       {
-            difficulty: 11.7,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "GENE",
         }],
@@ -15247,12 +15242,12 @@ const waccaSongs = [
     category: "バラエティ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10,
+            difficulty: 9.9,
             gameVersion: 400,
             charter: "るくあんす",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.3,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -15313,7 +15308,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11,
+            difficulty: 11.1,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -15369,7 +15364,7 @@ const waccaSongs = [
             charter: "Snowball",
         },
       {
-            difficulty: 10.45,
+            difficulty: 10.5,
             gameVersion: 400,
             charter: "Snowball",
         },
@@ -15397,7 +15392,7 @@ const waccaSongs = [
             charter: "nb1rs",
         },
       {
-            difficulty: 10.25,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "nb1rs",
         },
@@ -15542,7 +15537,7 @@ const waccaSongs = [
             charter: "nb1rs",
         },
       {
-            difficulty: 10,
+            difficulty: 10.3,
             gameVersion: 400,
             charter: "nb1rs",
         },
@@ -15593,12 +15588,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -15621,12 +15616,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -15654,7 +15649,7 @@ const waccaSongs = [
             charter: "saKe",
         },
       {
-            difficulty: 10.8,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "saKe",
         },
@@ -15799,7 +15794,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 9.6,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -15832,7 +15827,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 10.7,
+            difficulty: 10.8,
             gameVersion: 400,
             charter: "Thuggles",
         },
@@ -15888,12 +15883,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 11.1,
+            difficulty: 11.3,
             gameVersion: 400,
             charter: "EV3LYN",
         },
@@ -15916,17 +15911,17 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -16071,7 +16066,7 @@ const waccaSongs = [
             charter: "許されるとぱぞ",
         },
       {
-            difficulty: 10.9,
+            difficulty: 11.2,
             gameVersion: 400,
             charter: "まだ許されるとぱぞ",
         },
@@ -16183,7 +16178,7 @@ const waccaSongs = [
             charter: "BlackY",
         },
       {
-            difficulty: 10.7,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "BlackY",
         },
@@ -16473,7 +16468,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.7,
+            difficulty: 12.6,
             gameVersion: 400,
             charter: "るくあんす -Game Over-",
         }],
@@ -16646,7 +16641,7 @@ const waccaSongs = [
             charter: "Twis",
         },
       {
-            difficulty: 10.95,
+            difficulty: 10.9,
             gameVersion: 400,
             charter: "Twis",
         },
@@ -16669,12 +16664,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -17135,11 +17130,6 @@ const waccaSongs = [
             difficulty: 13.7,
             gameVersion: 400,
             charter: "瑠区庵 譜面 出張 残業",
-        },
-      {
-            difficulty: 1,
-            gameVersion: 400,
-            charter: "DO YOU REMEMBER THE CODE? [ 覚 ]",
         }],
   },
   {
@@ -17333,7 +17323,7 @@ const waccaSongs = [
             charter: "譜面道+みかんのはる",
         },
       {
-            difficulty: 11.6,
+            difficulty: 12,
             gameVersion: 400,
             charter: "譜面道+みかんのはる",
         }],
@@ -17529,7 +17519,7 @@ const waccaSongs = [
             charter: "栗霧 さやか",
         },
       {
-            difficulty: 11.3,
+            difficulty: 11.5,
             gameVersion: 400,
             charter: "クリギリサヤカ -目を晦ます-",
         }],
@@ -17641,7 +17631,7 @@ const waccaSongs = [
             charter: "レッドアリス",
         },
       {
-            difficulty: 10.8,
+            difficulty: 11.4,
             gameVersion: 400,
             charter: "レッドアリス",
         }],
@@ -17725,7 +17715,7 @@ const waccaSongs = [
             charter: "とぱぞら",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.6,
             gameVersion: 400,
             charter: "とぱのぞら",
         }],
@@ -17809,7 +17799,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "るくあんす",
         }],
@@ -17837,7 +17827,7 @@ const waccaSongs = [
             charter: "MSR",
         },
       {
-            difficulty: 11.51,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "MSR",
         }],
@@ -18005,7 +17995,7 @@ const waccaSongs = [
             charter: "Sam+るくあんす",
         },
       {
-            difficulty: 11.5,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "Sam",
         }],
@@ -18117,7 +18107,7 @@ const waccaSongs = [
             charter: "M-Sam-R",
         },
       {
-            difficulty: 11.6,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "M-Sam-R",
         }],
@@ -18285,7 +18275,7 @@ const waccaSongs = [
             charter: "レッドアリス",
         },
       {
-            difficulty: 10.6,
+            difficulty: 11.2,
             gameVersion: 400,
             charter: "レッドアリス",
         }],
@@ -18313,7 +18303,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.5,
+            difficulty: 12,
             gameVersion: 400,
             charter: "るくあんす・A",
         }],
@@ -18341,7 +18331,7 @@ const waccaSongs = [
             charter: "あおき",
         },
       {
-            difficulty: 10.75,
+            difficulty: 11.3,
             gameVersion: 400,
             charter: "とんかつあおき@麻冬推し",
         }],
@@ -18481,7 +18471,7 @@ const waccaSongs = [
             charter: "サトウ+るくあんす",
         },
       {
-            difficulty: 11.6,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "佐藤",
         }],
@@ -18537,7 +18527,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.25,
+            difficulty: 11.4,
             gameVersion: 400,
             charter: "るくあんす",
         }],
@@ -18812,7 +18802,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 9.7,
+            difficulty: 11.3,
             gameVersion: 400,
             charter: "るくあんす",
         },
@@ -18901,7 +18891,7 @@ const waccaSongs = [
             charter: "Tiiger",
         },
       {
-            difficulty: 10.8,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "Tiiger",
         }],
@@ -18919,12 +18909,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -19214,7 +19204,7 @@ const waccaSongs = [
             charter: "Sam+るくあんす",
         },
       {
-            difficulty: 11.4,
+            difficulty: 12,
             gameVersion: 400,
             charter: "Sam",
         }],
@@ -19494,7 +19484,7 @@ const waccaSongs = [
             charter: "やっぱりレッドアリスに興味ないじゃん",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.4,
             gameVersion: 400,
             charter: "そもそもだいたいレッドアリスに興味ないじゃん",
         }],
@@ -19517,7 +19507,7 @@ const waccaSongs = [
             charter: "twis",
         },
       {
-            difficulty: 10.15,
+            difficulty: 10.2,
             gameVersion: 400,
             charter: "Tiiger",
         },
@@ -19736,17 +19726,17 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -19807,7 +19797,7 @@ const waccaSongs = [
             charter: "栗霧 さやか",
         },
       {
-            difficulty: 10.95,
+            difficulty: 11.9,
             gameVersion: 400,
             charter: "転生したら栗霧さやかだった件",
         }],
@@ -19863,7 +19853,7 @@ const waccaSongs = [
             charter: "栗霧 さやか+るくあんす",
         },
       {
-            difficulty: 11.7,
+            difficulty: 12.7,
             gameVersion: 400,
             charter: "栗霧紗矢華&瑠区庵",
         }],
@@ -19891,7 +19881,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.7,
+            difficulty: 12.8,
             gameVersion: 400,
             charter: "るくあんす",
         }],
@@ -20250,12 +20240,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -20339,7 +20329,7 @@ const waccaSongs = [
             charter: "MSR",
         },
       {
-            difficulty: 8,
+            difficulty: 10.1,
             gameVersion: 400,
             charter: "MSR",
         },
@@ -20377,7 +20367,7 @@ const waccaSongs = [
             charter: "オオトモ",
         },
       {
-            difficulty: 11.5,
+            difficulty: 12.2,
             gameVersion: 400,
             charter: "オオトモ",
         }],
@@ -20708,7 +20698,7 @@ const waccaSongs = [
             charter: "TANO*C Fumen Team",
         },
       {
-            difficulty: 10.45,
+            difficulty: 10.5,
             gameVersion: 400,
             charter: "TANO*C Fumen Team",
         },
@@ -20731,12 +20721,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
@@ -20853,7 +20843,7 @@ const waccaSongs = [
             charter: "栗霧 さやか",
         },
       {
-            difficulty: 11.5,
+            difficulty: 12,
             gameVersion: 400,
             charter: "栗霧 さやか",
         }],
@@ -20937,7 +20927,7 @@ const waccaSongs = [
             charter: "タノシーストア高橋",
         },
       {
-            difficulty: 10.5,
+            difficulty: 11.4,
             gameVersion: 400,
             charter: "高橋（タノシーストア）",
         }],
@@ -20965,7 +20955,7 @@ const waccaSongs = [
             charter: "あおき",
         },
       {
-            difficulty: 11.6,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "とんかつあおき",
         }],
@@ -20993,7 +20983,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.25,
+            difficulty: 11.7,
             gameVersion: 400,
             charter: "るくあんす",
         }],
@@ -21082,7 +21072,7 @@ const waccaSongs = [
             charter: "るくあんす",
         },
       {
-            difficulty: 11.1,
+            difficulty: 12.1,
             gameVersion: 400,
             charter: "るくあんす -Re:Newal-",
         }],
@@ -21278,7 +21268,7 @@ const waccaSongs = [
             charter: "Sam",
         },
       {
-            difficulty: 11.2,
+            difficulty: 11.8,
             gameVersion: 400,
             charter: "Sam",
         }],
@@ -21357,7 +21347,7 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 10.2,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: "rw",
         },
@@ -21413,12 +21403,12 @@ const waccaSongs = [
     category: "アニメ／ＰＯＰ",
     releaseDate: "2025-07-07",
     sheets: [      {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
       {
-            difficulty: 1,
+            difficulty: 0.1,
             gameVersion: 400,
             charter: null,
         },
