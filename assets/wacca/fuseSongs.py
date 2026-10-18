@@ -2,6 +2,7 @@ import json
 import re
 import os
 
+#little tip: delete on your OS both files in songs_js_path and export_json_path if you wanna start fresh, no fusing anymore
 # Paths
 songs_js_path = "waccaSongs.js"
 songs_js_path_empty = "waccaSongs-empty.js"
