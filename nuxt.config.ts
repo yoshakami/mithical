@@ -36,17 +36,5 @@ export default defineNuxtConfig({
         },
       },
     },
-    plugins: [
-      {
-        name: "wacca-songs-reload",
-        handleHotUpdate({ file, server }) {
-          const normalized = file.replace(/\\/g, "/").toLowerCase();
-          if (normalized.includes("/assets/wacca/waccasongs.js")) {
-            server.ws.send({ type: "full-reload" });
-            return [];
-          }
-        },
-      },
-    ],
   },
 });

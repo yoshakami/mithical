@@ -412,7 +412,7 @@ import { formatDifficulty } from "~/assets/js/util";
 import { NuxtLink } from "#components";
 const difficultyInternal = useState("difficultyInternal");
 
-const waccaSongs = useWaccaSongs();
+import waccaSongs from "~~/assets/wacca/waccaSongs.js";
 import waccaGradeBorders from "~/assets/wacca/waccaGradeBorders";
 
 function fillGrade(grade, score) {
@@ -431,7 +431,7 @@ const props = defineProps({
 });
 
 const song = computed(() => {
-  let song = waccaSongs.value.find((song) => song.id === props.play.info.music_id);
+  let song = waccaSongs.find((song) => song.id === props.play.info.music_id);
 
   return song;
 });
